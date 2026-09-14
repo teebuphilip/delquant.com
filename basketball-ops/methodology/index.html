@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DelQuant Basketball Ops Methodology</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <div class="eyebrow">DelQuant Basketball Ops</div>
+        <h1>Methodology</h1>
+        <p>This page spells out the full FMV to wins chain, the totals columns, and the proxy diagnostics shown on the live pages.</p>
+        <div class="subline">
+          <span class="chip">FMV</span>
+          <span class="chip">FMVW</span>
+          <span class="chip">HBB</span>
+          <span class="chip">Proxy totals</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section card">
+        <h2>Stage Order</h2>
+        <div class="list">
+          <div class="metric">
+            <span class="muted">1. FMV</span>
+            <strong>Cap-constrained market value estimated from the simulation layer.</strong>
+          </div>
+          <div class="metric">
+            <span class="muted">2. Wins Eq</span>
+            <strong>Convert salary-equivalent FMV into a wins-equivalent estimate.</strong>
+          </div>
+          <div class="metric">
+            <span class="muted">3. HBB Factor</span>
+            <strong>Apply the team-context multiplier to the wins bridge.</strong>
+          </div>
+          <div class="metric">
+            <span class="muted">4. HBB Wins</span>
+            <strong>HBB-adjusted wins before any proxy correction.</strong>
+          </div>
+          <div class="metric">
+            <span class="muted">5. Proxy Delta</span>
+            <strong>Apply the offense/defense proxy correction as a separate total.</strong>
+          </div>
+          <div class="metric">
+            <span class="muted">6. Proxy Wins</span>
+            <strong>Final proxy-adjusted wins after the correction is added to HBB wins.</strong>
+          </div>
+          <div class="metric">
+            <span class="muted">7. Proxy Read</span>
+            <strong>Show offense proxy, defense proxy, turnovers, and FTA as the diagnostic readout.</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="section card">
+        <h2>Totals Columns</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Column</th>
+                <th>Meaning</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>FMV</td>
+                <td>Salary-equivalent estimate from the simulation output.</td>
+              </tr>
+              <tr>
+                <td>Wins Eq</td>
+                <td>FMV translated into a wins-equivalent number using the bridge slope.</td>
+              </tr>
+              <tr>
+                <td>HBB</td>
+                <td>Team-context factor applied to the wins bridge.</td>
+              </tr>
+              <tr>
+                <td>HBB Wins</td>
+                <td>Wins Eq after HBB is applied.</td>
+              </tr>
+              <tr>
+                <td>Proxy Δ</td>
+                <td>Additional correction from the offense / defense proxy layer.</td>
+              </tr>
+              <tr>
+                <td>Proxy Wins</td>
+                <td>HBB Wins plus Proxy Δ.</td>
+              </tr>
+              <tr>
+                <td>Proxy Read</td>
+                <td>Offense proxy, defense proxy, turnovers, and FTA as the explanation layer.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section card">
+        <h2>Plain-English Flow</h2>
+        <div class="list">
+          <div class="metric">
+            <span class="muted">A</span>
+            <strong>Start with the teammate-neutral FMV salary estimate.</strong>
+          </div>
+          <div class="metric">
+            <span class="muted">B</span>
+            <strong>Convert that salary into wins-equivalent output.</strong>
+          </div>
+          <div class="metric">
+            <span class="muted">C</span>
+            <strong>Adjust the wins output for team context using HBB.</strong>
+          </div>
+          <div class="metric">
+            <span class="muted">D</span>
+            <strong>Apply the proxy delta as a visible correction term.</strong>
+          </div>
+          <div class="metric">
+            <span class="muted">E</span>
+            <strong>Show the proxy read separately so the arithmetic is auditable.</strong>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

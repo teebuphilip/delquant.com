@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DelQuant Heat Coaching Game Prep</title>
+    <style>
+      :root {
+        --bg: #0e1116;
+        --panel: #171b22;
+        --panel-2: #202631;
+        --text: #f3f5f8;
+        --muted: #aeb7c5;
+        --line: #303846;
+        --accent: #d84d4d;
+        --gold: #f2c45d;
+        --green: #67d08c;
+        --blue: #6aa7ff;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font: 14px/1.5 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      header {
+        padding: 30px 22px 20px;
+        background: #11151c;
+        border-bottom: 1px solid var(--line);
+      }
+
+      main {
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: 22px;
+      }
+
+      .wrap {
+        max-width: 1240px;
+        margin: 0 auto;
+      }
+
+      h1, h2, h3 { margin: 0; line-height: 1.15; letter-spacing: 0; }
+      h1 { font-size: clamp(28px, 4vw, 44px); }
+      h2 { font-size: 20px; margin-bottom: 12px; }
+      h3 { font-size: 15px; margin-bottom: 8px; }
+      p { margin: 8px 0 0; color: var(--muted); }
+
+      .eyebrow {
+        color: var(--gold);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 14px;
+      }
+
+      .card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 15px;
+      }
+
+      .span-3 { grid-column: span 3; }
+      .span-4 { grid-column: span 4; }
+      .span-6 { grid-column: span 6; }
+      .span-8 { grid-column: span 8; }
+      .span-12 { grid-column: span 12; }
+
+      .tabs, .opponent-tabs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 0 0 16px;
+      }
+
+      button {
+        border: 1px solid var(--line);
+        background: var(--panel);
+        color: var(--text);
+        border-radius: 6px;
+        padding: 8px 12px;
+        cursor: pointer;
+        font: inherit;
+      }
+
+      button.active {
+        background: var(--accent);
+        border-color: var(--accent);
+      }
+
+      .metric {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 12px;
+        border-bottom: 1px solid var(--line);
+        padding: 8px 0;
+      }
+
+      .metric:last-child { border-bottom: 0; }
+      .metric strong { font-size: 24px; }
+      .muted { color: var(--muted); }
+      .small { font-size: 12px; }
+
+      .tag {
+        display: inline-block;
+        padding: 3px 7px;
+        margin: 2px 3px 2px 0;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: var(--panel-2);
+        color: var(--text);
+        font-size: 12px;
+        white-space: nowrap;
+      }
+
+      .tag.good { color: var(--green); }
+      .tag.warn { color: var(--gold); }
+      .tag.blue { color: var(--blue); }
+
+      .insight {
+        border-left: 3px solid var(--gold);
+        padding-left: 10px;
+        margin-top: 10px;
+        color: var(--text);
+      }
+
+      .support-note {
+        color: var(--muted);
+        font-size: 12px;
+        margin-top: 8px;
+      }
+
+      .callout {
+        padding: 12px 14px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel-2);
+        color: var(--text);
+        margin-bottom: 14px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      th, td {
+        text-align: left;
+        border-bottom: 1px solid var(--line);
+        padding: 9px 8px;
+        vertical-align: top;
+      }
+
+      th {
+        color: var(--muted);
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: .04em;
+        background: #141922;
+        position: sticky;
+        top: 0;
+      }
+
+      .table-wrap {
+        overflow: auto;
+        max-height: 600px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+      }
+
+      .player-card {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr 1.8fr;
+        gap: 14px;
+        border-top: 1px solid var(--line);
+        padding: 14px 0;
+      }
+
+      .player-card:first-child {
+        border-top: 0;
+        padding-top: 0;
+      }
+
+      .trait-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        margin-top: 8px;
+      }
+
+      .trait {
+        background: var(--panel-2);
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        padding: 8px;
+      }
+
+      .trait strong {
+        display: block;
+        font-size: 18px;
+      }
+
+      .delta.plus { color: var(--green); }
+      .delta.minus { color: #ff8c8c; }
+      .delta.neutral { color: var(--muted); }
+
+      .hidden { display: none; }
+
+      @media (max-width: 900px) {
+        .span-3, .span-4, .span-6, .span-8 { grid-column: span 12; }
+        .player-card { grid-template-columns: 1fr; }
+        main { padding: 16px; }
+        header { padding: 26px 16px 18px; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <div class="eyebrow">DelQuant Private Coaching Demo</div>
+        <h1>Heat Game Prep: Eastern Semis Stress Test</h1>
+        <p>Current Heat archetypes versus NYK, PHI, DET, CLE, and BOS, plus team-top-7 compare, archetype fit, and a 2026-27 scenario view.</p>
+      </div>
+    </header>
+
+    <main>
+      <div class="tabs" role="tablist">
+        <button class="active" data-tab="prep">Opponent Prep</button>
+        <button data-tab="compare">Team Compare</button>
+        <button data-tab="fit">Archetype Fit</button>
+        <button data-tab="projection">2026-27 Projection</button>
+        <button data-tab="method">Method Note</button>
+      </div>
+
+      <section id="prep" class="tab-panel">
+        <div class="opponent-tabs" id="opponent-tabs"></div>
+        <div class="grid">
+          <div class="card span-12" id="prep-headline"></div>
+          <div class="card span-4">
+            <h2 id="opponent-title">Opponent</h2>
+            <p id="opponent-read"></p>
+            <div style="margin-top:12px;" id="opponent-metrics"></div>
+          </div>
+          <div class="card span-8">
+            <h2>Rotation Role Cards</h2>
+            <p class="small">Each card starts with the coaching read. Numbers are supporting evidence: 54-archetype role, HBB trait shape, shrunk matchup deltas, and per-36 role translation for low-minute players.</p>
+            <div id="player-cards" style="margin-top:14px;"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="compare" class="tab-panel hidden">
+        <div class="grid">
+          <div class="card span-12" id="compare-headline"></div>
+          <div class="card span-4">
+            <h2>What This Shows</h2>
+            <p id="compare-read"></p>
+            <p class="support-note">The comparison uses the current top-7 groups for each team, then compares the Heat against each opponent and the league top-7 average.</p>
+          </div>
+          <div class="card span-8">
+            <h2>Top-7 Team Comparison</h2>
+            <div class="table-wrap"><table id="compare-table"></table></div>
+          </div>
+          <div class="card span-12">
+            <h2>Heat Baseline</h2>
+            <div id="heat-baseline-chips"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="fit" class="tab-panel hidden">
+        <div class="card" id="fit-headline"></div>
+        <div class="card" style="margin-top:14px;">
+          <h2>Archetype Fit By Opponent</h2>
+          <p class="small">Positive fit archetypes are the types that travel. Stress archetypes are the ones that get squeezed.</p>
+          <div class="table-wrap"><table id="fit-table"></table></div>
+        </div>
+      </section>
+
+      <section id="projection" class="tab-panel hidden">
+        <div class="grid">
+          <div class="card span-12" id="projection-headline"></div>
+          <div class="card span-4">
+            <h2>What This Is</h2>
+            <p id="projection-read"></p>
+            <p class="support-note">This is a scenario layer. Games played are included because availability changes the season.</p>
+          </div>
+          <div class="card span-8">
+            <h2>2026-27 Top-7 Scenario</h2>
+            <div class="table-wrap"><table id="projection-table"></table></div>
+          </div>
+          <div class="card span-12">
+            <h2>Scenario Totals</h2>
+            <div id="projection-totals"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="method" class="tab-panel hidden">
+        <div class="grid">
+          <div class="card span-4">
+            <h2>54 Archetypes</h2>
+            <p id="method-archetypes"></p>
+          </div>
+          <div class="card span-4">
+            <h2>Championship DNA</h2>
+            <p id="method-dna"></p>
+          </div>
+          <div class="card span-4">
+            <h2>HBB</h2>
+            <p><strong>Motor:</strong> <span id="method-motor"></span></p>
+            <p><strong>Decision:</strong> <span id="method-decision"></span></p>
+            <p><strong>Pressure:</strong> <span id="method-pressure"></span></p>
+          </div>
+          <div class="card span-12">
+            <h2>IP / Use Note</h2>
+            <p id="method-note"></p>
+            <p id="ip-note"></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const state = { payload: null, opponent: null };
+
+      const fmt = (value, digits = 1) => {
+        if (value === null || value === undefined || Number.isNaN(Number(value))) return "--";
+        return Number(value).toFixed(digits);
+      };
+
+      const deltaClass = (value) => {
+        if (value === null || value === undefined) return "neutral";
+        if (Number(value) > 0.15) return "plus";
+        if (Number(value) < -0.15) return "minus";
+        return "neutral";
+      };
+
+      const delta = (value, digits = 1) => {
+        if (value === null || value === undefined) return "--";
+        const number = Number(value);
+        const prefix = number > 0 ? "+" : "";
+        return `${prefix}${number.toFixed(digits)}`;
+      };
+
+      function setTab(tabName) {
+        document.querySelectorAll(".tabs button").forEach((button) => {
+          button.classList.toggle("active", button.dataset.tab === tabName);
+        });
+        document.querySelectorAll(".tab-panel").forEach((panel) => {
+          panel.classList.toggle("hidden", panel.id !== tabName);
+        });
+      }
+
+      function setOpponent(code) {
+        state.opponent = code;
+        document.querySelectorAll(".opponent-tabs button").forEach((button) => {
+          button.classList.toggle("active", button.dataset.opponent === code);
+        });
+        renderOpponent();
+      }
+
+      function renderOpponentTabs() {
+        const root = document.getElementById("opponent-tabs");
+        root.innerHTML = state.payload.opponents.map((item) => (
+          `<button data-opponent="${item.code}">${item.code}</button>`
+        )).join("");
+        root.querySelectorAll("button").forEach((button) => {
+          button.addEventListener("click", () => setOpponent(button.dataset.opponent));
+        });
+      }
+
+      function renderOpponent() {
+        const item = state.payload.opponents.find((candidate) => candidate.code === state.opponent);
+        if (!item) return;
+        const summary = item.summary;
+        document.getElementById("prep-headline").innerHTML = `<div class="callout">${summary.headline || summary.game_prep_read}</div>`;
+        document.getElementById("opponent-title").textContent = `${item.code}: ${item.name}`;
+        document.getElementById("opponent-read").textContent = summary.game_prep_read;
+        document.getElementById("opponent-metrics").innerHTML = `
+          <div class="metric"><span>Player rows</span><strong>${summary.player_count}</strong></div>
+          <div class="metric"><span>Usable/strong samples</span><strong>${summary.usable_or_strong_samples}</strong></div>
+          <div class="metric"><span>Avg PTS delta</span><strong class="delta ${deltaClass(summary.average_deltas.points)}">${delta(summary.average_deltas.points)}</strong></div>
+          <div class="metric"><span>Avg AST delta</span><strong class="delta ${deltaClass(summary.average_deltas.assists)}">${delta(summary.average_deltas.assists)}</strong></div>
+        `;
+        document.getElementById("player-cards").innerHTML = item.players.map(renderPlayerCard).join("");
+      }
+
+      function traitBlock(label, value) {
+        return `<div class="trait"><span class="small muted">${label}</span><strong>${value ?? "--"}</strong></div>`;
+      }
+
+      function renderPlayerCard(player) {
+        const stats = player.stats;
+        const per36 = player.per36 || {};
+        const archetype = player.archetype || {};
+        const traits = player.competitive_traits || {};
+        const minutesContext = player.minutes_context || {};
+        return `
+          <div class="player-card">
+            <div>
+              <h3>${player.player_name}</h3>
+              <span class="tag blue">${player.position || "--"}</span>
+              <span class="tag">${archetype.id || "archetype pending"} / 54</span>
+              <span class="tag ${player.confidence_bucket === "strong" ? "good" : "warn"}">${player.confidence_bucket || "thin"} sample</span>
+              <span class="tag">${minutesContext.label || "minutes pending"}</span>
+              <p class="insight">${player.insight_read || player.coaching_note}</p>
+              <p class="support-note">${player.role_translation || ""}</p>
+              <p class="small">${archetype.core_stat_block || "No current top-seven archetype card."}</p>
+            </div>
+            <div>
+              <h3>HBB</h3>
+              <div class="trait-grid">
+                ${traitBlock("Motor", traits.motor)}
+                ${traitBlock("Decision", traits.decision)}
+                ${traitBlock("Pressure", traits.pressure)}
+              </div>
+              <p class="support-note">${minutesContext.note || ""}</p>
+            </div>
+            <div>
+              <h3>Evidence</h3>
+              <div class="small muted">Baseline / per-36</div>
+              <span class="tag">MIN ${fmt(stats.minutes.baseline)}</span>
+              <span class="tag">PTS ${fmt(stats.points.baseline)} / ${fmt(per36.points)}</span>
+              <span class="tag">REB ${fmt(stats.rebounds.baseline)} / ${fmt(per36.rebounds)}</span>
+              <span class="tag">AST ${fmt(stats.assists.baseline)} / ${fmt(per36.assists)}</span>
+              <span class="tag">3PM ${fmt(stats.threes.baseline)} / ${fmt(per36.threes)}</span>
+              <div class="small muted" style="margin-top:8px;">Opponent deltas</div>
+              <span class="tag">PTS <span class="delta ${deltaClass(stats.points.delta)}">${delta(stats.points.delta)}</span></span>
+              <span class="tag">REB <span class="delta ${deltaClass(stats.rebounds.delta)}">${delta(stats.rebounds.delta)}</span></span>
+              <span class="tag">AST <span class="delta ${deltaClass(stats.assists.delta)}">${delta(stats.assists.delta)}</span></span>
+              <span class="tag">3PM <span class="delta ${deltaClass(stats.threes.delta)}">${delta(stats.threes.delta)}</span></span>
+              <span class="tag">TO <span class="delta ${deltaClass(-1 * (stats.turnovers.delta || 0))}">${delta(stats.turnovers.delta)}</span></span>
+              <p class="support-note">${player.coaching_note}</p>
+            </div>
+          </div>
+        `;
+      }
+
+      function chip(label, value) {
+        return `<span class="tag">${label} <span class="delta neutral">${value}</span></span>`;
+      }
+
+      function renderTeamComparison() {
+        const compare = state.payload.team_comparison;
+        document.getElementById("compare-headline").innerHTML = `<div class="callout">${compare.headline || compare.subtitle}</div>`;
+        document.getElementById("compare-read").textContent = compare.heat.read;
+        document.getElementById("heat-baseline-chips").innerHTML = `
+          ${chip("PTS", compare.heat.points)}
+          ${chip("REB", compare.heat.rebounds)}
+          ${chip("AST", compare.heat.assists)}
+          ${chip("STL", compare.heat.steals)}
+          ${chip("BLK", compare.heat.blocks)}
+          ${chip("3PM", compare.heat.threes)}
+          ${chip("Motor", compare.heat.motor)}
+          ${chip("Decision", compare.heat.decision)}
+          ${chip("Pressure", compare.heat.pressure)}
+          ${chip("Composite", compare.heat.composite)}
+        `;
+        const rows = compare.comparisons.map((row) => `
+          <tr>
+            <td><strong>${row.team_name || row.team}</strong><br><span class="small muted">${row.team}</span></td>
+            <td>${row.player_count}</td>
+            <td>${row.archetype_mix}</td>
+            <td>${row.points}</td>
+            <td>${row.assists}</td>
+            <td>${row.motor}</td>
+            <td class="delta ${deltaClass(row.gap_vs_heat.composite)}">${delta(row.gap_vs_heat.composite)}</td>
+            <td class="delta ${deltaClass(row.gap_vs_heat.decision)}">${delta(row.gap_vs_heat.decision)}</td>
+            <td class="delta ${deltaClass(row.gap_vs_heat.pressure)}">${delta(row.gap_vs_heat.pressure)}</td>
+            <td>${row.read}</td>
+          </tr>
+        `).join("");
+        document.getElementById("compare-table").innerHTML = `
+          <thead>
+            <tr>
+              <th>Group</th>
+              <th>Rows</th>
+              <th>Top-7 Mix</th>
+              <th>PTS</th>
+              <th>AST</th>
+              <th>Motor</th>
+              <th>Comp Gap</th>
+              <th>Dec Gap</th>
+              <th>Press Gap</th>
+              <th>Read</th>
+            </tr>
+          </thead>
+          <tbody>${rows}</tbody>
+        `;
+      }
+
+      function renderArchetypeFit() {
+        const fit = state.payload.archetype_fit;
+        document.getElementById("fit-headline").innerHTML = `<div class="callout">${fit.headline || fit.subtitle}</div>`;
+        const rows = fit.opponents.map((item) => `
+          <tr>
+            <td><strong>${item.opponent}</strong><br><span class="small muted">${item.opponent_name}</span></td>
+            <td>
+              ${item.best_fits.map((row) => `
+                <div class="support-note"><strong>${row.archetype}</strong> ${row.position} ${fmt(row.fit_score, 2)}</div>
+                <div class="small muted">${row.core_stat_block || ""}</div>
+                <div class="small muted">${row.read}</div>
+              `).join("")}
+            </td>
+            <td>
+              ${item.stress_fits.map((row) => `
+                <div class="support-note"><strong>${row.archetype}</strong> ${row.position} ${fmt(row.fit_score, 2)}</div>
+              `).join("")}
+            </td>
+            <td>${item.opponent_read}</td>
+          </tr>
+        `).join("");
+        document.getElementById("fit-table").innerHTML = `
+          <thead>
+            <tr>
+              <th>Opponent</th>
+              <th>Best Fit Types</th>
+              <th>Stress Types</th>
+              <th>Read</th>
+            </tr>
+          </thead>
+          <tbody>${rows}</tbody>
+        `;
+      }
+
+      function renderProjection() {
+        const projection = state.payload.projection_2026_27;
+        document.getElementById("projection-headline").innerHTML = `<div class="callout">${projection.headline || projection.subtitle}</div>`;
+        document.getElementById("projection-read").textContent = projection.subtitle;
+        const rows = projection.players.map((player) => `
+          <tr>
+            <td><strong>${player.player_name}</strong><br><span class="small muted">${player.position} ${player.age ?? "--"}</span></td>
+            <td>${player.archetype || "--"}</td>
+            <td>${player.games_played}</td>
+            <td>${fmt(player.minutes, 1)}</td>
+            <td>${fmt(player.per_game.points, 1)}</td>
+            <td>${fmt(player.per_game.rebounds, 1)}</td>
+            <td>${fmt(player.per_game.assists, 1)}</td>
+            <td>${fmt(player.per_game.steals, 1)}</td>
+            <td>${fmt(player.per_game.blocks, 1)}</td>
+            <td>${fmt(player.per_game.threes, 1)}</td>
+            <td>${fmt(player.season_totals.points, 1)}</td>
+            <td>${player.availability_note}</td>
+          </tr>
+        `).join("");
+        document.getElementById("projection-table").innerHTML = `
+          <thead>
+            <tr>
+              <th>Player</th>
+              <th>Archetype</th>
+              <th>Games</th>
+              <th>Minutes</th>
+              <th>PTS/G</th>
+              <th>REB/G</th>
+              <th>AST/G</th>
+              <th>STL/G</th>
+              <th>BLK/G</th>
+              <th>3PM/G</th>
+              <th>PTS Season</th>
+              <th>Read</th>
+            </tr>
+          </thead>
+          <tbody>${rows}</tbody>
+        `;
+        const totals = projection.team_totals;
+        document.getElementById("projection-totals").innerHTML = `
+          <span class="tag">PTS ${totals.points}</span>
+          <span class="tag">REB ${totals.rebounds}</span>
+          <span class="tag">AST ${totals.assists}</span>
+          <span class="tag">STL ${totals.steals}</span>
+          <span class="tag">BLK ${totals.blocks}</span>
+          <span class="tag">3PM ${totals.threes}</span>
+        `;
+      }
+
+      function renderMethod() {
+        const framework = state.payload.framework;
+        document.getElementById("method-archetypes").textContent = framework.archetypes;
+        document.getElementById("method-archetypes").textContent += ` ${framework.archetype_usage || ""}`;
+        document.getElementById("method-dna").textContent = framework.championship_dna;
+        document.getElementById("method-motor").textContent = framework.hbb.motor;
+        document.getElementById("method-decision").textContent = framework.hbb.decision;
+        document.getElementById("method-pressure").textContent = framework.hbb.pressure;
+        document.getElementById("method-note").textContent = state.payload.meta.method_note;
+        document.getElementById("ip-note").textContent = `${state.payload.meta.ip_note} ${framework.per36_note || ""}`;
+      }
+
+      async function init() {
+        const response = await fetch("heat_coaching_game_prep.json");
+        state.payload = await response.json();
+        renderOpponentTabs();
+        renderTeamComparison();
+        renderArchetypeFit();
+        renderProjection();
+        renderMethod();
+        setOpponent(state.payload.opponents[0].code);
+        document.querySelectorAll(".tabs button").forEach((button) => {
+          button.addEventListener("click", () => setTab(button.dataset.tab));
+        });
+      }
+
+      init();
+    </script>
+  </body>
+</html>

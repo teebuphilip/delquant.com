@@ -1,0 +1,321 @@
+{
+  "input_path": "./data/dbb2_flat_file.csv",
+  "output_dir": "./reports/basketball_ops/context_neutral",
+  "player_rows": 505,
+  "teams": 30,
+  "stat_fields": [
+    "PTS",
+    "REB",
+    "AST",
+    "STL",
+    "BLK",
+    "TO",
+    "FG_PCT",
+    "FT_PCT",
+    "THREE_PM",
+    "USG_PCT"
+  ],
+  "blend": 0.5,
+  "team_summary": [
+    {
+      "team": "ATL",
+      "player_count": 18,
+      "mean_pts": 9.143944444444445,
+      "mean_context_pts": 11.672144444444445,
+      "mean_ast": 2.035888888888889,
+      "mean_context_ast": 2.648388888888889,
+      "mean_usg": 0.4212388888888889,
+      "mean_context_usg": 0.44923888888888885
+    },
+    {
+      "team": "BKN",
+      "player_count": 18,
+      "mean_pts": 8.809833333333334,
+      "mean_context_pts": 11.505033333333333,
+      "mean_ast": 1.9996111111111112,
+      "mean_context_ast": 2.630211111111111,
+      "mean_usg": 0.41187222222222225,
+      "mean_context_usg": 0.4445722222222222
+    },
+    {
+      "team": "BOS",
+      "player_count": 13,
+      "mean_pts": 10.554846153846153,
+      "mean_context_pts": 12.377546153846152,
+      "mean_ast": 2.3656923076923078,
+      "mean_context_ast": 2.8132923076923078,
+      "mean_usg": 0.4291384615384616,
+      "mean_context_usg": 0.45323846153846153
+    },
+    {
+      "team": "CHA",
+      "player_count": 17,
+      "mean_pts": 8.990764705882352,
+      "mean_context_pts": 11.595564705882353,
+      "mean_ast": 1.9743529411764706,
+      "mean_context_ast": 2.617552941176471,
+      "mean_usg": 0.4224823529411765,
+      "mean_context_usg": 0.44988235294117646
+    },
+    {
+      "team": "CHI",
+      "player_count": 17,
+      "mean_pts": 8.785941176470587,
+      "mean_context_pts": 11.493141176470587,
+      "mean_ast": 2.0900588235294117,
+      "mean_context_ast": 2.6754588235294117,
+      "mean_usg": 0.4102058823529412,
+      "mean_context_usg": 0.44370588235294117
+    },
+    {
+      "team": "CLE",
+      "player_count": 17,
+      "mean_pts": 9.614411764705881,
+      "mean_context_pts": 11.90731176470588,
+      "mean_ast": 2.4610588235294117,
+      "mean_context_ast": 2.860958823529412,
+      "mean_usg": 0.4022529411764706,
+      "mean_context_usg": 0.43975294117647057
+    },
+    {
+      "team": "DAL",
+      "player_count": 20,
+      "mean_pts": 9.4712,
+      "mean_context_pts": 11.835795000000001,
+      "mean_ast": 2.088,
+      "mean_context_ast": 2.6744,
+      "mean_usg": 0.41499499999999995,
+      "mean_context_usg": 0.446195
+    },
+    {
+      "team": "DEN",
+      "player_count": 18,
+      "mean_pts": 9.484444444444444,
+      "mean_context_pts": 11.842344444444445,
+      "mean_ast": 2.3794444444444443,
+      "mean_context_ast": 2.8201444444444443,
+      "mean_usg": 0.41878333333333334,
+      "mean_context_usg": 0.44808333333333333
+    },
+    {
+      "team": "DET",
+      "player_count": 16,
+      "mean_pts": 8.7513125,
+      "mean_context_pts": 11.4758125,
+      "mean_ast": 2.12,
+      "mean_context_ast": 2.6904,
+      "mean_usg": 0.41046875,
+      "mean_context_usg": 0.44386875
+    },
+    {
+      "team": "GSW",
+      "player_count": 18,
+      "mean_pts": 9.445555555555556,
+      "mean_context_pts": 11.822955555555556,
+      "mean_ast": 2.3485555555555555,
+      "mean_context_ast": 2.8046555555555557,
+      "mean_usg": 0.39902777777777776,
+      "mean_context_usg": 0.4381277777777778
+    },
+    {
+      "team": "HOU",
+      "player_count": 15,
+      "mean_pts": 8.824733333333334,
+      "mean_context_pts": 11.512533333333332,
+      "mean_ast": 1.8478666666666668,
+      "mean_context_ast": 2.5543666666666667,
+      "mean_usg": 0.4135466666666667,
+      "mean_context_usg": 0.44544666666666666
+    },
+    {
+      "team": "IND",
+      "player_count": 18,
+      "mean_pts": 9.299555555555555,
+      "mean_context_pts": 11.749955555555555,
+      "mean_ast": 2.2429444444444444,
+      "mean_context_ast": 2.7518444444444445,
+      "mean_usg": 0.41789444444444446,
+      "mean_context_usg": 0.4475944444444444
+    },
+    {
+      "team": "LAC",
+      "player_count": 16,
+      "mean_pts": 9.250625,
+      "mean_context_pts": 11.725425,
+      "mean_ast": 2.192375,
+      "mean_context_ast": 2.726575,
+      "mean_usg": 0.4134875,
+      "mean_context_usg": 0.4453875
+    },
+    {
+      "team": "LAL",
+      "player_count": 17,
+      "mean_pts": 9.564941176470587,
+      "mean_context_pts": 11.882641176470587,
+      "mean_ast": 2.2321764705882354,
+      "mean_context_ast": 2.7464764705882354,
+      "mean_usg": 0.43051764705882356,
+      "mean_context_usg": 0.45391764705882354
+    },
+    {
+      "team": "MEM",
+      "player_count": 19,
+      "mean_pts": 9.42378947368421,
+      "mean_context_pts": 11.81208947368421,
+      "mean_ast": 2.3693684210526316,
+      "mean_context_ast": 2.8150684210526316,
+      "mean_usg": 0.410321052631579,
+      "mean_context_usg": 0.443821052631579
+    },
+    {
+      "team": "MIA",
+      "player_count": 15,
+      "mean_pts": 10.5542,
+      "mean_context_pts": 12.37722,
+      "mean_ast": 2.4346,
+      "mean_context_ast": 2.8477,
+      "mean_usg": 0.4400866666666667,
+      "mean_context_usg": 0.4586866666666667
+    },
+    {
+      "team": "MIL",
+      "player_count": 18,
+      "mean_pts": 9.940999999999999,
+      "mean_context_pts": 12.07065,
+      "mean_ast": 2.2494444444444444,
+      "mean_context_ast": 2.7551444444444444,
+      "mean_usg": 0.41657777777777777,
+      "mean_context_usg": 0.4469777777777778
+    },
+    {
+      "team": "MIN",
+      "player_count": 16,
+      "mean_pts": 9.3915,
+      "mean_context_pts": 11.7959,
+      "mean_ast": 2.197875,
+      "mean_context_ast": 2.729375,
+      "mean_usg": 0.42216875,
+      "mean_context_usg": 0.44976875
+    },
+    {
+      "team": "NOP",
+      "player_count": 15,
+      "mean_pts": 10.4724,
+      "mean_context_pts": 12.336386666666668,
+      "mean_ast": 2.329333333333333,
+      "mean_context_ast": 2.7950333333333335,
+      "mean_usg": 0.4297066666666666,
+      "mean_context_usg": 0.45350666666666667
+    },
+    {
+      "team": "NYK",
+      "player_count": 17,
+      "mean_pts": 9.263352941176471,
+      "mean_context_pts": 11.73185294117647,
+      "mean_ast": 2.2386470588235294,
+      "mean_context_ast": 2.7497470588235293,
+      "mean_usg": 0.4239882352941176,
+      "mean_context_usg": 0.4506882352941176
+    },
+    {
+      "team": "OKC",
+      "player_count": 16,
+      "mean_pts": 10.152375,
+      "mean_context_pts": 12.176375,
+      "mean_ast": 2.4305,
+      "mean_context_ast": 2.84569375,
+      "mean_usg": 0.421575,
+      "mean_context_usg": 0.449475
+    },
+    {
+      "team": "ORL",
+      "player_count": 15,
+      "mean_pts": 9.959933333333334,
+      "mean_context_pts": 12.080133333333333,
+      "mean_ast": 2.1512666666666664,
+      "mean_context_ast": 2.7060666666666666,
+      "mean_usg": 0.43374666666666667,
+      "mean_context_usg": 0.45554666666666666
+    },
+    {
+      "team": "PHI",
+      "player_count": 18,
+      "mean_pts": 9.916666666666666,
+      "mean_context_pts": 12.058466666666668,
+      "mean_ast": 2.145888888888889,
+      "mean_context_ast": 2.703388888888889,
+      "mean_usg": 0.41952222222222224,
+      "mean_context_usg": 0.4484222222222222
+    },
+    {
+      "team": "PHX",
+      "player_count": 17,
+      "mean_pts": 8.88535294117647,
+      "mean_context_pts": 11.54285294117647,
+      "mean_ast": 1.9868235294117649,
+      "mean_context_ast": 2.6238235294117644,
+      "mean_usg": 0.41646470588235296,
+      "mean_context_usg": 0.44686470588235294
+    },
+    {
+      "team": "POR",
+      "player_count": 18,
+      "mean_pts": 9.020555555555555,
+      "mean_context_pts": 11.610455555555555,
+      "mean_ast": 2.1012222222222223,
+      "mean_context_ast": 2.6810222222222224,
+      "mean_usg": 0.43099444444444446,
+      "mean_context_usg": 0.4541944444444444
+    },
+    {
+      "team": "SAC",
+      "player_count": 16,
+      "mean_pts": 11.1313125,
+      "mean_context_pts": 12.6658125,
+      "mean_ast": 2.650875,
+      "mean_context_ast": 2.955875,
+      "mean_usg": 0.41033125,
+      "mean_context_usg": 0.44383125
+    },
+    {
+      "team": "SAS",
+      "player_count": 16,
+      "mean_pts": 8.8863125,
+      "mean_context_pts": 11.5433125,
+      "mean_ast": 2.0776875,
+      "mean_context_ast": 2.6692875,
+      "mean_usg": 0.421575,
+      "mean_context_usg": 0.449475
+    },
+    {
+      "team": "TOR",
+      "player_count": 16,
+      "mean_pts": 9.236749999999999,
+      "mean_context_pts": 11.71855,
+      "mean_ast": 2.18275,
+      "mean_context_ast": 2.72175,
+      "mean_usg": 0.43621875,
+      "mean_context_usg": 0.45671875
+    },
+    {
+      "team": "UTA",
+      "player_count": 18,
+      "mean_pts": 11.249888888888888,
+      "mean_context_pts": 12.72508888888889,
+      "mean_ast": 2.645388888888889,
+      "mean_context_ast": 2.953088888888889,
+      "mean_usg": 0.4321166666666667,
+      "mean_context_usg": 0.4547166666666667
+    },
+    {
+      "team": "WAS",
+      "player_count": 17,
+      "mean_pts": 10.083470588235295,
+      "mean_context_pts": 12.141870588235294,
+      "mean_ast": 2.2964117647058826,
+      "mean_context_ast": 2.7786117647058823,
+      "mean_usg": 0.42597058823529416,
+      "mean_context_usg": 0.4516705882352941
+    }
+  ]
+}

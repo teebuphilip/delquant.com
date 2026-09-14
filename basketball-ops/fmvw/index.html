@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DelQuant Basketball Ops FMVW</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body data-app="fmvw">
+    <header>
+      <div class="wrap">
+        <div class="eyebrow">DelQuant Basketball Ops</div>
+        <h1>FMVW</h1>
+        <p>Upload FMV output and bridge market value into a wins-equivalent estimate using a replacement baseline and a wins calibration scale.</p>
+        <div class="subline">
+          <span class="chip">Market value in</span>
+          <span class="chip">Wins-equivalent out</span>
+          <span class="chip">Configurable bridge</span>
+          <span class="chip">No backend</span>
+        </div>
+      </div>
+    </header>
+
+    <main data-app-root data-sample="../data/mini_fmv_player_values.csv">
+      <div class="split">
+        <section class="card">
+          <h2>Controls</h2>
+          <div class="controls">
+            <div class="field span-6">
+              <label>Load FMV file</label>
+              <input data-file-input type="file" accept=".csv,.json" />
+            </div>
+            <div class="field span-3">
+              <label>Replacement salary</label>
+              <input data-replacement-salary type="number" step="100000" value="2000000" />
+            </div>
+            <div class="field span-3">
+              <label>$ per win</label>
+              <input data-salary-per-win type="number" step="100000" value="4000000" />
+            </div>
+          </div>
+          <div class="toolbar" style="margin-top: 14px;">
+            <button class="ghost" data-load-demo>Load Demo FMV</button>
+            <button class="primary" data-run>Run FMVW</button>
+            <button data-download-csv disabled>Download CSV</button>
+            <button data-download-json disabled>Download JSON</button>
+          </div>
+          <p class="small muted" data-status style="margin-top: 12px;">Waiting for FMV input.</p>
+        </section>
+
+        <aside class="card">
+          <h2>Summary</h2>
+          <div data-summary class="list"></div>
+          <p class="small muted" style="margin-top: 14px;">This bridge is the first cut of the team-value-to-wins layer. It stays separate from FMV so the market price and the wins translation do not blur together.</p>
+        </aside>
+      </div>
+
+      <section class="section card">
+        <div class="table-actions">
+          <div>
+            <h2 style="margin-bottom: 4px;">Bridge Output</h2>
+            <p class="small muted">Sorted by FMV salary-equivalent.</p>
+            <p class="small muted" data-proxy-callout style="margin-top: 8px;">Offense / defense proxy read will appear here.</p>
+          </div>
+          <div class="field" style="min-width: 180px;">
+            <label>Rows shown</label>
+            <input data-view-limit type="number" min="10" step="5" value="50" />
+          </div>
+        </div>
+        <div class="table-wrap">
+          <div data-table></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="../app.js"></script>
+  </body>
+</html>

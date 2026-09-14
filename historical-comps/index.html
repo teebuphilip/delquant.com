@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="DelQuant historical comps lets you search NBA players and unlock unlimited comparable seasons with a monthly subscription."
+    />
+    <title>DelQuant | Historical Comps</title>
+    <link rel="stylesheet" href="../site.css" />
+    <script defer src="./app.js"></script>
+  </head>
+  <body class="historical-comps-page">
+    <div class="noise"></div>
+    <header class="hero comp-hero">
+      <div class="shell">
+        <div class="topline page-topline">
+          <span class="brand">DelQuant</span>
+          <nav class="site-nav" aria-label="Primary">
+            <a href="../">Home</a>
+            <a href="../b2b/">B2B</a>
+            <a href="../methodology/">Methodology</a>
+            <a href="../pricing/">Pricing</a>
+            <a href="../contact/">Contact</a>
+          </nav>
+        </div>
+
+        <div class="hero-grid comp-hero-grid">
+          <section class="hero-copy comp-hero-copy">
+            <p class="eyebrow">Consumer product</p>
+            <h1>Historical comps, unlimited.</h1>
+            <p class="lede">
+              Search any NBA player, preview the closest historical seasons, and unlock the full list for a monthly
+              subscription.
+            </p>
+            <div class="cta-row">
+              <a class="button button-primary" href="#search">Search comps</a>
+              <button class="button button-secondary" id="subscribe-button" type="button">Go to Stripe</button>
+            </div>
+            <div class="cta-row subtle">
+              <a href="../">B2B front door</a>
+              <a href="../pricing/">Pricing</a>
+              <a href="#faq">How it works</a>
+            </div>
+          </section>
+
+          <aside class="hero-panel comp-panel">
+            <div class="stat">
+              <span class="stat-label">Monthly price</span>
+              <strong>$6.99</strong>
+            </div>
+            <div class="stat">
+              <span class="stat-label">Access model</span>
+              <strong>Stripe checkout + hashed entitlement</strong>
+            </div>
+            <div class="stat">
+              <span class="stat-label">What you get</span>
+              <strong>Unlimited historical comparables</strong>
+            </div>
+            <div class="stat">
+              <span class="stat-label">Stored in DelQuant</span>
+              <strong>No cards, no raw billing data</strong>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </header>
+
+    <main class="shell comp-shell">
+      <section class="section" id="search">
+        <div class="search-grid">
+          <article class="card search-card">
+            <p class="eyebrow">Search</p>
+            <h2>Find a player.</h2>
+            <p class="lede compact">
+              Search by player name or player id. You will see a preview first, then the full historical family if your
+              token is active.
+            </p>
+            <label class="field-label" for="search-input">Player</label>
+            <div class="input-row">
+              <input id="search-input" class="text-input" type="search" placeholder="Chris Webber" />
+              <button class="button button-primary" id="search-button" type="button">Search</button>
+            </div>
+            <p class="inline-note" id="search-status">Enter a player name to start.</p>
+            <div class="filters-grid">
+              <div class="filter-group">
+                <label class="field-label" for="position-filter">Comp position</label>
+                <select id="position-filter" class="text-input">
+                  <option value="">All positions</option>
+                  <option value="PG">PG</option>
+                  <option value="SG">SG</option>
+                  <option value="SF">SF</option>
+                  <option value="PF">PF</option>
+                  <option value="C">C</option>
+                </select>
+              </div>
+              <div class="filter-group">
+                <label class="field-label" for="era-filter">Era</label>
+                <select id="era-filter" class="text-input">
+                  <option value="">All eras</option>
+                  <option value="1990s">1990s</option>
+                  <option value="2000s">2000s</option>
+                  <option value="2010s">2010s</option>
+                  <option value="2020s">2020s</option>
+                </select>
+              </div>
+              <div class="filter-group">
+                <label class="field-label" for="similarity-filter">Min similarity</label>
+                <input id="similarity-filter" class="text-input" type="number" min="0" max="1" step="0.01" value="0" />
+              </div>
+              <div class="filter-group filter-actions">
+                <label class="field-label" for="reset-filters">Actions</label>
+                <button class="button button-secondary" id="reset-filters" type="button">Reset filters</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card access-card">
+            <p class="eyebrow">Unlock</p>
+            <h2>Claim access after checkout.</h2>
+            <p class="lede compact">
+              Stripe returns you here after checkout. DelQuant checks your signed session cookie and unlocks the full
+              comp list automatically.
+            </p>
+            <div class="cta-row">
+              <button class="button button-primary" id="refresh-button" type="button">Refresh access</button>
+            </div>
+            <p class="inline-note" id="access-status">No active session loaded.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section comp-layout">
+        <article class="card results-card">
+          <div class="section-head compact-head">
+            <p class="eyebrow">Matches</p>
+            <h2>Search results</h2>
+          </div>
+          <div id="results" class="results-list">
+            <div class="empty-state">Search for a player to see matches.</div>
+          </div>
+        </article>
+
+        <article class="card detail-card">
+          <div class="section-head compact-head">
+            <p class="eyebrow">Player view</p>
+            <h2>Historical comp card</h2>
+          </div>
+          <div id="detail" class="detail-state">
+            <div class="empty-state">Pick a player result to load the full card.</div>
+          </div>
+        </article>
+      </section>
+
+      <section class="section" id="faq">
+        <div class="split">
+          <article class="card prose">
+            <h3>What is included?</h3>
+            <p>Unlimited historical comparables for the current player library, with preview access for everyone.</p>
+          </article>
+          <article class="card prose">
+            <h3>What is not included?</h3>
+            <p>Card storage, raw billing data, and any of the B2B engine surfaces. This page is a consumer layer only.</p>
+          </article>
+          <article class="card prose">
+            <h3>Are there refunds?</h3>
+            <p>No refunds are offered on consumer subscriptions unless required by law. Please review the preview before subscribing.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="shell footer-inner">
+        <span>DelQuant Historical Comps</span>
+        <span>Monthly subscription and preview flow</span>
+      </div>
+    </footer>
+  </body>
+</html>

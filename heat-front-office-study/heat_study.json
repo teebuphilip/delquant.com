@@ -1,0 +1,4211 @@
+{
+  "meta": {
+    "title": "How Miami Keeps Creating Value",
+    "subtitle": "A DelQuant roster construction study, 1995-present",
+    "team": "MIA",
+    "season_count": 31,
+    "player_profile_count": 21,
+    "method_note": "DelQuant maps player seasons into functional archetypes, studies 31 seasons of roster construction, and summarizes position-relative competitive trait outputs. This demo exposes curated outputs only; model internals, formulas, and scoring weights are intentionally withheld."
+  },
+  "framework": {
+    "archetypes": "54 functional player archetypes derived from historical production shape.",
+    "championship_dna": "A 31-season study of which archetype combinations and player types translate into playoff outcomes.",
+    "competitive_traits": {
+      "motor": "Heart proxy: availability, rebounding, and defensive activity signals.",
+      "decision": "Brains proxy: creation, efficiency, and mistake-control signals.",
+      "pressure": "Balls proxy: scoring responsibility and shot-pressure signals."
+    },
+    "value_lens": {
+      "value_acquisition": "Known production acquired at a market or premium cost.",
+      "value_creation": "Surplus value created through role fit, development, or context unlock.",
+      "internal_development": "Drafted or developed player whose role value compounds inside the system.",
+      "role_fit": "Useful contributor whose value depends on fit inside the roster architecture."
+    }
+  },
+  "era_summary": [
+    {
+      "era": "Riley/Mourning Defensive Identity",
+      "seasons": "1995-96 to 2003-04",
+      "season_count": 9,
+      "avg_wins": 44.0,
+      "playoff_seasons": 7,
+      "finals": 0,
+      "championships": 0,
+      "avg_hbb": {
+        "motor": 50.7,
+        "decision": 46.8,
+        "pressure": 48.9
+      }
+    },
+    {
+      "era": "Wade/Shaq Title Construction",
+      "seasons": "2004-05 to 2007-08",
+      "season_count": 4,
+      "avg_wins": 42.5,
+      "playoff_seasons": 3,
+      "finals": 1,
+      "championships": 1,
+      "avg_hbb": {
+        "motor": 49.0,
+        "decision": 47.5,
+        "pressure": 48.8
+      }
+    },
+    {
+      "era": "Wade Bridge Era",
+      "seasons": "2008-09 to 2010-11",
+      "season_count": 3,
+      "avg_wins": 49.3,
+      "playoff_seasons": 3,
+      "finals": 1,
+      "championships": 0,
+      "avg_hbb": {
+        "motor": 50.5,
+        "decision": 48.2,
+        "pressure": 46.6
+      }
+    },
+    {
+      "era": "Big Three Superteam Architecture",
+      "seasons": "2011-12 to 2014-15",
+      "season_count": 4,
+      "avg_wins": 50.8,
+      "playoff_seasons": 3,
+      "finals": 3,
+      "championships": 2,
+      "avg_hbb": {
+        "motor": 51.7,
+        "decision": 49.7,
+        "pressure": 48.2
+      }
+    },
+    {
+      "era": "Post-LeBron Retool And Value Search",
+      "seasons": "2015-16 to 2019-20",
+      "season_count": 5,
+      "avg_wins": 43.2,
+      "playoff_seasons": 3,
+      "finals": 1,
+      "championships": 0,
+      "avg_hbb": {
+        "motor": 51.4,
+        "decision": 49.5,
+        "pressure": 50.5
+      }
+    },
+    {
+      "era": "Butler/Spoelstra Role-Fit Era",
+      "seasons": "2020-21 to 2025-26",
+      "season_count": 6,
+      "avg_wins": 43.8,
+      "playoff_seasons": 5,
+      "finals": 1,
+      "championships": 0,
+      "avg_hbb": {
+        "motor": 49.9,
+        "decision": 56.3,
+        "pressure": 55.2
+      }
+    }
+  ],
+  "seasons": [
+    {
+      "season": "1995-96",
+      "era": "Riley/Mourning Defensive Identity",
+      "record": "42-40",
+      "wins": 42,
+      "losses": 40,
+      "win_pct": 0.512,
+      "playoff_result": {
+        "made_playoffs": true,
+        "series_wins": 0,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Alonzo Mourning",
+          "archetype": "C_04",
+          "hbb": 65.2
+        },
+        {
+          "name": "Keith Askins",
+          "archetype": "SG_05",
+          "hbb": 44.3
+        },
+        {
+          "name": "Bimbo Coles",
+          "archetype": "PG_05",
+          "hbb": 54.0
+        },
+        {
+          "name": "Rex Chapman",
+          "archetype": "PG_02",
+          "hbb": 48.6
+        },
+        {
+          "name": "Kurt Thomas",
+          "archetype": "SF_06",
+          "hbb": 38.4
+        },
+        {
+          "name": "Billy Owens",
+          "archetype": "SG_04",
+          "hbb": 52.1
+        },
+        {
+          "name": "Kevin Willis",
+          "archetype": "PF_11",
+          "hbb": 41.2
+        }
+      ],
+      "archetype_mix": "C_04 | SG_05 | PG_05 | PG_02 | SF_06 | SG_04 | PF_11",
+      "hbb_team_shape": {
+        "motor": 52.9,
+        "decision": 44.3,
+        "pressure": 50.1,
+        "composite": 49.1
+      },
+      "value_counts": {
+        "value_creation": 0,
+        "value_acquisition": 1,
+        "internal_development": 0,
+        "role_fit": 6
+      },
+      "note": "Playoff team: useful identity, but not enough complete fit to survive deep rounds."
+    },
+    {
+      "season": "1996-97",
+      "era": "Riley/Mourning Defensive Identity",
+      "record": "61-21",
+      "wins": 61,
+      "losses": 21,
+      "win_pct": 0.744,
+      "playoff_result": {
+        "made_playoffs": true,
+        "series_wins": 2,
+        "made_conf_finals": true,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Tim Hardaway",
+          "archetype": "PG_01",
+          "hbb": 64.5
+        },
+        {
+          "name": "P.J. Brown",
+          "archetype": "PF_12",
+          "hbb": 50.0
+        },
+        {
+          "name": "Alonzo Mourning",
+          "archetype": "C_04",
+          "hbb": 59.8
+        },
+        {
+          "name": "Voshon Lenard",
+          "archetype": "PG_02",
+          "hbb": 46.9
+        },
+        {
+          "name": "Ike Austin",
+          "archetype": "C_08",
+          "hbb": 41.8
+        },
+        {
+          "name": "Keith Askins",
+          "archetype": "SG_08",
+          "hbb": 37.2
+        },
+        {
+          "name": "Sasha Danilovic",
+          "archetype": "PG_07",
+          "hbb": 42.5
+        }
+      ],
+      "archetype_mix": "PG_01 | PF_12 | C_04 | PG_02 | C_08 | SG_08 | PG_07",
+      "hbb_team_shape": {
+        "motor": 50.1,
+        "decision": 44.5,
+        "pressure": 52.2,
+        "composite": 49.0
+      },
+      "value_counts": {
+        "value_creation": 0,
+        "value_acquisition": 2,
+        "internal_development": 0,
+        "role_fit": 5
+      },
+      "note": "Deep playoff team with enough fit to beat strong opponents across multiple series."
+    },
+    {
+      "season": "1997-98",
+      "era": "Riley/Mourning Defensive Identity",
+      "record": "55-27",
+      "wins": 55,
+      "losses": 27,
+      "win_pct": 0.671,
+      "playoff_result": {
+        "made_playoffs": true,
+        "series_wins": 0,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Tim Hardaway",
+          "archetype": "PG_10",
+          "hbb": 63.0
+        },
+        {
+          "name": "Voshon Lenard",
+          "archetype": "PG_02",
+          "hbb": 48.3
+        },
+        {
+          "name": "P.J. Brown",
+          "archetype": "PF_12",
+          "hbb": 50.9
+        },
+        {
+          "name": "Alonzo Mourning",
+          "archetype": "C_04",
+          "hbb": 55.6
+        },
+        {
+          "name": "Dan Majerle",
+          "archetype": "SG_09",
+          "hbb": 45.5
+        },
+        {
+          "name": "Jamal Mashburn",
+          "archetype": "SF_06",
+          "hbb": 50.9
+        },
+        {
+          "name": "Eric Murdock",
+          "archetype": "PG_04",
+          "hbb": 35.9
+        }
+      ],
+      "archetype_mix": "PG_10 | PG_02 | PF_12 | C_04 | SG_09 | SF_06 | PG_04",
+      "hbb_team_shape": {
+        "motor": 51.4,
+        "decision": 48.1,
+        "pressure": 50.5,
+        "composite": 50.0
+      },
+      "value_counts": {
+        "value_creation": 0,
+        "value_acquisition": 2,
+        "internal_development": 0,
+        "role_fit": 5
+      },
+      "note": "Playoff team: useful identity, but not enough complete fit to survive deep rounds."
+    },
+    {
+      "season": "1998-99",
+      "era": "Riley/Mourning Defensive Identity",
+      "record": "33-17",
+      "wins": 33,
+      "losses": 17,
+      "win_pct": 0.66,
+      "playoff_result": {
+        "made_playoffs": true,
+        "series_wins": 0,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Tim Hardaway",
+          "archetype": "PG_01",
+          "hbb": 58.0
+        },
+        {
+          "name": "Alonzo Mourning",
+          "archetype": "C_09",
+          "hbb": 62.9
+        },
+        {
+          "name": "Dan Majerle",
+          "archetype": "SG_09",
+          "hbb": 49.4
+        },
+        {
+          "name": "P.J. Brown",
+          "archetype": "PF_12",
+          "hbb": 49.9
+        },
+        {
+          "name": "Terry Porter",
+          "archetype": "PG_06",
+          "hbb": 46.1
+        },
+        {
+          "name": "Clar. Weatherspoon",
+          "archetype": "SF_06",
+          "hbb": 38.1
+        },
+        {
+          "name": "Jamal Mashburn",
+          "archetype": "SF_01",
+          "hbb": 50.8
+        }
+      ],
+      "archetype_mix": "PG_01 | C_09 | SG_09 | PF_12 | PG_06 | SF_06 | SF_01",
+      "hbb_team_shape": {
+        "motor": 51.3,
+        "decision": 49.7,
+        "pressure": 51.2,
+        "composite": 50.7
+      },
+      "value_counts": {
+        "value_creation": 0,
+        "value_acquisition": 2,
+        "internal_development": 0,
+        "role_fit": 5
+      },
+      "note": "Playoff team: useful identity, but not enough complete fit to survive deep rounds."
+    },
+    {
+      "season": "1999-00",
+      "era": "Riley/Mourning Defensive Identity",
+      "record": "52-30",
+      "wins": 52,
+      "losses": 30,
+      "win_pct": 0.634,
+      "playoff_result": {
+        "made_playoffs": true,
+        "series_wins": 1,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Jamal Mashburn",
+          "archetype": "SF_02",
+          "hbb": 57.1
+        },
+        {
+          "name": "Alonzo Mourning",
+          "archetype": "C_09",
+          "hbb": 61.2
+        },
+        {
+          "name": "Dan Majerle",
+          "archetype": "SG_09",
+          "hbb": 53.4
+        },
+        {
+          "name": "P.J. Brown",
+          "archetype": "PF_12",
+          "hbb": 49.3
+        },
+        {
+          "name": "Anthony Carter",
+          "archetype": "PG_06",
+          "hbb": 36.8
+        },
+        {
+          "name": "Tim Hardaway",
+          "archetype": "PG_09",
+          "hbb": 52.4
+        },
+        {
+          "name": "Clar. Weatherspoon",
+          "archetype": "SF_07",
+          "hbb": 41.3
+        }
+      ],
+      "archetype_mix": "SF_02 | C_09 | SG_09 | PF_12 | PG_06 | PG_09 | SF_07",
+      "hbb_team_shape": {
+        "motor": 50.2,
+        "decision": 52.3,
+        "pressure": 48.1,
+        "composite": 50.2
+      },
+      "value_counts": {
+        "value_creation": 0,
+        "value_acquisition": 2,
+        "internal_development": 0,
+        "role_fit": 5
+      },
+      "note": "Playoff team: useful identity, but not enough complete fit to survive deep rounds."
+    },
+    {
+      "season": "2000-01",
+      "era": "Riley/Mourning Defensive Identity",
+      "record": "50-32",
+      "wins": 50,
+      "losses": 32,
+      "win_pct": 0.61,
+      "playoff_result": {
+        "made_playoffs": true,
+        "series_wins": 0,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Anthony Mason",
+          "archetype": "SF_01",
+          "hbb": 58.3
+        },
+        {
+          "name": "Brian Grant",
+          "archetype": "PF_12",
+          "hbb": 51.5
+        },
+        {
+          "name": "Bruce Bowen",
+          "archetype": "SF_03",
+          "hbb": 44.8
+        },
+        {
+          "name": "Tim Hardaway",
+          "archetype": "PG_02",
+          "hbb": 53.1
+        },
+        {
+          "name": "Eddie Jones",
+          "archetype": "SG_01",
+          "hbb": 60.5
+        },
+        {
+          "name": "Anthony Carter",
+          "archetype": "PG_04",
+          "hbb": 35.7
+        },
+        {
+          "name": "A.C. Green",
+          "archetype": "SF_06",
+          "hbb": 29.9
+        }
+      ],
+      "archetype_mix": "SF_01 | PF_12 | SF_03 | PG_02 | SG_01 | PG_04 | SF_06",
+      "hbb_team_shape": {
+        "motor": 50.1,
+        "decision": 45.1,
+        "pressure": 47.7,
+        "composite": 47.7
+      },
+      "value_counts": {
+        "value_creation": 0,
+        "value_acquisition": 1,
+        "internal_development": 0,
+        "role_fit": 6
+      },
+      "note": "Playoff team: useful identity, but not enough complete fit to survive deep rounds."
+    },
+    {
+      "season": "2001-02",
+      "era": "Riley/Mourning Defensive Identity",
+      "record": "36-46",
+      "wins": 36,
+      "losses": 46,
+      "win_pct": 0.439,
+      "playoff_result": {
+        "made_playoffs": false,
+        "series_wins": 0,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Eddie Jones",
+          "archetype": "SG_01",
+          "hbb": 63.8
+        },
+        {
+          "name": "Alonzo Mourning",
+          "archetype": "C_09",
+          "hbb": 52.7
+        },
+        {
+          "name": "Rod Strickland",
+          "archetype": "PG_06",
+          "hbb": 47.6
+        },
+        {
+          "name": "Brian Grant",
+          "archetype": "PF_12",
+          "hbb": 48.6
+        },
+        {
+          "name": "Jim Jackson",
+          "archetype": "SG_05",
+          "hbb": 48.4
+        },
+        {
+          "name": "LaPhonso Ellis",
+          "archetype": "SF_06",
+          "hbb": 36.8
+        },
+        {
+          "name": "Kendall Gill",
+          "archetype": "PG_04",
+          "hbb": 32.7
+        }
+      ],
+      "archetype_mix": "SG_01 | C_09 | PG_06 | PF_12 | SG_05 | SF_06 | PG_04",
+      "hbb_team_shape": {
+        "motor": 49.5,
+        "decision": 46.4,
+        "pressure": 45.8,
+        "composite": 47.2
+      },
+      "value_counts": {
+        "value_creation": 0,
+        "value_acquisition": 1,
+        "internal_development": 0,
+        "role_fit": 6
+      },
+      "note": "Non-playoff season: useful for identifying missing roster-construction ingredients."
+    },
+    {
+      "season": "2002-03",
+      "era": "Riley/Mourning Defensive Identity",
+      "record": "25-57",
+      "wins": 25,
+      "losses": 57,
+      "win_pct": 0.305,
+      "playoff_result": {
+        "made_playoffs": false,
+        "series_wins": 0,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Caron Butler",
+          "archetype": "SF_10",
+          "hbb": 53.9
+        },
+        {
+          "name": "Brian Grant",
+          "archetype": "PF_12",
+          "hbb": 50.3
+        },
+        {
+          "name": "Malik Allen",
+          "archetype": "SF_06",
+          "hbb": 41.2
+        },
+        {
+          "name": "Travis Best",
+          "archetype": "PG_06",
+          "hbb": 39.1
+        },
+        {
+          "name": "Eddie Jones",
+          "archetype": "SG_01",
+          "hbb": 63.1
+        },
+        {
+          "name": "Mike James",
+          "archetype": "PG_07",
+          "hbb": 36.0
+        },
+        {
+          "name": "Vladimir Stepania",
+          "archetype": "C_08",
+          "hbb": 36.4
+        }
+      ],
+      "archetype_mix": "SF_10 | PF_12 | SF_06 | PG_06 | SG_01 | PG_07 | C_08",
+      "hbb_team_shape": {
+        "motor": 47.8,
+        "decision": 44.3,
+        "pressure": 45.0,
+        "composite": 45.7
+      },
+      "value_counts": {
+        "value_creation": 0,
+        "value_acquisition": 0,
+        "internal_development": 0,
+        "role_fit": 7
+      },
+      "note": "Non-playoff season: useful for identifying missing roster-construction ingredients."
+    },
+    {
+      "season": "2003-04",
+      "era": "Riley/Mourning Defensive Identity",
+      "record": "42-40",
+      "wins": 42,
+      "losses": 40,
+      "win_pct": 0.512,
+      "playoff_result": {
+        "made_playoffs": true,
+        "series_wins": 1,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Lamar Odom",
+          "archetype": "SF_01",
+          "hbb": 60.8
+        },
+        {
+          "name": "Eddie Jones",
+          "archetype": "SG_06",
+          "hbb": 58.5
+        },
+        {
+          "name": "Rafer Alston",
+          "archetype": "PG_02",
+          "hbb": 49.8
+        },
+        {
+          "name": "Brian Grant",
+          "archetype": "PF_02",
+          "hbb": 44.8
+        },
+        {
+          "name": "Dwyane Wade",
+          "archetype": "PG_08",
+          "hbb": 53.8
+        },
+        {
+          "name": "Caron Butler",
+          "archetype": "SF_06",
+          "hbb": 42.9
+        },
+        {
+          "name": "Udonis Haslem",
+          "archetype": "SF_06",
+          "hbb": 38.0
+        }
+      ],
+      "archetype_mix": "SF_01 | SG_06 | PG_02 | PF_02 | PG_08 | SF_06 | SF_06",
+      "hbb_team_shape": {
+        "motor": 53.4,
+        "decision": 46.7,
+        "pressure": 49.4,
+        "composite": 49.8
+      },
+      "value_counts": {
+        "value_creation": 1,
+        "value_acquisition": 0,
+        "internal_development": 1,
+        "role_fit": 5
+      },
+      "note": "Playoff team: useful identity, but not enough complete fit to survive deep rounds."
+    },
+    {
+      "season": "2004-05",
+      "era": "Wade/Shaq Title Construction",
+      "record": "59-23",
+      "wins": 59,
+      "losses": 23,
+      "win_pct": 0.72,
+      "playoff_result": {
+        "made_playoffs": true,
+        "series_wins": 2,
+        "made_conf_finals": true,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Dwyane Wade",
+          "archetype": "PG_03",
+          "hbb": 65.1
+        },
+        {
+          "name": "Eddie Jones",
+          "archetype": "SG_01",
+          "hbb": 56.0
+        },
+        {
+          "name": "Udonis Haslem",
+          "archetype": "SF_07",
+          "hbb": 51.6
+        },
+        {
+          "name": "Damon Jones",
+          "archetype": "PG_02",
+          "hbb": 51.4
+        },
+        {
+          "name": "Shaquille O'Neal",
+          "archetype": "C_11",
+          "hbb": 61.5
+        },
+        {
+          "name": "Rasual Butler",
+          "archetype": "SF_04",
+          "hbb": 34.6
+        },
+        {
+          "name": "Keyon Dooling",
+          "archetype": "PG_04",
+          "hbb": 29.3
+        }
+      ],
+      "archetype_mix": "PG_03 | SG_01 | SF_07 | PG_02 | C_11 | SF_04 | PG_04",
+      "hbb_team_shape": {
+        "motor": 50.6,
+        "decision": 49.6,
+        "pressure": 49.6,
+        "composite": 49.9
+      },
+      "value_counts": {
+        "value_creation": 1,
+        "value_acquisition": 1,
+        "internal_development": 1,
+        "role_fit": 4
+      },
+      "note": "Deep playoff team with enough fit to beat strong opponents across multiple series."
+    },
+    {
+      "season": "2005-06",
+      "era": "Wade/Shaq Title Construction",
+      "record": "52-30",
+      "wins": 52,
+      "losses": 30,
+      "win_pct": 0.634,
+      "playoff_result": {
+        "made_playoffs": true,
+        "series_wins": 4,
+        "made_conf_finals": true,
+        "made_finals": true,
+        "won_championship": true
+      },
+      "top_players": [
+        {
+          "name": "Dwyane Wade",
+          "archetype": "PG_03",
+          "hbb": 69.8
+        },
+        {
+          "name": "Udonis Haslem",
+          "archetype": "SF_07",
+          "hbb": 46.5
+        },
+        {
+          "name": "Gary Payton",
+          "archetype": "PG_06",
+          "hbb": 42.0
+        },
+        {
+          "name": "Antoine Walker",
+          "archetype": "SF_04",
+          "hbb": 45.4
+        },
+        {
+          "name": "James Posey",
+          "archetype": "SF_04",
+          "hbb": 44.7
+        },
+        {
+          "name": "Jason Williams",
+          "archetype": "PG_09",
+          "hbb": 49.1
+        },
+        {
+          "name": "Shaquille O'Neal",
+          "archetype": "C_04",
+          "hbb": 53.9
+        }
+      ],
+      "archetype_mix": "PG_03 | SF_07 | PG_06 | SF_04 | SF_04 | PG_09 | C_04",
+      "hbb_team_shape": {
+        "motor": 51.1,
+        "decision": 48.1,
+        "pressure": 51.4,
+        "composite": 50.2
+      },
+      "value_counts": {
+        "value_creation": 1,
+        "value_acquisition": 1,
+        "internal_development": 1,
+        "role_fit": 4
+      },
+      "note": "Championship roster: star certainty supported by a coherent top-seven archetype mix."
+    },
+    {
+      "season": "2006-07",
+      "era": "Wade/Shaq Title Construction",
+      "record": "44-38",
+      "wins": 44,
+      "losses": 38,
+      "win_pct": 0.537,
+      "playoff_result": {
+        "made_playoffs": true,
+        "series_wins": 0,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Udonis Haslem",
+          "archetype": "SF_07",
+          "hbb": 45.8
+        },
+        {
+          "name": "Dwyane Wade",
+          "archetype": "PG_03",
+          "hbb": 69.2
+        },
+        {
+          "name": "James Posey",
+          "archetype": "SF_04",
+          "hbb": 46.9
+        },
+        {
+          "name": "Jason Williams",
+          "archetype": "PG_09",
+          "hbb": 49.3
+        },
+        {
+          "name": "Antoine Walker",
+          "archetype": "SF_04",
+          "hbb": 36.7
+        },
+        {
+          "name": "Jason Kapono",
+          "archetype": "SF_04",
+          "hbb": 44.1
+        },
+        {
+          "name": "Alonzo Mourning",
+          "archetype": "C_07",
+          "hbb": 39.2
+        }
+      ],
+      "archetype_mix": "SF_07 | PG_03 | SF_04 | PG_09 | SF_04 | SF_04 | C_07",
+      "hbb_team_shape": {
+        "motor": 46.7,
+        "decision": 47.7,
+        "pressure": 47.5,
+        "composite": 47.3
+      },
+      "value_counts": {
+        "value_creation": 1,
+        "value_acquisition": 1,
+        "internal_development": 1,
+        "role_fit": 4
+      },
+      "note": "Playoff team: useful identity, but not enough complete fit to survive deep rounds."
+    },
+    {
+      "season": "2007-08",
+      "era": "Wade/Shaq Title Construction",
+      "record": "15-67",
+      "wins": 15,
+      "losses": 67,
+      "win_pct": 0.183,
+      "playoff_result": {
+        "made_playoffs": false,
+        "series_wins": 0,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Ricky Davis",
+          "archetype": "PG_02",
+          "hbb": 51.4
+        },
+        {
+          "name": "Dwyane Wade",
+          "archetype": "PG_03",
+          "hbb": 63.5
+        },
+        {
+          "name": "Jason Williams",
+          "archetype": "PG_06",
+          "hbb": 45.7
+        },
+        {
+          "name": "Udonis Haslem",
+          "archetype": "SF_07",
+          "hbb": 51.3
+        },
+        {
+          "name": "Mark Blount",
+          "archetype": "PF_02",
+          "hbb": 35.1
+        },
+        {
+          "name": "Daequan Cook",
+          "archetype": "PG_07",
+          "hbb": 36.1
+        },
+        {
+          "name": "Chris Quinn",
+          "archetype": "PG_07",
+          "hbb": 40.5
+        }
+      ],
+      "archetype_mix": "PG_02 | PG_03 | PG_06 | SF_07 | PF_02 | PG_07 | PG_07",
+      "hbb_team_shape": {
+        "motor": 47.5,
+        "decision": 44.5,
+        "pressure": 46.7,
+        "composite": 46.2
+      },
+      "value_counts": {
+        "value_creation": 1,
+        "value_acquisition": 0,
+        "internal_development": 1,
+        "role_fit": 5
+      },
+      "note": "Non-playoff season: useful for identifying missing roster-construction ingredients."
+    },
+    {
+      "season": "2008-09",
+      "era": "Wade Bridge Era",
+      "record": "43-39",
+      "wins": 43,
+      "losses": 39,
+      "win_pct": 0.524,
+      "playoff_result": {
+        "made_playoffs": true,
+        "series_wins": 0,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Dwyane Wade",
+          "archetype": "PG_03",
+          "hbb": 73.8
+        },
+        {
+          "name": "Mario Chalmers",
+          "archetype": "PG_05",
+          "hbb": 50.1
+        },
+        {
+          "name": "Udonis Haslem",
+          "archetype": "SF_07",
+          "hbb": 48.5
+        },
+        {
+          "name": "Michael Beasley",
+          "archetype": "SF_06",
+          "hbb": 42.1
+        },
+        {
+          "name": "Daequan Cook",
+          "archetype": "PG_07",
+          "hbb": 39.5
+        },
+        {
+          "name": "Shawn Marion",
+          "archetype": "SG_03",
+          "hbb": 59.3
+        },
+        {
+          "name": "Joel Anthony",
+          "archetype": "C_08",
+          "hbb": 33.9
+        }
+      ],
+      "archetype_mix": "PG_03 | PG_05 | SF_07 | SF_06 | PG_07 | SG_03 | C_08",
+      "hbb_team_shape": {
+        "motor": 55.0,
+        "decision": 46.6,
+        "pressure": 47.3,
+        "composite": 49.6
+      },
+      "value_counts": {
+        "value_creation": 1,
+        "value_acquisition": 0,
+        "internal_development": 1,
+        "role_fit": 5
+      },
+      "note": "Playoff team: useful identity, but not enough complete fit to survive deep rounds."
+    },
+    {
+      "season": "2009-10",
+      "era": "Wade Bridge Era",
+      "record": "47-35",
+      "wins": 47,
+      "losses": 35,
+      "win_pct": 0.573,
+      "playoff_result": {
+        "made_playoffs": true,
+        "series_wins": 0,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Dwyane Wade",
+          "archetype": "PG_03",
+          "hbb": 68.5
+        },
+        {
+          "name": "Michael Beasley",
+          "archetype": "SF_07",
+          "hbb": 48.5
+        },
+        {
+          "name": "Udonis Haslem",
+          "archetype": "SF_07",
+          "hbb": 42.7
+        },
+        {
+          "name": "Quentin Richardson",
+          "archetype": "SF_02",
+          "hbb": 45.4
+        },
+        {
+          "name": "Jermaine O'Neal",
+          "archetype": "PF_11",
+          "hbb": 45.6
+        },
+        {
+          "name": "Mario Chalmers",
+          "archetype": "PG_06",
+          "hbb": 39.3
+        },
+        {
+          "name": "Carlos Arroyo",
+          "archetype": "PG_06",
+          "hbb": 40.7
+        }
+      ],
+      "archetype_mix": "PG_03 | SF_07 | SF_07 | SF_02 | PF_11 | PG_06 | PG_06",
+      "hbb_team_shape": {
+        "motor": 48.6,
+        "decision": 47.8,
+        "pressure": 45.4,
+        "composite": 47.2
+      },
+      "value_counts": {
+        "value_creation": 1,
+        "value_acquisition": 0,
+        "internal_development": 1,
+        "role_fit": 5
+      },
+      "note": "Playoff team: useful identity, but not enough complete fit to survive deep rounds."
+    },
+    {
+      "season": "2010-11",
+      "era": "Wade Bridge Era",
+      "record": "58-24",
+      "wins": 58,
+      "losses": 24,
+      "win_pct": 0.707,
+      "playoff_result": {
+        "made_playoffs": true,
+        "series_wins": 3,
+        "made_conf_finals": true,
+        "made_finals": true,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "LeBron James",
+          "archetype": "SF_09",
+          "hbb": 70.8
+        },
+        {
+          "name": "Dwyane Wade",
+          "archetype": "PG_03",
+          "hbb": 67.2
+        },
+        {
+          "name": "Chris Bosh",
+          "archetype": "SF_01",
+          "hbb": 55.5
+        },
+        {
+          "name": "Mario Chalmers",
+          "archetype": "PG_07",
+          "hbb": 38.8
+        },
+        {
+          "name": "James Jones",
+          "archetype": "SG_07",
+          "hbb": 36.7
+        },
+        {
+          "name": "Joel Anthony",
+          "archetype": "C_08",
+          "hbb": 35.0
+        },
+        {
+          "name": "Zydrunas Ilgauskas",
+          "archetype": "C_08",
+          "hbb": 34.6
+        }
+      ],
+      "archetype_mix": "SF_09 | PG_03 | SF_01 | PG_07 | SG_07 | C_08 | C_08",
+      "hbb_team_shape": {
+        "motor": 47.8,
+        "decision": 50.2,
+        "pressure": 47.2,
+        "composite": 48.4
+      },
+      "value_counts": {
+        "value_creation": 0,
+        "value_acquisition": 2,
+        "internal_development": 1,
+        "role_fit": 4
+      },
+      "note": "Finals roster: Miami translated role clarity and pressure tolerance into postseason value."
+    },
+    {
+      "season": "2011-12",
+      "era": "Big Three Superteam Architecture",
+      "record": "46-20",
+      "wins": 46,
+      "losses": 20,
+      "win_pct": 0.697,
+      "playoff_result": {
+        "made_playoffs": true,
+        "series_wins": 4,
+        "made_conf_finals": true,
+        "made_finals": true,
+        "won_championship": true
+      },
+      "top_players": [
+        {
+          "name": "LeBron James",
+          "archetype": "SF_09",
+          "hbb": 72.5
+        },
+        {
+          "name": "Chris Bosh",
+          "archetype": "SF_01",
+          "hbb": 54.6
+        },
+        {
+          "name": "Mario Chalmers",
+          "archetype": "PG_09",
+          "hbb": 46.8
+        },
+        {
+          "name": "Dwyane Wade",
+          "archetype": "PG_03",
+          "hbb": 62.6
+        },
+        {
+          "name": "Udonis Haslem",
+          "archetype": "SF_07",
+          "hbb": 39.2
+        },
+        {
+          "name": "Shane Battier",
+          "archetype": "SF_03",
+          "hbb": 39.4
+        },
+        {
+          "name": "Joel Anthony",
+          "archetype": "C_08",
+          "hbb": 37.5
+        }
+      ],
+      "archetype_mix": "SF_09 | SF_01 | PG_09 | PG_03 | SF_07 | SF_03 | C_08",
+      "hbb_team_shape": {
+        "motor": 54.6,
+        "decision": 49.2,
+        "pressure": 47.3,
+        "composite": 50.4
+      },
+      "value_counts": {
+        "value_creation": 1,
+        "value_acquisition": 2,
+        "internal_development": 1,
+        "role_fit": 3
+      },
+      "note": "Championship roster: star certainty supported by a coherent top-seven archetype mix."
+    },
+    {
+      "season": "2012-13",
+      "era": "Big Three Superteam Architecture",
+      "record": "66-16",
+      "wins": 66,
+      "losses": 16,
+      "win_pct": 0.805,
+      "playoff_result": {
+        "made_playoffs": true,
+        "series_wins": 4,
+        "made_conf_finals": true,
+        "made_finals": true,
+        "won_championship": true
+      },
+      "top_players": [
+        {
+          "name": "LeBron James",
+          "archetype": "SF_09",
+          "hbb": 75.7
+        },
+        {
+          "name": "Chris Bosh",
+          "archetype": "SF_08",
+          "hbb": 55.5
+        },
+        {
+          "name": "Dwyane Wade",
+          "archetype": "PG_03",
+          "hbb": 63.8
+        },
+        {
+          "name": "Mario Chalmers",
+          "archetype": "PG_06",
+          "hbb": 45.4
+        },
+        {
+          "name": "Ray Allen",
+          "archetype": "PG_07",
+          "hbb": 44.8
+        },
+        {
+          "name": "Shane Battier",
+          "archetype": "SF_04",
+          "hbb": 44.4
+        },
+        {
+          "name": "Norris Cole",
+          "archetype": "PG_04",
+          "hbb": 31.2
+        }
+      ],
+      "archetype_mix": "SF_09 | SF_08 | PG_03 | PG_06 | PG_07 | SF_04 | PG_04",
+      "hbb_team_shape": {
+        "motor": 53.0,
+        "decision": 52.0,
+        "pressure": 49.6,
+        "composite": 51.5
+      },
+      "value_counts": {
+        "value_creation": 0,
+        "value_acquisition": 2,
+        "internal_development": 1,
+        "role_fit": 4
+      },
+      "note": "Championship roster: star certainty supported by a coherent top-seven archetype mix."
+    },
+    {
+      "season": "2013-14",
+      "era": "Big Three Superteam Architecture",
+      "record": "54-28",
+      "wins": 54,
+      "losses": 28,
+      "win_pct": 0.658,
+      "playoff_result": {
+        "made_playoffs": true,
+        "series_wins": 3,
+        "made_conf_finals": true,
+        "made_finals": true,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "LeBron James",
+          "archetype": "SF_05",
+          "hbb": 70.9
+        },
+        {
+          "name": "Chris Bosh",
+          "archetype": "SF_01",
+          "hbb": 54.1
+        },
+        {
+          "name": "Mario Chalmers",
+          "archetype": "PG_05",
+          "hbb": 49.1
+        },
+        {
+          "name": "Norris Cole",
+          "archetype": "PG_06",
+          "hbb": 37.1
+        },
+        {
+          "name": "Ray Allen",
+          "archetype": "PG_07",
+          "hbb": 43.8
+        },
+        {
+          "name": "Dwyane Wade",
+          "archetype": "PG_08",
+          "hbb": 57.6
+        },
+        {
+          "name": "Shane Battier",
+          "archetype": "SF_03",
+          "hbb": 38.8
+        }
+      ],
+      "archetype_mix": "SF_05 | SF_01 | PG_05 | PG_06 | PG_07 | PG_08 | SF_03",
+      "hbb_team_shape": {
+        "motor": 50.1,
+        "decision": 51.9,
+        "pressure": 48.6,
+        "composite": 50.2
+      },
+      "value_counts": {
+        "value_creation": 0,
+        "value_acquisition": 2,
+        "internal_development": 1,
+        "role_fit": 4
+      },
+      "note": "Finals roster: Miami translated role clarity and pressure tolerance into postseason value."
+    },
+    {
+      "season": "2014-15",
+      "era": "Big Three Superteam Architecture",
+      "record": "37-45",
+      "wins": 37,
+      "losses": 45,
+      "win_pct": 0.451,
+      "playoff_result": {
+        "made_playoffs": false,
+        "series_wins": 0,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Luol Deng",
+          "archetype": "SF_02",
+          "hbb": 50.6
+        },
+        {
+          "name": "Mario Chalmers",
+          "archetype": "PG_06",
+          "hbb": 44.6
+        },
+        {
+          "name": "Dwyane Wade",
+          "archetype": "PG_10",
+          "hbb": 53.2
+        },
+        {
+          "name": "Chris Bosh",
+          "archetype": "SF_02",
+          "hbb": 57.0
+        },
+        {
+          "name": "Norris Cole",
+          "archetype": "PG_04",
+          "hbb": 38.3
+        },
+        {
+          "name": "Hassan Whiteside",
+          "archetype": "C_09",
+          "hbb": 48.8
+        },
+        {
+          "name": "Chris Andersen",
+          "archetype": "PF_02",
+          "hbb": 40.1
+        }
+      ],
+      "archetype_mix": "SF_02 | PG_06 | PG_10 | SF_02 | PG_04 | C_09 | PF_02",
+      "hbb_team_shape": {
+        "motor": 49.1,
+        "decision": 45.8,
+        "pressure": 47.5,
+        "composite": 47.5
+      },
+      "value_counts": {
+        "value_creation": 1,
+        "value_acquisition": 1,
+        "internal_development": 1,
+        "role_fit": 4
+      },
+      "note": "Non-playoff season: useful for identifying missing roster-construction ingredients."
+    },
+    {
+      "season": "2015-16",
+      "era": "Post-LeBron Retool And Value Search",
+      "record": "48-34",
+      "wins": 48,
+      "losses": 34,
+      "win_pct": 0.585,
+      "playoff_result": {
+        "made_playoffs": true,
+        "series_wins": 1,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Luol Deng",
+          "archetype": "SF_02",
+          "hbb": 52.0
+        },
+        {
+          "name": "Goran Dragic",
+          "archetype": "PG_10",
+          "hbb": 52.1
+        },
+        {
+          "name": "Dwyane Wade",
+          "archetype": "PG_08",
+          "hbb": 53.5
+        },
+        {
+          "name": "Justise Winslow",
+          "archetype": "SG_05",
+          "hbb": 42.3
+        },
+        {
+          "name": "Hassan Whiteside",
+          "archetype": "C_09",
+          "hbb": 56.1
+        },
+        {
+          "name": "Chris Bosh",
+          "archetype": "SF_02",
+          "hbb": 57.6
+        },
+        {
+          "name": "Gerald Green",
+          "archetype": "SG_07",
+          "hbb": 36.6
+        }
+      ],
+      "archetype_mix": "SF_02 | PG_10 | PG_08 | SG_05 | C_09 | SF_02 | SG_07",
+      "hbb_team_shape": {
+        "motor": 53.5,
+        "decision": 46.8,
+        "pressure": 49.7,
+        "composite": 50.0
+      },
+      "value_counts": {
+        "value_creation": 1,
+        "value_acquisition": 1,
+        "internal_development": 1,
+        "role_fit": 4
+      },
+      "note": "Playoff team: useful identity, but not enough complete fit to survive deep rounds."
+    },
+    {
+      "season": "2016-17",
+      "era": "Post-LeBron Retool And Value Search",
+      "record": "41-41",
+      "wins": 41,
+      "losses": 41,
+      "win_pct": 0.5,
+      "playoff_result": {
+        "made_playoffs": false,
+        "series_wins": 0,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Hassan Whiteside",
+          "archetype": "C_09",
+          "hbb": 58.3
+        },
+        {
+          "name": "Goran Dragic",
+          "archetype": "PG_10",
+          "hbb": 57.4
+        },
+        {
+          "name": "Tyler Johnson",
+          "archetype": "PG_08",
+          "hbb": 53.6
+        },
+        {
+          "name": "James Johnson",
+          "archetype": "SF_10",
+          "hbb": 53.1
+        },
+        {
+          "name": "Rodney McGruder",
+          "archetype": "PG_04",
+          "hbb": 38.5
+        },
+        {
+          "name": "Josh Richardson",
+          "archetype": "PG_08",
+          "hbb": 50.0
+        },
+        {
+          "name": "Wayne Ellington",
+          "archetype": "PG_07",
+          "hbb": 41.3
+        }
+      ],
+      "archetype_mix": "C_09 | PG_10 | PG_08 | SF_10 | PG_04 | PG_08 | PG_07",
+      "hbb_team_shape": {
+        "motor": 54.4,
+        "decision": 46.2,
+        "pressure": 50.4,
+        "composite": 50.3
+      },
+      "value_counts": {
+        "value_creation": 4,
+        "value_acquisition": 0,
+        "internal_development": 0,
+        "role_fit": 3
+      },
+      "note": "Non-playoff season: useful for identifying missing roster-construction ingredients."
+    },
+    {
+      "season": "2017-18",
+      "era": "Post-LeBron Retool And Value Search",
+      "record": "44-38",
+      "wins": 44,
+      "losses": 38,
+      "win_pct": 0.537,
+      "playoff_result": {
+        "made_playoffs": true,
+        "series_wins": 0,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Josh Richardson",
+          "archetype": "PG_08",
+          "hbb": 56.3
+        },
+        {
+          "name": "Goran Dragic",
+          "archetype": "PG_09",
+          "hbb": 53.1
+        },
+        {
+          "name": "Tyler Johnson",
+          "archetype": "PG_08",
+          "hbb": 48.8
+        },
+        {
+          "name": "Wayne Ellington",
+          "archetype": "PG_02",
+          "hbb": 44.0
+        },
+        {
+          "name": "James Johnson",
+          "archetype": "SF_10",
+          "hbb": 51.3
+        },
+        {
+          "name": "Kelly Olynyk",
+          "archetype": "PF_01",
+          "hbb": 50.3
+        },
+        {
+          "name": "Justise Winslow",
+          "archetype": "SG_05",
+          "hbb": 44.3
+        }
+      ],
+      "archetype_mix": "PG_08 | PG_09 | PG_08 | PG_02 | SF_10 | PF_01 | SG_05",
+      "hbb_team_shape": {
+        "motor": 50.3,
+        "decision": 49.3,
+        "pressure": 49.6,
+        "composite": 49.7
+      },
+      "value_counts": {
+        "value_creation": 3,
+        "value_acquisition": 0,
+        "internal_development": 0,
+        "role_fit": 4
+      },
+      "note": "Playoff team: useful identity, but not enough complete fit to survive deep rounds."
+    },
+    {
+      "season": "2018-19",
+      "era": "Post-LeBron Retool And Value Search",
+      "record": "39-43",
+      "wins": 39,
+      "losses": 43,
+      "win_pct": 0.476,
+      "playoff_result": {
+        "made_playoffs": false,
+        "series_wins": 0,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Josh Richardson",
+          "archetype": "PG_02",
+          "hbb": 58.3
+        },
+        {
+          "name": "Justise Winslow",
+          "archetype": "SG_06",
+          "hbb": 51.4
+        },
+        {
+          "name": "Bam Adebayo",
+          "archetype": "PF_12",
+          "hbb": 48.0
+        },
+        {
+          "name": "Dwyane Wade",
+          "archetype": "PG_08",
+          "hbb": 49.1
+        },
+        {
+          "name": "Kelly Olynyk",
+          "archetype": "PF_01",
+          "hbb": 46.3
+        },
+        {
+          "name": "Hassan Whiteside",
+          "archetype": "C_06",
+          "hbb": 49.2
+        },
+        {
+          "name": "Rodney McGruder",
+          "archetype": "PG_07",
+          "hbb": 38.6
+        }
+      ],
+      "archetype_mix": "PG_02 | SG_06 | PF_12 | PG_08 | PF_01 | C_06 | PG_07",
+      "hbb_team_shape": {
+        "motor": 50.1,
+        "decision": 48.1,
+        "pressure": 47.8,
+        "composite": 48.7
+      },
+      "value_counts": {
+        "value_creation": 2,
+        "value_acquisition": 0,
+        "internal_development": 2,
+        "role_fit": 3
+      },
+      "note": "Non-playoff season: useful for identifying missing roster-construction ingredients."
+    },
+    {
+      "season": "2019-20",
+      "era": "Post-LeBron Retool And Value Search",
+      "record": "44-29",
+      "wins": 44,
+      "losses": 29,
+      "win_pct": 0.603,
+      "playoff_result": {
+        "made_playoffs": true,
+        "series_wins": 3,
+        "made_conf_finals": true,
+        "made_finals": true,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Bam Adebayo",
+          "archetype": "PF_04",
+          "hbb": 63.1
+        },
+        {
+          "name": "Duncan Robinson",
+          "archetype": "SF_02",
+          "hbb": 51.8
+        },
+        {
+          "name": "Kendrick Nunn",
+          "archetype": "PG_02",
+          "hbb": 50.0
+        },
+        {
+          "name": "Jimmy Butler III",
+          "archetype": "SF_05",
+          "hbb": 66.4
+        },
+        {
+          "name": "Goran Dragic",
+          "archetype": "PG_09",
+          "hbb": 50.0
+        },
+        {
+          "name": "Tyler Herro",
+          "archetype": "PG_02",
+          "hbb": 47.0
+        },
+        {
+          "name": "Derrick Jones Jr.",
+          "archetype": "SF_03",
+          "hbb": 46.5
+        }
+      ],
+      "archetype_mix": "PF_04 | SF_02 | PG_02 | SF_05 | PG_09 | PG_02 | SF_03",
+      "hbb_team_shape": {
+        "motor": 48.9,
+        "decision": 56.9,
+        "pressure": 54.9,
+        "composite": 53.5
+      },
+      "value_counts": {
+        "value_creation": 2,
+        "value_acquisition": 1,
+        "internal_development": 2,
+        "role_fit": 2
+      },
+      "note": "Finals roster: Miami translated role clarity and pressure tolerance into postseason value."
+    },
+    {
+      "season": "2020-21",
+      "era": "Butler/Spoelstra Role-Fit Era",
+      "record": "40-32",
+      "wins": 40,
+      "losses": 32,
+      "win_pct": 0.556,
+      "playoff_result": {
+        "made_playoffs": true,
+        "series_wins": 0,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Duncan Robinson",
+          "archetype": "SF_02",
+          "hbb": 52.1
+        },
+        {
+          "name": "Bam Adebayo",
+          "archetype": "PF_04",
+          "hbb": 65.0
+        },
+        {
+          "name": "Jimmy Butler III",
+          "archetype": "SF_05",
+          "hbb": 69.5
+        },
+        {
+          "name": "Kendrick Nunn",
+          "archetype": "PG_02",
+          "hbb": 52.4
+        },
+        {
+          "name": "Tyler Herro",
+          "archetype": "PG_02",
+          "hbb": 52.4
+        },
+        {
+          "name": "Goran Dragic",
+          "archetype": "PG_09",
+          "hbb": 47.6
+        },
+        {
+          "name": "Andre Iguodala",
+          "archetype": "SG_05",
+          "hbb": 40.4
+        }
+      ],
+      "archetype_mix": "SF_02 | PF_04 | SF_05 | PG_02 | PG_02 | PG_09 | SG_05",
+      "hbb_team_shape": {
+        "motor": 51.1,
+        "decision": 57.3,
+        "pressure": 54.2,
+        "composite": 54.2
+      },
+      "value_counts": {
+        "value_creation": 2,
+        "value_acquisition": 1,
+        "internal_development": 2,
+        "role_fit": 2
+      },
+      "note": "Playoff team: useful identity, but not enough complete fit to survive deep rounds."
+    },
+    {
+      "season": "2021-22",
+      "era": "Butler/Spoelstra Role-Fit Era",
+      "record": "53-29",
+      "wins": 53,
+      "losses": 29,
+      "win_pct": 0.646,
+      "playoff_result": {
+        "made_playoffs": true,
+        "series_wins": 2,
+        "made_conf_finals": true,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Tyler Herro",
+          "archetype": "PG_01",
+          "hbb": 57.0
+        },
+        {
+          "name": "Kyle Lowry",
+          "archetype": "PG_01",
+          "hbb": 58.9
+        },
+        {
+          "name": "Duncan Robinson",
+          "archetype": "SF_04",
+          "hbb": 46.8
+        },
+        {
+          "name": "P.J. Tucker",
+          "archetype": "SF_03",
+          "hbb": 48.8
+        },
+        {
+          "name": "Jimmy Butler III",
+          "archetype": "SF_05",
+          "hbb": 65.4
+        },
+        {
+          "name": "Bam Adebayo",
+          "archetype": "PF_04",
+          "hbb": 61.5
+        },
+        {
+          "name": "Gabe Vincent",
+          "archetype": "PG_07",
+          "hbb": 41.2
+        }
+      ],
+      "archetype_mix": "PG_01 | PG_01 | SF_04 | SF_03 | SF_05 | PF_04 | PG_07",
+      "hbb_team_shape": {
+        "motor": 49.9,
+        "decision": 57.1,
+        "pressure": 55.6,
+        "composite": 54.2
+      },
+      "value_counts": {
+        "value_creation": 2,
+        "value_acquisition": 2,
+        "internal_development": 2,
+        "role_fit": 1
+      },
+      "note": "Deep playoff team with enough fit to beat strong opponents across multiple series."
+    },
+    {
+      "season": "2022-23",
+      "era": "Butler/Spoelstra Role-Fit Era",
+      "record": "44-38",
+      "wins": 44,
+      "losses": 38,
+      "win_pct": 0.537,
+      "playoff_result": {
+        "made_playoffs": true,
+        "series_wins": 3,
+        "made_conf_finals": true,
+        "made_finals": true,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Bam Adebayo",
+          "archetype": "PF_04",
+          "hbb": 60.6
+        },
+        {
+          "name": "Tyler Herro",
+          "archetype": "PG_01",
+          "hbb": 61.2
+        },
+        {
+          "name": "Max Strus",
+          "archetype": "SG_07",
+          "hbb": 49.1
+        },
+        {
+          "name": "Jimmy Butler III",
+          "archetype": "SF_05",
+          "hbb": 68.3
+        },
+        {
+          "name": "Caleb Martin",
+          "archetype": "SF_03",
+          "hbb": 48.7
+        },
+        {
+          "name": "Gabe Vincent",
+          "archetype": "PG_07",
+          "hbb": 41.1
+        },
+        {
+          "name": "Kyle Lowry",
+          "archetype": "PG_02",
+          "hbb": 54.7
+        }
+      ],
+      "archetype_mix": "PF_04 | PG_01 | SG_07 | SF_05 | SF_03 | PG_07 | PG_02",
+      "hbb_team_shape": {
+        "motor": 51.4,
+        "decision": 56.5,
+        "pressure": 56.5,
+        "composite": 54.8
+      },
+      "value_counts": {
+        "value_creation": 3,
+        "value_acquisition": 2,
+        "internal_development": 2,
+        "role_fit": 0
+      },
+      "note": "Finals roster: Miami translated role clarity and pressure tolerance into postseason value."
+    },
+    {
+      "season": "2023-24",
+      "era": "Butler/Spoelstra Role-Fit Era",
+      "record": "46-36",
+      "wins": 46,
+      "losses": 36,
+      "win_pct": 0.561,
+      "playoff_result": {
+        "made_playoffs": true,
+        "series_wins": 0,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Bam Adebayo",
+          "archetype": "PF_04",
+          "hbb": 63.0
+        },
+        {
+          "name": "Jaime Jaquez Jr.",
+          "archetype": "PG_04",
+          "hbb": 48.6
+        },
+        {
+          "name": "Jimmy Butler III",
+          "archetype": "SF_05",
+          "hbb": 64.8
+        },
+        {
+          "name": "Duncan Robinson",
+          "archetype": "SF_02",
+          "hbb": 51.3
+        },
+        {
+          "name": "Caleb Martin",
+          "archetype": "SF_04",
+          "hbb": 47.6
+        },
+        {
+          "name": "Tyler Herro",
+          "archetype": "PG_01",
+          "hbb": 59.5
+        },
+        {
+          "name": "Haywood Highsmith",
+          "archetype": "SF_03",
+          "hbb": 40.3
+        }
+      ],
+      "archetype_mix": "PF_04 | PG_04 | SF_05 | SF_02 | SF_04 | PG_01 | SF_03",
+      "hbb_team_shape": {
+        "motor": 48.0,
+        "decision": 57.6,
+        "pressure": 55.1,
+        "composite": 53.6
+      },
+      "value_counts": {
+        "value_creation": 2,
+        "value_acquisition": 1,
+        "internal_development": 2,
+        "role_fit": 2
+      },
+      "note": "Playoff team: useful identity, but not enough complete fit to survive deep rounds."
+    },
+    {
+      "season": "2024-25",
+      "era": "Butler/Spoelstra Role-Fit Era",
+      "record": "37-45",
+      "wins": 37,
+      "losses": 45,
+      "win_pct": 0.451,
+      "playoff_result": {
+        "made_playoffs": true,
+        "series_wins": 0,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Tyler Herro",
+          "archetype": "PG_01",
+          "hbb": 65.5
+        },
+        {
+          "name": "Bam Adebayo",
+          "archetype": "PF_04",
+          "hbb": 65.1
+        },
+        {
+          "name": "Haywood Highsmith",
+          "archetype": "SF_03",
+          "hbb": 43.3
+        },
+        {
+          "name": "Duncan Robinson",
+          "archetype": "SF_04",
+          "hbb": 47.0
+        },
+        {
+          "name": "Kel'el Ware",
+          "archetype": "C_03",
+          "hbb": 47.9
+        },
+        {
+          "name": "Jaime Jaquez Jr.",
+          "archetype": "PG_04",
+          "hbb": 42.3
+        }
+      ],
+      "archetype_mix": "PG_01 | PF_04 | SF_03 | SF_04 | PG_07 | C_03 | PG_04",
+      "hbb_team_shape": {
+        "motor": 47.6,
+        "decision": 54.4,
+        "pressure": 53.5,
+        "composite": 51.8
+      },
+      "value_counts": {
+        "value_creation": 1,
+        "value_acquisition": 0,
+        "internal_development": 2,
+        "role_fit": 3
+      },
+      "note": "Playoff team: useful identity, but not enough complete fit to survive deep rounds."
+    },
+    {
+      "season": "2025-26",
+      "era": "Butler/Spoelstra Role-Fit Era",
+      "record": "43-39",
+      "wins": 43,
+      "losses": 39,
+      "win_pct": 0.524,
+      "playoff_result": {
+        "made_playoffs": false,
+        "series_wins": 0,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Bam Adebayo",
+          "archetype": "PF_06",
+          "hbb": 64.6
+        },
+        {
+          "name": "Jaime Jaquez Jr.",
+          "archetype": "PG_09",
+          "hbb": 53.0
+        },
+        {
+          "name": "Andrew Wiggins",
+          "archetype": "SF_02",
+          "hbb": 57.6
+        },
+        {
+          "name": "Davion Mitchell",
+          "archetype": "PG_09",
+          "hbb": 50.3
+        },
+        {
+          "name": "Pelle Larsson",
+          "archetype": "PG_06",
+          "hbb": 46.6
+        },
+        {
+          "name": "Norman Powell",
+          "archetype": "PG_02",
+          "hbb": 55.2
+        },
+        {
+          "name": "Kel'el Ware",
+          "archetype": "C_03",
+          "hbb": 53.1
+        }
+      ],
+      "archetype_mix": "PF_06 | PG_09 | SF_02 | PG_09 | PG_06 | PG_02 | C_03",
+      "hbb_team_shape": {
+        "motor": 51.6,
+        "decision": 54.7,
+        "pressure": 56.6,
+        "composite": 54.3
+      },
+      "value_counts": {
+        "value_creation": 0,
+        "value_acquisition": 0,
+        "internal_development": 1,
+        "role_fit": 6
+      },
+      "note": "Non-playoff season: useful for identifying missing roster-construction ingredients."
+    }
+  ],
+  "player_profiles": [
+    {
+      "season": "1995-96",
+      "player_id": "297",
+      "player_name": "Alonzo Mourning",
+      "position": "C",
+      "age": 25.0,
+      "rank_on_team": 1,
+      "games_played": 70,
+      "minutes_per_game": 38.2,
+      "stat_line": {
+        "points": 23.2,
+        "rebounds": 10.4,
+        "assists": 2.3,
+        "steals": 1.0,
+        "blocks": 2.7,
+        "threes": 0.1
+      },
+      "archetype": {
+        "cluster_id": "C_04",
+        "position": "C",
+        "confidence": 0.303,
+        "core_stat_block": "18.6/9.4/1.9/0.7/1.9",
+        "championship_dna": {
+          "team_seasons": 30,
+          "playoff_rate": 0.5,
+          "avg_series_wins": 0.367,
+          "finals_rate": 0.033,
+          "championship_rate": 0.033
+        }
+      },
+      "competitive_traits": {
+        "motor": 73.4,
+        "decision": 47.6,
+        "pressure": 74.5,
+        "composite": 65.2
+      },
+      "acquisition_lens": {
+        "classification": "value_acquisition",
+        "thesis": "Miami paid for known production and used roster structure to convert certainty into playoff leverage."
+      }
+    },
+    {
+      "season": "1996-97",
+      "player_id": "896",
+      "player_name": "Tim Hardaway",
+      "position": "G",
+      "age": 30.0,
+      "rank_on_team": 1,
+      "games_played": 81,
+      "minutes_per_game": 38.8,
+      "stat_line": {
+        "points": 20.3,
+        "rebounds": 3.4,
+        "assists": 8.6,
+        "steals": 1.9,
+        "blocks": 0.1,
+        "threes": 2.5
+      },
+      "archetype": {
+        "cluster_id": "PG_01",
+        "position": "PG",
+        "confidence": 0.256,
+        "core_stat_block": "22.5/4.0/5.9/1.2/0.3",
+        "championship_dna": {
+          "team_seasons": 226,
+          "playoff_rate": 0.584,
+          "avg_series_wins": 0.553,
+          "finals_rate": 0.071,
+          "championship_rate": 0.026
+        }
+      },
+      "competitive_traits": {
+        "motor": 59.4,
+        "decision": 61.7,
+        "pressure": 72.4,
+        "composite": 64.5
+      },
+      "acquisition_lens": {
+        "classification": "value_acquisition",
+        "thesis": "Miami paid for known production and used roster structure to convert certainty into playoff leverage."
+      }
+    },
+    {
+      "season": "2008-09",
+      "player_id": "2548",
+      "player_name": "Dwyane Wade",
+      "position": "G",
+      "age": 26.0,
+      "rank_on_team": 1,
+      "games_played": 79,
+      "minutes_per_game": 38.6,
+      "stat_line": {
+        "points": 30.2,
+        "rebounds": 5.0,
+        "assists": 7.5,
+        "steals": 2.2,
+        "blocks": 1.3,
+        "threes": 1.1
+      },
+      "archetype": {
+        "cluster_id": "PG_03",
+        "position": "PG",
+        "confidence": 0.126,
+        "core_stat_block": "22.0/5.6/7.1/1.8/0.5",
+        "championship_dna": {
+          "team_seasons": 143,
+          "playoff_rate": 0.65,
+          "avg_series_wins": 0.727,
+          "finals_rate": 0.098,
+          "championship_rate": 0.056
+        }
+      },
+      "competitive_traits": {
+        "motor": 85.9,
+        "decision": 58.5,
+        "pressure": 77.1,
+        "composite": 73.8
+      },
+      "acquisition_lens": {
+        "classification": "internal_development",
+        "thesis": "Miami turned an internal talent asset into a defined high-leverage role inside its roster identity."
+      }
+    },
+    {
+      "season": "2004-05",
+      "player_id": "406",
+      "player_name": "Shaquille O'Neal",
+      "position": "C",
+      "age": 32.0,
+      "rank_on_team": 5,
+      "games_played": 73,
+      "minutes_per_game": 34.1,
+      "stat_line": {
+        "points": 22.9,
+        "rebounds": 10.4,
+        "assists": 2.7,
+        "steals": 0.5,
+        "blocks": 2.3,
+        "threes": 0.0
+      },
+      "archetype": {
+        "cluster_id": "C_11",
+        "position": "C",
+        "confidence": 0.511,
+        "core_stat_block": "25.8/11.4/3.0/0.6/2.4",
+        "championship_dna": {
+          "team_seasons": 14,
+          "playoff_rate": 1.0,
+          "avg_series_wins": 1.857,
+          "finals_rate": 0.286,
+          "championship_rate": 0.214
+        }
+      },
+      "competitive_traits": {
+        "motor": 62.5,
+        "decision": 52.7,
+        "pressure": 69.4,
+        "composite": 61.5
+      },
+      "acquisition_lens": {
+        "classification": "value_acquisition",
+        "thesis": "Miami paid for known production and used roster structure to convert certainty into playoff leverage."
+      }
+    },
+    {
+      "season": "2004-05",
+      "player_id": "2617",
+      "player_name": "Udonis Haslem",
+      "position": "F",
+      "age": 24.0,
+      "rank_on_team": 3,
+      "games_played": 80,
+      "minutes_per_game": 33.4,
+      "stat_line": {
+        "points": 10.9,
+        "rebounds": 9.1,
+        "assists": 1.4,
+        "steals": 0.8,
+        "blocks": 0.5,
+        "threes": 0.0
+      },
+      "archetype": {
+        "cluster_id": "SF_07",
+        "position": "SF",
+        "confidence": 0.387,
+        "core_stat_block": "9.4/6.9/1.5/0.8/0.8",
+        "championship_dna": {
+          "team_seasons": 156,
+          "playoff_rate": 0.468,
+          "avg_series_wins": 0.436,
+          "finals_rate": 0.058,
+          "championship_rate": 0.038
+        }
+      },
+      "competitive_traits": {
+        "motor": 59.0,
+        "decision": 51.9,
+        "pressure": 43.9,
+        "composite": 51.6
+      },
+      "acquisition_lens": {
+        "classification": "value_creation",
+        "thesis": "Miami extracted rotation value beyond the player's prior market label through role clarity, development, or context fit."
+      }
+    },
+    {
+      "season": "2012-13",
+      "player_id": "2544",
+      "player_name": "LeBron James",
+      "position": "F",
+      "age": 27.0,
+      "rank_on_team": 1,
+      "games_played": 76,
+      "minutes_per_game": 37.9,
+      "stat_line": {
+        "points": 26.8,
+        "rebounds": 8.0,
+        "assists": 7.2,
+        "steals": 1.7,
+        "blocks": 0.9,
+        "threes": 1.4
+      },
+      "archetype": {
+        "cluster_id": "SF_09",
+        "position": "SF",
+        "confidence": 0.35,
+        "core_stat_block": "26.3/9.0/6.1/1.3/1.0",
+        "championship_dna": {
+          "team_seasons": 58,
+          "playoff_rate": 0.862,
+          "avg_series_wins": 1.207,
+          "finals_rate": 0.224,
+          "championship_rate": 0.121
+        }
+      },
+      "competitive_traits": {
+        "motor": 71.8,
+        "decision": 78.8,
+        "pressure": 76.6,
+        "composite": 75.7
+      },
+      "acquisition_lens": {
+        "classification": "value_acquisition",
+        "thesis": "Miami paid for known production and used roster structure to convert certainty into playoff leverage."
+      }
+    },
+    {
+      "season": "2015-16",
+      "player_id": "2547",
+      "player_name": "Chris Bosh",
+      "position": "F",
+      "age": 31.0,
+      "rank_on_team": 6,
+      "games_played": 53,
+      "minutes_per_game": 33.5,
+      "stat_line": {
+        "points": 19.1,
+        "rebounds": 7.4,
+        "assists": 2.4,
+        "steals": 0.7,
+        "blocks": 0.6,
+        "threes": 1.5
+      },
+      "archetype": {
+        "cluster_id": "SF_02",
+        "position": "SF",
+        "confidence": 0.362,
+        "core_stat_block": "16.1/5.3/2.3/0.9/0.4",
+        "championship_dna": {
+          "team_seasons": 246,
+          "playoff_rate": 0.484,
+          "avg_series_wins": 0.342,
+          "finals_rate": 0.037,
+          "championship_rate": 0.008
+        }
+      },
+      "competitive_traits": {
+        "motor": 54.4,
+        "decision": 53.8,
+        "pressure": 64.6,
+        "composite": 57.6
+      },
+      "acquisition_lens": {
+        "classification": "value_acquisition",
+        "thesis": "Miami paid for known production and used roster structure to convert certainty into playoff leverage."
+      }
+    },
+    {
+      "season": "2016-17",
+      "player_id": "201609",
+      "player_name": "Goran Dragic",
+      "position": "G",
+      "age": 30.0,
+      "rank_on_team": 2,
+      "games_played": 73,
+      "minutes_per_game": 33.7,
+      "stat_line": {
+        "points": 20.3,
+        "rebounds": 3.8,
+        "assists": 5.8,
+        "steals": 1.2,
+        "blocks": 0.2,
+        "threes": 1.6
+      },
+      "archetype": {
+        "cluster_id": "PG_10",
+        "position": "PG",
+        "confidence": 0.363,
+        "core_stat_block": "17.1/3.8/6.9/1.4/0.2",
+        "championship_dna": {
+          "team_seasons": 175,
+          "playoff_rate": 0.543,
+          "avg_series_wins": 0.469,
+          "finals_rate": 0.063,
+          "championship_rate": 0.017
+        }
+      },
+      "competitive_traits": {
+        "motor": 54.3,
+        "decision": 54.6,
+        "pressure": 63.4,
+        "composite": 57.4
+      },
+      "acquisition_lens": {
+        "classification": "role_fit",
+        "thesis": "Useful Heat role fit: production shape mattered because it filled a specific roster job."
+      }
+    },
+    {
+      "season": "2016-17",
+      "player_id": "202355",
+      "player_name": "Hassan Whiteside",
+      "position": "C",
+      "age": 27.0,
+      "rank_on_team": 1,
+      "games_played": 77,
+      "minutes_per_game": 32.7,
+      "stat_line": {
+        "points": 17.0,
+        "rebounds": 14.1,
+        "assists": 0.7,
+        "steals": 0.7,
+        "blocks": 2.1,
+        "threes": 0.0
+      },
+      "archetype": {
+        "cluster_id": "C_09",
+        "position": "C",
+        "confidence": 0.271,
+        "core_stat_block": "12.4/10.7/1.0/0.6/2.9",
+        "championship_dna": {
+          "team_seasons": 42,
+          "playoff_rate": 0.524,
+          "avg_series_wins": 0.429,
+          "finals_rate": 0.048,
+          "championship_rate": 0.0
+        }
+      },
+      "competitive_traits": {
+        "motor": 72.2,
+        "decision": 42.7,
+        "pressure": 60.1,
+        "composite": 58.3
+      },
+      "acquisition_lens": {
+        "classification": "value_creation",
+        "thesis": "Miami extracted rotation value beyond the player's prior market label through role clarity, development, or context fit."
+      }
+    },
+    {
+      "season": "2018-19",
+      "player_id": "1626196",
+      "player_name": "Josh Richardson",
+      "position": "G",
+      "age": 25.0,
+      "rank_on_team": 1,
+      "games_played": 73,
+      "minutes_per_game": 34.8,
+      "stat_line": {
+        "points": 16.6,
+        "rebounds": 3.6,
+        "assists": 4.1,
+        "steals": 1.1,
+        "blocks": 0.5,
+        "threes": 2.2
+      },
+      "archetype": {
+        "cluster_id": "PG_02",
+        "position": "PG",
+        "confidence": 0.327,
+        "core_stat_block": "15.3/3.3/2.8/1.0/0.2",
+        "championship_dna": {
+          "team_seasons": 279,
+          "playoff_rate": 0.577,
+          "avg_series_wins": 0.509,
+          "finals_rate": 0.054,
+          "championship_rate": 0.025
+        }
+      },
+      "competitive_traits": {
+        "motor": 58.9,
+        "decision": 52.8,
+        "pressure": 63.1,
+        "composite": 58.3
+      },
+      "acquisition_lens": {
+        "classification": "value_creation",
+        "thesis": "Miami extracted rotation value beyond the player's prior market label through role clarity, development, or context fit."
+      }
+    },
+    {
+      "season": "2016-17",
+      "player_id": "204020",
+      "player_name": "Tyler Johnson",
+      "position": "G",
+      "age": 24.0,
+      "rank_on_team": 3,
+      "games_played": 73,
+      "minutes_per_game": 29.8,
+      "stat_line": {
+        "points": 13.7,
+        "rebounds": 4.0,
+        "assists": 3.2,
+        "steals": 1.2,
+        "blocks": 0.6,
+        "threes": 1.3
+      },
+      "archetype": {
+        "cluster_id": "PG_08",
+        "position": "PG",
+        "confidence": 0.594,
+        "core_stat_block": "11.9/4.0/3.0/1.2/0.5",
+        "championship_dna": {
+          "team_seasons": 159,
+          "playoff_rate": 0.497,
+          "avg_series_wins": 0.585,
+          "finals_rate": 0.094,
+          "championship_rate": 0.063
+        }
+      },
+      "competitive_traits": {
+        "motor": 62.5,
+        "decision": 48.5,
+        "pressure": 49.9,
+        "composite": 53.6
+      },
+      "acquisition_lens": {
+        "classification": "value_creation",
+        "thesis": "Miami extracted rotation value beyond the player's prior market label through role clarity, development, or context fit."
+      }
+    },
+    {
+      "season": "2016-17",
+      "player_id": "201949",
+      "player_name": "James Johnson",
+      "position": "F",
+      "age": 29.0,
+      "rank_on_team": 4,
+      "games_played": 76,
+      "minutes_per_game": 27.4,
+      "stat_line": {
+        "points": 12.8,
+        "rebounds": 4.9,
+        "assists": 3.6,
+        "steals": 1.0,
+        "blocks": 1.1,
+        "threes": 1.1
+      },
+      "archetype": {
+        "cluster_id": "SF_10",
+        "position": "SF",
+        "confidence": 0.314,
+        "core_stat_block": "11.5/5.5/2.2/1.3/0.6",
+        "championship_dna": {
+          "team_seasons": 147,
+          "playoff_rate": 0.524,
+          "avg_series_wins": 0.408,
+          "finals_rate": 0.048,
+          "championship_rate": 0.041
+        }
+      },
+      "competitive_traits": {
+        "motor": 53.7,
+        "decision": 55.8,
+        "pressure": 49.7,
+        "composite": 53.1
+      },
+      "acquisition_lens": {
+        "classification": "value_creation",
+        "thesis": "Miami extracted rotation value beyond the player's prior market label through role clarity, development, or context fit."
+      }
+    },
+    {
+      "season": "2024-25",
+      "player_id": "1628389",
+      "player_name": "Bam Adebayo",
+      "position": "C-F",
+      "age": 27.0,
+      "rank_on_team": 2,
+      "games_played": 78,
+      "minutes_per_game": 34.3,
+      "stat_line": {
+        "points": 18.1,
+        "rebounds": 9.6,
+        "assists": 4.3,
+        "steals": 1.3,
+        "blocks": 0.7,
+        "threes": 1.0
+      },
+      "archetype": {
+        "cluster_id": "PF_04",
+        "position": "PF",
+        "confidence": 0.351,
+        "core_stat_block": "18.5/10.5/4.6/1.1/1.0",
+        "championship_dna": {
+          "team_seasons": 34,
+          "playoff_rate": 0.706,
+          "avg_series_wins": 0.618,
+          "finals_rate": 0.088,
+          "championship_rate": 0.029
+        }
+      },
+      "competitive_traits": {
+        "motor": 61.8,
+        "decision": 66.6,
+        "pressure": 66.8,
+        "composite": 65.1
+      },
+      "acquisition_lens": {
+        "classification": "internal_development",
+        "thesis": "Miami turned an internal talent asset into a defined high-leverage role inside its roster identity."
+      }
+    },
+    {
+      "season": "2020-21",
+      "player_id": "202710",
+      "player_name": "Jimmy Butler III",
+      "position": "F",
+      "age": 31.0,
+      "rank_on_team": 3,
+      "games_played": 52,
+      "minutes_per_game": 33.6,
+      "stat_line": {
+        "points": 21.5,
+        "rebounds": 6.9,
+        "assists": 7.1,
+        "steals": 2.1,
+        "blocks": 0.3,
+        "threes": 0.5
+      },
+      "archetype": {
+        "cluster_id": "SF_05",
+        "position": "SF",
+        "confidence": 0.208,
+        "core_stat_block": "21.7/6.4/4.1/1.4/0.6",
+        "championship_dna": {
+          "team_seasons": 110,
+          "playoff_rate": 0.645,
+          "avg_series_wins": 0.673,
+          "finals_rate": 0.091,
+          "championship_rate": 0.036
+        }
+      },
+      "competitive_traits": {
+        "motor": 65.3,
+        "decision": 82.2,
+        "pressure": 61.0,
+        "composite": 69.5
+      },
+      "acquisition_lens": {
+        "classification": "value_acquisition",
+        "thesis": "Miami paid for known production and used roster structure to convert certainty into playoff leverage."
+      }
+    },
+    {
+      "season": "2020-21",
+      "player_id": "1629130",
+      "player_name": "Duncan Robinson",
+      "position": "F",
+      "age": 26.0,
+      "rank_on_team": 1,
+      "games_played": 72,
+      "minutes_per_game": 31.4,
+      "stat_line": {
+        "points": 13.1,
+        "rebounds": 3.5,
+        "assists": 1.8,
+        "steals": 0.6,
+        "blocks": 0.3,
+        "threes": 3.5
+      },
+      "archetype": {
+        "cluster_id": "SF_02",
+        "position": "SF",
+        "confidence": 0.2,
+        "core_stat_block": "16.1/5.3/2.3/0.9/0.4",
+        "championship_dna": {
+          "team_seasons": 246,
+          "playoff_rate": 0.484,
+          "avg_series_wins": 0.342,
+          "finals_rate": 0.037,
+          "championship_rate": 0.008
+        }
+      },
+      "competitive_traits": {
+        "motor": 38.4,
+        "decision": 51.4,
+        "pressure": 66.4,
+        "composite": 52.1
+      },
+      "acquisition_lens": {
+        "classification": "value_creation",
+        "thesis": "Miami extracted rotation value beyond the player's prior market label through role clarity, development, or context fit."
+      }
+    },
+    {
+      "season": "2020-21",
+      "player_id": "1629134",
+      "player_name": "Kendrick Nunn",
+      "position": "G",
+      "age": 25.0,
+      "rank_on_team": 4,
+      "games_played": 56,
+      "minutes_per_game": 29.5,
+      "stat_line": {
+        "points": 14.6,
+        "rebounds": 3.2,
+        "assists": 2.6,
+        "steals": 0.9,
+        "blocks": 0.2,
+        "threes": 2.2
+      },
+      "archetype": {
+        "cluster_id": "PG_02",
+        "position": "PG",
+        "confidence": 0.707,
+        "core_stat_block": "15.3/3.3/2.8/1.0/0.2",
+        "championship_dna": {
+          "team_seasons": 279,
+          "playoff_rate": 0.577,
+          "avg_series_wins": 0.509,
+          "finals_rate": 0.054,
+          "championship_rate": 0.025
+        }
+      },
+      "competitive_traits": {
+        "motor": 48.3,
+        "decision": 52.8,
+        "pressure": 56.2,
+        "composite": 52.4
+      },
+      "acquisition_lens": {
+        "classification": "value_creation",
+        "thesis": "Miami extracted rotation value beyond the player's prior market label through role clarity, development, or context fit."
+      }
+    },
+    {
+      "season": "2024-25",
+      "player_id": "1629639",
+      "player_name": "Tyler Herro",
+      "position": "G",
+      "age": 24.0,
+      "rank_on_team": 1,
+      "games_played": 77,
+      "minutes_per_game": 35.4,
+      "stat_line": {
+        "points": 23.9,
+        "rebounds": 5.2,
+        "assists": 5.5,
+        "steals": 0.9,
+        "blocks": 0.2,
+        "threes": 3.3
+      },
+      "archetype": {
+        "cluster_id": "PG_01",
+        "position": "PG",
+        "confidence": 0.297,
+        "core_stat_block": "22.5/4.0/5.9/1.2/0.3",
+        "championship_dna": {
+          "team_seasons": 226,
+          "playoff_rate": 0.584,
+          "avg_series_wins": 0.553,
+          "finals_rate": 0.071,
+          "championship_rate": 0.026
+        }
+      },
+      "competitive_traits": {
+        "motor": 59.4,
+        "decision": 57.7,
+        "pressure": 79.4,
+        "composite": 65.5
+      },
+      "acquisition_lens": {
+        "classification": "internal_development",
+        "thesis": "Miami turned an internal talent asset into a defined high-leverage role inside its roster identity."
+      }
+    },
+    {
+      "season": "2022-23",
+      "player_id": "1629622",
+      "player_name": "Max Strus",
+      "position": "G-F",
+      "age": 26.0,
+      "rank_on_team": 3,
+      "games_played": 80,
+      "minutes_per_game": 28.4,
+      "stat_line": {
+        "points": 11.5,
+        "rebounds": 3.2,
+        "assists": 2.1,
+        "steals": 0.5,
+        "blocks": 0.1,
+        "threes": 2.5
+      },
+      "archetype": {
+        "cluster_id": "SG_07",
+        "position": "SG",
+        "confidence": 0.368,
+        "core_stat_block": "11.3/3.2/1.6/0.7/0.3",
+        "championship_dna": {
+          "team_seasons": 133,
+          "playoff_rate": 0.549,
+          "avg_series_wins": 0.429,
+          "finals_rate": 0.053,
+          "championship_rate": 0.015
+        }
+      },
+      "competitive_traits": {
+        "motor": 37.8,
+        "decision": 53.6,
+        "pressure": 55.8,
+        "composite": 49.1
+      },
+      "acquisition_lens": {
+        "classification": "value_creation",
+        "thesis": "Miami extracted rotation value beyond the player's prior market label through role clarity, development, or context fit."
+      }
+    },
+    {
+      "season": "2021-22",
+      "player_id": "1629216",
+      "player_name": "Gabe Vincent",
+      "position": "G",
+      "age": 25.0,
+      "rank_on_team": 7,
+      "games_played": 68,
+      "minutes_per_game": 23.4,
+      "stat_line": {
+        "points": 8.7,
+        "rebounds": 1.9,
+        "assists": 3.1,
+        "steals": 0.9,
+        "blocks": 0.2,
+        "threes": 1.8
+      },
+      "archetype": {
+        "cluster_id": "PG_07",
+        "position": "PG",
+        "confidence": 0.462,
+        "core_stat_block": "9.2/2.3/2.7/0.7/0.1",
+        "championship_dna": {
+          "team_seasons": 324,
+          "playoff_rate": 0.574,
+          "avg_series_wins": 0.59,
+          "finals_rate": 0.083,
+          "championship_rate": 0.046
+        }
+      },
+      "competitive_traits": {
+        "motor": 37.4,
+        "decision": 44.8,
+        "pressure": 41.5,
+        "composite": 41.2
+      },
+      "acquisition_lens": {
+        "classification": "value_creation",
+        "thesis": "Miami extracted rotation value beyond the player's prior market label through role clarity, development, or context fit."
+      }
+    },
+    {
+      "season": "2022-23",
+      "player_id": "1628997",
+      "player_name": "Caleb Martin",
+      "position": "F",
+      "age": 27.0,
+      "rank_on_team": 5,
+      "games_played": 71,
+      "minutes_per_game": 29.3,
+      "stat_line": {
+        "points": 9.6,
+        "rebounds": 4.8,
+        "assists": 1.6,
+        "steals": 1.0,
+        "blocks": 0.4,
+        "threes": 1.2
+      },
+      "archetype": {
+        "cluster_id": "SF_03",
+        "position": "SF",
+        "confidence": 0.434,
+        "core_stat_block": "7.2/4.2/1.5/0.8/0.5",
+        "championship_dna": {
+          "team_seasons": 187,
+          "playoff_rate": 0.556,
+          "avg_series_wins": 0.503,
+          "finals_rate": 0.08,
+          "championship_rate": 0.027
+        }
+      },
+      "competitive_traits": {
+        "motor": 47.3,
+        "decision": 51.9,
+        "pressure": 46.9,
+        "composite": 48.7
+      },
+      "acquisition_lens": {
+        "classification": "value_creation",
+        "thesis": "Miami extracted rotation value beyond the player's prior market label through role clarity, development, or context fit."
+      }
+    },
+    {
+      "season": "2021-22",
+      "player_id": "200768",
+      "player_name": "Kyle Lowry",
+      "position": "G",
+      "age": 35.0,
+      "rank_on_team": 2,
+      "games_played": 63,
+      "minutes_per_game": 33.8,
+      "stat_line": {
+        "points": 13.4,
+        "rebounds": 4.5,
+        "assists": 7.5,
+        "steals": 1.1,
+        "blocks": 0.3,
+        "threes": 2.3
+      },
+      "archetype": {
+        "cluster_id": "PG_01",
+        "position": "PG",
+        "confidence": 0.304,
+        "core_stat_block": "22.5/4.0/5.9/1.2/0.3",
+        "championship_dna": {
+          "team_seasons": 226,
+          "playoff_rate": 0.584,
+          "avg_series_wins": 0.553,
+          "finals_rate": 0.071,
+          "championship_rate": 0.026
+        }
+      },
+      "competitive_traits": {
+        "motor": 58.1,
+        "decision": 60.1,
+        "pressure": 58.4,
+        "composite": 58.9
+      },
+      "acquisition_lens": {
+        "classification": "value_acquisition",
+        "thesis": "Miami paid for known production and used roster structure to convert certainty into playoff leverage."
+      }
+    }
+  ],
+  "hof_positional_baselines": {
+    "title": "Hall of Fame Positional Baselines",
+    "source_note": "Curated modern NBA Hall of Fame cohort with DelQuant-era seasons, including inducted classes through 2025. This is a benchmark layer, not a Hall of Fame prediction model.",
+    "baseline_method": "For each Hall of Fame player, DelQuant selects the strongest available DelQuant-era season by HBB composite, then computes positional averages and standard deviations for Motor, Decision, Pressure, and Composite.",
+    "baselines": [
+      {
+        "position": "PG",
+        "player_count": 8,
+        "players": [
+          "Allen Iverson",
+          "Chauncey Billups",
+          "Gary Payton",
+          "Jason Kidd",
+          "John Stockton",
+          "Steve Nash",
+          "Tim Hardaway",
+          "Tony Parker"
+        ],
+        "motor": {
+          "avg": 61.6,
+          "std_dev": 14.0
+        },
+        "decision": {
+          "avg": 68.3,
+          "std_dev": 8.2
+        },
+        "pressure": {
+          "avg": 66.3,
+          "std_dev": 9.7
+        },
+        "hbb_composite": {
+          "avg": 65.4,
+          "std_dev": 5.3
+        }
+      },
+      {
+        "position": "SG",
+        "player_count": 7,
+        "players": [
+          "Dwyane Wade",
+          "Kobe Bryant",
+          "Manu Ginobili",
+          "Michael Jordan",
+          "Mitch Richmond",
+          "Ray Allen",
+          "Reggie Miller"
+        ],
+        "motor": {
+          "avg": 71.3,
+          "std_dev": 12.0
+        },
+        "decision": {
+          "avg": 53.3,
+          "std_dev": 5.1
+        },
+        "pressure": {
+          "avg": 76.3,
+          "std_dev": 5.9
+        },
+        "hbb_composite": {
+          "avg": 67.0,
+          "std_dev": 5.9
+        }
+      },
+      {
+        "position": "SF",
+        "player_count": 6,
+        "players": [
+          "Carmelo Anthony",
+          "Grant Hill",
+          "Paul Pierce",
+          "Scottie Pippen",
+          "Tracy McGrady",
+          "Vince Carter"
+        ],
+        "motor": {
+          "avg": 72.5,
+          "std_dev": 3.7
+        },
+        "decision": {
+          "avg": 59.8,
+          "std_dev": 7.3
+        },
+        "pressure": {
+          "avg": 78.0,
+          "std_dev": 9.9
+        },
+        "hbb_composite": {
+          "avg": 70.1,
+          "std_dev": 2.9
+        }
+      },
+      {
+        "position": "PF",
+        "player_count": 7,
+        "players": [
+          "Chris Bosh",
+          "Chris Webber",
+          "Dennis Rodman",
+          "Dirk Nowitzki",
+          "Karl Malone",
+          "Kevin Garnett",
+          "Tim Duncan"
+        ],
+        "motor": {
+          "avg": 75.0,
+          "std_dev": 6.5
+        },
+        "decision": {
+          "avg": 59.3,
+          "std_dev": 7.3
+        },
+        "pressure": {
+          "avg": 65.8,
+          "std_dev": 11.9
+        },
+        "hbb_composite": {
+          "avg": 66.7,
+          "std_dev": 7.5
+        }
+      },
+      {
+        "position": "C",
+        "player_count": 7,
+        "players": [
+          "Ben Wallace",
+          "Dikembe Mutombo",
+          "Dwight Howard",
+          "Pau Gasol",
+          "Shaquille O'Neal",
+          "Vlade Divac",
+          "Yao Ming"
+        ],
+        "motor": {
+          "avg": 74.4,
+          "std_dev": 11.4
+        },
+        "decision": {
+          "avg": 53.7,
+          "std_dev": 8.2
+        },
+        "pressure": {
+          "avg": 62.7,
+          "std_dev": 9.8
+        },
+        "hbb_composite": {
+          "avg": 63.6,
+          "std_dev": 3.7
+        }
+      }
+    ],
+    "heat_comparisons": [
+      {
+        "player_name": "Alonzo Mourning",
+        "season": "1995-96",
+        "position": "C",
+        "archetype": "C_04",
+        "traits": {
+          "motor": 69.7,
+          "decision": 59.7,
+          "pressure": 68.3,
+          "composite": 65.9
+        },
+        "z_scores": {
+          "motor": -0.41,
+          "decision": 0.73,
+          "pressure": 0.57,
+          "composite": 0.62
+        },
+        "labels": {
+          "motor": "slightly below HOF positional reference",
+          "decision": "above typical HOF positional reference",
+          "pressure": "above typical HOF positional reference",
+          "composite": "above typical HOF positional reference"
+        },
+        "development_read": "Closest elite-position signal: decision. Primary positional gap to explore: motor.",
+        "context_read": "This is a historical positional benchmark, not a verdict on the current player."
+      },
+      {
+        "player_name": "Alonzo Mourning",
+        "season": "1996-97",
+        "position": "C",
+        "archetype": "C_04",
+        "traits": {
+          "motor": 65.4,
+          "decision": 52.1,
+          "pressure": 60.8,
+          "composite": 59.4
+        },
+        "z_scores": {
+          "motor": -0.79,
+          "decision": -0.2,
+          "pressure": -0.19,
+          "composite": -1.14
+        },
+        "labels": {
+          "motor": "slightly below HOF positional reference",
+          "decision": "inside HOF positional reference",
+          "pressure": "inside HOF positional reference",
+          "composite": "below typical HOF positional reference"
+        },
+        "development_read": "Closest elite-position signal: pressure. Primary positional gap to explore: composite.",
+        "context_read": "This is a historical positional benchmark, not a verdict on the current player."
+      },
+      {
+        "player_name": "Ike Austin",
+        "season": "1996-97",
+        "position": "C",
+        "archetype": "C_08",
+        "traits": {
+          "motor": 37.5,
+          "decision": 52.6,
+          "pressure": 42.2,
+          "composite": 44.1
+        },
+        "z_scores": {
+          "motor": -3.24,
+          "decision": -0.13,
+          "pressure": -2.09,
+          "composite": -5.27
+        },
+        "labels": {
+          "motor": "below typical HOF positional reference",
+          "decision": "inside HOF positional reference",
+          "pressure": "below typical HOF positional reference",
+          "composite": "below typical HOF positional reference"
+        },
+        "development_read": "Closest elite-position signal: decision. Primary positional gap to explore: composite.",
+        "context_read": "This is a historical positional benchmark, not a verdict on the current player."
+      },
+      {
+        "player_name": "Alonzo Mourning",
+        "season": "1997-98",
+        "position": "C",
+        "archetype": "C_04",
+        "traits": {
+          "motor": 58.5,
+          "decision": 45.3,
+          "pressure": 58.8,
+          "composite": 54.2
+        },
+        "z_scores": {
+          "motor": -1.39,
+          "decision": -1.02,
+          "pressure": -0.4,
+          "composite": -2.54
+        },
+        "labels": {
+          "motor": "below typical HOF positional reference",
+          "decision": "below typical HOF positional reference",
+          "pressure": "slightly below HOF positional reference",
+          "composite": "below typical HOF positional reference"
+        },
+        "development_read": "Closest elite-position signal: pressure. Primary positional gap to explore: composite.",
+        "context_read": "This is a historical positional benchmark, not a verdict on the current player."
+      },
+      {
+        "player_name": "Alonzo Mourning",
+        "season": "1998-99",
+        "position": "C",
+        "archetype": "C_09",
+        "traits": {
+          "motor": 70.9,
+          "decision": 52.9,
+          "pressure": 62.6,
+          "composite": 62.1
+        },
+        "z_scores": {
+          "motor": -0.31,
+          "decision": -0.1,
+          "pressure": -0.01,
+          "composite": -0.41
+        },
+        "labels": {
+          "motor": "inside HOF positional reference",
+          "decision": "inside HOF positional reference",
+          "pressure": "inside HOF positional reference",
+          "composite": "slightly below HOF positional reference"
+        },
+        "development_read": "Closest elite-position signal: pressure. Primary positional gap to explore: composite.",
+        "context_read": "This is a historical positional benchmark, not a verdict on the current player."
+      },
+      {
+        "player_name": "Alonzo Mourning",
+        "season": "1999-00",
+        "position": "C",
+        "archetype": "C_09",
+        "traits": {
+          "motor": 61.4,
+          "decision": 57.0,
+          "pressure": 62.4,
+          "composite": 60.3
+        },
+        "z_scores": {
+          "motor": -1.14,
+          "decision": 0.4,
+          "pressure": -0.03,
+          "composite": -0.89
+        },
+        "labels": {
+          "motor": "below typical HOF positional reference",
+          "decision": "above typical HOF positional reference",
+          "pressure": "inside HOF positional reference",
+          "composite": "slightly below HOF positional reference"
+        },
+        "development_read": "Closest elite-position signal: decision. Primary positional gap to explore: motor.",
+        "context_read": "This is a historical positional benchmark, not a verdict on the current player."
+      },
+      {
+        "player_name": "Alonzo Mourning",
+        "season": "2001-02",
+        "position": "C",
+        "archetype": "C_09",
+        "traits": {
+          "motor": 50.4,
+          "decision": 49.4,
+          "pressure": 54.8,
+          "composite": 51.5
+        },
+        "z_scores": {
+          "motor": -2.11,
+          "decision": -0.52,
+          "pressure": -0.81,
+          "composite": -3.27
+        },
+        "labels": {
+          "motor": "below typical HOF positional reference",
+          "decision": "slightly below HOF positional reference",
+          "pressure": "slightly below HOF positional reference",
+          "composite": "below typical HOF positional reference"
+        },
+        "development_read": "Closest elite-position signal: decision. Primary positional gap to explore: composite.",
+        "context_read": "This is a historical positional benchmark, not a verdict on the current player."
+      },
+      {
+        "player_name": "Vladimir Stepania",
+        "season": "2002-03",
+        "position": "C",
+        "archetype": "C_08",
+        "traits": {
+          "motor": 39.1,
+          "decision": 33.5,
+          "pressure": 36.1,
+          "composite": 36.2
+        },
+        "z_scores": {
+          "motor": -3.1,
+          "decision": -2.46,
+          "pressure": -2.71,
+          "composite": -7.41
+        },
+        "labels": {
+          "motor": "below typical HOF positional reference",
+          "decision": "below typical HOF positional reference",
+          "pressure": "below typical HOF positional reference",
+          "composite": "below typical HOF positional reference"
+        },
+        "development_read": "Closest elite-position signal: decision. Primary positional gap to explore: composite.",
+        "context_read": "This is a historical positional benchmark, not a verdict on the current player."
+      },
+      {
+        "player_name": "Shaquille O'Neal",
+        "season": "2004-05",
+        "position": "C",
+        "archetype": "C_11",
+        "traits": {
+          "motor": 56.8,
+          "decision": 69.1,
+          "pressure": 63.2,
+          "composite": 63.0
+        },
+        "z_scores": {
+          "motor": -1.54,
+          "decision": 1.88,
+          "pressure": 0.05,
+          "composite": -0.16
+        },
+        "labels": {
+          "motor": "below typical HOF positional reference",
+          "decision": "well above HOF positional reference",
+          "pressure": "inside HOF positional reference",
+          "composite": "inside HOF positional reference"
+        },
+        "development_read": "Closest elite-position signal: decision. Primary positional gap to explore: motor.",
+        "context_read": "This is a historical positional benchmark, not a verdict on the current player."
+      },
+      {
+        "player_name": "Shaquille O'Neal",
+        "season": "2005-06",
+        "position": "C",
+        "archetype": "C_04",
+        "traits": {
+          "motor": 48.6,
+          "decision": 57.1,
+          "pressure": 58.0,
+          "composite": 54.6
+        },
+        "z_scores": {
+          "motor": -2.26,
+          "decision": 0.41,
+          "pressure": -0.48,
+          "composite": -2.43
+        },
+        "labels": {
+          "motor": "below typical HOF positional reference",
+          "decision": "above typical HOF positional reference",
+          "pressure": "slightly below HOF positional reference",
+          "composite": "below typical HOF positional reference"
+        },
+        "development_read": "Closest elite-position signal: decision. Primary positional gap to explore: composite.",
+        "context_read": "This is a historical positional benchmark, not a verdict on the current player."
+      },
+      {
+        "player_name": "Alonzo Mourning",
+        "season": "2006-07",
+        "position": "C",
+        "archetype": "C_07",
+        "traits": {
+          "motor": 34.1,
+          "decision": 40.8,
+          "pressure": 39.4,
+          "composite": 38.1
+        },
+        "z_scores": {
+          "motor": -3.54,
+          "decision": -1.57,
+          "pressure": -2.38,
+          "composite": -6.89
+        },
+        "labels": {
+          "motor": "below typical HOF positional reference",
+          "decision": "below typical HOF positional reference",
+          "pressure": "below typical HOF positional reference",
+          "composite": "below typical HOF positional reference"
+        },
+        "development_read": "Closest elite-position signal: decision. Primary positional gap to explore: composite.",
+        "context_read": "This is a historical positional benchmark, not a verdict on the current player."
+      },
+      {
+        "player_name": "Joel Anthony",
+        "season": "2008-09",
+        "position": "C",
+        "archetype": "C_08",
+        "traits": {
+          "motor": 28.8,
+          "decision": 46.9,
+          "pressure": 30.1,
+          "composite": 35.3
+        },
+        "z_scores": {
+          "motor": -4.0,
+          "decision": -0.83,
+          "pressure": -3.33,
+          "composite": -7.65
+        },
+        "labels": {
+          "motor": "below typical HOF positional reference",
+          "decision": "slightly below HOF positional reference",
+          "pressure": "below typical HOF positional reference",
+          "composite": "below typical HOF positional reference"
+        },
+        "development_read": "Closest elite-position signal: decision. Primary positional gap to explore: composite.",
+        "context_read": "This is a historical positional benchmark, not a verdict on the current player."
+      },
+      {
+        "player_name": "Joel Anthony",
+        "season": "2010-11",
+        "position": "C",
+        "archetype": "C_08",
+        "traits": {
+          "motor": 26.7,
+          "decision": 50.1,
+          "pressure": 31.8,
+          "composite": 36.2
+        },
+        "z_scores": {
+          "motor": -4.18,
+          "decision": -0.44,
+          "pressure": -3.15,
+          "composite": -7.41
+        },
+        "labels": {
+          "motor": "below typical HOF positional reference",
+          "decision": "slightly below HOF positional reference",
+          "pressure": "below typical HOF positional reference",
+          "composite": "below typical HOF positional reference"
+        },
+        "development_read": "Closest elite-position signal: decision. Primary positional gap to explore: composite.",
+        "context_read": "This is a historical positional benchmark, not a verdict on the current player."
+      },
+      {
+        "player_name": "Zydrunas Ilgauskas",
+        "season": "2010-11",
+        "position": "C",
+        "archetype": "C_08",
+        "traits": {
+          "motor": 28.1,
+          "decision": 45.9,
+          "pressure": 33.0,
+          "composite": 35.7
+        },
+        "z_scores": {
+          "motor": -4.06,
+          "decision": -0.95,
+          "pressure": -3.03,
+          "composite": -7.54
+        },
+        "labels": {
+          "motor": "below typical HOF positional reference",
+          "decision": "slightly below HOF positional reference",
+          "pressure": "below typical HOF positional reference",
+          "composite": "below typical HOF positional reference"
+        },
+        "development_read": "Closest elite-position signal: decision. Primary positional gap to explore: composite.",
+        "context_read": "This is a historical positional benchmark, not a verdict on the current player."
+      },
+      {
+        "player_name": "Joel Anthony",
+        "season": "2011-12",
+        "position": "C",
+        "archetype": "C_08",
+        "traits": {
+          "motor": 36.7,
+          "decision": 43.2,
+          "pressure": 34.3,
+          "composite": 38.1
+        },
+        "z_scores": {
+          "motor": -3.31,
+          "decision": -1.28,
+          "pressure": -2.9,
+          "composite": -6.89
+        },
+        "labels": {
+          "motor": "below typical HOF positional reference",
+          "decision": "below typical HOF positional reference",
+          "pressure": "below typical HOF positional reference",
+          "composite": "below typical HOF positional reference"
+        },
+        "development_read": "Closest elite-position signal: decision. Primary positional gap to explore: composite.",
+        "context_read": "This is a historical positional benchmark, not a verdict on the current player."
+      },
+      {
+        "player_name": "Hassan Whiteside",
+        "season": "2014-15",
+        "position": "C",
+        "archetype": "C_09",
+        "traits": {
+          "motor": 54.8,
+          "decision": 41.0,
+          "pressure": 45.0,
+          "composite": 46.9
+        },
+        "z_scores": {
+          "motor": -1.72,
+          "decision": -1.55,
+          "pressure": -1.81,
+          "composite": -4.51
+        },
+        "labels": {
+          "motor": "below typical HOF positional reference",
+          "decision": "below typical HOF positional reference",
+          "pressure": "below typical HOF positional reference",
+          "composite": "below typical HOF positional reference"
+        },
+        "development_read": "Closest elite-position signal: decision. Primary positional gap to explore: composite.",
+        "context_read": "This is a historical positional benchmark, not a verdict on the current player."
+      },
+      {
+        "player_name": "Hassan Whiteside",
+        "season": "2015-16",
+        "position": "C",
+        "archetype": "C_09",
+        "traits": {
+          "motor": 65.6,
+          "decision": 45.8,
+          "pressure": 50.8,
+          "composite": 54.1
+        },
+        "z_scores": {
+          "motor": -0.77,
+          "decision": -0.96,
+          "pressure": -1.21,
+          "composite": -2.57
+        },
+        "labels": {
+          "motor": "slightly below HOF positional reference",
+          "decision": "slightly below HOF positional reference",
+          "pressure": "below typical HOF positional reference",
+          "composite": "below typical HOF positional reference"
+        },
+        "development_read": "Closest elite-position signal: motor. Primary positional gap to explore: composite.",
+        "context_read": "This is a historical positional benchmark, not a verdict on the current player."
+      },
+      {
+        "player_name": "Hassan Whiteside",
+        "season": "2016-17",
+        "position": "C",
+        "archetype": "C_09",
+        "traits": {
+          "motor": 67.2,
+          "decision": 46.7,
+          "pressure": 56.0,
+          "composite": 56.6
+        },
+        "z_scores": {
+          "motor": -0.63,
+          "decision": -0.85,
+          "pressure": -0.68,
+          "composite": -1.89
+        },
+        "labels": {
+          "motor": "slightly below HOF positional reference",
+          "decision": "slightly below HOF positional reference",
+          "pressure": "slightly below HOF positional reference",
+          "composite": "below typical HOF positional reference"
+        },
+        "development_read": "Closest elite-position signal: motor. Primary positional gap to explore: composite.",
+        "context_read": "This is a historical positional benchmark, not a verdict on the current player."
+      },
+      {
+        "player_name": "Hassan Whiteside",
+        "season": "2018-19",
+        "position": "C",
+        "archetype": "C_06",
+        "traits": {
+          "motor": 55.7,
+          "decision": 45.7,
+          "pressure": 45.8,
+          "composite": 49.1
+        },
+        "z_scores": {
+          "motor": -1.64,
+          "decision": -0.98,
+          "pressure": -1.72,
+          "composite": -3.92
+        },
+        "labels": {
+          "motor": "below typical HOF positional reference",
+          "decision": "slightly below HOF positional reference",
+          "pressure": "below typical HOF positional reference",
+          "composite": "below typical HOF positional reference"
+        },
+        "development_read": "Closest elite-position signal: decision. Primary positional gap to explore: composite.",
+        "context_read": "This is a historical positional benchmark, not a verdict on the current player."
+      },
+      {
+        "player_name": "Kel'el Ware",
+        "season": "2024-25",
+        "position": "C",
+        "archetype": "C_03",
+        "traits": {
+          "motor": 43.9,
+          "decision": 59.0,
+          "pressure": 51.4,
+          "composite": 51.4
+        },
+        "z_scores": {
+          "motor": -2.68,
+          "decision": 0.65,
+          "pressure": -1.15,
+          "composite": -3.3
+        },
+        "labels": {
+          "motor": "below typical HOF positional reference",
+          "decision": "above typical HOF positional reference",
+          "pressure": "below typical HOF positional reference",
+          "composite": "below typical HOF positional reference"
+        },
+        "development_read": "Closest elite-position signal: decision. Primary positional gap to explore: composite.",
+        "context_read": "This is a historical positional benchmark, not a verdict on the current player."
+      },
+      {
+        "player_name": "Kel'el Ware",
+        "season": "2025-26",
+        "position": "C",
+        "archetype": "C_03",
+        "traits": {
+          "motor": 50.0,
+          "decision": 56.1,
+          "pressure": 60.0,
+          "composite": 55.4
+        },
+        "z_scores": {
+          "motor": -2.14,
+          "decision": 0.29,
+          "pressure": -0.28,
+          "composite": -2.22
+        },
+        "labels": {
+          "motor": "below typical HOF positional reference",
+          "decision": "inside HOF positional reference",
+          "pressure": "inside HOF positional reference",
+          "composite": "below typical HOF positional reference"
+        },
+        "development_read": "Closest elite-position signal: decision. Primary positional gap to explore: composite.",
+        "context_read": "This is a historical positional benchmark, not a verdict on the current player."
+      }
+    ]
+  },
+  "value_creation_examples": [
+    {
+      "season": "2016-17",
+      "player_id": "202355",
+      "player_name": "Hassan Whiteside",
+      "position": "C",
+      "age": 27.0,
+      "rank_on_team": 1,
+      "games_played": 77,
+      "minutes_per_game": 32.7,
+      "stat_line": {
+        "points": 17.0,
+        "rebounds": 14.1,
+        "assists": 0.7,
+        "steals": 0.7,
+        "blocks": 2.1,
+        "threes": 0.0
+      },
+      "archetype": {
+        "cluster_id": "C_09",
+        "position": "C",
+        "confidence": 0.271,
+        "core_stat_block": "12.4/10.7/1.0/0.6/2.9",
+        "championship_dna": {
+          "team_seasons": 42,
+          "playoff_rate": 0.524,
+          "avg_series_wins": 0.429,
+          "finals_rate": 0.048,
+          "championship_rate": 0.0
+        }
+      },
+      "competitive_traits": {
+        "motor": 72.2,
+        "decision": 42.7,
+        "pressure": 60.1,
+        "composite": 58.3
+      },
+      "acquisition_lens": {
+        "classification": "value_creation",
+        "thesis": "Miami extracted rotation value beyond the player's prior market label through role clarity, development, or context fit."
+      }
+    },
+    {
+      "season": "2018-19",
+      "player_id": "1626196",
+      "player_name": "Josh Richardson",
+      "position": "G",
+      "age": 25.0,
+      "rank_on_team": 1,
+      "games_played": 73,
+      "minutes_per_game": 34.8,
+      "stat_line": {
+        "points": 16.6,
+        "rebounds": 3.6,
+        "assists": 4.1,
+        "steals": 1.1,
+        "blocks": 0.5,
+        "threes": 2.2
+      },
+      "archetype": {
+        "cluster_id": "PG_02",
+        "position": "PG",
+        "confidence": 0.327,
+        "core_stat_block": "15.3/3.3/2.8/1.0/0.2",
+        "championship_dna": {
+          "team_seasons": 279,
+          "playoff_rate": 0.577,
+          "avg_series_wins": 0.509,
+          "finals_rate": 0.054,
+          "championship_rate": 0.025
+        }
+      },
+      "competitive_traits": {
+        "motor": 58.9,
+        "decision": 52.8,
+        "pressure": 63.1,
+        "composite": 58.3
+      },
+      "acquisition_lens": {
+        "classification": "value_creation",
+        "thesis": "Miami extracted rotation value beyond the player's prior market label through role clarity, development, or context fit."
+      }
+    },
+    {
+      "season": "2016-17",
+      "player_id": "204020",
+      "player_name": "Tyler Johnson",
+      "position": "G",
+      "age": 24.0,
+      "rank_on_team": 3,
+      "games_played": 73,
+      "minutes_per_game": 29.8,
+      "stat_line": {
+        "points": 13.7,
+        "rebounds": 4.0,
+        "assists": 3.2,
+        "steals": 1.2,
+        "blocks": 0.6,
+        "threes": 1.3
+      },
+      "archetype": {
+        "cluster_id": "PG_08",
+        "position": "PG",
+        "confidence": 0.594,
+        "core_stat_block": "11.9/4.0/3.0/1.2/0.5",
+        "championship_dna": {
+          "team_seasons": 159,
+          "playoff_rate": 0.497,
+          "avg_series_wins": 0.585,
+          "finals_rate": 0.094,
+          "championship_rate": 0.063
+        }
+      },
+      "competitive_traits": {
+        "motor": 62.5,
+        "decision": 48.5,
+        "pressure": 49.9,
+        "composite": 53.6
+      },
+      "acquisition_lens": {
+        "classification": "value_creation",
+        "thesis": "Miami extracted rotation value beyond the player's prior market label through role clarity, development, or context fit."
+      }
+    },
+    {
+      "season": "2016-17",
+      "player_id": "201949",
+      "player_name": "James Johnson",
+      "position": "F",
+      "age": 29.0,
+      "rank_on_team": 4,
+      "games_played": 76,
+      "minutes_per_game": 27.4,
+      "stat_line": {
+        "points": 12.8,
+        "rebounds": 4.9,
+        "assists": 3.6,
+        "steals": 1.0,
+        "blocks": 1.1,
+        "threes": 1.1
+      },
+      "archetype": {
+        "cluster_id": "SF_10",
+        "position": "SF",
+        "confidence": 0.314,
+        "core_stat_block": "11.5/5.5/2.2/1.3/0.6",
+        "championship_dna": {
+          "team_seasons": 147,
+          "playoff_rate": 0.524,
+          "avg_series_wins": 0.408,
+          "finals_rate": 0.048,
+          "championship_rate": 0.041
+        }
+      },
+      "competitive_traits": {
+        "motor": 53.7,
+        "decision": 55.8,
+        "pressure": 49.7,
+        "composite": 53.1
+      },
+      "acquisition_lens": {
+        "classification": "value_creation",
+        "thesis": "Miami extracted rotation value beyond the player's prior market label through role clarity, development, or context fit."
+      }
+    },
+    {
+      "season": "2020-21",
+      "player_id": "1629134",
+      "player_name": "Kendrick Nunn",
+      "position": "G",
+      "age": 25.0,
+      "rank_on_team": 4,
+      "games_played": 56,
+      "minutes_per_game": 29.5,
+      "stat_line": {
+        "points": 14.6,
+        "rebounds": 3.2,
+        "assists": 2.6,
+        "steals": 0.9,
+        "blocks": 0.2,
+        "threes": 2.2
+      },
+      "archetype": {
+        "cluster_id": "PG_02",
+        "position": "PG",
+        "confidence": 0.707,
+        "core_stat_block": "15.3/3.3/2.8/1.0/0.2",
+        "championship_dna": {
+          "team_seasons": 279,
+          "playoff_rate": 0.577,
+          "avg_series_wins": 0.509,
+          "finals_rate": 0.054,
+          "championship_rate": 0.025
+        }
+      },
+      "competitive_traits": {
+        "motor": 48.3,
+        "decision": 52.8,
+        "pressure": 56.2,
+        "composite": 52.4
+      },
+      "acquisition_lens": {
+        "classification": "value_creation",
+        "thesis": "Miami extracted rotation value beyond the player's prior market label through role clarity, development, or context fit."
+      }
+    },
+    {
+      "season": "2020-21",
+      "player_id": "1629130",
+      "player_name": "Duncan Robinson",
+      "position": "F",
+      "age": 26.0,
+      "rank_on_team": 1,
+      "games_played": 72,
+      "minutes_per_game": 31.4,
+      "stat_line": {
+        "points": 13.1,
+        "rebounds": 3.5,
+        "assists": 1.8,
+        "steals": 0.6,
+        "blocks": 0.3,
+        "threes": 3.5
+      },
+      "archetype": {
+        "cluster_id": "SF_02",
+        "position": "SF",
+        "confidence": 0.2,
+        "core_stat_block": "16.1/5.3/2.3/0.9/0.4",
+        "championship_dna": {
+          "team_seasons": 246,
+          "playoff_rate": 0.484,
+          "avg_series_wins": 0.342,
+          "finals_rate": 0.037,
+          "championship_rate": 0.008
+        }
+      },
+      "competitive_traits": {
+        "motor": 38.4,
+        "decision": 51.4,
+        "pressure": 66.4,
+        "composite": 52.1
+      },
+      "acquisition_lens": {
+        "classification": "value_creation",
+        "thesis": "Miami extracted rotation value beyond the player's prior market label through role clarity, development, or context fit."
+      }
+    },
+    {
+      "season": "2004-05",
+      "player_id": "2617",
+      "player_name": "Udonis Haslem",
+      "position": "F",
+      "age": 24.0,
+      "rank_on_team": 3,
+      "games_played": 80,
+      "minutes_per_game": 33.4,
+      "stat_line": {
+        "points": 10.9,
+        "rebounds": 9.1,
+        "assists": 1.4,
+        "steals": 0.8,
+        "blocks": 0.5,
+        "threes": 0.0
+      },
+      "archetype": {
+        "cluster_id": "SF_07",
+        "position": "SF",
+        "confidence": 0.387,
+        "core_stat_block": "9.4/6.9/1.5/0.8/0.8",
+        "championship_dna": {
+          "team_seasons": 156,
+          "playoff_rate": 0.468,
+          "avg_series_wins": 0.436,
+          "finals_rate": 0.058,
+          "championship_rate": 0.038
+        }
+      },
+      "competitive_traits": {
+        "motor": 59.0,
+        "decision": 51.9,
+        "pressure": 43.9,
+        "composite": 51.6
+      },
+      "acquisition_lens": {
+        "classification": "value_creation",
+        "thesis": "Miami extracted rotation value beyond the player's prior market label through role clarity, development, or context fit."
+      }
+    },
+    {
+      "season": "2022-23",
+      "player_id": "1629622",
+      "player_name": "Max Strus",
+      "position": "G-F",
+      "age": 26.0,
+      "rank_on_team": 3,
+      "games_played": 80,
+      "minutes_per_game": 28.4,
+      "stat_line": {
+        "points": 11.5,
+        "rebounds": 3.2,
+        "assists": 2.1,
+        "steals": 0.5,
+        "blocks": 0.1,
+        "threes": 2.5
+      },
+      "archetype": {
+        "cluster_id": "SG_07",
+        "position": "SG",
+        "confidence": 0.368,
+        "core_stat_block": "11.3/3.2/1.6/0.7/0.3",
+        "championship_dna": {
+          "team_seasons": 133,
+          "playoff_rate": 0.549,
+          "avg_series_wins": 0.429,
+          "finals_rate": 0.053,
+          "championship_rate": 0.015
+        }
+      },
+      "competitive_traits": {
+        "motor": 37.8,
+        "decision": 53.6,
+        "pressure": 55.8,
+        "composite": 49.1
+      },
+      "acquisition_lens": {
+        "classification": "value_creation",
+        "thesis": "Miami extracted rotation value beyond the player's prior market label through role clarity, development, or context fit."
+      }
+    },
+    {
+      "season": "2022-23",
+      "player_id": "1628997",
+      "player_name": "Caleb Martin",
+      "position": "F",
+      "age": 27.0,
+      "rank_on_team": 5,
+      "games_played": 71,
+      "minutes_per_game": 29.3,
+      "stat_line": {
+        "points": 9.6,
+        "rebounds": 4.8,
+        "assists": 1.6,
+        "steals": 1.0,
+        "blocks": 0.4,
+        "threes": 1.2
+      },
+      "archetype": {
+        "cluster_id": "SF_03",
+        "position": "SF",
+        "confidence": 0.434,
+        "core_stat_block": "7.2/4.2/1.5/0.8/0.5",
+        "championship_dna": {
+          "team_seasons": 187,
+          "playoff_rate": 0.556,
+          "avg_series_wins": 0.503,
+          "finals_rate": 0.08,
+          "championship_rate": 0.027
+        }
+      },
+      "competitive_traits": {
+        "motor": 47.3,
+        "decision": 51.9,
+        "pressure": 46.9,
+        "composite": 48.7
+      },
+      "acquisition_lens": {
+        "classification": "value_creation",
+        "thesis": "Miami extracted rotation value beyond the player's prior market label through role clarity, development, or context fit."
+      }
+    },
+    {
+      "season": "2021-22",
+      "player_id": "1629216",
+      "player_name": "Gabe Vincent",
+      "position": "G",
+      "age": 25.0,
+      "rank_on_team": 7,
+      "games_played": 68,
+      "minutes_per_game": 23.4,
+      "stat_line": {
+        "points": 8.7,
+        "rebounds": 1.9,
+        "assists": 3.1,
+        "steals": 0.9,
+        "blocks": 0.2,
+        "threes": 1.8
+      },
+      "archetype": {
+        "cluster_id": "PG_07",
+        "position": "PG",
+        "confidence": 0.462,
+        "core_stat_block": "9.2/2.3/2.7/0.7/0.1",
+        "championship_dna": {
+          "team_seasons": 324,
+          "playoff_rate": 0.574,
+          "avg_series_wins": 0.59,
+          "finals_rate": 0.083,
+          "championship_rate": 0.046
+        }
+      },
+      "competitive_traits": {
+        "motor": 37.4,
+        "decision": 44.8,
+        "pressure": 41.5,
+        "composite": 41.2
+      },
+      "acquisition_lens": {
+        "classification": "value_creation",
+        "thesis": "Miami extracted rotation value beyond the player's prior market label through role clarity, development, or context fit."
+      }
+    },
+    {
+      "season": "2012-13",
+      "player_id": "2544",
+      "player_name": "LeBron James",
+      "position": "F",
+      "age": 27.0,
+      "rank_on_team": 1,
+      "games_played": 76,
+      "minutes_per_game": 37.9,
+      "stat_line": {
+        "points": 26.8,
+        "rebounds": 8.0,
+        "assists": 7.2,
+        "steals": 1.7,
+        "blocks": 0.9,
+        "threes": 1.4
+      },
+      "archetype": {
+        "cluster_id": "SF_09",
+        "position": "SF",
+        "confidence": 0.35,
+        "core_stat_block": "26.3/9.0/6.1/1.3/1.0",
+        "championship_dna": {
+          "team_seasons": 58,
+          "playoff_rate": 0.862,
+          "avg_series_wins": 1.207,
+          "finals_rate": 0.224,
+          "championship_rate": 0.121
+        }
+      },
+      "competitive_traits": {
+        "motor": 71.8,
+        "decision": 78.8,
+        "pressure": 76.6,
+        "composite": 75.7
+      },
+      "acquisition_lens": {
+        "classification": "value_acquisition",
+        "thesis": "Miami paid for known production and used roster structure to convert certainty into playoff leverage."
+      }
+    },
+    {
+      "season": "2008-09",
+      "player_id": "2548",
+      "player_name": "Dwyane Wade",
+      "position": "G",
+      "age": 26.0,
+      "rank_on_team": 1,
+      "games_played": 79,
+      "minutes_per_game": 38.6,
+      "stat_line": {
+        "points": 30.2,
+        "rebounds": 5.0,
+        "assists": 7.5,
+        "steals": 2.2,
+        "blocks": 1.3,
+        "threes": 1.1
+      },
+      "archetype": {
+        "cluster_id": "PG_03",
+        "position": "PG",
+        "confidence": 0.126,
+        "core_stat_block": "22.0/5.6/7.1/1.8/0.5",
+        "championship_dna": {
+          "team_seasons": 143,
+          "playoff_rate": 0.65,
+          "avg_series_wins": 0.727,
+          "finals_rate": 0.098,
+          "championship_rate": 0.056
+        }
+      },
+      "competitive_traits": {
+        "motor": 85.9,
+        "decision": 58.5,
+        "pressure": 77.1,
+        "composite": 73.8
+      },
+      "acquisition_lens": {
+        "classification": "internal_development",
+        "thesis": "Miami turned an internal talent asset into a defined high-leverage role inside its roster identity."
+      }
+    }
+  ]
+}

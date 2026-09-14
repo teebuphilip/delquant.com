@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DelQuant Hawks Roster Construction Study</title>
+    <style>
+      :root {
+        --bg: #0f1115;
+        --panel: #171a21;
+        --panel-2: #20242d;
+        --text: #f2f4f8;
+        --muted: #aeb6c3;
+        --line: #303642;
+        --accent: #e03a3e;
+        --accent-2: #c1d32f;
+        --green: #65d08a;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font: 15px/1.5 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      header {
+        padding: 34px 24px 22px;
+        border-bottom: 1px solid var(--line);
+        background: #11141a;
+      }
+
+      main {
+        max-width: 1220px;
+        margin: 0 auto;
+        padding: 24px;
+      }
+
+      h1, h2, h3 { margin: 0; line-height: 1.15; }
+      h1 { font-size: clamp(28px, 4vw, 46px); letter-spacing: 0; }
+      h2 { font-size: 22px; margin-bottom: 14px; }
+      h3 { font-size: 16px; margin-bottom: 8px; }
+      p { margin: 8px 0 0; color: var(--muted); }
+
+      .wrap {
+        max-width: 1220px;
+        margin: 0 auto;
+      }
+
+      .eyebrow {
+        color: var(--accent-2);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 14px;
+      }
+
+      .card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 16px;
+      }
+
+      .span-3 { grid-column: span 3; }
+      .span-4 { grid-column: span 4; }
+      .span-5 { grid-column: span 5; }
+      .span-7 { grid-column: span 7; }
+      .span-12 { grid-column: span 12; }
+
+      .tabs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 0 0 18px;
+      }
+
+      button {
+        border: 1px solid var(--line);
+        background: var(--panel);
+        color: var(--text);
+        border-radius: 6px;
+        padding: 8px 12px;
+        cursor: pointer;
+        font: inherit;
+      }
+
+      button.active {
+        background: var(--accent);
+        border-color: var(--accent);
+        color: white;
+      }
+
+      select {
+        width: 100%;
+        background: var(--panel-2);
+        color: var(--text);
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        padding: 9px 10px;
+        font: inherit;
+      }
+
+      .metric {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 8px 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .metric:last-child { border-bottom: 0; }
+      .metric strong { font-size: 22px; color: var(--text); }
+      .muted { color: var(--muted); }
+      .small { font-size: 12px; }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      th, td {
+        text-align: left;
+        border-bottom: 1px solid var(--line);
+        padding: 9px 8px;
+        vertical-align: top;
+      }
+
+      th {
+        color: var(--muted);
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: .04em;
+        background: #141820;
+        position: sticky;
+        top: 0;
+      }
+
+      .table-wrap {
+        overflow: auto;
+        max-height: 620px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+      }
+
+      .tag {
+        display: inline-block;
+        padding: 3px 7px;
+        margin: 2px 3px 2px 0;
+        border-radius: 999px;
+        background: var(--panel-2);
+        color: var(--text);
+        border: 1px solid var(--line);
+        font-size: 12px;
+        white-space: nowrap;
+      }
+
+      .tag.good { color: var(--green); }
+      .tag.warn { color: var(--accent-2); }
+      .bar {
+        height: 8px;
+        background: #252b35;
+        border-radius: 999px;
+        overflow: hidden;
+        margin-top: 4px;
+      }
+
+      .bar > span {
+        display: block;
+        height: 100%;
+        background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      }
+
+      .hidden { display: none; }
+      .profile-title {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 12px;
+      }
+
+      .notice {
+        border-left: 3px solid var(--accent-2);
+        padding-left: 12px;
+        color: var(--muted);
+      }
+
+      @media (max-width: 860px) {
+        .span-3, .span-4, .span-5, .span-7 { grid-column: span 12; }
+        main { padding: 16px; }
+        header { padding: 28px 16px 18px; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <div class="eyebrow">DelQuant Private Demo Output</div>
+        <h1>Atlanta Hawks Roster Construction Study</h1>
+        <p>An RFP-style roster construction study using 54 archetypes, Championship DNA outputs, and the Motor / Decision / Pressure competitive trait layer.</p>
+      </div>
+    </header>
+
+    <main>
+      <div class="tabs" role="tablist">
+        <button class="active" data-tab="overview">Overview</button>
+        <button data-tab="seasons">Hawks Seasons</button>
+        <button data-tab="profiles">Player Profiles</button>
+        <button data-tab="hbb">HBB Through The Years</button>
+        <button data-tab="hof">HOF Baselines</button>
+        <button data-tab="method">Method Note</button>
+      </div>
+
+      <section id="overview" class="tab-panel">
+        <div class="grid">
+          <div class="card span-3"><div class="metric"><span>Seasons</span><strong id="season-count">--</strong></div></div>
+          <div class="card span-3"><div class="metric"><span>Profiles</span><strong id="profile-count">--</strong></div></div>
+          <div class="card span-3"><div class="metric"><span>Archetypes</span><strong>54</strong></div></div>
+          <div class="card span-3"><div class="metric"><span>Study Window</span><strong>31y</strong></div></div>
+
+          <div class="card span-4">
+            <h2>What DelQuant Is Showing</h2>
+            <p>DelQuant is used here as a discovery and decision-support layer: it turns historical player production into functional archetypes, then studies how those player types fit inside winning rosters.</p>
+          </div>
+          <div class="card span-4">
+            <h2>Why Atlanta</h2>
+            <p>The Hawks provide a clean RFP case: multiple roster eras, a 60-win motion offense peak, a Trae Young conference-finals spike, and a current group that needs role-fit clarity.</p>
+          </div>
+          <div class="card span-4">
+            <h2>What Is Protected</h2>
+            <p>This demo shows curated outputs. Model internals, exact scoring logic, formulas, and weights are intentionally withheld.</p>
+          </div>
+
+          <div class="card span-12">
+            <h2>Era Summary</h2>
+            <div class="table-wrap"><table id="era-table"></table></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="seasons" class="tab-panel hidden">
+        <div class="card">
+          <h2>Hawks Seasons, 1995-Present</h2>
+          <p class="notice">Top-seven player archetypes and HBB team shape are generated from historical production outputs.</p>
+          <div class="table-wrap" style="margin-top:14px;"><table id="season-table"></table></div>
+        </div>
+      </section>
+
+      <section id="profiles" class="tab-panel hidden">
+        <div class="grid">
+          <div class="card span-12">
+            <h2>Player Selector</h2>
+            <select id="player-select"></select>
+            <p class="small">Curated Hawks-relevant profiles only. This is not a full player database.</p>
+          </div>
+          <div class="card span-12" id="profile-card"></div>
+        </div>
+      </section>
+
+      <section id="hbb" class="tab-panel hidden">
+        <div class="card">
+          <h2>Motor / Decision / Pressure By Season</h2>
+          <p class="notice">HBB is expressed publicly as Motor, Decision, and Pressure. Scores are position-relative statistical proxies, not claims about personality.</p>
+          <div class="table-wrap" style="margin-top:14px;"><table id="hbb-table"></table></div>
+        </div>
+      </section>
+
+      <section id="hof" class="tab-panel hidden">
+        <div class="grid">
+          <div class="card span-4">
+            <h2>What This Shows</h2>
+            <p>Hall of Fame position baselines are a roster-building reference point: they show how the Hawks' historical players stack against elite positional bands, not whether a current player is a Hall of Famer.</p>
+          </div>
+          <div class="card span-8">
+            <h2>Positional Baselines</h2>
+            <div class="table-wrap"><table id="hof-baseline-table"></table></div>
+          </div>
+          <div class="card span-12">
+            <h2>Hawks Versus HOF Baseline</h2>
+            <div class="table-wrap"><table id="hof-heat-table"></table></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="method" class="tab-panel hidden">
+        <div class="grid">
+          <div class="card span-5">
+            <h2>Public-Safe Method</h2>
+            <div id="method-note"></div>
+          </div>
+          <div class="card span-7">
+            <h2>Framework</h2>
+            <div id="framework"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      let payload = null;
+
+      const fmt = (value) => value === null || value === undefined ? "-" : value;
+      const tag = (text, cls = "") => `<span class="tag ${cls}">${text}</span>`;
+      const playoffLabel = (result) => {
+        if (result.won_championship) return "Champion";
+        if (result.made_finals) return "Finals";
+        if (result.made_conf_finals) return "Conf. Finals";
+        if (result.made_playoffs) return `${result.series_wins} series win${result.series_wins === 1 ? "" : "s"}`;
+        return "Missed playoffs";
+      };
+
+      function buildTable(headers, rows) {
+        return `<thead><tr>${headers.map(h => `<th>${h}</th>`).join("")}</tr></thead><tbody>${rows.join("")}</tbody>`;
+      }
+
+      function renderOverview() {
+        document.getElementById("season-count").textContent = payload.meta.season_count;
+        document.getElementById("profile-count").textContent = payload.meta.player_profile_count;
+        const rows = payload.era_summary.map(row => `
+          <tr>
+            <td><strong>${row.era}</strong><br><span class="muted small">${row.seasons}</span></td>
+            <td>${row.season_count}</td>
+            <td>${row.avg_wins}</td>
+            <td>${row.playoff_seasons}</td>
+            <td>${row.finals}</td>
+            <td>${row.championships}</td>
+            <td>${row.avg_hbb.motor} / ${row.avg_hbb.decision} / ${row.avg_hbb.pressure}</td>
+          </tr>
+        `);
+        document.getElementById("era-table").innerHTML = buildTable(
+          ["Era", "Seasons", "Avg Wins", "Playoffs", "Finals", "Titles", "Motor / Decision / Pressure"],
+          rows
+        );
+      }
+
+      function renderSeasons() {
+        const rows = payload.seasons.map(row => `
+          <tr>
+            <td><strong>${row.season}</strong><br><span class="muted small">${row.era}</span></td>
+            <td>${row.record}</td>
+            <td>${playoffLabel(row.playoff_result)}</td>
+            <td>${row.hbb_team_shape.motor} / ${row.hbb_team_shape.decision} / ${row.hbb_team_shape.pressure}</td>
+            <td>${row.value_counts.value_creation}</td>
+            <td>${row.value_counts.value_acquisition}</td>
+            <td>${row.top_players.map(p => tag(`${p.name} (${p.archetype})`)).join(" ")}</td>
+            <td>${row.note}</td>
+          </tr>
+        `);
+        document.getElementById("season-table").innerHTML = buildTable(
+          ["Season", "Record", "Result", "HBB Shape", "Value Creation", "Value Acquisition", "Top Players", "DelQuant Note"],
+          rows
+        );
+      }
+
+      function renderProfileOptions() {
+        const select = document.getElementById("player-select");
+        select.innerHTML = payload.player_profiles
+          .map((p, idx) => `<option value="${idx}">${p.player_name} - ${p.season}</option>`)
+          .join("");
+        select.addEventListener("change", () => renderProfile(Number(select.value)));
+        renderProfile(0);
+      }
+
+      function scoreBar(label, value) {
+        return `
+          <div class="metric"><span>${label}</span><strong>${fmt(value)}</strong></div>
+          <div class="bar"><span style="width:${Math.max(0, Math.min(100, Number(value || 0)))}%"></span></div>
+        `;
+      }
+
+      function renderProfile(index) {
+        const p = payload.player_profiles[index];
+        if (!p) return;
+        document.getElementById("profile-card").innerHTML = `
+          <div class="profile-title">
+            <div>
+              <h2>${p.player_name}</h2>
+              <p>${p.season} Atlanta Hawks | ${p.position} | rank ${p.rank_on_team} by minutes</p>
+            </div>
+            <div>${tag(p.acquisition_lens.classification.replaceAll("_", " "), "warn")}</div>
+          </div>
+          <div class="grid">
+            <div class="span-5">
+              <h3>Archetype</h3>
+              <p>${tag(p.archetype.cluster_id)} ${tag(p.archetype.core_stat_block || "core block n/a")}</p>
+              <p class="small">Championship DNA: ${fmt(p.archetype.championship_dna.team_seasons)} team seasons, ${fmt(p.archetype.championship_dna.finals_rate)} finals rate, ${fmt(p.archetype.championship_dna.championship_rate)} title rate.</p>
+              <h3 style="margin-top:18px;">Stat Line</h3>
+              <p>${p.stat_line.points} PTS, ${p.stat_line.rebounds} REB, ${p.stat_line.assists} AST, ${p.stat_line.steals} STL, ${p.stat_line.blocks} BLK, ${p.stat_line.threes} 3PM</p>
+              <h3 style="margin-top:18px;">Value Thesis</h3>
+              <p>${p.acquisition_lens.thesis}</p>
+            </div>
+            <div class="span-7">
+              <h3>Competitive Traits</h3>
+              ${scoreBar("Motor", p.competitive_traits.motor)}
+              ${scoreBar("Decision", p.competitive_traits.decision)}
+              ${scoreBar("Pressure", p.competitive_traits.pressure)}
+              ${scoreBar("Composite", p.competitive_traits.composite)}
+            </div>
+          </div>
+        `;
+      }
+
+      function renderHbb() {
+        const rows = payload.seasons.map(row => `
+          <tr>
+            <td><strong>${row.season}</strong><br><span class="muted small">${row.era}</span></td>
+            <td>${row.hbb_team_shape.motor}</td>
+            <td>${row.hbb_team_shape.decision}</td>
+            <td>${row.hbb_team_shape.pressure}</td>
+            <td>${row.hbb_team_shape.composite}</td>
+            <td>${playoffLabel(row.playoff_result)}</td>
+          </tr>
+        `);
+        document.getElementById("hbb-table").innerHTML = buildTable(
+          ["Season", "Motor", "Decision", "Pressure", "Composite", "Result"],
+          rows
+        );
+      }
+
+      function renderHof() {
+        const hof = payload.hof_positional_baselines;
+        if (!hof) return;
+        const baselineRows = hof.baselines.map(row => `
+          <tr>
+            <td><strong>${row.position}</strong><br><span class="muted small">${row.player_count} players</span></td>
+            <td>${row.motor.avg} / ${row.motor.std_dev}</td>
+            <td>${row.decision.avg} / ${row.decision.std_dev}</td>
+            <td>${row.pressure.avg} / ${row.pressure.std_dev}</td>
+            <td>${row.hbb_composite.avg} / ${row.hbb_composite.std_dev}</td>
+            <td>${row.players.slice(0, 4).join(", ")}${row.players.length > 4 ? "…" : ""}</td>
+          </tr>
+        `);
+        document.getElementById("hof-baseline-table").innerHTML = buildTable(
+          ["Pos", "Motor avg/std", "Decision avg/std", "Pressure avg/std", "Composite avg/std", "Example names"],
+          baselineRows
+        );
+
+        const comparisonRows = hof.heat_comparisons.map(row => `
+          <tr>
+            <td><strong>${row.player_name}</strong><br><span class="muted small">${row.season} | ${row.position}</span></td>
+            <td>${row.archetype}</td>
+            <td>${row.traits.motor} <span class="muted small">(${row.labels.motor})</span></td>
+            <td>${row.traits.decision} <span class="muted small">(${row.labels.decision})</span></td>
+            <td>${row.traits.pressure} <span class="muted small">(${row.labels.pressure})</span></td>
+            <td>${row.traits.composite} <span class="muted small">(${row.labels.composite})</span></td>
+            <td>${row.development_read}</td>
+          </tr>
+        `);
+        document.getElementById("hof-heat-table").innerHTML = buildTable(
+          ["Player", "Archetype", "Motor", "Decision", "Pressure", "Composite", "Read"],
+          comparisonRows
+        );
+      }
+
+      function renderMethod() {
+        document.getElementById("method-note").innerHTML = `<p>${payload.meta.method_note}</p>`;
+        const f = payload.framework;
+        document.getElementById("framework").innerHTML = `
+          <h3>54 Archetypes</h3><p>${f.archetypes}</p>
+          <h3 style="margin-top:18px;">Championship DNA</h3><p>${f.championship_dna}</p>
+          <h3 style="margin-top:18px;">Competitive Traits</h3>
+          <p>${tag("Motor")} ${f.competitive_traits.motor}</p>
+          <p>${tag("Decision")} ${f.competitive_traits.decision}</p>
+          <p>${tag("Pressure")} ${f.competitive_traits.pressure}</p>
+          <h3 style="margin-top:18px;">Value Lens</h3>
+          ${Object.entries(f.value_lens).map(([key, val]) => `<p>${tag(key.replaceAll("_", " "))} ${val}</p>`).join("")}
+        `;
+      }
+
+      function wireTabs() {
+        document.querySelectorAll(".tabs button").forEach(btn => {
+          btn.addEventListener("click", () => {
+            document.querySelectorAll(".tabs button").forEach(item => item.classList.remove("active"));
+            document.querySelectorAll(".tab-panel").forEach(panel => panel.classList.add("hidden"));
+            btn.classList.add("active");
+            document.getElementById(btn.dataset.tab).classList.remove("hidden");
+          });
+        });
+      }
+
+      async function init() {
+        const res = await fetch("./hawks_study.json");
+        payload = await res.json();
+        renderOverview();
+        renderSeasons();
+        renderProfileOptions();
+        renderHbb();
+        renderHof();
+        renderMethod();
+        wireTabs();
+      }
+
+      init().catch(err => {
+        document.querySelector("main").innerHTML = `<div class="card"><h2>Demo failed to load</h2><p>${err.message}</p></div>`;
+      });
+    </script>
+  </body>
+</html>

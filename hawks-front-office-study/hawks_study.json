@@ -1,0 +1,4186 @@
+{
+  "meta": {
+    "title": "Atlanta Hawks Roster Construction Study",
+    "subtitle": "A DelQuant RFP-style study of roster identity, role fit, and archetype inventory, 1995-present",
+    "team": "ATL",
+    "season_count": 31,
+    "player_profile_count": 19,
+    "method_note": "DelQuant maps player seasons into functional archetypes, studies 31 seasons of roster construction, and summarizes position-relative competitive trait outputs. This demo exposes curated outputs only; model internals, formulas, and scoring weights are intentionally withheld."
+  },
+  "framework": {
+    "archetypes": "54 functional player archetypes derived from historical production shape.",
+    "championship_dna": "A 31-season study of which archetype combinations and player types translate into playoff outcomes.",
+    "competitive_traits": {
+      "motor": "Heart proxy: availability, rebounding, and defensive activity signals.",
+      "decision": "Brains proxy: creation, efficiency, and mistake-control signals.",
+      "pressure": "Balls proxy: scoring responsibility and shot-pressure signals."
+    },
+    "value_lens": {
+      "value_acquisition": "Known production acquired at a market or premium cost.",
+      "value_creation": "Surplus value created through role fit, development, or context unlock.",
+      "internal_development": "Drafted or developed player whose role value compounds inside the system.",
+      "role_fit": "Useful contributor whose value depends on fit inside the roster architecture."
+    }
+  },
+  "era_summary": [
+    {
+      "era": "Mutombo/Blaylock Defensive Core",
+      "seasons": "1995-96 to 1999-00",
+      "season_count": 5,
+      "avg_wins": 42.2,
+      "playoff_seasons": 4,
+      "finals": 0,
+      "championships": 0,
+      "avg_hbb": {
+        "motor": 51.5,
+        "decision": 46.0,
+        "pressure": 49.4
+      }
+    },
+    {
+      "era": "Early-2000s Reset",
+      "seasons": "2000-01 to 2004-05",
+      "season_count": 5,
+      "avg_wins": 26.8,
+      "playoff_seasons": 0,
+      "finals": 0,
+      "championships": 0,
+      "avg_hbb": {
+        "motor": 48.8,
+        "decision": 45.8,
+        "pressure": 46.8
+      }
+    },
+    {
+      "era": "Johnson/Smith/Horford Playoff Core",
+      "seasons": "2005-06 to 2012-13",
+      "season_count": 8,
+      "avg_wins": 40.1,
+      "playoff_seasons": 6,
+      "finals": 0,
+      "championships": 0,
+      "avg_hbb": {
+        "motor": 50.5,
+        "decision": 51.0,
+        "pressure": 50.1
+      }
+    },
+    {
+      "era": "Budenholzer 60-Win Motion Core",
+      "seasons": "2013-14 to 2017-18",
+      "season_count": 5,
+      "avg_wins": 42.6,
+      "playoff_seasons": 4,
+      "finals": 0,
+      "championships": 0,
+      "avg_hbb": {
+        "motor": 49.3,
+        "decision": 51.0,
+        "pressure": 48.8
+      }
+    },
+    {
+      "era": "Trae Young Rebuild And CF Spike",
+      "seasons": "2018-19 to 2022-23",
+      "season_count": 5,
+      "avg_wins": 34.8,
+      "playoff_seasons": 3,
+      "finals": 0,
+      "championships": 0,
+      "avg_hbb": {
+        "motor": 49.1,
+        "decision": 53.0,
+        "pressure": 56.2
+      }
+    },
+    {
+      "era": "Johnson/Risacher Fit Window",
+      "seasons": "2023-24 to 2025-26",
+      "season_count": 3,
+      "avg_wins": 40.7,
+      "playoff_seasons": 1,
+      "finals": 0,
+      "championships": 0,
+      "avg_hbb": {
+        "motor": 56.8,
+        "decision": 55.2,
+        "pressure": 57.2
+      }
+    }
+  ],
+  "seasons": [
+    {
+      "season": "1995-96",
+      "era": "Mutombo/Blaylock Defensive Core",
+      "record": "46-36",
+      "wins": 46,
+      "losses": 36,
+      "win_pct": 0.561,
+      "playoff_result": {
+        "made_playoffs": true,
+        "series_wins": 1,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Grant Long",
+          "archetype": "SF_01",
+          "hbb": 55.6
+        },
+        {
+          "name": "Mookie Blaylock",
+          "archetype": "PG_01",
+          "hbb": 61.4
+        },
+        {
+          "name": "Steven Smith",
+          "archetype": "SG_06",
+          "hbb": 54.0
+        },
+        {
+          "name": "Stacey Augmon",
+          "archetype": "SG_04",
+          "hbb": 46.8
+        },
+        {
+          "name": "Andrew Lang",
+          "archetype": "C_07",
+          "hbb": 51.8
+        },
+        {
+          "name": "Craig Ehlo",
+          "archetype": "PG_04",
+          "hbb": 39.4
+        },
+        {
+          "name": "Alan Henderson",
+          "archetype": "PF_02",
+          "hbb": 34.1
+        }
+      ],
+      "archetype_mix": "SF_01 | PG_01 | SG_06 | SG_04 | C_07 | PG_04 | PF_02",
+      "hbb_team_shape": {
+        "motor": 52.1,
+        "decision": 45.0,
+        "pressure": 49.9,
+        "composite": 49.0
+      },
+      "value_counts": {
+        "value_creation": 0,
+        "value_acquisition": 1,
+        "internal_development": 0,
+        "role_fit": 6
+      },
+      "note": "Playoff team: useful identity, but not enough complete fit to survive deep rounds."
+    },
+    {
+      "season": "1996-97",
+      "era": "Mutombo/Blaylock Defensive Core",
+      "record": "56-26",
+      "wins": 56,
+      "losses": 26,
+      "win_pct": 0.683,
+      "playoff_result": {
+        "made_playoffs": true,
+        "series_wins": 1,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Christian Laettner",
+          "archetype": "PF_03",
+          "hbb": 60.3
+        },
+        {
+          "name": "Mookie Blaylock",
+          "archetype": "PG_03",
+          "hbb": 66.7
+        },
+        {
+          "name": "Dikembe Mutombo",
+          "archetype": "C_09",
+          "hbb": 59.6
+        },
+        {
+          "name": "Steven Smith",
+          "archetype": "SG_06",
+          "hbb": 58.7
+        },
+        {
+          "name": "Tyrone Corbin",
+          "archetype": "SF_10",
+          "hbb": 47.2
+        },
+        {
+          "name": "Eldridge Recasner",
+          "archetype": "PG_07",
+          "hbb": 31.5
+        },
+        {
+          "name": "Jon Barry",
+          "archetype": "PG_07",
+          "hbb": 33.2
+        }
+      ],
+      "archetype_mix": "PF_03 | PG_03 | C_09 | SG_06 | SF_10 | PG_07 | PG_07",
+      "hbb_team_shape": {
+        "motor": 52.6,
+        "decision": 48.1,
+        "pressure": 52.4,
+        "composite": 51.0
+      },
+      "value_counts": {
+        "value_creation": 0,
+        "value_acquisition": 2,
+        "internal_development": 0,
+        "role_fit": 5
+      },
+      "note": "Playoff team: useful identity, but not enough complete fit to survive deep rounds."
+    },
+    {
+      "season": "1997-98",
+      "era": "Mutombo/Blaylock Defensive Core",
+      "record": "50-32",
+      "wins": 50,
+      "losses": 32,
+      "win_pct": 0.61,
+      "playoff_result": {
+        "made_playoffs": true,
+        "series_wins": 0,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Dikembe Mutombo",
+          "archetype": "C_09",
+          "hbb": 57.5
+        },
+        {
+          "name": "Steven Smith",
+          "archetype": "SG_06",
+          "hbb": 59.5
+        },
+        {
+          "name": "Mookie Blaylock",
+          "archetype": "PG_05",
+          "hbb": 60.4
+        },
+        {
+          "name": "Tyrone Corbin",
+          "archetype": "SF_10",
+          "hbb": 49.9
+        },
+        {
+          "name": "Christian Laettner",
+          "archetype": "PF_03",
+          "hbb": 53.1
+        },
+        {
+          "name": "Alan Henderson",
+          "archetype": "PF_11",
+          "hbb": 45.0
+        },
+        {
+          "name": "Eldridge Recasner",
+          "archetype": "PG_07",
+          "hbb": 40.4
+        }
+      ],
+      "archetype_mix": "C_09 | SG_06 | PG_05 | SF_10 | PF_03 | PF_11 | PG_07",
+      "hbb_team_shape": {
+        "motor": 54.3,
+        "decision": 49.7,
+        "pressure": 52.7,
+        "composite": 52.3
+      },
+      "value_counts": {
+        "value_creation": 0,
+        "value_acquisition": 2,
+        "internal_development": 0,
+        "role_fit": 5
+      },
+      "note": "Playoff team: useful identity, but not enough complete fit to survive deep rounds."
+    },
+    {
+      "season": "1998-99",
+      "era": "Mutombo/Blaylock Defensive Core",
+      "record": "31-19",
+      "wins": 31,
+      "losses": 19,
+      "win_pct": 0.62,
+      "playoff_result": {
+        "made_playoffs": true,
+        "series_wins": 1,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Dikembe Mutombo",
+          "archetype": "C_09",
+          "hbb": 56.2
+        },
+        {
+          "name": "Mookie Blaylock",
+          "archetype": "PG_05",
+          "hbb": 57.1
+        },
+        {
+          "name": "Grant Long",
+          "archetype": "SF_07",
+          "hbb": 42.4
+        },
+        {
+          "name": "Steven Smith",
+          "archetype": "SG_06",
+          "hbb": 54.3
+        },
+        {
+          "name": "Alan Henderson",
+          "archetype": "PF_12",
+          "hbb": 45.2
+        },
+        {
+          "name": "Tyrone Corbin",
+          "archetype": "SF_03",
+          "hbb": 35.0
+        },
+        {
+          "name": "Anthony Johnson",
+          "archetype": "PG_04",
+          "hbb": 30.4
+        }
+      ],
+      "archetype_mix": "C_09 | PG_05 | SF_07 | SG_06 | PF_12 | SF_03 | PG_04",
+      "hbb_team_shape": {
+        "motor": 50.1,
+        "decision": 41.3,
+        "pressure": 46.0,
+        "composite": 45.8
+      },
+      "value_counts": {
+        "value_creation": 0,
+        "value_acquisition": 2,
+        "internal_development": 0,
+        "role_fit": 5
+      },
+      "note": "Playoff team: useful identity, but not enough complete fit to survive deep rounds."
+    },
+    {
+      "season": "1999-00",
+      "era": "Mutombo/Blaylock Defensive Core",
+      "record": "28-54",
+      "wins": 28,
+      "losses": 54,
+      "win_pct": 0.342,
+      "playoff_result": {
+        "made_playoffs": false,
+        "series_wins": 0,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Dikembe Mutombo",
+          "archetype": "C_09",
+          "hbb": 59.6
+        },
+        {
+          "name": "Alan Henderson",
+          "archetype": "PF_12",
+          "hbb": 48.0
+        },
+        {
+          "name": "Jim Jackson",
+          "archetype": "SG_06",
+          "hbb": 51.0
+        },
+        {
+          "name": "Isaiah Rider",
+          "archetype": "PG_09",
+          "hbb": 49.3
+        },
+        {
+          "name": "Bimbo Coles",
+          "archetype": "PG_06",
+          "hbb": 39.9
+        },
+        {
+          "name": "Jason Terry",
+          "archetype": "PG_06",
+          "hbb": 40.1
+        },
+        {
+          "name": "LaPhonso Ellis",
+          "archetype": "SF_06",
+          "hbb": 39.4
+        }
+      ],
+      "archetype_mix": "C_09 | PF_12 | SG_06 | PG_09 | PG_06 | PG_06 | SF_06",
+      "hbb_team_shape": {
+        "motor": 48.4,
+        "decision": 45.7,
+        "pressure": 46.2,
+        "composite": 46.8
+      },
+      "value_counts": {
+        "value_creation": 0,
+        "value_acquisition": 1,
+        "internal_development": 0,
+        "role_fit": 6
+      },
+      "note": "Non-playoff season: useful for identifying missing roster-construction ingredients and role gaps."
+    },
+    {
+      "season": "2000-01",
+      "era": "Early-2000s Reset",
+      "record": "25-57",
+      "wins": 25,
+      "losses": 57,
+      "win_pct": 0.305,
+      "playoff_result": {
+        "made_playoffs": false,
+        "series_wins": 0,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Jason Terry",
+          "archetype": "PG_09",
+          "hbb": 55.7
+        },
+        {
+          "name": "Lorenzen Wright",
+          "archetype": "PF_08",
+          "hbb": 45.7
+        },
+        {
+          "name": "Alan Henderson",
+          "archetype": "PF_02",
+          "hbb": 38.6
+        },
+        {
+          "name": "Dikembe Mutombo",
+          "archetype": "C_09",
+          "hbb": 55.3
+        },
+        {
+          "name": "Matt Maloney",
+          "archetype": "PG_06",
+          "hbb": 39.2
+        },
+        {
+          "name": "Brevin Knight",
+          "archetype": "PG_05",
+          "hbb": 47.5
+        },
+        {
+          "name": "DerMarr Johnson",
+          "archetype": "SG_08",
+          "hbb": 29.6
+        }
+      ],
+      "archetype_mix": "PG_09 | PF_08 | PF_02 | C_09 | PG_06 | PG_05 | SG_08",
+      "hbb_team_shape": {
+        "motor": 48.5,
+        "decision": 41.9,
+        "pressure": 43.1,
+        "composite": 44.5
+      },
+      "value_counts": {
+        "value_creation": 0,
+        "value_acquisition": 1,
+        "internal_development": 0,
+        "role_fit": 6
+      },
+      "note": "Non-playoff season: useful for identifying missing roster-construction ingredients and role gaps."
+    },
+    {
+      "season": "2001-02",
+      "era": "Early-2000s Reset",
+      "record": "33-49",
+      "wins": 33,
+      "losses": 49,
+      "win_pct": 0.402,
+      "playoff_result": {
+        "made_playoffs": false,
+        "series_wins": 0,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Shareef Abdur-Rahim",
+          "archetype": "SF_01",
+          "hbb": 61.2
+        },
+        {
+          "name": "Jason Terry",
+          "archetype": "PG_01",
+          "hbb": 61.5
+        },
+        {
+          "name": "Nazr Mohammed",
+          "archetype": "C_12",
+          "hbb": 42.8
+        },
+        {
+          "name": "Jacque Vaughn",
+          "archetype": "PG_06",
+          "hbb": 40.3
+        },
+        {
+          "name": "DerMarr Johnson",
+          "archetype": "SG_05",
+          "hbb": 42.4
+        },
+        {
+          "name": "Toni Kukoc",
+          "archetype": "SF_03",
+          "hbb": 44.3
+        },
+        {
+          "name": "Hanno Mottola",
+          "archetype": "PF_02",
+          "hbb": 29.7
+        }
+      ],
+      "archetype_mix": "SF_01 | PG_01 | C_12 | PG_06 | SG_05 | SF_03 | PF_02",
+      "hbb_team_shape": {
+        "motor": 45.8,
+        "decision": 46.8,
+        "pressure": 45.5,
+        "composite": 46.0
+      },
+      "value_counts": {
+        "value_creation": 0,
+        "value_acquisition": 0,
+        "internal_development": 0,
+        "role_fit": 7
+      },
+      "note": "Non-playoff season: useful for identifying missing roster-construction ingredients and role gaps."
+    },
+    {
+      "season": "2002-03",
+      "era": "Early-2000s Reset",
+      "record": "35-47",
+      "wins": 35,
+      "losses": 47,
+      "win_pct": 0.427,
+      "playoff_result": {
+        "made_playoffs": false,
+        "series_wins": 0,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Jason Terry",
+          "archetype": "PG_01",
+          "hbb": 60.5
+        },
+        {
+          "name": "Shareef Abdur-Rahim",
+          "archetype": "SF_01",
+          "hbb": 58.7
+        },
+        {
+          "name": "Glenn Robinson",
+          "archetype": "SF_05",
+          "hbb": 58.0
+        },
+        {
+          "name": "Theo Ratliff",
+          "archetype": "C_09",
+          "hbb": 51.2
+        },
+        {
+          "name": "Ira Newble",
+          "archetype": "SG_08",
+          "hbb": 42.3
+        },
+        {
+          "name": "Dion Glover",
+          "archetype": "SG_09",
+          "hbb": 41.6
+        },
+        {
+          "name": "Alan Henderson",
+          "archetype": "PF_02",
+          "hbb": 33.3
+        }
+      ],
+      "archetype_mix": "PG_01 | SF_01 | SF_05 | C_09 | SG_08 | SG_09 | PF_02",
+      "hbb_team_shape": {
+        "motor": 50.8,
+        "decision": 47.8,
+        "pressure": 49.4,
+        "composite": 49.4
+      },
+      "value_counts": {
+        "value_creation": 0,
+        "value_acquisition": 0,
+        "internal_development": 0,
+        "role_fit": 7
+      },
+      "note": "Non-playoff season: useful for identifying missing roster-construction ingredients and role gaps."
+    },
+    {
+      "season": "2003-04",
+      "era": "Early-2000s Reset",
+      "record": "28-54",
+      "wins": 28,
+      "losses": 54,
+      "win_pct": 0.342,
+      "playoff_result": {
+        "made_playoffs": false,
+        "series_wins": 0,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Jason Terry",
+          "archetype": "PG_05",
+          "hbb": 57.7
+        },
+        {
+          "name": "Stephen Jackson",
+          "archetype": "SG_01",
+          "hbb": 57.1
+        },
+        {
+          "name": "Shareef Abdur-Rahim",
+          "archetype": "SF_01",
+          "hbb": 57.0
+        },
+        {
+          "name": "Boris Diaw",
+          "archetype": "PF_02",
+          "hbb": 40.5
+        },
+        {
+          "name": "Theo Ratliff",
+          "archetype": "C_09",
+          "hbb": 49.4
+        },
+        {
+          "name": "Dion Glover",
+          "archetype": "SG_08",
+          "hbb": 42.7
+        },
+        {
+          "name": "Jacque Vaughn",
+          "archetype": "PG_06",
+          "hbb": 30.3
+        }
+      ],
+      "archetype_mix": "PG_05 | SG_01 | SF_01 | PF_02 | C_09 | SG_08 | PG_06",
+      "hbb_team_shape": {
+        "motor": 49.9,
+        "decision": 46.2,
+        "pressure": 47.3,
+        "composite": 47.8
+      },
+      "value_counts": {
+        "value_creation": 0,
+        "value_acquisition": 0,
+        "internal_development": 0,
+        "role_fit": 7
+      },
+      "note": "Non-playoff season: useful for identifying missing roster-construction ingredients and role gaps."
+    },
+    {
+      "season": "2004-05",
+      "era": "Early-2000s Reset",
+      "record": "13-69",
+      "wins": 13,
+      "losses": 69,
+      "win_pct": 0.159,
+      "playoff_result": {
+        "made_playoffs": false,
+        "series_wins": 0,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Al Harrington",
+          "archetype": "SF_01",
+          "hbb": 53.8
+        },
+        {
+          "name": "Josh Childress",
+          "archetype": "SG_04",
+          "hbb": 48.3
+        },
+        {
+          "name": "Antoine Walker",
+          "archetype": "SF_05",
+          "hbb": 59.9
+        },
+        {
+          "name": "Josh Smith",
+          "archetype": "SF_08",
+          "hbb": 47.6
+        },
+        {
+          "name": "Tyronn Lue",
+          "archetype": "PG_06",
+          "hbb": 48.5
+        },
+        {
+          "name": "Predrag Drobnjak",
+          "archetype": "C_05",
+          "hbb": 38.7
+        },
+        {
+          "name": "Tony Delk",
+          "archetype": "PG_07",
+          "hbb": 39.4
+        }
+      ],
+      "archetype_mix": "SF_01 | SG_04 | SF_05 | SF_08 | PG_06 | C_05 | PG_07",
+      "hbb_team_shape": {
+        "motor": 49.0,
+        "decision": 46.2,
+        "pressure": 48.9,
+        "composite": 48.0
+      },
+      "value_counts": {
+        "value_creation": 0,
+        "value_acquisition": 0,
+        "internal_development": 1,
+        "role_fit": 6
+      },
+      "note": "Non-playoff season: useful for identifying missing roster-construction ingredients and role gaps."
+    },
+    {
+      "season": "2005-06",
+      "era": "Johnson/Smith/Horford Playoff Core",
+      "record": "26-56",
+      "wins": 26,
+      "losses": 56,
+      "win_pct": 0.317,
+      "playoff_result": {
+        "made_playoffs": false,
+        "series_wins": 0,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Joe Johnson",
+          "archetype": "SG_10",
+          "hbb": 64.2
+        },
+        {
+          "name": "Al Harrington",
+          "archetype": "SF_01",
+          "hbb": 54.9
+        },
+        {
+          "name": "Josh Smith",
+          "archetype": "SF_08",
+          "hbb": 52.3
+        },
+        {
+          "name": "Zaza Pachulia",
+          "archetype": "C_12",
+          "hbb": 50.2
+        },
+        {
+          "name": "Josh Childress",
+          "archetype": "SG_04",
+          "hbb": 50.5
+        },
+        {
+          "name": "Marvin Williams",
+          "archetype": "SF_06",
+          "hbb": 37.8
+        },
+        {
+          "name": "Salim Stoudamire",
+          "archetype": "PG_07",
+          "hbb": 35.1
+        }
+      ],
+      "archetype_mix": "SG_10 | SF_01 | SF_08 | C_12 | SG_04 | SF_06 | PG_07",
+      "hbb_team_shape": {
+        "motor": 50.5,
+        "decision": 47.9,
+        "pressure": 49.4,
+        "composite": 49.3
+      },
+      "value_counts": {
+        "value_creation": 0,
+        "value_acquisition": 1,
+        "internal_development": 1,
+        "role_fit": 5
+      },
+      "note": "Non-playoff season: useful for identifying missing roster-construction ingredients and role gaps."
+    },
+    {
+      "season": "2006-07",
+      "era": "Johnson/Smith/Horford Playoff Core",
+      "record": "30-52",
+      "wins": 30,
+      "losses": 52,
+      "win_pct": 0.366,
+      "playoff_result": {
+        "made_playoffs": false,
+        "series_wins": 0,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Josh Smith",
+          "archetype": "SF_08",
+          "hbb": 60.5
+        },
+        {
+          "name": "Joe Johnson",
+          "archetype": "SG_10",
+          "hbb": 62.5
+        },
+        {
+          "name": "Marvin Williams",
+          "archetype": "SF_06",
+          "hbb": 47.1
+        },
+        {
+          "name": "Josh Childress",
+          "archetype": "SG_04",
+          "hbb": 55.9
+        },
+        {
+          "name": "Zaza Pachulia",
+          "archetype": "C_12",
+          "hbb": 48.2
+        },
+        {
+          "name": "Tyronn Lue",
+          "archetype": "PG_07",
+          "hbb": 40.7
+        },
+        {
+          "name": "Shelden Williams",
+          "archetype": "PF_02",
+          "hbb": 34.0
+        }
+      ],
+      "archetype_mix": "SF_08 | SG_10 | SF_06 | SG_04 | C_12 | PG_07 | PF_02",
+      "hbb_team_shape": {
+        "motor": 50.8,
+        "decision": 47.6,
+        "pressure": 51.2,
+        "composite": 49.8
+      },
+      "value_counts": {
+        "value_creation": 0,
+        "value_acquisition": 1,
+        "internal_development": 1,
+        "role_fit": 5
+      },
+      "note": "Non-playoff season: useful for identifying missing roster-construction ingredients and role gaps."
+    },
+    {
+      "season": "2007-08",
+      "era": "Johnson/Smith/Horford Playoff Core",
+      "record": "37-45",
+      "wins": 37,
+      "losses": 45,
+      "win_pct": 0.451,
+      "playoff_result": {
+        "made_playoffs": true,
+        "series_wins": 0,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Joe Johnson",
+          "archetype": "SG_10",
+          "hbb": 64.4
+        },
+        {
+          "name": "Josh Smith",
+          "archetype": "SF_08",
+          "hbb": 61.2
+        },
+        {
+          "name": "Marvin Williams",
+          "archetype": "SF_07",
+          "hbb": 49.9
+        },
+        {
+          "name": "Al Horford",
+          "archetype": "PF_12",
+          "hbb": 49.0
+        },
+        {
+          "name": "Josh Childress",
+          "archetype": "SG_05",
+          "hbb": 50.2
+        },
+        {
+          "name": "Anthony Johnson",
+          "archetype": "PG_06",
+          "hbb": 45.1
+        },
+        {
+          "name": "Mike Bibby",
+          "archetype": "PG_09",
+          "hbb": 53.0
+        }
+      ],
+      "archetype_mix": "SG_10 | SF_08 | SF_07 | PF_12 | SG_05 | PG_06 | PG_09",
+      "hbb_team_shape": {
+        "motor": 54.2,
+        "decision": 53.8,
+        "pressure": 51.8,
+        "composite": 53.3
+      },
+      "value_counts": {
+        "value_creation": 0,
+        "value_acquisition": 1,
+        "internal_development": 2,
+        "role_fit": 4
+      },
+      "note": "Playoff team: useful identity, but not enough complete fit to survive deep rounds."
+    },
+    {
+      "season": "2008-09",
+      "era": "Johnson/Smith/Horford Playoff Core",
+      "record": "47-35",
+      "wins": 47,
+      "losses": 35,
+      "win_pct": 0.573,
+      "playoff_result": {
+        "made_playoffs": true,
+        "series_wins": 1,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Joe Johnson",
+          "archetype": "SG_10",
+          "hbb": 64.4
+        },
+        {
+          "name": "Mike Bibby",
+          "archetype": "PG_02",
+          "hbb": 55.9
+        },
+        {
+          "name": "Josh Smith",
+          "archetype": "SF_08",
+          "hbb": 56.9
+        },
+        {
+          "name": "Al Horford",
+          "archetype": "PF_12",
+          "hbb": 54.6
+        },
+        {
+          "name": "Marvin Williams",
+          "archetype": "SF_06",
+          "hbb": 51.9
+        },
+        {
+          "name": "Flip Murray",
+          "archetype": "PG_06",
+          "hbb": 41.3
+        },
+        {
+          "name": "Maurice Evans",
+          "archetype": "SG_07",
+          "hbb": 38.0
+        }
+      ],
+      "archetype_mix": "SG_10 | PG_02 | SF_08 | PF_12 | SF_06 | PG_06 | SG_07",
+      "hbb_team_shape": {
+        "motor": 52.5,
+        "decision": 50.1,
+        "pressure": 53.0,
+        "composite": 51.9
+      },
+      "value_counts": {
+        "value_creation": 0,
+        "value_acquisition": 1,
+        "internal_development": 2,
+        "role_fit": 4
+      },
+      "note": "Playoff team: useful identity, but not enough complete fit to survive deep rounds."
+    },
+    {
+      "season": "2009-10",
+      "era": "Johnson/Smith/Horford Playoff Core",
+      "record": "53-29",
+      "wins": 53,
+      "losses": 29,
+      "win_pct": 0.646,
+      "playoff_result": {
+        "made_playoffs": true,
+        "series_wins": 1,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Joe Johnson",
+          "archetype": "SG_06",
+          "hbb": 62.5
+        },
+        {
+          "name": "Josh Smith",
+          "archetype": "SF_08",
+          "hbb": 63.9
+        },
+        {
+          "name": "Al Horford",
+          "archetype": "PF_07",
+          "hbb": 56.9
+        },
+        {
+          "name": "Marvin Williams",
+          "archetype": "SF_06",
+          "hbb": 46.4
+        },
+        {
+          "name": "Jamal Crawford",
+          "archetype": "PG_02",
+          "hbb": 50.6
+        },
+        {
+          "name": "Mike Bibby",
+          "archetype": "PG_07",
+          "hbb": 45.4
+        },
+        {
+          "name": "Maurice Evans",
+          "archetype": "SG_08",
+          "hbb": 34.1
+        }
+      ],
+      "archetype_mix": "SG_06 | SF_08 | PF_07 | SF_06 | PG_02 | PG_07 | SG_08",
+      "hbb_team_shape": {
+        "motor": 49.3,
+        "decision": 54.4,
+        "pressure": 50.5,
+        "composite": 51.4
+      },
+      "value_counts": {
+        "value_creation": 0,
+        "value_acquisition": 1,
+        "internal_development": 2,
+        "role_fit": 4
+      },
+      "note": "Playoff team: useful identity, but not enough complete fit to survive deep rounds."
+    },
+    {
+      "season": "2010-11",
+      "era": "Johnson/Smith/Horford Playoff Core",
+      "record": "44-38",
+      "wins": 44,
+      "losses": 38,
+      "win_pct": 0.537,
+      "playoff_result": {
+        "made_playoffs": true,
+        "series_wins": 1,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Al Horford",
+          "archetype": "PF_03",
+          "hbb": 60.2
+        },
+        {
+          "name": "Josh Smith",
+          "archetype": "SF_08",
+          "hbb": 60.3
+        },
+        {
+          "name": "Joe Johnson",
+          "archetype": "SG_06",
+          "hbb": 56.0
+        },
+        {
+          "name": "Jamal Crawford",
+          "archetype": "PG_07",
+          "hbb": 44.9
+        },
+        {
+          "name": "Marvin Williams",
+          "archetype": "SF_06",
+          "hbb": 44.3
+        },
+        {
+          "name": "Mike Bibby",
+          "archetype": "PG_07",
+          "hbb": 45.0
+        },
+        {
+          "name": "Zaza Pachulia",
+          "archetype": "C_08",
+          "hbb": 34.2
+        }
+      ],
+      "archetype_mix": "PF_03 | SF_08 | SG_06 | PG_07 | SF_06 | PG_07 | C_08",
+      "hbb_team_shape": {
+        "motor": 45.7,
+        "decision": 52.4,
+        "pressure": 49.8,
+        "composite": 49.3
+      },
+      "value_counts": {
+        "value_creation": 0,
+        "value_acquisition": 1,
+        "internal_development": 2,
+        "role_fit": 4
+      },
+      "note": "Playoff team: useful identity, but not enough complete fit to survive deep rounds."
+    },
+    {
+      "season": "2011-12",
+      "era": "Johnson/Smith/Horford Playoff Core",
+      "record": "40-26",
+      "wins": 40,
+      "losses": 26,
+      "win_pct": 0.606,
+      "playoff_result": {
+        "made_playoffs": true,
+        "series_wins": 0,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Josh Smith",
+          "archetype": "SF_08",
+          "hbb": 63.7
+        },
+        {
+          "name": "Jeff Teague",
+          "archetype": "PG_08",
+          "hbb": 53.8
+        },
+        {
+          "name": "Joe Johnson",
+          "archetype": "SG_06",
+          "hbb": 58.1
+        },
+        {
+          "name": "Zaza Pachulia",
+          "archetype": "C_12",
+          "hbb": 48.2
+        },
+        {
+          "name": "Marvin Williams",
+          "archetype": "SF_03",
+          "hbb": 46.3
+        },
+        {
+          "name": "Kirk Hinrich",
+          "archetype": "PG_04",
+          "hbb": 40.2
+        },
+        {
+          "name": "Ivan Johnson",
+          "archetype": "SF_06",
+          "hbb": 33.5
+        }
+      ],
+      "archetype_mix": "SF_08 | PG_08 | SG_06 | C_12 | SF_03 | PG_04 | SF_06",
+      "hbb_team_shape": {
+        "motor": 50.7,
+        "decision": 50.1,
+        "pressure": 46.5,
+        "composite": 49.1
+      },
+      "value_counts": {
+        "value_creation": 0,
+        "value_acquisition": 1,
+        "internal_development": 2,
+        "role_fit": 4
+      },
+      "note": "Playoff team: useful identity, but not enough complete fit to survive deep rounds."
+    },
+    {
+      "season": "2012-13",
+      "era": "Johnson/Smith/Horford Playoff Core",
+      "record": "44-38",
+      "wins": 44,
+      "losses": 38,
+      "win_pct": 0.537,
+      "playoff_result": {
+        "made_playoffs": true,
+        "series_wins": 0,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Al Horford",
+          "archetype": "PF_04",
+          "hbb": 60.7
+        },
+        {
+          "name": "Josh Smith",
+          "archetype": "SF_08",
+          "hbb": 61.4
+        },
+        {
+          "name": "Jeff Teague",
+          "archetype": "PG_10",
+          "hbb": 55.4
+        },
+        {
+          "name": "Kyle Korver",
+          "archetype": "SG_07",
+          "hbb": 54.7
+        },
+        {
+          "name": "Devin Harris",
+          "archetype": "PG_06",
+          "hbb": 42.4
+        },
+        {
+          "name": "DeShawn Stevenson",
+          "archetype": "SG_07",
+          "hbb": 34.1
+        },
+        {
+          "name": "Zaza Pachulia",
+          "archetype": "C_12",
+          "hbb": 42.4
+        }
+      ],
+      "archetype_mix": "PF_04 | SF_08 | PG_10 | SG_07 | PG_06 | SG_07 | C_12",
+      "hbb_team_shape": {
+        "motor": 49.9,
+        "decision": 51.7,
+        "pressure": 48.9,
+        "composite": 50.2
+      },
+      "value_counts": {
+        "value_creation": 1,
+        "value_acquisition": 0,
+        "internal_development": 3,
+        "role_fit": 3
+      },
+      "note": "Playoff team: useful identity, but not enough complete fit to survive deep rounds."
+    },
+    {
+      "season": "2013-14",
+      "era": "Budenholzer 60-Win Motion Core",
+      "record": "38-44",
+      "wins": 38,
+      "losses": 44,
+      "win_pct": 0.463,
+      "playoff_result": {
+        "made_playoffs": true,
+        "series_wins": 0,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Jeff Teague",
+          "archetype": "PG_10",
+          "hbb": 52.5
+        },
+        {
+          "name": "Paul Millsap",
+          "archetype": "SF_05",
+          "hbb": 61.3
+        },
+        {
+          "name": "Kyle Korver",
+          "archetype": "SG_07",
+          "hbb": 57.6
+        },
+        {
+          "name": "DeMarre Carroll",
+          "archetype": "SF_10",
+          "hbb": 52.9
+        },
+        {
+          "name": "Shelvin Mack",
+          "archetype": "PG_06",
+          "hbb": 39.6
+        },
+        {
+          "name": "Mike Scott",
+          "archetype": "SF_04",
+          "hbb": 36.6
+        },
+        {
+          "name": "Lou Williams",
+          "archetype": "PG_07",
+          "hbb": 41.0
+        }
+      ],
+      "archetype_mix": "PG_10 | SF_05 | SG_07 | SF_10 | PG_06 | SF_04 | PG_07",
+      "hbb_team_shape": {
+        "motor": 46.0,
+        "decision": 52.2,
+        "pressure": 48.1,
+        "composite": 48.8
+      },
+      "value_counts": {
+        "value_creation": 2,
+        "value_acquisition": 0,
+        "internal_development": 1,
+        "role_fit": 4
+      },
+      "note": "Playoff team: useful identity, but not enough complete fit to survive deep rounds."
+    },
+    {
+      "season": "2014-15",
+      "era": "Budenholzer 60-Win Motion Core",
+      "record": "60-22",
+      "wins": 60,
+      "losses": 22,
+      "win_pct": 0.732,
+      "playoff_result": {
+        "made_playoffs": true,
+        "series_wins": 2,
+        "made_conf_finals": true,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Kyle Korver",
+          "archetype": "SG_07",
+          "hbb": 56.6
+        },
+        {
+          "name": "Paul Millsap",
+          "archetype": "SF_05",
+          "hbb": 60.7
+        },
+        {
+          "name": "Al Horford",
+          "archetype": "PF_03",
+          "hbb": 57.9
+        },
+        {
+          "name": "Jeff Teague",
+          "archetype": "PG_10",
+          "hbb": 56.7
+        },
+        {
+          "name": "DeMarre Carroll",
+          "archetype": "SF_10",
+          "hbb": 52.4
+        },
+        {
+          "name": "Dennis Schr\u00f6der",
+          "archetype": "PG_06",
+          "hbb": 38.7
+        },
+        {
+          "name": "Kent Bazemore",
+          "archetype": "SG_08",
+          "hbb": 32.7
+        }
+      ],
+      "archetype_mix": "SG_07 | SF_05 | PF_03 | PG_10 | SF_10 | PG_06 | SG_08",
+      "hbb_team_shape": {
+        "motor": 50.3,
+        "decision": 53.3,
+        "pressure": 48.8,
+        "composite": 50.8
+      },
+      "value_counts": {
+        "value_creation": 2,
+        "value_acquisition": 0,
+        "internal_development": 3,
+        "role_fit": 2
+      },
+      "note": "Deep playoff team with enough fit to beat strong opponents across multiple series."
+    },
+    {
+      "season": "2015-16",
+      "era": "Budenholzer 60-Win Motion Core",
+      "record": "48-34",
+      "wins": 48,
+      "losses": 34,
+      "win_pct": 0.585,
+      "playoff_result": {
+        "made_playoffs": true,
+        "series_wins": 1,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Paul Millsap",
+          "archetype": "SF_08",
+          "hbb": 64.5
+        },
+        {
+          "name": "Al Horford",
+          "archetype": "PF_06",
+          "hbb": 60.7
+        },
+        {
+          "name": "Kyle Korver",
+          "archetype": "SG_07",
+          "hbb": 48.7
+        },
+        {
+          "name": "Jeff Teague",
+          "archetype": "PG_10",
+          "hbb": 52.0
+        },
+        {
+          "name": "Kent Bazemore",
+          "archetype": "SG_01",
+          "hbb": 50.6
+        },
+        {
+          "name": "Thabo Sefolosha",
+          "archetype": "SG_05",
+          "hbb": 43.8
+        },
+        {
+          "name": "Dennis Schr\u00f6der",
+          "archetype": "PG_06",
+          "hbb": 40.6
+        }
+      ],
+      "archetype_mix": "SF_08 | PF_06 | SG_07 | PG_10 | SG_01 | SG_05 | PG_06",
+      "hbb_team_shape": {
+        "motor": 53.5,
+        "decision": 52.2,
+        "pressure": 48.9,
+        "composite": 51.6
+      },
+      "value_counts": {
+        "value_creation": 2,
+        "value_acquisition": 0,
+        "internal_development": 3,
+        "role_fit": 2
+      },
+      "note": "Playoff team: useful identity, but not enough complete fit to survive deep rounds."
+    },
+    {
+      "season": "2016-17",
+      "era": "Budenholzer 60-Win Motion Core",
+      "record": "43-39",
+      "wins": 43,
+      "losses": 39,
+      "win_pct": 0.524,
+      "playoff_result": {
+        "made_playoffs": true,
+        "series_wins": 0,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Dennis Schr\u00f6der",
+          "archetype": "PG_09",
+          "hbb": 53.2
+        },
+        {
+          "name": "Paul Millsap",
+          "archetype": "SF_05",
+          "hbb": 60.6
+        },
+        {
+          "name": "Dwight Howard",
+          "archetype": "PF_10",
+          "hbb": 53.3
+        },
+        {
+          "name": "Tim Hardaway Jr.",
+          "archetype": "SG_07",
+          "hbb": 47.4
+        },
+        {
+          "name": "Kent Bazemore",
+          "archetype": "SG_01",
+          "hbb": 46.7
+        },
+        {
+          "name": "Thabo Sefolosha",
+          "archetype": "SG_04",
+          "hbb": 46.0
+        },
+        {
+          "name": "Malcolm Delaney",
+          "archetype": "PG_07",
+          "hbb": 29.5
+        }
+      ],
+      "archetype_mix": "PG_09 | SF_05 | PF_10 | SG_07 | SG_01 | SG_04 | PG_07",
+      "hbb_team_shape": {
+        "motor": 49.8,
+        "decision": 47.5,
+        "pressure": 47.0,
+        "composite": 48.1
+      },
+      "value_counts": {
+        "value_creation": 1,
+        "value_acquisition": 0,
+        "internal_development": 1,
+        "role_fit": 5
+      },
+      "note": "Playoff team: useful identity, but not enough complete fit to survive deep rounds."
+    },
+    {
+      "season": "2017-18",
+      "era": "Budenholzer 60-Win Motion Core",
+      "record": "24-58",
+      "wins": 24,
+      "losses": 58,
+      "win_pct": 0.293,
+      "playoff_result": {
+        "made_playoffs": false,
+        "series_wins": 0,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Taurean Prince",
+          "archetype": "SF_02",
+          "hbb": 51.7
+        },
+        {
+          "name": "Dennis Schr\u00f6der",
+          "archetype": "PG_09",
+          "hbb": 53.1
+        },
+        {
+          "name": "Kent Bazemore",
+          "archetype": "SG_01",
+          "hbb": 52.9
+        },
+        {
+          "name": "John Collins",
+          "archetype": "PF_08",
+          "hbb": 47.9
+        },
+        {
+          "name": "Dewayne Dedmon",
+          "archetype": "C_03",
+          "hbb": 51.3
+        },
+        {
+          "name": "Marco Belinelli",
+          "archetype": "PG_07",
+          "hbb": 42.2
+        },
+        {
+          "name": "Ersan Ilyasova",
+          "archetype": "SF_02",
+          "hbb": 46.4
+        }
+      ],
+      "archetype_mix": "SF_02 | PG_09 | SG_01 | PF_08 | C_03 | PG_07 | SF_02",
+      "hbb_team_shape": {
+        "motor": 46.8,
+        "decision": 49.9,
+        "pressure": 51.3,
+        "composite": 49.4
+      },
+      "value_counts": {
+        "value_creation": 0,
+        "value_acquisition": 0,
+        "internal_development": 2,
+        "role_fit": 5
+      },
+      "note": "Non-playoff season: useful for identifying missing roster-construction ingredients and role gaps."
+    },
+    {
+      "season": "2018-19",
+      "era": "Trae Young Rebuild And CF Spike",
+      "record": "29-53",
+      "wins": 29,
+      "losses": 53,
+      "win_pct": 0.354,
+      "playoff_result": {
+        "made_playoffs": false,
+        "series_wins": 0,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Trae Young",
+          "archetype": "PG_01",
+          "hbb": 55.6
+        },
+        {
+          "name": "Kevin Huerter",
+          "archetype": "SG_07",
+          "hbb": 46.8
+        },
+        {
+          "name": "DeAndre' Bembry",
+          "archetype": "SG_04",
+          "hbb": 44.0
+        },
+        {
+          "name": "John Collins",
+          "archetype": "PF_07",
+          "hbb": 55.8
+        },
+        {
+          "name": "Kent Bazemore",
+          "archetype": "SG_01",
+          "hbb": 46.5
+        },
+        {
+          "name": "Dewayne Dedmon",
+          "archetype": "C_03",
+          "hbb": 56.3
+        },
+        {
+          "name": "Taurean Prince",
+          "archetype": "SF_02",
+          "hbb": 50.4
+        }
+      ],
+      "archetype_mix": "PG_01 | SG_07 | SG_04 | PF_07 | SG_01 | C_03 | SF_02",
+      "hbb_team_shape": {
+        "motor": 49.3,
+        "decision": 49.3,
+        "pressure": 53.7,
+        "composite": 50.8
+      },
+      "value_counts": {
+        "value_creation": 0,
+        "value_acquisition": 0,
+        "internal_development": 2,
+        "role_fit": 5
+      },
+      "note": "Non-playoff season: useful for identifying missing roster-construction ingredients and role gaps."
+    },
+    {
+      "season": "2019-20",
+      "era": "Trae Young Rebuild And CF Spike",
+      "record": "20-47",
+      "wins": 20,
+      "losses": 47,
+      "win_pct": 0.298,
+      "playoff_result": {
+        "made_playoffs": false,
+        "series_wins": 0,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Trae Young",
+          "archetype": "PG_01",
+          "hbb": 67.3
+        },
+        {
+          "name": "De'Andre Hunter",
+          "archetype": "SG_07",
+          "hbb": 46.8
+        },
+        {
+          "name": "Kevin Huerter",
+          "archetype": "SG_06",
+          "hbb": 55.7
+        },
+        {
+          "name": "Cam Reddish",
+          "archetype": "SG_09",
+          "hbb": 43.7
+        },
+        {
+          "name": "John Collins",
+          "archetype": "PF_06",
+          "hbb": 63.4
+        },
+        {
+          "name": "DeAndre' Bembry",
+          "archetype": "SG_05",
+          "hbb": 38.6
+        },
+        {
+          "name": "Damian Jones",
+          "archetype": "C_08",
+          "hbb": 40.2
+        }
+      ],
+      "archetype_mix": "PG_01 | SG_07 | SG_06 | SG_09 | PF_06 | SG_05 | C_08",
+      "hbb_team_shape": {
+        "motor": 48.4,
+        "decision": 49.9,
+        "pressure": 54.1,
+        "composite": 50.8
+      },
+      "value_counts": {
+        "value_creation": 0,
+        "value_acquisition": 0,
+        "internal_development": 2,
+        "role_fit": 5
+      },
+      "note": "Non-playoff season: useful for identifying missing roster-construction ingredients and role gaps."
+    },
+    {
+      "season": "2020-21",
+      "era": "Trae Young Rebuild And CF Spike",
+      "record": "41-31",
+      "wins": 41,
+      "losses": 31,
+      "win_pct": 0.569,
+      "playoff_result": {
+        "made_playoffs": true,
+        "series_wins": 2,
+        "made_conf_finals": true,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Kevin Huerter",
+          "archetype": "SG_06",
+          "hbb": 54.2
+        },
+        {
+          "name": "Trae Young",
+          "archetype": "PG_01",
+          "hbb": 62.4
+        },
+        {
+          "name": "Clint Capela",
+          "archetype": "C_06",
+          "hbb": 58.0
+        },
+        {
+          "name": "John Collins",
+          "archetype": "PF_07",
+          "hbb": 55.3
+        },
+        {
+          "name": "Solomon Hill",
+          "archetype": "SF_03",
+          "hbb": 35.6
+        },
+        {
+          "name": "Bogdan Bogdanovi\u0107",
+          "archetype": "PG_02",
+          "hbb": 58.7
+        },
+        {
+          "name": "Danilo Gallinari",
+          "archetype": "SF_04",
+          "hbb": 48.2
+        }
+      ],
+      "archetype_mix": "SG_06 | PG_01 | C_06 | PF_07 | SF_03 | PG_02 | SF_04",
+      "hbb_team_shape": {
+        "motor": 48.6,
+        "decision": 53.8,
+        "pressure": 57.2,
+        "composite": 53.2
+      },
+      "value_counts": {
+        "value_creation": 1,
+        "value_acquisition": 0,
+        "internal_development": 2,
+        "role_fit": 4
+      },
+      "note": "Deep playoff team with enough fit to beat strong opponents across multiple series."
+    },
+    {
+      "season": "2021-22",
+      "era": "Trae Young Rebuild And CF Spike",
+      "record": "43-39",
+      "wins": 43,
+      "losses": 39,
+      "win_pct": 0.524,
+      "playoff_result": {
+        "made_playoffs": true,
+        "series_wins": 0,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Trae Young",
+          "archetype": "PG_01",
+          "hbb": 66.7
+        },
+        {
+          "name": "Kevin Huerter",
+          "archetype": "SG_07",
+          "hbb": 52.2
+        },
+        {
+          "name": "Clint Capela",
+          "archetype": "C_06",
+          "hbb": 55.6
+        },
+        {
+          "name": "Bogdan Bogdanovi\u0107",
+          "archetype": "PG_02",
+          "hbb": 54.8
+        },
+        {
+          "name": "Danilo Gallinari",
+          "archetype": "SF_04",
+          "hbb": 49.2
+        },
+        {
+          "name": "John Collins",
+          "archetype": "PF_07",
+          "hbb": 57.0
+        },
+        {
+          "name": "De'Andre Hunter",
+          "archetype": "SG_07",
+          "hbb": 44.8
+        }
+      ],
+      "archetype_mix": "PG_01 | SG_07 | C_06 | PG_02 | SF_04 | PF_07 | SG_07",
+      "hbb_team_shape": {
+        "motor": 47.9,
+        "decision": 56.4,
+        "pressure": 58.7,
+        "composite": 54.3
+      },
+      "value_counts": {
+        "value_creation": 1,
+        "value_acquisition": 0,
+        "internal_development": 2,
+        "role_fit": 4
+      },
+      "note": "Playoff team: useful identity, but not enough complete fit to survive deep rounds."
+    },
+    {
+      "season": "2022-23",
+      "era": "Trae Young Rebuild And CF Spike",
+      "record": "41-41",
+      "wins": 41,
+      "losses": 41,
+      "win_pct": 0.5,
+      "playoff_result": {
+        "made_playoffs": true,
+        "series_wins": 0,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Dejounte Murray",
+          "archetype": "PG_01",
+          "hbb": 64.7
+        },
+        {
+          "name": "Trae Young",
+          "archetype": "PG_01",
+          "hbb": 62.6
+        },
+        {
+          "name": "John Collins",
+          "archetype": "PF_01",
+          "hbb": 51.6
+        },
+        {
+          "name": "De'Andre Hunter",
+          "archetype": "SG_07",
+          "hbb": 48.3
+        },
+        {
+          "name": "Onyeka Okongwu",
+          "archetype": "PF_08",
+          "hbb": 49.0
+        },
+        {
+          "name": "Clint Capela",
+          "archetype": "C_06",
+          "hbb": 53.6
+        },
+        {
+          "name": "Bogdan Bogdanovi\u0107",
+          "archetype": "PG_02",
+          "hbb": 52.4
+        }
+      ],
+      "archetype_mix": "PG_01 | PG_01 | PF_01 | SG_07 | PF_08 | C_06 | PG_02",
+      "hbb_team_shape": {
+        "motor": 51.1,
+        "decision": 55.6,
+        "pressure": 57.1,
+        "composite": 54.6
+      },
+      "value_counts": {
+        "value_creation": 1,
+        "value_acquisition": 1,
+        "internal_development": 3,
+        "role_fit": 2
+      },
+      "note": "Playoff team: useful identity, but not enough complete fit to survive deep rounds."
+    },
+    {
+      "season": "2023-24",
+      "era": "Johnson/Risacher Fit Window",
+      "record": "36-46",
+      "wins": 36,
+      "losses": 46,
+      "win_pct": 0.439,
+      "playoff_result": {
+        "made_playoffs": false,
+        "series_wins": 0,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Dejounte Murray",
+          "archetype": "PG_01",
+          "hbb": 66.1
+        },
+        {
+          "name": "Bogdan Bogdanovi\u0107",
+          "archetype": "PG_02",
+          "hbb": 57.1
+        },
+        {
+          "name": "Saddiq Bey",
+          "archetype": "SG_06",
+          "hbb": 53.6
+        },
+        {
+          "name": "Trae Young",
+          "archetype": "PG_01",
+          "hbb": 66.4
+        },
+        {
+          "name": "Jalen Johnson",
+          "archetype": "SF_01",
+          "hbb": 63.0
+        },
+        {
+          "name": "Clint Capela",
+          "archetype": "C_06",
+          "hbb": 52.2
+        },
+        {
+          "name": "De'Andre Hunter",
+          "archetype": "SG_07",
+          "hbb": 48.5
+        }
+      ],
+      "archetype_mix": "PG_01 | PG_02 | SG_06 | PG_01 | SF_01 | C_06 | SG_07",
+      "hbb_team_shape": {
+        "motor": 56.0,
+        "decision": 55.3,
+        "pressure": 63.1,
+        "composite": 58.1
+      },
+      "value_counts": {
+        "value_creation": 1,
+        "value_acquisition": 1,
+        "internal_development": 2,
+        "role_fit": 3
+      },
+      "note": "Non-playoff season: useful for identifying missing roster-construction ingredients and role gaps."
+    },
+    {
+      "season": "2024-25",
+      "era": "Johnson/Risacher Fit Window",
+      "record": "40-42",
+      "wins": 40,
+      "losses": 42,
+      "win_pct": 0.488,
+      "playoff_result": {
+        "made_playoffs": false,
+        "series_wins": 0,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Trae Young",
+          "archetype": "PG_01",
+          "hbb": 64.5
+        },
+        {
+          "name": "Dyson Daniels",
+          "archetype": "PG_03",
+          "hbb": 62.5
+        },
+        {
+          "name": "Onyeka Okongwu",
+          "archetype": "PF_07",
+          "hbb": 56.9
+        },
+        {
+          "name": "Zaccharie Risacher",
+          "archetype": "SF_04",
+          "hbb": 44.2
+        },
+        {
+          "name": "Jalen Johnson",
+          "archetype": "SF_09",
+          "hbb": 68.1
+        },
+        {
+          "name": "Clint Capela",
+          "archetype": "C_07",
+          "hbb": 46.0
+        },
+        {
+          "name": "V\u00edt Krej\u010d\u00ed",
+          "archetype": "PG_04",
+          "hbb": 44.8
+        }
+      ],
+      "archetype_mix": "PG_01 | PG_03 | PF_07 | SF_04 | SF_09 | C_07 | PG_04",
+      "hbb_team_shape": {
+        "motor": 57.1,
+        "decision": 55.4,
+        "pressure": 53.4,
+        "composite": 55.3
+      },
+      "value_counts": {
+        "value_creation": 2,
+        "value_acquisition": 0,
+        "internal_development": 4,
+        "role_fit": 1
+      },
+      "note": "Non-playoff season: useful for identifying missing roster-construction ingredients and role gaps."
+    },
+    {
+      "season": "2025-26",
+      "era": "Johnson/Risacher Fit Window",
+      "record": "46-36",
+      "wins": 46,
+      "losses": 36,
+      "win_pct": 0.561,
+      "playoff_result": {
+        "made_playoffs": true,
+        "series_wins": 0,
+        "made_conf_finals": false,
+        "made_finals": false,
+        "won_championship": false
+      },
+      "top_players": [
+        {
+          "name": "Nickeil Alexander-Walker",
+          "archetype": "PG_01",
+          "hbb": 62.3
+        },
+        {
+          "name": "Jalen Johnson",
+          "archetype": "SF_09",
+          "hbb": 70.5
+        },
+        {
+          "name": "Dyson Daniels",
+          "archetype": "PG_03",
+          "hbb": 61.5
+        },
+        {
+          "name": "Onyeka Okongwu",
+          "archetype": "PF_06",
+          "hbb": 61.4
+        },
+        {
+          "name": "Zaccharie Risacher",
+          "archetype": "SF_04",
+          "hbb": 43.2
+        },
+        {
+          "name": "CJ McCollum",
+          "archetype": "PG_08",
+          "hbb": 55.9
+        },
+        {
+          "name": "Mouhamed Gueye",
+          "archetype": "SF_03",
+          "hbb": 36.0
+        }
+      ],
+      "archetype_mix": "PG_01 | SF_09 | PG_03 | PF_06 | SF_04 | PG_08 | SF_03",
+      "hbb_team_shape": {
+        "motor": 57.4,
+        "decision": 54.9,
+        "pressure": 55.2,
+        "composite": 55.8
+      },
+      "value_counts": {
+        "value_creation": 2,
+        "value_acquisition": 1,
+        "internal_development": 3,
+        "role_fit": 1
+      },
+      "note": "Playoff team: useful identity, but not enough complete fit to survive deep rounds."
+    }
+  ],
+  "player_profiles": [
+    {
+      "season": "1996-97",
+      "player_id": "302",
+      "player_name": "Mookie Blaylock",
+      "position": "G",
+      "age": 29.0,
+      "rank_on_team": 2,
+      "games_played": 78,
+      "minutes_per_game": 39.3,
+      "stat_line": {
+        "points": 17.4,
+        "rebounds": 5.3,
+        "assists": 5.9,
+        "steals": 2.7,
+        "blocks": 0.3,
+        "threes": 2.8
+      },
+      "archetype": {
+        "cluster_id": "PG_03",
+        "position": "PG",
+        "confidence": 0.176,
+        "core_stat_block": "22.0/5.6/7.1/1.8/0.5",
+        "championship_dna": {
+          "team_seasons": 143,
+          "playoff_rate": 0.65,
+          "avg_series_wins": 0.727,
+          "finals_rate": 0.098,
+          "championship_rate": 0.056
+        }
+      },
+      "competitive_traits": {
+        "motor": 76.6,
+        "decision": 52.6,
+        "pressure": 70.8,
+        "composite": 66.7
+      },
+      "acquisition_lens": {
+        "classification": "value_acquisition",
+        "thesis": "Atlanta acquired known production and used roster structure to translate that certainty into a defined job."
+      }
+    },
+    {
+      "season": "1996-97",
+      "player_id": "87",
+      "player_name": "Dikembe Mutombo",
+      "position": "C",
+      "age": 30.0,
+      "rank_on_team": 3,
+      "games_played": 80,
+      "minutes_per_game": 37.2,
+      "stat_line": {
+        "points": 13.3,
+        "rebounds": 11.6,
+        "assists": 1.4,
+        "steals": 0.6,
+        "blocks": 3.3,
+        "threes": 0.0
+      },
+      "archetype": {
+        "cluster_id": "C_09",
+        "position": "C",
+        "confidence": 0.492,
+        "core_stat_block": "12.4/10.7/1.0/0.6/2.9",
+        "championship_dna": {
+          "team_seasons": 42,
+          "playoff_rate": 0.524,
+          "avg_series_wins": 0.429,
+          "finals_rate": 0.048,
+          "championship_rate": 0.0
+        }
+      },
+      "competitive_traits": {
+        "motor": 74.0,
+        "decision": 46.5,
+        "pressure": 58.3,
+        "composite": 59.6
+      },
+      "acquisition_lens": {
+        "classification": "value_acquisition",
+        "thesis": "Atlanta acquired known production and used roster structure to translate that certainty into a defined job."
+      }
+    },
+    {
+      "season": "2007-08",
+      "player_id": "2207",
+      "player_name": "Joe Johnson",
+      "position": "G-F",
+      "age": 26.0,
+      "rank_on_team": 1,
+      "games_played": 82,
+      "minutes_per_game": 40.8,
+      "stat_line": {
+        "points": 21.7,
+        "rebounds": 4.5,
+        "assists": 5.8,
+        "steals": 1.0,
+        "blocks": 0.2,
+        "threes": 2.1
+      },
+      "archetype": {
+        "cluster_id": "SG_10",
+        "position": "SG",
+        "confidence": 0.335,
+        "core_stat_block": "25.0/6.0/5.2/1.3/0.5",
+        "championship_dna": {
+          "team_seasons": 57,
+          "playoff_rate": 0.667,
+          "avg_series_wins": 0.93,
+          "finals_rate": 0.175,
+          "championship_rate": 0.123
+        }
+      },
+      "competitive_traits": {
+        "motor": 53.8,
+        "decision": 63.4,
+        "pressure": 76.1,
+        "composite": 64.4
+      },
+      "acquisition_lens": {
+        "classification": "value_acquisition",
+        "thesis": "Atlanta acquired known production and used roster structure to translate that certainty into a defined job."
+      }
+    },
+    {
+      "season": "2009-10",
+      "player_id": "2746",
+      "player_name": "Josh Smith",
+      "position": "F",
+      "age": 23.0,
+      "rank_on_team": 2,
+      "games_played": 81,
+      "minutes_per_game": 35.5,
+      "stat_line": {
+        "points": 15.7,
+        "rebounds": 8.7,
+        "assists": 4.2,
+        "steals": 1.6,
+        "blocks": 2.1,
+        "threes": 0.0
+      },
+      "archetype": {
+        "cluster_id": "SF_08",
+        "position": "SF",
+        "confidence": 0.296,
+        "core_stat_block": "15.0/8.1/2.8/1.1/1.7",
+        "championship_dna": {
+          "team_seasons": 86,
+          "playoff_rate": 0.512,
+          "avg_series_wins": 0.546,
+          "finals_rate": 0.081,
+          "championship_rate": 0.046
+        }
+      },
+      "competitive_traits": {
+        "motor": 81.1,
+        "decision": 59.0,
+        "pressure": 51.6,
+        "composite": 63.9
+      },
+      "acquisition_lens": {
+        "classification": "internal_development",
+        "thesis": "Atlanta developed or retained an internal talent asset whose role value compounds if the surrounding archetype mix is right."
+      }
+    },
+    {
+      "season": "2012-13",
+      "player_id": "201143",
+      "player_name": "Al Horford",
+      "position": "C-F",
+      "age": 26.0,
+      "rank_on_team": 1,
+      "games_played": 74,
+      "minutes_per_game": 37.3,
+      "stat_line": {
+        "points": 17.4,
+        "rebounds": 10.2,
+        "assists": 3.2,
+        "steals": 1.1,
+        "blocks": 1.1,
+        "threes": 0.0
+      },
+      "archetype": {
+        "cluster_id": "PF_04",
+        "position": "PF",
+        "confidence": 0.383,
+        "core_stat_block": "18.5/10.5/4.6/1.1/1.0",
+        "championship_dna": {
+          "team_seasons": 34,
+          "playoff_rate": 0.706,
+          "avg_series_wins": 0.618,
+          "finals_rate": 0.088,
+          "championship_rate": 0.029
+        }
+      },
+      "competitive_traits": {
+        "motor": 63.4,
+        "decision": 59.0,
+        "pressure": 59.8,
+        "composite": 60.7
+      },
+      "acquisition_lens": {
+        "classification": "internal_development",
+        "thesis": "Atlanta developed or retained an internal talent asset whose role value compounds if the surrounding archetype mix is right."
+      }
+    },
+    {
+      "season": "2014-15",
+      "player_id": "201952",
+      "player_name": "Jeff Teague",
+      "position": "G",
+      "age": 26.0,
+      "rank_on_team": 4,
+      "games_played": 73,
+      "minutes_per_game": 30.5,
+      "stat_line": {
+        "points": 15.9,
+        "rebounds": 2.5,
+        "assists": 7.0,
+        "steals": 1.7,
+        "blocks": 0.4,
+        "threes": 1.0
+      },
+      "archetype": {
+        "cluster_id": "PG_10",
+        "position": "PG",
+        "confidence": 0.307,
+        "core_stat_block": "17.1/3.8/6.9/1.4/0.2",
+        "championship_dna": {
+          "team_seasons": 175,
+          "playoff_rate": 0.543,
+          "avg_series_wins": 0.469,
+          "finals_rate": 0.063,
+          "championship_rate": 0.017
+        }
+      },
+      "competitive_traits": {
+        "motor": 57.1,
+        "decision": 61.5,
+        "pressure": 51.5,
+        "composite": 56.7
+      },
+      "acquisition_lens": {
+        "classification": "internal_development",
+        "thesis": "Atlanta developed or retained an internal talent asset whose role value compounds if the surrounding archetype mix is right."
+      }
+    },
+    {
+      "season": "2015-16",
+      "player_id": "200794",
+      "player_name": "Paul Millsap",
+      "position": "F",
+      "age": 30.0,
+      "rank_on_team": 1,
+      "games_played": 81,
+      "minutes_per_game": 32.7,
+      "stat_line": {
+        "points": 17.1,
+        "rebounds": 9.0,
+        "assists": 3.3,
+        "steals": 1.8,
+        "blocks": 1.7,
+        "threes": 0.9
+      },
+      "archetype": {
+        "cluster_id": "SF_08",
+        "position": "SF",
+        "confidence": 0.262,
+        "core_stat_block": "15.0/8.1/2.8/1.1/1.7",
+        "championship_dna": {
+          "team_seasons": 86,
+          "playoff_rate": 0.512,
+          "avg_series_wins": 0.546,
+          "finals_rate": 0.081,
+          "championship_rate": 0.046
+        }
+      },
+      "competitive_traits": {
+        "motor": 81.9,
+        "decision": 54.2,
+        "pressure": 57.4,
+        "composite": 64.5
+      },
+      "acquisition_lens": {
+        "classification": "value_creation",
+        "thesis": "Atlanta turned the player's statistical shape into more useful roster value through role fit, usage context, or acquisition timing."
+      }
+    },
+    {
+      "season": "2013-14",
+      "player_id": "2594",
+      "player_name": "Kyle Korver",
+      "position": "G-F",
+      "age": 32.0,
+      "rank_on_team": 3,
+      "games_played": 71,
+      "minutes_per_game": 34.0,
+      "stat_line": {
+        "points": 12.0,
+        "rebounds": 4.0,
+        "assists": 2.9,
+        "steals": 1.0,
+        "blocks": 0.3,
+        "threes": 2.6
+      },
+      "archetype": {
+        "cluster_id": "SG_07",
+        "position": "SG",
+        "confidence": 0.295,
+        "core_stat_block": "11.3/3.2/1.6/0.7/0.3",
+        "championship_dna": {
+          "team_seasons": 133,
+          "playoff_rate": 0.549,
+          "avg_series_wins": 0.429,
+          "finals_rate": 0.053,
+          "championship_rate": 0.015
+        }
+      },
+      "competitive_traits": {
+        "motor": 50.5,
+        "decision": 61.0,
+        "pressure": 61.2,
+        "composite": 57.6
+      },
+      "acquisition_lens": {
+        "classification": "value_creation",
+        "thesis": "Atlanta turned the player's statistical shape into more useful roster value through role fit, usage context, or acquisition timing."
+      }
+    },
+    {
+      "season": "2016-17",
+      "player_id": "203471",
+      "player_name": "Dennis Schr\u00f6der",
+      "position": "G",
+      "age": 23.0,
+      "rank_on_team": 1,
+      "games_played": 79,
+      "minutes_per_game": 31.5,
+      "stat_line": {
+        "points": 17.9,
+        "rebounds": 3.1,
+        "assists": 6.3,
+        "steals": 0.9,
+        "blocks": 0.2,
+        "threes": 1.3
+      },
+      "archetype": {
+        "cluster_id": "PG_09",
+        "position": "PG",
+        "confidence": 0.427,
+        "core_stat_block": "14.4/3.0/4.5/0.9/0.2",
+        "championship_dna": {
+          "team_seasons": 208,
+          "playoff_rate": 0.471,
+          "avg_series_wins": 0.462,
+          "finals_rate": 0.062,
+          "championship_rate": 0.038
+        }
+      },
+      "competitive_traits": {
+        "motor": 47.9,
+        "decision": 55.0,
+        "pressure": 56.6,
+        "composite": 53.2
+      },
+      "acquisition_lens": {
+        "classification": "internal_development",
+        "thesis": "Atlanta developed or retained an internal talent asset whose role value compounds if the surrounding archetype mix is right."
+      }
+    },
+    {
+      "season": "2019-20",
+      "player_id": "1629027",
+      "player_name": "Trae Young",
+      "position": "G",
+      "age": 21.0,
+      "rank_on_team": 1,
+      "games_played": 60,
+      "minutes_per_game": 35.3,
+      "stat_line": {
+        "points": 29.6,
+        "rebounds": 4.2,
+        "assists": 9.3,
+        "steals": 1.1,
+        "blocks": 0.1,
+        "threes": 3.4
+      },
+      "archetype": {
+        "cluster_id": "PG_01",
+        "position": "PG",
+        "confidence": 0.231,
+        "core_stat_block": "22.5/4.0/5.9/1.2/0.3",
+        "championship_dna": {
+          "team_seasons": 226,
+          "playoff_rate": 0.584,
+          "avg_series_wins": 0.553,
+          "finals_rate": 0.071,
+          "championship_rate": 0.026
+        }
+      },
+      "competitive_traits": {
+        "motor": 54.8,
+        "decision": 59.3,
+        "pressure": 87.9,
+        "composite": 67.3
+      },
+      "acquisition_lens": {
+        "classification": "internal_development",
+        "thesis": "Atlanta developed or retained an internal talent asset whose role value compounds if the surrounding archetype mix is right."
+      }
+    },
+    {
+      "season": "2019-20",
+      "player_id": "1628381",
+      "player_name": "John Collins",
+      "position": "F-C",
+      "age": 22.0,
+      "rank_on_team": 5,
+      "games_played": 41,
+      "minutes_per_game": 33.2,
+      "stat_line": {
+        "points": 21.6,
+        "rebounds": 10.1,
+        "assists": 1.5,
+        "steals": 0.8,
+        "blocks": 1.6,
+        "threes": 1.4
+      },
+      "archetype": {
+        "cluster_id": "PF_06",
+        "position": "PF",
+        "confidence": 0.286,
+        "core_stat_block": "15.9/7.4/2.5/1.0/1.1",
+        "championship_dna": {
+          "team_seasons": 70,
+          "playoff_rate": 0.586,
+          "avg_series_wins": 0.714,
+          "finals_rate": 0.086,
+          "championship_rate": 0.014
+        }
+      },
+      "competitive_traits": {
+        "motor": 63.8,
+        "decision": 53.6,
+        "pressure": 72.7,
+        "composite": 63.4
+      },
+      "acquisition_lens": {
+        "classification": "internal_development",
+        "thesis": "Atlanta developed or retained an internal talent asset whose role value compounds if the surrounding archetype mix is right."
+      }
+    },
+    {
+      "season": "2023-24",
+      "player_id": "1627749",
+      "player_name": "Dejounte Murray",
+      "position": "G",
+      "age": 27.0,
+      "rank_on_team": 1,
+      "games_played": 78,
+      "minutes_per_game": 35.7,
+      "stat_line": {
+        "points": 22.5,
+        "rebounds": 5.3,
+        "assists": 6.4,
+        "steals": 1.4,
+        "blocks": 0.3,
+        "threes": 2.6
+      },
+      "archetype": {
+        "cluster_id": "PG_01",
+        "position": "PG",
+        "confidence": 0.371,
+        "core_stat_block": "22.5/4.0/5.9/1.2/0.3",
+        "championship_dna": {
+          "team_seasons": 226,
+          "playoff_rate": 0.584,
+          "avg_series_wins": 0.553,
+          "finals_rate": 0.071,
+          "championship_rate": 0.026
+        }
+      },
+      "competitive_traits": {
+        "motor": 67.4,
+        "decision": 57.4,
+        "pressure": 73.5,
+        "composite": 66.1
+      },
+      "acquisition_lens": {
+        "classification": "value_acquisition",
+        "thesis": "Atlanta acquired known production and used roster structure to translate that certainty into a defined job."
+      }
+    },
+    {
+      "season": "2020-21",
+      "player_id": "203991",
+      "player_name": "Clint Capela",
+      "position": "C",
+      "age": 26.0,
+      "rank_on_team": 3,
+      "games_played": 63,
+      "minutes_per_game": 30.2,
+      "stat_line": {
+        "points": 15.2,
+        "rebounds": 14.3,
+        "assists": 0.8,
+        "steals": 0.7,
+        "blocks": 2.0,
+        "threes": 0.0
+      },
+      "archetype": {
+        "cluster_id": "C_06",
+        "position": "C",
+        "confidence": 0.272,
+        "core_stat_block": "10.7/10.2/1.1/0.7/1.7",
+        "championship_dna": {
+          "team_seasons": 60,
+          "playoff_rate": 0.517,
+          "avg_series_wins": 0.45,
+          "finals_rate": 0.033,
+          "championship_rate": 0.017
+        }
+      },
+      "competitive_traits": {
+        "motor": 70.7,
+        "decision": 47.5,
+        "pressure": 55.7,
+        "composite": 58.0
+      },
+      "acquisition_lens": {
+        "classification": "value_creation",
+        "thesis": "Atlanta turned the player's statistical shape into more useful roster value through role fit, usage context, or acquisition timing."
+      }
+    },
+    {
+      "season": "2025-26",
+      "player_id": "1630168",
+      "player_name": "Onyeka Okongwu",
+      "position": "F-C",
+      "age": 24.0,
+      "rank_on_team": 4,
+      "games_played": 74,
+      "minutes_per_game": 31.1,
+      "stat_line": {
+        "points": 15.2,
+        "rebounds": 7.6,
+        "assists": 3.1,
+        "steals": 1.1,
+        "blocks": 1.1,
+        "threes": 1.9
+      },
+      "archetype": {
+        "cluster_id": "PF_06",
+        "position": "PF",
+        "confidence": 0.409,
+        "core_stat_block": "15.9/7.4/2.5/1.0/1.1",
+        "championship_dna": {
+          "team_seasons": 70,
+          "playoff_rate": 0.586,
+          "avg_series_wins": 0.714,
+          "finals_rate": 0.086,
+          "championship_rate": 0.014
+        }
+      },
+      "competitive_traits": {
+        "motor": 57.6,
+        "decision": 60.6,
+        "pressure": 66.0,
+        "composite": 61.4
+      },
+      "acquisition_lens": {
+        "classification": "internal_development",
+        "thesis": "Atlanta developed or retained an internal talent asset whose role value compounds if the surrounding archetype mix is right."
+      }
+    },
+    {
+      "season": "2025-26",
+      "player_id": "1630552",
+      "player_name": "Jalen Johnson",
+      "position": "F",
+      "age": 23.0,
+      "rank_on_team": 2,
+      "games_played": 72,
+      "minutes_per_game": 35.2,
+      "stat_line": {
+        "points": 22.5,
+        "rebounds": 10.3,
+        "assists": 7.9,
+        "steals": 1.2,
+        "blocks": 0.4,
+        "threes": 1.7
+      },
+      "archetype": {
+        "cluster_id": "SF_09",
+        "position": "SF",
+        "confidence": 0.301,
+        "core_stat_block": "26.3/9.0/6.1/1.3/1.0",
+        "championship_dna": {
+          "team_seasons": 58,
+          "playoff_rate": 0.862,
+          "avg_series_wins": 1.207,
+          "finals_rate": 0.224,
+          "championship_rate": 0.121
+        }
+      },
+      "competitive_traits": {
+        "motor": 67.2,
+        "decision": 73.1,
+        "pressure": 71.2,
+        "composite": 70.5
+      },
+      "acquisition_lens": {
+        "classification": "internal_development",
+        "thesis": "Atlanta developed or retained an internal talent asset whose role value compounds if the surrounding archetype mix is right."
+      }
+    },
+    {
+      "season": "2024-25",
+      "player_id": "1630700",
+      "player_name": "Dyson Daniels",
+      "position": "G",
+      "age": 21.0,
+      "rank_on_team": 2,
+      "games_played": 76,
+      "minutes_per_game": 33.9,
+      "stat_line": {
+        "points": 14.1,
+        "rebounds": 5.9,
+        "assists": 4.4,
+        "steals": 3.0,
+        "blocks": 0.7,
+        "threes": 1.1
+      },
+      "archetype": {
+        "cluster_id": "PG_03",
+        "position": "PG",
+        "confidence": 0.169,
+        "core_stat_block": "22.0/5.6/7.1/1.8/0.5",
+        "championship_dna": {
+          "team_seasons": 143,
+          "playoff_rate": 0.65,
+          "avg_series_wins": 0.727,
+          "finals_rate": 0.098,
+          "championship_rate": 0.056
+        }
+      },
+      "competitive_traits": {
+        "motor": 87.7,
+        "decision": 48.0,
+        "pressure": 51.9,
+        "composite": 62.5
+      },
+      "acquisition_lens": {
+        "classification": "value_creation",
+        "thesis": "Atlanta turned the player's statistical shape into more useful roster value through role fit, usage context, or acquisition timing."
+      }
+    },
+    {
+      "season": "2025-26",
+      "player_id": "203468",
+      "player_name": "CJ McCollum",
+      "position": "G",
+      "age": 34.0,
+      "rank_on_team": 6,
+      "games_played": 41,
+      "minutes_per_game": 28.8,
+      "stat_line": {
+        "points": 18.7,
+        "rebounds": 3.1,
+        "assists": 4.1,
+        "steals": 1.0,
+        "blocks": 0.6,
+        "threes": 2.3
+      },
+      "archetype": {
+        "cluster_id": "PG_08",
+        "position": "PG",
+        "confidence": 0.242,
+        "core_stat_block": "11.9/4.0/3.0/1.2/0.5",
+        "championship_dna": {
+          "team_seasons": 159,
+          "playoff_rate": 0.497,
+          "avg_series_wins": 0.585,
+          "finals_rate": 0.094,
+          "championship_rate": 0.063
+        }
+      },
+      "competitive_traits": {
+        "motor": 56.7,
+        "decision": 49.1,
+        "pressure": 62.0,
+        "composite": 55.9
+      },
+      "acquisition_lens": {
+        "classification": "value_acquisition",
+        "thesis": "Atlanta acquired known production and used roster structure to translate that certainty into a defined job."
+      }
+    },
+    {
+      "season": "2025-26",
+      "player_id": "1629638",
+      "player_name": "Nickeil Alexander-Walker",
+      "position": "G",
+      "age": 27.0,
+      "rank_on_team": 1,
+      "games_played": 78,
+      "minutes_per_game": 33.4,
+      "stat_line": {
+        "points": 20.8,
+        "rebounds": 3.4,
+        "assists": 3.7,
+        "steals": 1.3,
+        "blocks": 0.5,
+        "threes": 3.2
+      },
+      "archetype": {
+        "cluster_id": "PG_01",
+        "position": "PG",
+        "confidence": 0.25,
+        "core_stat_block": "22.5/4.0/5.9/1.2/0.3",
+        "championship_dna": {
+          "team_seasons": 226,
+          "playoff_rate": 0.584,
+          "avg_series_wins": 0.553,
+          "finals_rate": 0.071,
+          "championship_rate": 0.026
+        }
+      },
+      "competitive_traits": {
+        "motor": 61.3,
+        "decision": 52.0,
+        "pressure": 73.6,
+        "composite": 62.3
+      },
+      "acquisition_lens": {
+        "classification": "value_creation",
+        "thesis": "Atlanta turned the player's statistical shape into more useful roster value through role fit, usage context, or acquisition timing."
+      }
+    },
+    {
+      "season": "2024-25",
+      "player_id": "1642258",
+      "player_name": "Zaccharie Risacher",
+      "position": "F",
+      "age": 19.0,
+      "rank_on_team": 4,
+      "games_played": 75,
+      "minutes_per_game": 24.6,
+      "stat_line": {
+        "points": 12.6,
+        "rebounds": 3.6,
+        "assists": 1.2,
+        "steals": 0.7,
+        "blocks": 0.5,
+        "threes": 1.6
+      },
+      "archetype": {
+        "cluster_id": "SF_04",
+        "position": "SF",
+        "confidence": 0.521,
+        "core_stat_block": "9.7/3.8/1.5/0.7/0.3",
+        "championship_dna": {
+          "team_seasons": 236,
+          "playoff_rate": 0.517,
+          "avg_series_wins": 0.576,
+          "finals_rate": 0.089,
+          "championship_rate": 0.042
+        }
+      },
+      "competitive_traits": {
+        "motor": 39.1,
+        "decision": 43.0,
+        "pressure": 50.5,
+        "composite": 44.2
+      },
+      "acquisition_lens": {
+        "classification": "internal_development",
+        "thesis": "Atlanta developed or retained an internal talent asset whose role value compounds if the surrounding archetype mix is right."
+      }
+    }
+  ],
+  "hof_positional_baselines": {
+    "title": "Hall of Fame Positional Baselines",
+    "source_note": "Curated modern NBA Hall of Fame cohort with DelQuant-era seasons, including inducted classes through 2025. This is a benchmark layer, not a Hall of Fame prediction model.",
+    "baseline_method": "For each Hall of Fame player, DelQuant selects the strongest available DelQuant-era season by HBB composite, then computes positional averages and standard deviations for Motor, Decision, Pressure, and Composite.",
+    "baselines": [
+      {
+        "position": "PG",
+        "player_count": 8,
+        "players": [
+          "Allen Iverson",
+          "Chauncey Billups",
+          "Gary Payton",
+          "Jason Kidd",
+          "John Stockton",
+          "Steve Nash",
+          "Tim Hardaway",
+          "Tony Parker"
+        ],
+        "motor": {
+          "avg": 61.6,
+          "std_dev": 14.0
+        },
+        "decision": {
+          "avg": 68.3,
+          "std_dev": 8.2
+        },
+        "pressure": {
+          "avg": 66.3,
+          "std_dev": 9.7
+        },
+        "hbb_composite": {
+          "avg": 65.4,
+          "std_dev": 5.3
+        }
+      },
+      {
+        "position": "SG",
+        "player_count": 7,
+        "players": [
+          "Dwyane Wade",
+          "Kobe Bryant",
+          "Manu Ginobili",
+          "Michael Jordan",
+          "Mitch Richmond",
+          "Ray Allen",
+          "Reggie Miller"
+        ],
+        "motor": {
+          "avg": 71.3,
+          "std_dev": 12.0
+        },
+        "decision": {
+          "avg": 53.3,
+          "std_dev": 5.1
+        },
+        "pressure": {
+          "avg": 76.3,
+          "std_dev": 5.9
+        },
+        "hbb_composite": {
+          "avg": 67.0,
+          "std_dev": 5.9
+        }
+      },
+      {
+        "position": "SF",
+        "player_count": 6,
+        "players": [
+          "Carmelo Anthony",
+          "Grant Hill",
+          "Paul Pierce",
+          "Scottie Pippen",
+          "Tracy McGrady",
+          "Vince Carter"
+        ],
+        "motor": {
+          "avg": 72.5,
+          "std_dev": 3.7
+        },
+        "decision": {
+          "avg": 59.8,
+          "std_dev": 7.3
+        },
+        "pressure": {
+          "avg": 78.0,
+          "std_dev": 9.9
+        },
+        "hbb_composite": {
+          "avg": 70.1,
+          "std_dev": 2.9
+        }
+      },
+      {
+        "position": "PF",
+        "player_count": 7,
+        "players": [
+          "Chris Bosh",
+          "Chris Webber",
+          "Dennis Rodman",
+          "Dirk Nowitzki",
+          "Karl Malone",
+          "Kevin Garnett",
+          "Tim Duncan"
+        ],
+        "motor": {
+          "avg": 75.0,
+          "std_dev": 6.5
+        },
+        "decision": {
+          "avg": 59.3,
+          "std_dev": 7.3
+        },
+        "pressure": {
+          "avg": 65.8,
+          "std_dev": 11.9
+        },
+        "hbb_composite": {
+          "avg": 66.7,
+          "std_dev": 7.5
+        }
+      },
+      {
+        "position": "C",
+        "player_count": 7,
+        "players": [
+          "Ben Wallace",
+          "Dikembe Mutombo",
+          "Dwight Howard",
+          "Pau Gasol",
+          "Shaquille O'Neal",
+          "Vlade Divac",
+          "Yao Ming"
+        ],
+        "motor": {
+          "avg": 74.4,
+          "std_dev": 11.4
+        },
+        "decision": {
+          "avg": 53.7,
+          "std_dev": 8.2
+        },
+        "pressure": {
+          "avg": 62.7,
+          "std_dev": 9.8
+        },
+        "hbb_composite": {
+          "avg": 63.6,
+          "std_dev": 3.7
+        }
+      }
+    ],
+    "heat_comparisons": [
+      {
+        "player_name": "Andrew Lang",
+        "season": "1995-96",
+        "position": "C",
+        "archetype": "C_07",
+        "traits": {
+          "motor": 49.4,
+          "decision": 48.7,
+          "pressure": 61.1,
+          "composite": 53.1
+        },
+        "z_scores": {
+          "motor": -2.19,
+          "decision": -0.61,
+          "pressure": -0.16,
+          "composite": -2.84
+        },
+        "labels": {
+          "motor": "below typical HOF positional reference",
+          "decision": "slightly below HOF positional reference",
+          "pressure": "inside HOF positional reference",
+          "composite": "below typical HOF positional reference"
+        },
+        "development_read": "Closest elite-position signal: pressure. Primary positional gap to explore: composite.",
+        "context_read": "This is a historical positional benchmark, not a verdict on the current player."
+      },
+      {
+        "player_name": "Dikembe Mutombo",
+        "season": "1996-97",
+        "position": "C",
+        "archetype": "C_09",
+        "traits": {
+          "motor": 64.1,
+          "decision": 50.7,
+          "pressure": 63.5,
+          "composite": 59.4
+        },
+        "z_scores": {
+          "motor": -0.9,
+          "decision": -0.37,
+          "pressure": 0.08,
+          "composite": -1.14
+        },
+        "labels": {
+          "motor": "slightly below HOF positional reference",
+          "decision": "slightly below HOF positional reference",
+          "pressure": "inside HOF positional reference",
+          "composite": "below typical HOF positional reference"
+        },
+        "development_read": "Closest elite-position signal: pressure. Primary positional gap to explore: composite.",
+        "context_read": "This is a historical positional benchmark, not a verdict on the current player."
+      },
+      {
+        "player_name": "Dikembe Mutombo",
+        "season": "1997-98",
+        "position": "C",
+        "archetype": "C_09",
+        "traits": {
+          "motor": 59.6,
+          "decision": 43.6,
+          "pressure": 62.7,
+          "composite": 55.3
+        },
+        "z_scores": {
+          "motor": -1.3,
+          "decision": -1.23,
+          "pressure": 0.0,
+          "composite": -2.24
+        },
+        "labels": {
+          "motor": "below typical HOF positional reference",
+          "decision": "below typical HOF positional reference",
+          "pressure": "inside HOF positional reference",
+          "composite": "below typical HOF positional reference"
+        },
+        "development_read": "Closest elite-position signal: pressure. Primary positional gap to explore: composite.",
+        "context_read": "This is a historical positional benchmark, not a verdict on the current player."
+      },
+      {
+        "player_name": "Dikembe Mutombo",
+        "season": "1998-99",
+        "position": "C",
+        "archetype": "C_09",
+        "traits": {
+          "motor": 58.1,
+          "decision": 46.4,
+          "pressure": 55.9,
+          "composite": 53.5
+        },
+        "z_scores": {
+          "motor": -1.43,
+          "decision": -0.89,
+          "pressure": -0.69,
+          "composite": -2.73
+        },
+        "labels": {
+          "motor": "below typical HOF positional reference",
+          "decision": "slightly below HOF positional reference",
+          "pressure": "slightly below HOF positional reference",
+          "composite": "below typical HOF positional reference"
+        },
+        "development_read": "Closest elite-position signal: pressure. Primary positional gap to explore: composite.",
+        "context_read": "This is a historical positional benchmark, not a verdict on the current player."
+      },
+      {
+        "player_name": "Dikembe Mutombo",
+        "season": "1999-00",
+        "position": "C",
+        "archetype": "C_09",
+        "traits": {
+          "motor": 63.0,
+          "decision": 51.6,
+          "pressure": 57.7,
+          "composite": 57.4
+        },
+        "z_scores": {
+          "motor": -1.0,
+          "decision": -0.26,
+          "pressure": -0.51,
+          "composite": -1.68
+        },
+        "labels": {
+          "motor": "below typical HOF positional reference",
+          "decision": "inside HOF positional reference",
+          "pressure": "slightly below HOF positional reference",
+          "composite": "below typical HOF positional reference"
+        },
+        "development_read": "Closest elite-position signal: decision. Primary positional gap to explore: composite.",
+        "context_read": "This is a historical positional benchmark, not a verdict on the current player."
+      },
+      {
+        "player_name": "Dikembe Mutombo",
+        "season": "2000-01",
+        "position": "C",
+        "archetype": "C_09",
+        "traits": {
+          "motor": 62.2,
+          "decision": 42.3,
+          "pressure": 49.9,
+          "composite": 51.5
+        },
+        "z_scores": {
+          "motor": -1.07,
+          "decision": -1.39,
+          "pressure": -1.31,
+          "composite": -3.27
+        },
+        "labels": {
+          "motor": "below typical HOF positional reference",
+          "decision": "below typical HOF positional reference",
+          "pressure": "below typical HOF positional reference",
+          "composite": "below typical HOF positional reference"
+        },
+        "development_read": "Closest elite-position signal: motor. Primary positional gap to explore: composite.",
+        "context_read": "This is a historical positional benchmark, not a verdict on the current player."
+      },
+      {
+        "player_name": "Nazr Mohammed",
+        "season": "2001-02",
+        "position": "C",
+        "archetype": "C_12",
+        "traits": {
+          "motor": 46.5,
+          "decision": 25.2,
+          "pressure": 45.9,
+          "composite": 39.2
+        },
+        "z_scores": {
+          "motor": -2.45,
+          "decision": -3.48,
+          "pressure": -1.71,
+          "composite": -6.59
+        },
+        "labels": {
+          "motor": "below typical HOF positional reference",
+          "decision": "below typical HOF positional reference",
+          "pressure": "below typical HOF positional reference",
+          "composite": "below typical HOF positional reference"
+        },
+        "development_read": "Closest elite-position signal: pressure. Primary positional gap to explore: composite.",
+        "context_read": "This is a historical positional benchmark, not a verdict on the current player."
+      },
+      {
+        "player_name": "Theo Ratliff",
+        "season": "2002-03",
+        "position": "C",
+        "archetype": "C_09",
+        "traits": {
+          "motor": 55.3,
+          "decision": 41.3,
+          "pressure": 46.2,
+          "composite": 47.6
+        },
+        "z_scores": {
+          "motor": -1.68,
+          "decision": -1.51,
+          "pressure": -1.68,
+          "composite": -4.32
+        },
+        "labels": {
+          "motor": "below typical HOF positional reference",
+          "decision": "below typical HOF positional reference",
+          "pressure": "below typical HOF positional reference",
+          "composite": "below typical HOF positional reference"
+        },
+        "development_read": "Closest elite-position signal: decision. Primary positional gap to explore: composite.",
+        "context_read": "This is a historical positional benchmark, not a verdict on the current player."
+      },
+      {
+        "player_name": "Theo Ratliff",
+        "season": "2003-04",
+        "position": "C",
+        "archetype": "C_09",
+        "traits": {
+          "motor": 52.0,
+          "decision": 40.1,
+          "pressure": 44.8,
+          "composite": 45.6
+        },
+        "z_scores": {
+          "motor": -1.96,
+          "decision": -1.66,
+          "pressure": -1.83,
+          "composite": -4.86
+        },
+        "labels": {
+          "motor": "below typical HOF positional reference",
+          "decision": "below typical HOF positional reference",
+          "pressure": "below typical HOF positional reference",
+          "composite": "below typical HOF positional reference"
+        },
+        "development_read": "Closest elite-position signal: decision. Primary positional gap to explore: composite.",
+        "context_read": "This is a historical positional benchmark, not a verdict on the current player."
+      },
+      {
+        "player_name": "Predrag Drobnjak",
+        "season": "2004-05",
+        "position": "C",
+        "archetype": "C_05",
+        "traits": {
+          "motor": 30.7,
+          "decision": 39.0,
+          "pressure": 43.7,
+          "composite": 37.8
+        },
+        "z_scores": {
+          "motor": -3.83,
+          "decision": -1.79,
+          "pressure": -1.94,
+          "composite": -6.97
+        },
+        "labels": {
+          "motor": "below typical HOF positional reference",
+          "decision": "below typical HOF positional reference",
+          "pressure": "below typical HOF positional reference",
+          "composite": "below typical HOF positional reference"
+        },
+        "development_read": "Closest elite-position signal: decision. Primary positional gap to explore: composite.",
+        "context_read": "This is a historical positional benchmark, not a verdict on the current player."
+      },
+      {
+        "player_name": "Zaza Pachulia",
+        "season": "2005-06",
+        "position": "C",
+        "archetype": "C_12",
+        "traits": {
+          "motor": 54.3,
+          "decision": 53.7,
+          "pressure": 54.8,
+          "composite": 54.3
+        },
+        "z_scores": {
+          "motor": -1.76,
+          "decision": 0.0,
+          "pressure": -0.81,
+          "composite": -2.51
+        },
+        "labels": {
+          "motor": "below typical HOF positional reference",
+          "decision": "inside HOF positional reference",
+          "pressure": "slightly below HOF positional reference",
+          "composite": "below typical HOF positional reference"
+        },
+        "development_read": "Closest elite-position signal: decision. Primary positional gap to explore: composite.",
+        "context_read": "This is a historical positional benchmark, not a verdict on the current player."
+      },
+      {
+        "player_name": "Zaza Pachulia",
+        "season": "2006-07",
+        "position": "C",
+        "archetype": "C_12",
+        "traits": {
+          "motor": 49.8,
+          "decision": 52.6,
+          "pressure": 53.7,
+          "composite": 52.0
+        },
+        "z_scores": {
+          "motor": -2.16,
+          "decision": -0.13,
+          "pressure": -0.92,
+          "composite": -3.14
+        },
+        "labels": {
+          "motor": "below typical HOF positional reference",
+          "decision": "inside HOF positional reference",
+          "pressure": "slightly below HOF positional reference",
+          "composite": "below typical HOF positional reference"
+        },
+        "development_read": "Closest elite-position signal: decision. Primary positional gap to explore: composite.",
+        "context_read": "This is a historical positional benchmark, not a verdict on the current player."
+      },
+      {
+        "player_name": "Zaza Pachulia",
+        "season": "2010-11",
+        "position": "C",
+        "archetype": "C_08",
+        "traits": {
+          "motor": 27.2,
+          "decision": 42.4,
+          "pressure": 23.6,
+          "composite": 31.1
+        },
+        "z_scores": {
+          "motor": -4.14,
+          "decision": -1.38,
+          "pressure": -3.99,
+          "composite": -8.78
+        },
+        "labels": {
+          "motor": "below typical HOF positional reference",
+          "decision": "below typical HOF positional reference",
+          "pressure": "below typical HOF positional reference",
+          "composite": "below typical HOF positional reference"
+        },
+        "development_read": "Closest elite-position signal: decision. Primary positional gap to explore: composite.",
+        "context_read": "This is a historical positional benchmark, not a verdict on the current player."
+      },
+      {
+        "player_name": "Zaza Pachulia",
+        "season": "2011-12",
+        "position": "C",
+        "archetype": "C_12",
+        "traits": {
+          "motor": 49.5,
+          "decision": 56.9,
+          "pressure": 41.8,
+          "composite": 49.4
+        },
+        "z_scores": {
+          "motor": -2.18,
+          "decision": 0.39,
+          "pressure": -2.13,
+          "composite": -3.84
+        },
+        "labels": {
+          "motor": "below typical HOF positional reference",
+          "decision": "above typical HOF positional reference",
+          "pressure": "below typical HOF positional reference",
+          "composite": "below typical HOF positional reference"
+        },
+        "development_read": "Closest elite-position signal: decision. Primary positional gap to explore: composite.",
+        "context_read": "This is a historical positional benchmark, not a verdict on the current player."
+      },
+      {
+        "player_name": "Zaza Pachulia",
+        "season": "2012-13",
+        "position": "C",
+        "archetype": "C_12",
+        "traits": {
+          "motor": 38.2,
+          "decision": 61.2,
+          "pressure": 31.8,
+          "composite": 43.7
+        },
+        "z_scores": {
+          "motor": -3.18,
+          "decision": 0.91,
+          "pressure": -3.15,
+          "composite": -5.38
+        },
+        "labels": {
+          "motor": "below typical HOF positional reference",
+          "decision": "above typical HOF positional reference",
+          "pressure": "below typical HOF positional reference",
+          "composite": "below typical HOF positional reference"
+        },
+        "development_read": "Closest elite-position signal: decision. Primary positional gap to explore: composite.",
+        "context_read": "This is a historical positional benchmark, not a verdict on the current player."
+      },
+      {
+        "player_name": "Dewayne Dedmon",
+        "season": "2017-18",
+        "position": "C",
+        "archetype": "C_03",
+        "traits": {
+          "motor": 43.7,
+          "decision": 60.6,
+          "pressure": 58.6,
+          "composite": 54.3
+        },
+        "z_scores": {
+          "motor": -2.69,
+          "decision": 0.84,
+          "pressure": -0.42,
+          "composite": -2.51
+        },
+        "labels": {
+          "motor": "below typical HOF positional reference",
+          "decision": "above typical HOF positional reference",
+          "pressure": "slightly below HOF positional reference",
+          "composite": "below typical HOF positional reference"
+        },
+        "development_read": "Closest elite-position signal: decision. Primary positional gap to explore: motor.",
+        "context_read": "This is a historical positional benchmark, not a verdict on the current player."
+      },
+      {
+        "player_name": "Dewayne Dedmon",
+        "season": "2018-19",
+        "position": "C",
+        "archetype": "C_03",
+        "traits": {
+          "motor": 52.3,
+          "decision": 60.9,
+          "pressure": 65.0,
+          "composite": 59.4
+        },
+        "z_scores": {
+          "motor": -1.94,
+          "decision": 0.88,
+          "pressure": 0.23,
+          "composite": -1.14
+        },
+        "labels": {
+          "motor": "below typical HOF positional reference",
+          "decision": "above typical HOF positional reference",
+          "pressure": "inside HOF positional reference",
+          "composite": "below typical HOF positional reference"
+        },
+        "development_read": "Closest elite-position signal: decision. Primary positional gap to explore: motor.",
+        "context_read": "This is a historical positional benchmark, not a verdict on the current player."
+      },
+      {
+        "player_name": "Damian Jones",
+        "season": "2019-20",
+        "position": "C",
+        "archetype": "C_08",
+        "traits": {
+          "motor": 29.0,
+          "decision": 55.8,
+          "pressure": 27.7,
+          "composite": 37.5
+        },
+        "z_scores": {
+          "motor": -3.98,
+          "decision": 0.26,
+          "pressure": -3.57,
+          "composite": -7.05
+        },
+        "labels": {
+          "motor": "below typical HOF positional reference",
+          "decision": "inside HOF positional reference",
+          "pressure": "below typical HOF positional reference",
+          "composite": "below typical HOF positional reference"
+        },
+        "development_read": "Closest elite-position signal: decision. Primary positional gap to explore: composite.",
+        "context_read": "This is a historical positional benchmark, not a verdict on the current player."
+      },
+      {
+        "player_name": "Clint Capela",
+        "season": "2020-21",
+        "position": "C",
+        "archetype": "C_06",
+        "traits": {
+          "motor": 63.2,
+          "decision": 43.8,
+          "pressure": 64.1,
+          "composite": 57.0
+        },
+        "z_scores": {
+          "motor": -0.98,
+          "decision": -1.21,
+          "pressure": 0.14,
+          "composite": -1.78
+        },
+        "labels": {
+          "motor": "slightly below HOF positional reference",
+          "decision": "below typical HOF positional reference",
+          "pressure": "inside HOF positional reference",
+          "composite": "below typical HOF positional reference"
+        },
+        "development_read": "Closest elite-position signal: pressure. Primary positional gap to explore: composite.",
+        "context_read": "This is a historical positional benchmark, not a verdict on the current player."
+      },
+      {
+        "player_name": "Clint Capela",
+        "season": "2021-22",
+        "position": "C",
+        "archetype": "C_06",
+        "traits": {
+          "motor": 55.6,
+          "decision": 64.3,
+          "pressure": 50.6,
+          "composite": 56.8
+        },
+        "z_scores": {
+          "motor": -1.65,
+          "decision": 1.29,
+          "pressure": -1.23,
+          "composite": -1.84
+        },
+        "labels": {
+          "motor": "below typical HOF positional reference",
+          "decision": "well above HOF positional reference",
+          "pressure": "below typical HOF positional reference",
+          "composite": "below typical HOF positional reference"
+        },
+        "development_read": "Closest elite-position signal: decision. Primary positional gap to explore: composite.",
+        "context_read": "This is a historical positional benchmark, not a verdict on the current player."
+      },
+      {
+        "player_name": "Clint Capela",
+        "season": "2022-23",
+        "position": "C",
+        "archetype": "C_06",
+        "traits": {
+          "motor": 52.5,
+          "decision": 55.3,
+          "pressure": 52.5,
+          "composite": 53.4
+        },
+        "z_scores": {
+          "motor": -1.92,
+          "decision": 0.2,
+          "pressure": -1.04,
+          "composite": -2.76
+        },
+        "labels": {
+          "motor": "below typical HOF positional reference",
+          "decision": "inside HOF positional reference",
+          "pressure": "below typical HOF positional reference",
+          "composite": "below typical HOF positional reference"
+        },
+        "development_read": "Closest elite-position signal: decision. Primary positional gap to explore: composite.",
+        "context_read": "This is a historical positional benchmark, not a verdict on the current player."
+      },
+      {
+        "player_name": "Clint Capela",
+        "season": "2023-24",
+        "position": "C",
+        "archetype": "C_06",
+        "traits": {
+          "motor": 50.4,
+          "decision": 58.4,
+          "pressure": 50.4,
+          "composite": 53.1
+        },
+        "z_scores": {
+          "motor": -2.11,
+          "decision": 0.57,
+          "pressure": -1.26,
+          "composite": -2.84
+        },
+        "labels": {
+          "motor": "below typical HOF positional reference",
+          "decision": "above typical HOF positional reference",
+          "pressure": "below typical HOF positional reference",
+          "composite": "below typical HOF positional reference"
+        },
+        "development_read": "Closest elite-position signal: decision. Primary positional gap to explore: composite.",
+        "context_read": "This is a historical positional benchmark, not a verdict on the current player."
+      },
+      {
+        "player_name": "Clint Capela",
+        "season": "2024-25",
+        "position": "C",
+        "archetype": "C_07",
+        "traits": {
+          "motor": 43.5,
+          "decision": 54.3,
+          "pressure": 40.2,
+          "composite": 46.0
+        },
+        "z_scores": {
+          "motor": -2.71,
+          "decision": 0.07,
+          "pressure": -2.3,
+          "composite": -4.76
+        },
+        "labels": {
+          "motor": "below typical HOF positional reference",
+          "decision": "inside HOF positional reference",
+          "pressure": "below typical HOF positional reference",
+          "composite": "below typical HOF positional reference"
+        },
+        "development_read": "Closest elite-position signal: decision. Primary positional gap to explore: composite.",
+        "context_read": "This is a historical positional benchmark, not a verdict on the current player."
+      }
+    ]
+  },
+  "value_creation_examples": [
+    {
+      "season": "2015-16",
+      "player_id": "200794",
+      "player_name": "Paul Millsap",
+      "position": "F",
+      "age": 30.0,
+      "rank_on_team": 1,
+      "games_played": 81,
+      "minutes_per_game": 32.7,
+      "stat_line": {
+        "points": 17.1,
+        "rebounds": 9.0,
+        "assists": 3.3,
+        "steals": 1.8,
+        "blocks": 1.7,
+        "threes": 0.9
+      },
+      "archetype": {
+        "cluster_id": "SF_08",
+        "position": "SF",
+        "confidence": 0.262,
+        "core_stat_block": "15.0/8.1/2.8/1.1/1.7",
+        "championship_dna": {
+          "team_seasons": 86,
+          "playoff_rate": 0.512,
+          "avg_series_wins": 0.546,
+          "finals_rate": 0.081,
+          "championship_rate": 0.046
+        }
+      },
+      "competitive_traits": {
+        "motor": 81.9,
+        "decision": 54.2,
+        "pressure": 57.4,
+        "composite": 64.5
+      },
+      "acquisition_lens": {
+        "classification": "value_creation",
+        "thesis": "Atlanta turned the player's statistical shape into more useful roster value through role fit, usage context, or acquisition timing."
+      }
+    },
+    {
+      "season": "2024-25",
+      "player_id": "1630700",
+      "player_name": "Dyson Daniels",
+      "position": "G",
+      "age": 21.0,
+      "rank_on_team": 2,
+      "games_played": 76,
+      "minutes_per_game": 33.9,
+      "stat_line": {
+        "points": 14.1,
+        "rebounds": 5.9,
+        "assists": 4.4,
+        "steals": 3.0,
+        "blocks": 0.7,
+        "threes": 1.1
+      },
+      "archetype": {
+        "cluster_id": "PG_03",
+        "position": "PG",
+        "confidence": 0.169,
+        "core_stat_block": "22.0/5.6/7.1/1.8/0.5",
+        "championship_dna": {
+          "team_seasons": 143,
+          "playoff_rate": 0.65,
+          "avg_series_wins": 0.727,
+          "finals_rate": 0.098,
+          "championship_rate": 0.056
+        }
+      },
+      "competitive_traits": {
+        "motor": 87.7,
+        "decision": 48.0,
+        "pressure": 51.9,
+        "composite": 62.5
+      },
+      "acquisition_lens": {
+        "classification": "value_creation",
+        "thesis": "Atlanta turned the player's statistical shape into more useful roster value through role fit, usage context, or acquisition timing."
+      }
+    },
+    {
+      "season": "2025-26",
+      "player_id": "1629638",
+      "player_name": "Nickeil Alexander-Walker",
+      "position": "G",
+      "age": 27.0,
+      "rank_on_team": 1,
+      "games_played": 78,
+      "minutes_per_game": 33.4,
+      "stat_line": {
+        "points": 20.8,
+        "rebounds": 3.4,
+        "assists": 3.7,
+        "steals": 1.3,
+        "blocks": 0.5,
+        "threes": 3.2
+      },
+      "archetype": {
+        "cluster_id": "PG_01",
+        "position": "PG",
+        "confidence": 0.25,
+        "core_stat_block": "22.5/4.0/5.9/1.2/0.3",
+        "championship_dna": {
+          "team_seasons": 226,
+          "playoff_rate": 0.584,
+          "avg_series_wins": 0.553,
+          "finals_rate": 0.071,
+          "championship_rate": 0.026
+        }
+      },
+      "competitive_traits": {
+        "motor": 61.3,
+        "decision": 52.0,
+        "pressure": 73.6,
+        "composite": 62.3
+      },
+      "acquisition_lens": {
+        "classification": "value_creation",
+        "thesis": "Atlanta turned the player's statistical shape into more useful roster value through role fit, usage context, or acquisition timing."
+      }
+    },
+    {
+      "season": "2020-21",
+      "player_id": "203991",
+      "player_name": "Clint Capela",
+      "position": "C",
+      "age": 26.0,
+      "rank_on_team": 3,
+      "games_played": 63,
+      "minutes_per_game": 30.2,
+      "stat_line": {
+        "points": 15.2,
+        "rebounds": 14.3,
+        "assists": 0.8,
+        "steals": 0.7,
+        "blocks": 2.0,
+        "threes": 0.0
+      },
+      "archetype": {
+        "cluster_id": "C_06",
+        "position": "C",
+        "confidence": 0.272,
+        "core_stat_block": "10.7/10.2/1.1/0.7/1.7",
+        "championship_dna": {
+          "team_seasons": 60,
+          "playoff_rate": 0.517,
+          "avg_series_wins": 0.45,
+          "finals_rate": 0.033,
+          "championship_rate": 0.017
+        }
+      },
+      "competitive_traits": {
+        "motor": 70.7,
+        "decision": 47.5,
+        "pressure": 55.7,
+        "composite": 58.0
+      },
+      "acquisition_lens": {
+        "classification": "value_creation",
+        "thesis": "Atlanta turned the player's statistical shape into more useful roster value through role fit, usage context, or acquisition timing."
+      }
+    },
+    {
+      "season": "2013-14",
+      "player_id": "2594",
+      "player_name": "Kyle Korver",
+      "position": "G-F",
+      "age": 32.0,
+      "rank_on_team": 3,
+      "games_played": 71,
+      "minutes_per_game": 34.0,
+      "stat_line": {
+        "points": 12.0,
+        "rebounds": 4.0,
+        "assists": 2.9,
+        "steals": 1.0,
+        "blocks": 0.3,
+        "threes": 2.6
+      },
+      "archetype": {
+        "cluster_id": "SG_07",
+        "position": "SG",
+        "confidence": 0.295,
+        "core_stat_block": "11.3/3.2/1.6/0.7/0.3",
+        "championship_dna": {
+          "team_seasons": 133,
+          "playoff_rate": 0.549,
+          "avg_series_wins": 0.429,
+          "finals_rate": 0.053,
+          "championship_rate": 0.015
+        }
+      },
+      "competitive_traits": {
+        "motor": 50.5,
+        "decision": 61.0,
+        "pressure": 61.2,
+        "composite": 57.6
+      },
+      "acquisition_lens": {
+        "classification": "value_creation",
+        "thesis": "Atlanta turned the player's statistical shape into more useful roster value through role fit, usage context, or acquisition timing."
+      }
+    },
+    {
+      "season": "2025-26",
+      "player_id": "1630552",
+      "player_name": "Jalen Johnson",
+      "position": "F",
+      "age": 23.0,
+      "rank_on_team": 2,
+      "games_played": 72,
+      "minutes_per_game": 35.2,
+      "stat_line": {
+        "points": 22.5,
+        "rebounds": 10.3,
+        "assists": 7.9,
+        "steals": 1.2,
+        "blocks": 0.4,
+        "threes": 1.7
+      },
+      "archetype": {
+        "cluster_id": "SF_09",
+        "position": "SF",
+        "confidence": 0.301,
+        "core_stat_block": "26.3/9.0/6.1/1.3/1.0",
+        "championship_dna": {
+          "team_seasons": 58,
+          "playoff_rate": 0.862,
+          "avg_series_wins": 1.207,
+          "finals_rate": 0.224,
+          "championship_rate": 0.121
+        }
+      },
+      "competitive_traits": {
+        "motor": 67.2,
+        "decision": 73.1,
+        "pressure": 71.2,
+        "composite": 70.5
+      },
+      "acquisition_lens": {
+        "classification": "internal_development",
+        "thesis": "Atlanta developed or retained an internal talent asset whose role value compounds if the surrounding archetype mix is right."
+      }
+    },
+    {
+      "season": "2019-20",
+      "player_id": "1629027",
+      "player_name": "Trae Young",
+      "position": "G",
+      "age": 21.0,
+      "rank_on_team": 1,
+      "games_played": 60,
+      "minutes_per_game": 35.3,
+      "stat_line": {
+        "points": 29.6,
+        "rebounds": 4.2,
+        "assists": 9.3,
+        "steals": 1.1,
+        "blocks": 0.1,
+        "threes": 3.4
+      },
+      "archetype": {
+        "cluster_id": "PG_01",
+        "position": "PG",
+        "confidence": 0.231,
+        "core_stat_block": "22.5/4.0/5.9/1.2/0.3",
+        "championship_dna": {
+          "team_seasons": 226,
+          "playoff_rate": 0.584,
+          "avg_series_wins": 0.553,
+          "finals_rate": 0.071,
+          "championship_rate": 0.026
+        }
+      },
+      "competitive_traits": {
+        "motor": 54.8,
+        "decision": 59.3,
+        "pressure": 87.9,
+        "composite": 67.3
+      },
+      "acquisition_lens": {
+        "classification": "internal_development",
+        "thesis": "Atlanta developed or retained an internal talent asset whose role value compounds if the surrounding archetype mix is right."
+      }
+    },
+    {
+      "season": "1996-97",
+      "player_id": "302",
+      "player_name": "Mookie Blaylock",
+      "position": "G",
+      "age": 29.0,
+      "rank_on_team": 2,
+      "games_played": 78,
+      "minutes_per_game": 39.3,
+      "stat_line": {
+        "points": 17.4,
+        "rebounds": 5.3,
+        "assists": 5.9,
+        "steals": 2.7,
+        "blocks": 0.3,
+        "threes": 2.8
+      },
+      "archetype": {
+        "cluster_id": "PG_03",
+        "position": "PG",
+        "confidence": 0.176,
+        "core_stat_block": "22.0/5.6/7.1/1.8/0.5",
+        "championship_dna": {
+          "team_seasons": 143,
+          "playoff_rate": 0.65,
+          "avg_series_wins": 0.727,
+          "finals_rate": 0.098,
+          "championship_rate": 0.056
+        }
+      },
+      "competitive_traits": {
+        "motor": 76.6,
+        "decision": 52.6,
+        "pressure": 70.8,
+        "composite": 66.7
+      },
+      "acquisition_lens": {
+        "classification": "value_acquisition",
+        "thesis": "Atlanta acquired known production and used roster structure to translate that certainty into a defined job."
+      }
+    },
+    {
+      "season": "2023-24",
+      "player_id": "1627749",
+      "player_name": "Dejounte Murray",
+      "position": "G",
+      "age": 27.0,
+      "rank_on_team": 1,
+      "games_played": 78,
+      "minutes_per_game": 35.7,
+      "stat_line": {
+        "points": 22.5,
+        "rebounds": 5.3,
+        "assists": 6.4,
+        "steals": 1.4,
+        "blocks": 0.3,
+        "threes": 2.6
+      },
+      "archetype": {
+        "cluster_id": "PG_01",
+        "position": "PG",
+        "confidence": 0.371,
+        "core_stat_block": "22.5/4.0/5.9/1.2/0.3",
+        "championship_dna": {
+          "team_seasons": 226,
+          "playoff_rate": 0.584,
+          "avg_series_wins": 0.553,
+          "finals_rate": 0.071,
+          "championship_rate": 0.026
+        }
+      },
+      "competitive_traits": {
+        "motor": 67.4,
+        "decision": 57.4,
+        "pressure": 73.5,
+        "composite": 66.1
+      },
+      "acquisition_lens": {
+        "classification": "value_acquisition",
+        "thesis": "Atlanta acquired known production and used roster structure to translate that certainty into a defined job."
+      }
+    },
+    {
+      "season": "2007-08",
+      "player_id": "2207",
+      "player_name": "Joe Johnson",
+      "position": "G-F",
+      "age": 26.0,
+      "rank_on_team": 1,
+      "games_played": 82,
+      "minutes_per_game": 40.8,
+      "stat_line": {
+        "points": 21.7,
+        "rebounds": 4.5,
+        "assists": 5.8,
+        "steals": 1.0,
+        "blocks": 0.2,
+        "threes": 2.1
+      },
+      "archetype": {
+        "cluster_id": "SG_10",
+        "position": "SG",
+        "confidence": 0.335,
+        "core_stat_block": "25.0/6.0/5.2/1.3/0.5",
+        "championship_dna": {
+          "team_seasons": 57,
+          "playoff_rate": 0.667,
+          "avg_series_wins": 0.93,
+          "finals_rate": 0.175,
+          "championship_rate": 0.123
+        }
+      },
+      "competitive_traits": {
+        "motor": 53.8,
+        "decision": 63.4,
+        "pressure": 76.1,
+        "composite": 64.4
+      },
+      "acquisition_lens": {
+        "classification": "value_acquisition",
+        "thesis": "Atlanta acquired known production and used roster structure to translate that certainty into a defined job."
+      }
+    },
+    {
+      "season": "2009-10",
+      "player_id": "2746",
+      "player_name": "Josh Smith",
+      "position": "F",
+      "age": 23.0,
+      "rank_on_team": 2,
+      "games_played": 81,
+      "minutes_per_game": 35.5,
+      "stat_line": {
+        "points": 15.7,
+        "rebounds": 8.7,
+        "assists": 4.2,
+        "steals": 1.6,
+        "blocks": 2.1,
+        "threes": 0.0
+      },
+      "archetype": {
+        "cluster_id": "SF_08",
+        "position": "SF",
+        "confidence": 0.296,
+        "core_stat_block": "15.0/8.1/2.8/1.1/1.7",
+        "championship_dna": {
+          "team_seasons": 86,
+          "playoff_rate": 0.512,
+          "avg_series_wins": 0.546,
+          "finals_rate": 0.081,
+          "championship_rate": 0.046
+        }
+      },
+      "competitive_traits": {
+        "motor": 81.1,
+        "decision": 59.0,
+        "pressure": 51.6,
+        "composite": 63.9
+      },
+      "acquisition_lens": {
+        "classification": "internal_development",
+        "thesis": "Atlanta developed or retained an internal talent asset whose role value compounds if the surrounding archetype mix is right."
+      }
+    },
+    {
+      "season": "2019-20",
+      "player_id": "1628381",
+      "player_name": "John Collins",
+      "position": "F-C",
+      "age": 22.0,
+      "rank_on_team": 5,
+      "games_played": 41,
+      "minutes_per_game": 33.2,
+      "stat_line": {
+        "points": 21.6,
+        "rebounds": 10.1,
+        "assists": 1.5,
+        "steals": 0.8,
+        "blocks": 1.6,
+        "threes": 1.4
+      },
+      "archetype": {
+        "cluster_id": "PF_06",
+        "position": "PF",
+        "confidence": 0.286,
+        "core_stat_block": "15.9/7.4/2.5/1.0/1.1",
+        "championship_dna": {
+          "team_seasons": 70,
+          "playoff_rate": 0.586,
+          "avg_series_wins": 0.714,
+          "finals_rate": 0.086,
+          "championship_rate": 0.014
+        }
+      },
+      "competitive_traits": {
+        "motor": 63.8,
+        "decision": 53.6,
+        "pressure": 72.7,
+        "composite": 63.4
+      },
+      "acquisition_lens": {
+        "classification": "internal_development",
+        "thesis": "Atlanta developed or retained an internal talent asset whose role value compounds if the surrounding archetype mix is right."
+      }
+    }
+  ]
+}
