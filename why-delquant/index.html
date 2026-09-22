@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="DelQuant gives sports platforms an independent NBA projection and intelligence layer: season outlooks, current-form context, historical player shapes, and replayable evaluation."
+    />
+    <meta name="theme-color" content="#0b1020" />
+    <title>Why DelQuant | NBA Intelligence Beyond the Feed</title>
+    <link rel="stylesheet" href="../site.css" />
+    <style>
+      .why-hero { padding-bottom: 8px; }
+      .why-hero h1 { max-width: 13ch; }
+      .hero-panel { align-content: center; }
+      .section-kicker { color: var(--accent-3); }
+      .proof-grid, .comparison-grid, .module-grid { display: grid; gap: 14px; }
+      .proof-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .comparison-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .module-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .card { padding: 22px; }
+      .card p + p { margin-top: 12px; }
+      .card-label { display: block; margin-bottom: 10px; color: var(--accent); font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+      .contrast-card { border-color: rgba(246, 200, 95, .28); }
+      .contrast-card h3 { color: var(--accent); }
+      .proof-number { display: block; margin: 2px 0 8px; font: 700 clamp(28px, 4vw, 42px)/1 Georgia, serif; color: var(--accent); }
+      .mode-list { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-top: 18px; }
+      .mode { padding: 14px; border: 1px solid var(--line); border-radius: 16px; background: rgba(255,255,255,.035); }
+      .mode strong { display: block; margin-bottom: 5px; }
+      .mode span { color: var(--muted); font-size: 14px; }
+      .callout { padding: clamp(24px, 5vw, 48px); border: 1px solid rgba(246,200,95,.3); border-radius: 24px; background: linear-gradient(120deg, rgba(246,200,95,.12), rgba(255,122,89,.06)); }
+      .callout h2 { max-width: 22ch; }
+      .fine-print { color: var(--muted); font-size: 13px; }
+      .why-footer { padding: 24px 0 34px; color: var(--muted); font-size: 13px; }
+      @media (max-width: 800px) {
+        .proof-grid, .module-grid { grid-template-columns: 1fr; }
+        .comparison-grid { grid-template-columns: 1fr; }
+        .mode-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <header class="hero why-hero">
+      <div class="shell">
+        <div class="topline page-topline">
+          <a class="brand" href="../">DelQuant</a>
+          <nav class="site-nav" aria-label="Primary">
+            <a href="../">Home</a>
+            <a href="../b2b/">Platform</a>
+            <a href="../methodology/">Methodology</a>
+            <a href="../pricing/">Pricing</a>
+            <a href="../contact/">Contact</a>
+          </nav>
+        </div>
+        <div class="hero-grid">
+          <section class="hero-copy">
+            <p class="eyebrow">The NBA intelligence layer</p>
+            <h1>Your data feed has the numbers. DelQuant gives them meaning.</h1>
+            <p class="lede">
+              Add an independent NBA projection model built to show more than a point estimate: season outlooks,
+              current-form context, uncertainty, player archetypes, historical comps, and a record you can replay
+              and evaluate.
+            </p>
+            <div class="cta-row">
+              <a class="button button-primary" href="../contact/">Discuss a pilot</a>
+              <a class="button button-secondary" href="../methodology/">See how we evaluate</a>
+            </div>
+            <p class="fine-print" style="margin-top:16px">Built for sports platforms, fantasy products, market teams, and basketball media.</p>
+          </section>
+          <aside class="hero-panel" aria-label="DelQuant product summary">
+            <div class="stat"><span class="stat-label">Core product</span><strong>Independent NBA season projections</strong></div>
+            <div class="stat"><span class="stat-label">Beyond the number</span><strong>Role · minutes · risk · player shape</strong></div>
+            <div class="stat"><span class="stat-label">Built to integrate</span><strong>API · JSON · batch feed · research</strong></div>
+          </aside>
+        </div>
+      </div>
+    </header>
+
+    <main class="shell">
+      <section class="section intro-band">
+        <div class="band-callout">
+          <p class="eyebrow section-kicker">The commercial gap</p>
+          <h2>When every platform can buy a projection, the projection alone is not a product advantage.</h2>
+        </div>
+        <div class="band-quote">
+          <p>
+            RotoWire, SportsDataIO, FantasyPros, and other established providers serve important needs across
+            projections, news, data, and fantasy workflows. DelQuant adds a different asset: an independent model
+            and an explainable intelligence layer your team can evaluate against its existing stack.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <p class="eyebrow">Why DelQuant</p>
+          <h2>Turn a projection into a product users can understand.</h2>
+        </div>
+        <div class="proof-grid">
+          <article class="card contrast-card">
+            <span class="card-label">Independent signal</span>
+            <h3>A second model, not another consensus feed</h3>
+            <p>Compare DelQuant with your provider, market, or in-house forecast. Find where models agree, where they diverge, and whether the difference matters.</p>
+          </article>
+          <article class="card contrast-card">
+            <span class="card-label">Player context</span>
+            <h3>Understand the shape behind the stat line</h3>
+            <p>Bring role, minutes, durability, risk, archetypes, and historical player comparisons into the same decision workflow.</p>
+          </article>
+          <article class="card contrast-card">
+            <span class="card-label">Evidence, not slogans</span>
+            <h3>Replay the forecast and grade it</h3>
+            <p>Use dated, no-lookahead replay and explicit evaluation rules to inspect how a forecast performed—not just a headline accuracy claim.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <p class="eyebrow">The model, in context</p>
+          <h2>Built for the horizon your product needs.</h2>
+          <p class="lede">Start with a stable season outlook. Add clearly labeled current-form and game-day views when the decision calls for faster response.</p>
+        </div>
+        <div class="mode-list">
+          <div class="mode"><strong>Season baseline</strong><span>End-of-season and season-long player outlooks.</span></div>
+          <div class="mode"><strong>Current form</strong><span>Recency-sensitive view for emerging role or production changes.</span></div>
+          <div class="mode"><strong>Game day</strong><span>Dated slate view with schedule and matchup context.</span></div>
+          <div class="mode"><strong>Historical replay</strong><span>Reconstruct what the model knew at a past decision date.</span></div>
+        </div>
+        <p class="fine-print" style="margin-top:12px">Projection horizons are labeled explicitly. Shorter windows are more responsive and noisier; they are not represented as automatically more accurate.</p>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <p class="eyebrow">Fit the layer to your stack</p>
+          <h2>Keep the providers you trust. Add the intelligence you are missing.</h2>
+        </div>
+        <div class="comparison-grid">
+          <article class="card">
+            <span class="card-label">Keep your current feed for</span>
+            <h3>Coverage, news, and market plumbing</h3>
+            <p>Use established providers for the data, odds, injury reporting, lineups, and breadth they already deliver well.</p>
+          </article>
+          <article class="card contrast-card">
+            <span class="card-label">Add DelQuant for</span>
+            <h3>An NBA model layer you can make your own</h3>
+            <p>Bring in independent projections, player-shape research, historical context, and reproducible evaluation—then decide how they improve your product.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <p class="eyebrow">One engine. Optional applications.</p>
+          <h2>Start with projections. Expand into the workflow.</h2>
+        </div>
+        <div class="module-grid">
+          <article class="card"><span class="card-label">Core</span><h3>DelQuant Intelligence</h3><p>Season projections, current-form context, risk, historical comps, archetypes, replay, and API delivery.</p></article>
+          <article class="card"><span class="card-label">Optional market service</span><h3>WinstAPlayer</h3><p>Connect projections to individual player markets, market comparison, research, and decision workflows.</p></article>
+          <article class="card"><span class="card-label">Optional DFS service</span><h3>DFSRase</h3><p>Connect player projections to slate context, salary-aware value, ceiling, and fantasy decision workflows.</p></article>
+        </div>
+        <p class="fine-print" style="margin-top:12px">WinstAPlayer and DFSRase are separate downstream products. Their services can be evaluated independently from the core projection feed.</p>
+      </section>
+
+      <section class="section">
+        <div class="proof-grid">
+          <article class="card"><span class="proof-number">0.6916</span><h3>Fantasy-point correlation</h3><p>Reported on the 2025–26 full-season holdout.</p></article>
+          <article class="card"><span class="proof-number">29.4%</span><h3>Lower MAE than a simple baseline</h3><p>Reported reduction versus the holdout-mean baseline on that evaluation.</p></article>
+          <article class="card"><span class="proof-number">24,208</span><h3>Played player-games evaluated</h3><p>Across 164 slates in the 2025–26 holdout.</p></article>
+        </div>
+        <p class="fine-print" style="margin-top:12px">These are projection-evaluation results, not proof of DFS profitability or a guarantee of future performance. The baseline, sample, and method matter; ask us for the protocol and detailed scorecard.</p>
+      </section>
+
+      <section class="section callout">
+        <p class="eyebrow">Run a real evaluation</p>
+        <h2>Give us your benchmark. Let the results decide.</h2>
+        <p class="lede">Choose a projection horizon, freeze the player universe and dates, and compare DelQuant with your current source using agreed scoring rules. If it does not add value, you will know. If it does, you have a differentiated NBA product.</p>
+        <div class="cta-row">
+          <a class="button button-primary" href="../contact/">Set up a model evaluation</a>
+          <a class="button button-secondary" href="../b2b/">Explore the platform</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="why-footer">
+      <div class="shell">DelQuant · Independent NBA projections and player intelligence · <a href="../methodology/">Methodology</a> · <a href="../contact/">Contact</a></div>
+    </footer>
+  </body>
+</html>
