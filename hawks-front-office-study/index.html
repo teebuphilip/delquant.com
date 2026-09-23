@@ -497,7 +497,7 @@
       }
 
       async function init() {
-        const res = await fetch("./hawks_study.json");
+        const res = await fetch("./hawks_study.json?v=bd60af8");
         payload = await res.json();
         renderOverview();
         renderSeasons();
