@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fair Market Value Methodology - FMVW View</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body data-app="fmvw">
+    <header>
+      <div class="wrap">
+        <div class="eyebrow">DBB2 Basketball Ops</div>
+        <h1>FMVW View</h1>
+        <p>Pick two players from the merged 26-27 top-360 pool and compare their teammate-neutral market value, wins-equivalent output, and proxy-adjusted wins.</p>
+        <div class="subline">
+          <span class="chip">Player A</span>
+          <span class="chip">Player B</span>
+          <span class="chip">FMV</span>
+          <span class="chip">Wins bridge</span>
+          <a class="chip" href="../methodology/">Methodology</a>
+          <a class="chip" href="../">Back to Hub</a>
+        </div>
+      </div>
+    </header>
+
+    <main data-app-root data-sample="../data/projections_26_27_top360.csv" data-league="../data/league_table.json" data-comparison="../data/basketball_ops_comparison_summary.json">
+      <section class="card">
+        <h2>Compare Two Players</h2>
+        <div class="controls">
+          <div class="field span-6">
+            <label>Player A</label>
+            <select data-player-a></select>
+          </div>
+          <div class="field span-6">
+            <label>Player B</label>
+            <select data-player-b></select>
+          </div>
+          <div class="field span-12">
+            <label>Reference</label>
+            <div class="toolbar">
+              <button class="primary" data-compare>Compare Players</button>
+            </div>
+          </div>
+        </div>
+        <p class="small muted" data-status style="margin-top: 12px;">Waiting for player pool.</p>
+      </section>
+
+      <section class="section card">
+        <div class="table-actions">
+          <div>
+            <h2 style="margin-bottom: 4px;">Player Comparison</h2>
+            <p class="small muted">FMV, wins-equivalent, HBB factor, and HBB-adjusted wins for the selected pair.</p>
+          </div>
+        </div>
+        <p class="small muted" style="margin: 0 0 12px 0;">Proxy Δ is the correction from the offense / defense proxy layer. Total Wins = HBB Wins + Proxy Δ. The callout above shows the total gap between the two players.</p>
+        <p class="small muted" data-total-callout style="margin: 0 0 12px 0;"></p>
+        <div class="table-wrap">
+          <div data-table></div>
+        </div>
+      </section>
+
+      <section class="card" style="margin-top: 16px;">
+        <h2>Summary</h2>
+        <div data-summary class="list"></div>
+        <div data-gap-summary class="list" style="margin-top: 14px;"></div>
+      </section>
+    </main>
+
+    <script src="../app.js"></script>
+  </body>
+</html>

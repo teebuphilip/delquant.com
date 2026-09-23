@@ -1,0 +1,142 @@
+{
+  "config": {
+    "baseline_wins": 6.0,
+    "offense_share": 0.55,
+    "defense_share": 0.45,
+    "slope_fallback": 4.06
+  },
+  "calibration": {
+    "team_score_to_wins_intercept": 27.1948,
+    "team_score_to_wins_slope": 4.060408,
+    "team_score_to_wins_correlation": 0.747037,
+    "wins_per_raw": 4.060408
+  },
+  "player_rows": 505,
+  "top_players": [
+    {
+      "player_name": "Shai Gilgeous-Alexander",
+      "team": "OKC",
+      "position": "G",
+      "offense_projection_raw": 1.9735,
+      "defense_projection_raw": 0.7684,
+      "advanced_projection_raw": 1.431205,
+      "strict_wins": 11.811,
+      "strict_wins_gap_from_baseline": 5.811
+    },
+    {
+      "player_name": "Yuki Kawamura",
+      "team": "CHI",
+      "position": "G",
+      "offense_projection_raw": 0.0632,
+      "defense_projection_raw": 2.7114,
+      "advanced_projection_raw": 1.2548899999999998,
+      "strict_wins": 11.095,
+      "strict_wins_gap_from_baseline": 5.095
+    },
+    {
+      "player_name": "Obi Toppin",
+      "team": "IND",
+      "position": "F",
+      "offense_projection_raw": 1.3281,
+      "defense_projection_raw": 1.149,
+      "advanced_projection_raw": 1.247505,
+      "strict_wins": 11.065,
+      "strict_wins_gap_from_baseline": 5.065
+    },
+    {
+      "player_name": "Tre Jones",
+      "team": "CHI",
+      "position": "G",
+      "offense_projection_raw": 2.0891,
+      "defense_projection_raw": 0.1644,
+      "advanced_projection_raw": 1.2229850000000002,
+      "strict_wins": 10.965,
+      "strict_wins_gap_from_baseline": 4.965
+    },
+    {
+      "player_name": "Isaiah Hartenstein",
+      "team": "OKC",
+      "position": "C",
+      "offense_projection_raw": 1.1991,
+      "defense_projection_raw": 1.0831,
+      "advanced_projection_raw": 1.1469,
+      "strict_wins": 10.657,
+      "strict_wins_gap_from_baseline": 4.657
+    },
+    {
+      "player_name": "T.J. McConnell",
+      "team": "IND",
+      "position": "G",
+      "offense_projection_raw": 1.9058,
+      "defense_projection_raw": 0.1915,
+      "advanced_projection_raw": 1.1343649999999998,
+      "strict_wins": 10.606,
+      "strict_wins_gap_from_baseline": 4.606
+    },
+    {
+      "player_name": "Javonte Green",
+      "team": "DET",
+      "position": "G",
+      "offense_projection_raw": 0.3526,
+      "defense_projection_raw": 2.0327,
+      "advanced_projection_raw": 1.108645,
+      "strict_wins": 10.501,
+      "strict_wins_gap_from_baseline": 4.501
+    },
+    {
+      "player_name": "Isaiah Stewart",
+      "team": "DET",
+      "position": "F",
+      "offense_projection_raw": 0.427,
+      "defense_projection_raw": 1.9234,
+      "advanced_projection_raw": 1.10038,
+      "strict_wins": 10.468,
+      "strict_wins_gap_from_baseline": 4.468
+    },
+    {
+      "player_name": "MarJon Beauchamp",
+      "team": "PHI",
+      "position": "F",
+      "offense_projection_raw": -0.2002,
+      "defense_projection_raw": 2.663,
+      "advanced_projection_raw": 1.08824,
+      "strict_wins": 10.419,
+      "strict_wins_gap_from_baseline": 4.419
+    },
+    {
+      "player_name": "Ayo Dosunmu",
+      "team": "MIN",
+      "position": "G",
+      "offense_projection_raw": 1.513,
+      "defense_projection_raw": 0.5589,
+      "advanced_projection_raw": 1.083655,
+      "strict_wins": 10.4,
+      "strict_wins_gap_from_baseline": 4.4
+    },
+    {
+      "player_name": "Dylan Harper",
+      "team": "SAS",
+      "position": "G",
+      "offense_projection_raw": 1.2521,
+      "defense_projection_raw": 0.8098,
+      "advanced_projection_raw": 1.053065,
+      "strict_wins": 10.276,
+      "strict_wins_gap_from_baseline": 4.276
+    },
+    {
+      "player_name": "Ajay Mitchell",
+      "team": "OKC",
+      "position": "G",
+      "offense_projection_raw": 0.3948,
+      "defense_projection_raw": 1.6804,
+      "advanced_projection_raw": 0.97332,
+      "strict_wins": 9.952,
+      "strict_wins_gap_from_baseline": 3.952
+    }
+  ],
+  "paths": {
+    "player_scores": "/Users/teebuphilip/Documents/work/dbb2-engine/reports/roster_construction/strict_wins_bridge/strict_wins_player_scores.csv",
+    "summary": "/Users/teebuphilip/Documents/work/dbb2-engine/reports/roster_construction/strict_wins_bridge/strict_wins_summary.json",
+    "markdown": "/Users/teebuphilip/Documents/work/dbb2-engine/reports/roster_construction/strict_wins_bridge/strict_wins_summary.md"
+  }
+}

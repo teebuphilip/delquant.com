@@ -1,0 +1,268 @@
+{
+  "strict_wins_rows": 505,
+  "vorp_rows": 2848,
+  "matched_rows": 474,
+  "pearson_correlation": 0.3826568403273171,
+  "spearman_correlation": 0.43350463275859763,
+  "strict_wins_mean": 6.485402953586498,
+  "vorp_mean": 0.5710970464135021,
+  "top_disagreements": [
+    {
+      "player_name": "Trey Murphy III",
+      "strict_wins": 2.784,
+      "vorp": 2.6,
+      "strict_wins_rank": 469.0,
+      "vorp_rank": 26.0,
+      "rank_delta": 443.0,
+      "z_delta": -4.184883713698199,
+      "percentile_delta": 0.9314345991561181
+    },
+    {
+      "player_name": "Jamal Murray",
+      "strict_wins": 4.151,
+      "vorp": 4.1,
+      "strict_wins_rank": 448.0,
+      "vorp_rank": 9.0,
+      "rank_delta": 439.0,
+      "z_delta": -4.619388272007182,
+      "percentile_delta": 0.9261603375527426
+    },
+    {
+      "player_name": "Kawhi Leonard",
+      "strict_wins": 5.001,
+      "vorp": 5.3,
+      "strict_wins_rank": 409.0,
+      "vorp_rank": 3.0,
+      "rank_delta": 406.0,
+      "z_delta": -5.124866944429749,
+      "percentile_delta": 0.8565400843881856
+    },
+    {
+      "player_name": "Ryan Nembhard",
+      "strict_wins": 7.947,
+      "vorp": -0.6,
+      "strict_wins_rank": 75.0,
+      "vorp_rank": 453.0,
+      "rank_delta": -378.0,
+      "z_delta": 1.9781612867459004,
+      "percentile_delta": -0.8016877637130801
+    },
+    {
+      "player_name": "Michael Porter Jr.",
+      "strict_wins": 4.917,
+      "vorp": 2.1,
+      "strict_wins_rank": 417.0,
+      "vorp_rank": 43.0,
+      "rank_delta": 374.0,
+      "z_delta": -2.3623566740489506,
+      "percentile_delta": 0.7827004219409283
+    },
+    {
+      "player_name": "Keyonte George",
+      "strict_wins": 4.018,
+      "vorp": 1.3,
+      "strict_wins_rank": 453.0,
+      "vorp_rank": 90.0,
+      "rank_delta": 363.0,
+      "z_delta": -2.2407532141334876,
+      "percentile_delta": 0.7584388185654009
+    },
+    {
+      "player_name": "Micah Peavy",
+      "strict_wins": 7.636,
+      "vorp": -0.7,
+      "strict_wins_rank": 97.0,
+      "vorp_rank": 458.0,
+      "rank_delta": -361.0,
+      "z_delta": 1.8646345969256664,
+      "percentile_delta": -0.7637130801687764
+    },
+    {
+      "player_name": "Isaac Okoro",
+      "strict_wins": 7.578,
+      "vorp": -0.8,
+      "strict_wins_rank": 102.0,
+      "vorp_rank": 461.0,
+      "rank_delta": -359.0,
+      "z_delta": 1.9150749905256754,
+      "percentile_delta": -0.760548523206751
+    },
+    {
+      "player_name": "Jericho Sims",
+      "strict_wins": 7.961,
+      "vorp": -0.4,
+      "strict_wins_rank": 74.0,
+      "vorp_rank": 429.0,
+      "rank_delta": -355.0,
+      "z_delta": 1.8111751931867337,
+      "percentile_delta": -0.7637130801687764
+    },
+    {
+      "player_name": "Josh Hart",
+      "strict_wins": 5.309,
+      "vorp": 2.5,
+      "strict_wins_rank": 381.0,
+      "vorp_rank": 30.0,
+      "rank_delta": 351.0,
+      "z_delta": -2.460423650238555,
+      "percentile_delta": 0.7373417721518987
+    },
+    {
+      "player_name": "Collin Gillespie",
+      "strict_wins": 5.465,
+      "vorp": 2.6,
+      "strict_wins_rank": 357.0,
+      "vorp_rank": 26.0,
+      "rank_delta": 331.0,
+      "z_delta": -2.447351102434676,
+      "percentile_delta": 0.6951476793248945
+    },
+    {
+      "player_name": "Chaz Lanier",
+      "strict_wins": 8.307,
+      "vorp": -0.2,
+      "strict_wins_rank": 53.0,
+      "vorp_rank": 379.0,
+      "rank_delta": -326.0,
+      "z_delta": 1.8593553909142098,
+      "percentile_delta": -0.7183544303797469
+    },
+    {
+      "player_name": "Paolo Banchero",
+      "strict_wins": 5.402,
+      "vorp": 2.1,
+      "strict_wins_rank": 369.0,
+      "vorp_rank": 43.0,
+      "rank_delta": 326.0,
+      "z_delta": -2.0480324232235834,
+      "percentile_delta": 0.6814345991561181
+    },
+    {
+      "player_name": "Yuki Kawamura",
+      "strict_wins": 11.095,
+      "vorp": -0.1,
+      "strict_wins_rank": 2.0,
+      "vorp_rank": 327.0,
+      "rank_delta": -325.0,
+      "z_delta": 3.5782040792796694,
+      "percentile_delta": -0.739451476793249
+    },
+    {
+      "player_name": "Kobe Sanders",
+      "strict_wins": 7.623,
+      "vorp": -0.3,
+      "strict_wins_rank": 98.0,
+      "vorp_rank": 409.0,
+      "rank_delta": -311.0,
+      "z_delta": 1.5040906690159095,
+      "percentile_delta": -0.6761603375527426
+    },
+    {
+      "player_name": "Onyeka Okongwu",
+      "strict_wins": 5.36,
+      "vorp": 1.6,
+      "strict_wins_rank": 378.0,
+      "vorp_rank": 68.0,
+      "rank_delta": 310.0,
+      "z_delta": -1.635103827997372,
+      "percentile_delta": 0.649789029535865
+    },
+    {
+      "player_name": "Josh Giddey",
+      "strict_wins": 5.523,
+      "vorp": 2.0,
+      "strict_wins_rank": 354.0,
+      "vorp_rank": 50.0,
+      "rank_delta": 304.0,
+      "z_delta": -1.8815836978756555,
+      "percentile_delta": 0.6381856540084387
+    },
+    {
+      "player_name": "Daeqwon Plowden",
+      "strict_wins": 7.181,
+      "vorp": -0.5,
+      "strict_wins_rank": 141.0,
+      "vorp_rank": 444.0,
+      "rank_delta": -303.0,
+      "z_delta": 1.3936937123621753,
+      "percentile_delta": -0.6476793248945147
+    },
+    {
+      "player_name": "Danny Wolf",
+      "strict_wins": 7.845,
+      "vorp": -0.2,
+      "strict_wins_rank": 81.0,
+      "vorp_rank": 379.0,
+      "rank_delta": -298.0,
+      "z_delta": 1.5599372385815915,
+      "percentile_delta": -0.6582278481012658
+    },
+    {
+      "player_name": "DeMar DeRozan",
+      "strict_wins": 5.134,
+      "vorp": 1.1,
+      "strict_wins_rank": 401.0,
+      "vorp_rank": 103.0,
+      "rank_delta": 298.0,
+      "z_delta": -1.3414240207131556,
+      "percentile_delta": 0.620253164556962
+    },
+    {
+      "player_name": "Jordan Clarkson",
+      "strict_wins": 7.208,
+      "vorp": -0.4,
+      "strict_wins_rank": 136.0,
+      "vorp_rank": 429.0,
+      "rank_delta": -293.0,
+      "z_delta": 1.3231624903588957,
+      "percentile_delta": -0.6329113924050633
+    },
+    {
+      "player_name": "Alex Sarr",
+      "strict_wins": 4.955,
+      "vorp": 0.9,
+      "strict_wins_rank": 414.0,
+      "vorp_rank": 122.0,
+      "rank_delta": 292.0,
+      "z_delta": -1.2813729815584949,
+      "percentile_delta": 0.6044303797468354
+    },
+    {
+      "player_name": "Nickeil Alexander-Walker",
+      "strict_wins": 5.651,
+      "vorp": 2.1,
+      "strict_wins_rank": 334.0,
+      "vorp_rank": 43.0,
+      "rank_delta": 291.0,
+      "z_delta": -1.8866577047586013,
+      "percentile_delta": 0.6075949367088608
+    },
+    {
+      "player_name": "Domantas Sabonis",
+      "strict_wins": 1.955,
+      "vorp": 0.4,
+      "strict_wins_rank": 473.0,
+      "vorp_rank": 182.0,
+      "rank_delta": 291.0,
+      "z_delta": -2.785498270747615,
+      "percentile_delta": 0.6012658227848102
+    },
+    {
+      "player_name": "Royce O'Neale",
+      "strict_wins": 5.454,
+      "vorp": 1.5,
+      "strict_wins_rank": 360.0,
+      "vorp_rank": 73.0,
+      "rank_delta": 287.0,
+      "z_delta": -1.4861535660974545,
+      "percentile_delta": 0.5959915611814346
+    }
+  ],
+  "paths": {
+    "csv": "/Users/teebuphilip/Documents/work/dbb2-engine/reports/roster_construction/vorp_comparison/strict_wins_vorp_comparison.csv",
+    "json": "/Users/teebuphilip/Documents/work/dbb2-engine/reports/roster_construction/vorp_comparison/strict_wins_vorp_comparison.json",
+    "markdown": "/Users/teebuphilip/Documents/work/dbb2-engine/reports/roster_construction/vorp_comparison/strict_wins_vorp_comparison.md",
+    "strict_wins": "/Users/teebuphilip/Documents/work/dbb2-engine/reports/roster_construction/strict_wins_bridge/strict_wins_player_scores.csv",
+    "vorp": "/Users/teebuphilip/Documents/work/dbb2-engine/data/benchmarks/vorp_player_seasons.csv"
+  }
+}

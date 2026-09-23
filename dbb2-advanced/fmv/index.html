@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DBB2 Basketball Ops FMV</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body data-app="fmv">
+    <header>
+      <div class="wrap">
+        <div class="eyebrow">DBB2 Basketball Ops</div>
+        <h1>FMV</h1>
+        <p>Precomputed 1000-run salary-equivalent output for the 26-27 top 360 player pool.</p>
+        <div class="subline">
+          <span class="chip">Top 360 pool</span>
+          <span class="chip">1000-sim output</span>
+          <span class="chip">26-27 projection bundle</span>
+          <span class="chip">Mean / Median / P25 / P75</span>
+          <a class="chip" href="../methodology/">Methodology</a>
+          <a class="chip" href="../">Back to Hub</a>
+        </div>
+      </div>
+    </header>
+
+    <main data-app-root data-sample="../data/fmvw_top360_2627.csv">
+      <section class="card">
+        <h2>Weighted Score</h2>
+        <p class="small muted" style="margin-top: 12px;">
+          Weighted Score is the ranking signal produced from the 26-27 projection bundle and 1,000 Monte Carlo runs. In this static export, the stored field is <code>sim_mean_score</code>, which is what the table renders. These are the current FMV defaults:
+        </p>
+        <div class="table-wrap" style="margin-top: 12px;">
+          <table>
+            <thead>
+              <tr><th>Metric</th><th>Weight</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Points</td><td>3.0</td></tr>
+              <tr><td>Rebounds</td><td>2.0</td></tr>
+              <tr><td>Assists</td><td>2.5</td></tr>
+              <tr><td>Steals</td><td>1.0</td></tr>
+              <tr><td>Blocks</td><td>1.0</td></tr>
+              <tr><td>Threes</td><td>1.5</td></tr>
+              <tr><td>Turnovers</td><td>-1.25</td></tr>
+              <tr><td>FG%</td><td>1.0</td></tr>
+              <tr><td>FT%</td><td>1.25</td></tr>
+              <tr><td>Usage</td><td>0.5</td></tr>
+              <tr><td>Projected Games</td><td>1.75</td></tr>
+              <tr><td>Projected Minutes</td><td>0.75</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Static FMV Table</h2>
+        <p class="small muted" data-status style="margin-top: 12px;">Loading precomputed 1000-run FMV table...</p>
+        <div data-summary class="list" style="margin-top: 12px;"></div>
+      </section>
+
+      <section class="section card">
+        <div class="table-actions">
+          <div>
+            <h2 style="margin-bottom: 4px;">Player Output</h2>
+            <p class="small muted">Sorted by mean salary-equivalent value from the 26-27 projection bundle.</p>
+          </div>
+          <div class="field" style="min-width: 180px;">
+            <label>Rows shown</label>
+            <input data-view-limit type="number" min="10" step="5" value="360" />
+          </div>
+        </div>
+        <div class="table-wrap">
+          <div data-table></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="../app.js"></script>
+  </body>
+</html>

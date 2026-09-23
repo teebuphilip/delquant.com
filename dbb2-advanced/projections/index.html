@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DBB2 Basketball Ops Projections</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body data-app="projections">
+    <header>
+      <div class="wrap">
+        <div class="eyebrow">DBB2 Basketball Ops</div>
+        <h1>Projections</h1>
+        <p>Full 26-27 projection table for the 360-player FMV pool.</p>
+        <div class="subline">
+          <span class="chip">26-27 projection bundle</span>
+          <span class="chip">Top 360 pool</span>
+          <span class="chip">Projected games</span>
+          <span class="chip">Minutes / box-score stats</span>
+          <a class="chip" href="../fmv/">FMV</a>
+          <a class="chip" href="../fmvw/">FMVW</a>
+          <a class="chip" href="../">Back to Hub</a>
+        </div>
+      </div>
+    </header>
+
+    <main data-app-root data-sample="../data/projections_26_27_top360.csv">
+      <section class="card">
+        <h2>Projection Source</h2>
+        <p class="small muted" style="margin-top: 12px;">
+          This table shows the full top-360 player pool used by the static FMV export, joined to the 26-27 projection bundle. The rows are ordered by FMV rank, and the projections are the underlying 26-27 inputs behind the static valuation pages.
+        </p>
+        <p class="small muted" data-status style="margin-top: 12px;">Loading projections table...</p>
+        <div data-summary class="list" style="margin-top: 12px;"></div>
+      </section>
+
+      <section class="section card">
+        <div class="table-actions">
+          <div>
+            <h2 style="margin-bottom: 4px;">Projection Table</h2>
+            <p class="small muted">Sorted by FMV rank, with the 26-27 projection fields shown directly.</p>
+          </div>
+          <div class="field" style="min-width: 180px;">
+            <label>Rows shown</label>
+            <input data-view-limit type="number" min="10" step="10" value="360" />
+          </div>
+        </div>
+        <div class="table-wrap">
+          <div data-table></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="../app.js"></script>
+  </body>
+</html>

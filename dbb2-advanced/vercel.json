@@ -1,0 +1,38 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": true,
+  "rewrites": [
+    {
+      "source": "/fmv",
+      "destination": "/fmv/index.html"
+    },
+    {
+      "source": "/fmv/",
+      "destination": "/fmv/index.html"
+    },
+    {
+      "source": "/projections",
+      "destination": "/projections/index.html"
+    },
+    {
+      "source": "/projections/",
+      "destination": "/projections/index.html"
+    },
+    {
+      "source": "/fmvw",
+      "destination": "/fmvw/index.html"
+    },
+    {
+      "source": "/fmvw/",
+      "destination": "/fmvw/index.html"
+    },
+    {
+      "source": "/methodology",
+      "destination": "/methodology/index.html"
+    },
+    {
+      "source": "/methodology/",
+      "destination": "/methodology/index.html"
+    }
+  ]
+}

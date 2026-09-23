@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DBB2 Advanced Methodology</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <div class="eyebrow">DBB2 Advanced</div>
+        <h1>Model Methodology</h1>
+        <p>This page explains the strict-wins stack, the advanced offense/defense layer, and how VORP is used as an external benchmark.</p>
+        <div class="subline">
+          <a class="chip" href="../">Strict Wins</a>
+          <a class="chip" href="../fmvw/">FMVW</a>
+          <span class="chip">Advanced Offense</span>
+          <span class="chip">Advanced Defense</span>
+          <span class="chip">VORP Benchmark</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section card">
+        <h2>What the model does</h2>
+        <div class="list">
+          <div class="metric"><span class="muted">1. Projection layer</span><strong>Start with the 26-27 player projection bundle, which carries games, minutes, scoring, shooting, usage, and pressure signals.</strong></div>
+          <div class="metric"><span class="muted">2. Advanced offense</span><strong>Score offensive creation, pressure, efficiency, and security from the historical offensive tracking layer.</strong></div>
+          <div class="metric"><span class="muted">3. Advanced defense</span><strong>Score defensive suppression, rim protection, pressure, possession control, and discipline from the historical defensive tracking layer.</strong></div>
+          <div class="metric"><span class="muted">4. Combined projection</span><strong>Blend offense and defense into a single advanced projection score.</strong></div>
+          <div class="metric"><span class="muted">5. Wins bridge</span><strong>Calibrate the advanced projection score to team wins with a linear fit from the historical league table.</strong></div>
+          <div class="metric"><span class="muted">6. Strict wins</span><strong>Apply the calibrated bridge to produce one strict-wins number per player.</strong></div>
+          <div class="metric"><span class="muted">7. External benchmark</span><strong>Compare strict wins against Basketball-Reference VORP to check whether the model lands in the same neighborhood.</strong></div>
+        </div>
+      </section>
+
+      <section class="section card">
+        <h2>Advanced offense inputs</h2>
+        <p class="small muted">The offense layer uses the historical offensive archive and the current projection bundle.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Bucket</th><th>Primary inputs</th><th>Purpose</th></tr></thead>
+            <tbody>
+              <tr><td>Creation</td><td>USG%, AST, points, role signals</td><td>How much offense the player creates</td></tr>
+              <tr><td>Pressure</td><td>FTA, free-throw rate, rim pressure proxies</td><td>How much pressure the player puts on defenses</td></tr>
+              <tr><td>Efficiency</td><td>FG%, 3P%, FT%, TS%, eFG%</td><td>How well the player converts chances</td></tr>
+              <tr><td>Security</td><td>Turnovers, AST/TO, turnover rate</td><td>How well the player protects possessions</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section card">
+        <h2>Advanced defense inputs</h2>
+        <p class="small muted">The defense layer uses the historical defensive tracking archive and the current projection bundle.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Bucket</th><th>Primary inputs</th><th>Purpose</th></tr></thead>
+            <tbody>
+              <tr><td>Suppression</td><td>Opponent shot defense by distance, opponent FG%</td><td>How much the player limits clean looks</td></tr>
+              <tr><td>Rim protection</td><td>At-rim defense, blocks, block rate</td><td>How well the player protects the basket</td></tr>
+              <tr><td>Pressure</td><td>Steals, deflections, disruption proxies</td><td>How much the player disrupts possessions</td></tr>
+              <tr><td>Control</td><td>Rebounds, opponent rebounds, possession control</td><td>How well the player ends possessions</td></tr>
+              <tr><td>Discipline</td><td>Fouls, foul economy, mistakes</td><td>How often the player gives value back</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section card">
+        <h2>Strict-wins calibration</h2>
+        <div class="list">
+          <div class="metric"><span class="muted">Baseline</span><strong>6.0 wins is the starting point before the advanced score is applied.</strong></div>
+          <div class="metric"><span class="muted">Shares</span><strong>Offense and defense are weighted 55% / 45% inside the advanced projection layer.</strong></div>
+          <div class="metric"><span class="muted">Bridge</span><strong>The team score-to-wins fit is a linear regression on the historical league table.</strong></div>
+          <div class="metric"><span class="muted">Output</span><strong>Strict wins is the final player-level wins number used on the page.</strong></div>
+        </div>
+      </section>
+
+      <section class="section card">
+        <h2>How to read VORP</h2>
+        <div class="list">
+          <div class="metric"><span class="muted">Purpose</span><strong>VORP is a public benchmark, not a model input.</strong></div>
+          <div class="metric"><span class="muted">Use</span><strong>It lets you check whether DBB2 lands in the same neighborhood as an established replacement-level framework.</strong></div>
+          <div class="metric"><span class="muted">Current fit</span><strong>The current comparison shows moderate correlation, which is enough for a sanity check but not enough to claim equivalence.</strong></div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DBB2 Advanced - Strict Wins</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body data-app="advanced">
+    <header>
+      <div class="wrap">
+        <div class="eyebrow">DBB2 Advanced</div>
+        <h1>Strict Wins View</h1>
+        <p>Pick two players from the 26-27 projection pool and compare advanced offense, advanced defense, strict wins, and the VORP benchmark on one calibrated scale.</p>
+        <div class="subline">
+          <a class="chip" href="./methodology/">Methodology</a>
+          <span class="chip">Player A</span>
+          <span class="chip">Player B</span>
+          <span class="chip">Strict Wins</span>
+          <span class="chip">Advanced Offense</span>
+          <span class="chip">Advanced Defense</span>
+          <span class="chip">VORP Benchmark</span>
+        </div>
+
+        <section class="card" style="margin-top: 18px;">
+          <h2>Compare Two Players</h2>
+          <div class="controls">
+            <div class="field span-6">
+              <label>Player A</label>
+              <select data-player-a></select>
+            </div>
+            <div class="field span-6">
+              <label>Player B</label>
+              <select data-player-b></select>
+            </div>
+          <div class="field span-12">
+            <label>Reference</label>
+            <div class="toolbar">
+              <button class="primary" data-compare>Compare Players</button>
+            </div>
+          </div>
+        </div>
+        <p class="small muted" data-total-callout style="margin: 12px 0 0 0; font-size: 1rem; font-weight: 600;"></p>
+        <p class="small muted" data-status style="margin-top: 12px;">Waiting for player pool.</p>
+      </section>
+      </div>
+    </header>
+
+    <main data-app-root data-sample="./data/strict_wins_player_scores.csv" data-summary="./data/strict_wins_summary.json" data-vorp-summary="./data/strict_wins_vorp_comparison.json">
+      <section class="card" style="margin-top: 0;">
+        <h2>Weighted Score</h2>
+        <p class="small muted" data-weighted-score style="margin-bottom: 12px;">
+          Strict Wins is the calibrated wins output from the 26-27 projection bundle and the historical score-to-wins fit.
+        </p>
+        <div class="list" data-model-summary></div>
+      </section>
+
+      <section class="section card">
+        <div class="table-actions">
+          <div>
+            <h2 style="margin-bottom: 4px;">Player Comparison</h2>
+            <p class="small muted">Advanced offense, advanced defense, and strict wins for the selected pair.</p>
+          </div>
+        </div>
+        <p class="small muted" data-total-callout style="margin: 0 0 12px 0;"></p>
+        <div class="table-wrap">
+          <div data-table></div>
+        </div>
+      </section>
+
+      <section class="card" style="margin-top: 16px;">
+        <h2>Summary</h2>
+        <div data-summary class="list"></div>
+        <div data-detail-summary class="list" style="margin-top: 14px;"></div>
+      </section>
+
+      <section class="card" style="margin-top: 16px;">
+        <h2>VORP Benchmark</h2>
+        <p class="small muted">Basketball-Reference VORP is a separate benchmark layer, not a model input.</p>
+        <div data-vorp-summary class="list"></div>
+        <div class="table-wrap" style="margin-top: 14px;">
+          <div data-vorp-table></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
