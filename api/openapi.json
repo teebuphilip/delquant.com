@@ -1,0 +1,48 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "DelQuant NBA Intelligence API",
+    "version": "1.2.0",
+    "description": "Public integration reference for DelQuant projections, player intelligence, historical replay, roster analysis, and decision tools. Response examples are representative; production access requires an API key."
+  },
+  "security": [{ "ApiKeyAuth": [] }],
+  "paths": {
+    "/health": { "get": { "summary": "Check service health", "security": [], "responses": { "200": { "description": "Service is healthy" } } } },
+    "/players/lookup": { "get": { "summary": "Resolve a player identity", "parameters": [{ "$ref": "#/components/parameters/Query" }, { "$ref": "#/components/parameters/Limit" }], "responses": { "200": { "description": "Matching players" }, "422": { "$ref": "#/components/responses/ValidationError" } } } },
+    "/projections/today": { "get": { "summary": "Get current player projections", "parameters": [{ "$ref": "#/components/parameters/ProjectionMode" }], "responses": { "200": { "description": "Projection contract" }, "401": { "$ref": "#/components/responses/Unauthorized" } } } },
+    "/api/game-day/projections": { "get": { "summary": "Get dated game-day projections", "parameters": [{ "$ref": "#/components/parameters/Date" }, { "$ref": "#/components/parameters/ProjectionMode" }], "responses": { "200": { "description": "Slate projections" } } } },
+    "/projections/player/{player_id}/modes": { "get": { "summary": "Compare projection horizons for a player", "parameters": [{ "$ref": "#/components/parameters/PlayerId" }, { "$ref": "#/components/parameters/AsOfDate" }], "responses": { "200": { "description": "Projection horizon comparison" } } } },
+    "/api/local/historical-projections": { "get": { "summary": "Run a no-lookahead historical replay", "parameters": [{ "$ref": "#/components/parameters/Date" }, { "name": "seasons", "in": "query", "schema": { "type": "integer", "minimum": 1, "maximum": 5, "default": 3 } }, { "name": "use_game_day", "in": "query", "schema": { "type": "boolean", "default": false } }], "responses": { "200": { "description": "Historical projection bundle" } } } },
+    "/api/team/player-profile": { "get": { "summary": "Get a complete player intelligence profile", "parameters": [{ "name": "player_id", "in": "query", "schema": { "type": "string" } }, { "name": "player_name", "in": "query", "schema": { "type": "string" } }, { "name": "comp_count", "in": "query", "schema": { "type": "integer", "default": 5 } }], "responses": { "200": { "description": "Player profile" } } } },
+    "/api/comps/search": { "get": { "summary": "Search historical comparisons", "parameters": [{ "$ref": "#/components/parameters/Query" }], "responses": { "200": { "description": "Comparison matches" } } } },
+    "/api/comps/player/{player_id}": { "get": { "summary": "Get historical comparisons for a player", "parameters": [{ "$ref": "#/components/parameters/PlayerId" }], "responses": { "200": { "description": "Historical comparisons" } } } },
+    "/tools/roster-construction/archetype-advanced/summary": { "get": { "summary": "Summarize advanced archetypes", "responses": { "200": { "description": "Archetype summary" } } } },
+    "/tools/roster-construction/archetype-advanced/baselines": { "get": { "summary": "List archetype baselines", "responses": { "200": { "description": "Archetype baselines" } } } },
+    "/tools/roster-construction/archetype-advanced/players": { "get": { "summary": "List archetype-mapped players", "responses": { "200": { "description": "Archetype players" } } } },
+    "/tools/roster-construction/archetype-advanced/teams/{team}": { "get": { "summary": "Inspect a team's archetype signals", "parameters": [{ "$ref": "#/components/parameters/Team" }], "responses": { "200": { "description": "Team archetype signals" } } } },
+    "/tools/roster-construction/competitive-traits/summary": { "get": { "summary": "Summarize competitive traits", "responses": { "200": { "description": "Competitive trait summary" } } } },
+    "/tools/roster-construction/competitive-traits/baselines": { "get": { "summary": "List competitive trait baselines", "responses": { "200": { "description": "Competitive trait baselines" } } } },
+    "/tools/roster-construction/competitive-traits/players": { "get": { "summary": "List player competitive traits", "responses": { "200": { "description": "Competitive traits" } } } },
+    "/tools/roster-construction/competitive-traits/teams/{team}": { "get": { "summary": "Inspect team competitive traits", "parameters": [{ "$ref": "#/components/parameters/Team" }], "responses": { "200": { "description": "Team traits" } } } },
+    "/tools/lineup/optimize": { "post": { "summary": "Optimize a lineup", "requestBody": { "$ref": "#/components/requestBodies/JsonBody" }, "responses": { "200": { "description": "Optimized lineup" } } } },
+    "/tools/similar-players": { "get": { "summary": "Find similar players", "parameters": [{ "$ref": "#/components/parameters/PlayerIdQuery" }, { "$ref": "#/components/parameters/Limit" }], "responses": { "200": { "description": "Similar players" } } } },
+    "/tools/streaming-candidates": { "get": { "summary": "Find streaming candidates", "parameters": [{ "$ref": "#/components/parameters/Limit" }], "responses": { "200": { "description": "Streaming candidates" } } } },
+    "/tools/trade/analyze": { "post": { "summary": "Analyze a trade", "requestBody": { "$ref": "#/components/requestBodies/JsonBody" }, "responses": { "200": { "description": "Trade analysis" } } } },
+    "/api/internal/baseline-projections": { "get": { "summary": "Get controlled partner baseline feed", "description": "Restricted endpoint for approved partners requiring a bulk baseline projection contract and additional category, durability, value, and consistency fields.", "responses": { "200": { "description": "Baseline projection feed" }, "401": { "$ref": "#/components/responses/Unauthorized" } } } }
+  },
+  "components": {
+    "securitySchemes": { "ApiKeyAuth": { "type": "apiKey", "in": "header", "name": "X-API-Key" } },
+    "parameters": {
+      "Query": { "name": "query", "in": "query", "required": true, "schema": { "type": "string" } },
+      "Limit": { "name": "limit", "in": "query", "schema": { "type": "integer", "minimum": 1, "maximum": 100, "default": 10 } },
+      "Date": { "name": "date", "in": "query", "required": true, "schema": { "type": "string", "format": "date" } },
+      "AsOfDate": { "name": "as_of_date", "in": "query", "schema": { "type": "string", "format": "date" } },
+      "PlayerId": { "name": "player_id", "in": "path", "required": true, "schema": { "type": "string" } },
+      "PlayerIdQuery": { "name": "player_id", "in": "query", "schema": { "type": "string" } },
+      "Team": { "name": "team", "in": "path", "required": true, "schema": { "type": "string", "example": "ATL" } },
+      "ProjectionMode": { "name": "projection_mode", "in": "query", "schema": { "type": "string", "enum": ["season_baseline", "recency_10", "recency_5", "recency_1", "game_day"], "default": "season_baseline" } }
+    },
+    "requestBodies": { "JsonBody": { "required": true, "content": { "application/json": { "schema": { "type": "object", "additionalProperties": true } } } } },
+    "responses": { "Unauthorized": { "description": "Missing or invalid API key" }, "ValidationError": { "description": "Invalid request parameters" } }
+  }
+}
