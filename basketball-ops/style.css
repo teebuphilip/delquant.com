@@ -13,6 +13,31 @@
 
 * { box-sizing: border-box; }
 
+.global-nav {
+  width: min(1180px, calc(100% - 40px)) !important;
+  margin: 0 auto 28px !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between !important;
+  gap: 12px !important;
+  flex-wrap: wrap;
+  font: 16px/1.6 "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, sans-serif !important;
+}
+
+.global-nav > a:first-child {
+  margin-right: auto;
+  color: var(--text) !important;
+  font: 700 14px/1 Georgia, "Times New Roman", serif !important;
+  letter-spacing: .18em !important;
+  text-transform: uppercase;
+}
+
+.global-nav > a:not(:first-child) {
+  color: var(--muted) !important;
+  font: 14px/1.6 "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, sans-serif !important;
+}
+
 html, body { margin: 0; min-height: 100%; }
 
 body {
