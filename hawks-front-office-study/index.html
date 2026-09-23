@@ -332,8 +332,8 @@
       function renderOverview() {
         document.getElementById("season-count").textContent = payload.meta.season_count;
         document.getElementById("profile-count").textContent = payload.meta.player_profile_count;
-        document.getElementById("roster-note").textContent = payload.current_roster.as_of + ": " + payload.current_roster.trade_note;
-        document.getElementById("current-roster").innerHTML = payload.current_roster.players.map(player => tag(player)).join(" ");
+        document.getElementById("roster-note").textContent = payload.meta.current_roster.as_of + ": " + payload.meta.current_roster.trade_note;
+        document.getElementById("current-roster").innerHTML = payload.meta.current_roster.players.map(player => tag(player)).join(" ");
         const rows = payload.era_summary.map(row => `
           <tr>
             <td><strong>${row.era}</strong><br><span class="muted small">${row.seasons}</span></td>
