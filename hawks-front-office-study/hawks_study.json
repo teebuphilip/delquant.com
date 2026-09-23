@@ -5,7 +5,12 @@
     "team": "ATL",
     "season_count": 31,
     "player_profile_count": 19,
-    "method_note": "DelQuant maps player seasons into functional archetypes, studies 31 seasons of roster construction, and summarizes position-relative competitive trait outputs. This demo exposes curated outputs only; model internals, formulas, and scoring weights are intentionally withheld."
+    "method_note": "DelQuant maps player seasons into functional archetypes, studies 31 seasons of roster construction, and summarizes position-relative competitive trait outputs. This demo exposes curated outputs only; model internals, formulas, and scoring weights are intentionally withheld.",
+    "current_roster": {
+      "as_of": "2026-09-23",
+      "trade_note": "Zaccharie Risacher was traded to Dallas on July 19, 2026. Atlanta received Luguentz Dort and Ryan Nembhard in the three-team deal.",
+      "players": ["Nickeil Alexander-Walker", "Luguentz Dort", "Dyson Daniels", "Jalen Johnson", "Onyeka Okongwu", "CJ McCollum", "Buddy Hield", "Corey Kispert", "Mouhamed Gueye", "Jock Landale", "Aaron Wiggins", "Ryan Nembhard", "Asa Newell", "Jalen Wilson", "Christian Koloko", "Tony Bradley", "RayJ Dennis", "Kingston Flemings", "Keshon Gilbert", "Zuby Ejiofor", "Henri Veesaar", "Gabe Vincent", "Keaton Wallace"]
+    }
   },
   "framework": {
     "archetypes": "54 functional player archetypes derived from historical production shape.",
