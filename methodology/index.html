@@ -19,10 +19,11 @@
           <section class="hero-copy page-hero-copy">
             <p class="eyebrow">Methodology</p>
             <h1>Explainable model outputs are the product.</h1>
-            <p class="lede">DelQuant is built around weighted baselines, context-aware variance, archetypes, historical comps, and no-lookahead replay validation.</p>
+            <p class="lede">DelQuant uses 31 seasons of NBA player history to build projections, player-shape priors, uncertainty, historical comparisons, and validation that can be explained in basketball language.</p>
           </section>
           <aside class="hero-panel page-panel">
-            <div class="stat"><span class="stat-label">Public proof</span><strong>Reports, demos, and comp cards</strong></div>
+            <div class="stat"><span class="stat-label">Historical window</span><strong>31 NBA seasons</strong></div>
+            <div class="stat"><span class="stat-label">Player-shape layer</span><strong>54 archetype families</strong></div>
             <div class="stat"><span class="stat-label">Core rule</span><strong>Show the receipt, then the model</strong></div>
           </aside>
         </div>
@@ -75,6 +76,40 @@
       </section>
 
       <section class="section">
+        <div class="section-head"><p class="eyebrow">Statistical methods</p><h2>Transparent techniques, applied in layers.</h2><p class="lede">The first DelQuant model is deterministic and structured. It is not presented as a mysterious neural forecast. Each layer has a job, a data source, and a way to inspect the result.</p></div>
+        <div class="grid three">
+          <article class="card prose"><span class="card-label">Weighted baseline</span><h3>Recent seasons, not one hot year</h3><p>For a player with enough history, the baseline weights the most recent season at 50%, the prior season at 30%, and the season before that at 20%. If fewer seasons are available, the weights are renormalized.</p><div class="code">baseline = 0.50 × recent season
+          + 0.30 × prior season
+          + 0.20 × two seasons back</div></article>
+          <article class="card prose"><span class="card-label">Shrinkage</span><h3>Stabilize thin samples</h3><p>Young players, role players, and small samples can produce extreme estimates. DelQuant blends player observations toward an age × position × role cohort so the estimate becomes more stable without erasing the player’s own signal.</p><div class="code">shrunk estimate =
+          player signal + cohort prior
+          weighted by sample strength</div></article>
+          <article class="card prose"><span class="card-label">Age and role</span><h3>Development is part of the prior</h3><p>The baseline is blended with an age, position, and role profile. The current season layer uses a 70% player baseline and 30% age-profile blend, with usage and minutes sanity checks.</p><div class="code">projection = 0.70 × player baseline
+            + 0.30 × age / role profile</div></article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head"><p class="eyebrow">Uncertainty and risk</p><h2>The range matters as much as the mean.</h2></div>
+        <div class="split">
+          <article class="card prose"><h3>Context-aware variance</h3><p>DelQuant does not rely on one flat volatility number. It can examine trailing 20-, 40-, and 82-game windows, recency-weighted variance, home/away splits, rest and back-to-back splits, minutes bands, and opponent tiers.</p><p>The recency layer uses an exponential decay with a 10-game half-life, so meaningful role or usage changes can appear faster than they would in a season-only average.</p></article>
+          <article class="card prose"><h3>Non-parametric uncertainty</h3><p>Where a variance estimate needs an interval, the engine uses bootstrap resampling: repeatedly resample the relevant games, recompute the standard deviation, and report the 5th and 95th percentiles as a 90% interval.</p><div class="code">bootstrap_std_dev_ci_90 =
+          [5th percentile, 95th percentile]</div><p>This avoids assuming that every player-stat distribution is normally shaped.</p></article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head"><p class="eyebrow">Player-shape statistics</p><h2>From box-score shape to basketball role.</h2></div>
+        <div class="grid three">
+          <article class="card prose"><h3>54 archetype families</h3><p>Players are mapped into position-specific clusters using scaled distance across points, rebounds, assists, steals, blocks, and made threes. The output includes the assigned family, distance from its centroid, and cluster confidence.</p></article>
+          <article class="card prose"><h3>Archetype-prior variance</h3><p>A player’s observed variance can be blended toward the variance of the historical archetype. The current prior strength is 20 games, giving thin player samples a relevant role-based comparison.</p><div class="code">shrunk variance =
+  (n × player variance + 20 × archetype variance)
+  / (n + 20)</div></article>
+          <article class="card prose"><h3>Historical comparisons</h3><p>The 31-season archive supplies player-season examples for comp searches, archetype priors, rarity analysis, and career-shape context. A comp is evidence of similar statistical shape—not a claim that two players are identical.</p></article>
+        </div>
+      </section>
+
+      <section class="section">
         <div class="section-head"><p class="eyebrow">Projection horizons</p><h2>One season view is not enough for every decision.</h2><p class="lede">A roster decision, a current-form question, and a game-day workflow should not be forced through the same weighting scheme.</p></div>
         <div class="grid three">
           <article class="card"><span class="card-label">Structural</span><h3>Season baseline</h3><p>Use the multi-season baseline for stable valuation, long-run player evaluation, and rest-of-season planning.</p></article>
@@ -104,7 +139,7 @@
         <p class="eyebrow">The DelQuant position</p>
         <h2>Broad feeds give you coverage. DelQuant gives you a basketball intelligence layer worth building on.</h2>
         <p class="lede">If you already have data, odds, injury, or lineup coverage, keep it. Add DelQuant where you need an independent NBA forecast, historical context, explainability, and outputs your customers can actually use.</p>
-        <div class="cta-row"><a class="button button-primary" href="../developers/">See the API and samples</a><a class="button button-secondary" href="../contact/">Request an evaluation</a></div>
+        <div class="cta-row"><a class="button button-primary" href="../historical-comparison/">See a historical example</a><a class="button button-secondary" href="../contact/">Request an evaluation</a></div>
       </section>
     </main>
   </body>
