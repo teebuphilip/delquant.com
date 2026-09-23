@@ -49,6 +49,12 @@
         margin: 0 auto;
       }
 
+      .site-topline { display: flex; justify-content: space-between; align-items: center; gap: 20px; margin-bottom: 28px; }
+      .brand { color: var(--text); font-weight: 800; letter-spacing: .06em; text-decoration: none; }
+      .site-nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 16px; }
+      .site-nav a { color: var(--muted); font-size: 13px; text-decoration: none; }
+      .site-nav a:hover, .site-nav a:focus-visible { color: var(--text); }
+
       .eyebrow {
         color: var(--accent-2);
         font-size: 12px;
@@ -76,6 +82,8 @@
       .span-5 { grid-column: span 5; }
       .span-7 { grid-column: span 7; }
       .span-12 { grid-column: span 12; }
+
+       (max-width: 760px) { .site-topline { align-items: flex-start; flex-direction: column; } .site-nav { justify-content: flex-start; gap: 10px 14px; } }
 
       .tabs {
         display: flex;
@@ -205,6 +213,7 @@
   <body>
     <header>
       <div class="wrap">
+        <div class="site-topline"><a class="brand" href="../">DelQuant</a><nav class="site-nav" aria-label="Primary"><a href="../b2b/">B2B</a><a href="../why-delquant/">Why DelQuant</a><a href="../competitors/">Compare</a><a href="../delquant-advanced/">Basketball Ops</a><a href="../methodology/">Methodology</a><a href="../contact/">Contact</a></nav></div>
         <div class="eyebrow">DelQuant Private Demo Output</div>
         <h1>Atlanta Hawks Roster Construction Study</h1>
         <p>An RFP-style roster construction study using 54 archetypes, Championship DNA outputs, and the Motor / Decision / Pressure competitive trait layer.</p>
