@@ -99,7 +99,7 @@
       }
     },
     {
-      "era": "Johnson/Risacher Fit Window",
+      "era": "Johnson/Alexander-Walker/Daniels Fit Window",
       "seasons": "2023-24 to 2025-26",
       "season_count": 3,
       "avg_wins": 40.7,
@@ -1964,7 +1964,7 @@
     },
     {
       "season": "2023-24",
-      "era": "Johnson/Risacher Fit Window",
+      "era": "Johnson/Alexander-Walker/Daniels Fit Window",
       "record": "36-46",
       "wins": 36,
       "losses": 46,
@@ -2030,7 +2030,7 @@
     },
     {
       "season": "2024-25",
-      "era": "Johnson/Risacher Fit Window",
+      "era": "Johnson/Alexander-Walker/Daniels Fit Window",
       "record": "40-42",
       "wins": 40,
       "losses": 42,
@@ -2096,7 +2096,7 @@
     },
     {
       "season": "2025-26",
-      "era": "Johnson/Risacher Fit Window",
+      "era": "Johnson/Alexander-Walker/Daniels Fit Window",
       "record": "46-36",
       "wins": 46,
       "losses": 36,
