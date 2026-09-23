@@ -28,5 +28,84 @@
         </div>
       </div>
     </header>
+    <main class="shell">
+      <section class="section intro-band">
+        <div class="band-callout">
+          <p class="eyebrow">The distinction</p>
+          <h2>DelQuant is not trying to be the biggest data company in the room.</h2>
+        </div>
+        <div class="band-quote">
+          <p>Large providers are built to deliver breadth: scores, schedules, odds, injuries, lineups, and feeds across many leagues. DelQuant is built to make one NBA intelligence layer more useful, more interpretable, and easier to test.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <p class="eyebrow">What we are actually selling</p>
+          <h2>Not another number. A point of view you can inspect.</h2>
+          <p class="lede">A standard projection answers “what is the number?” DelQuant is designed to answer the next questions: why this number, how stable is it, what changed recently, what historical players looked similar, and what decision does the output support?</p>
+        </div>
+        <div class="grid three">
+          <article class="card"><h3>Independent model layer</h3><p>Use DelQuant as a replacement projection source or place it beside an incumbent to identify disagreements, role changes, and assumptions worth investigating.</p></article>
+          <article class="card"><h3>Context around the forecast</h3><p>Projected minutes, role, durability, variance, confidence, current-form windows, schedule context, and game-day adjustments turn a point estimate into a decision surface.</p></article>
+          <article class="card"><h3>Historical basketball meaning</h3><p>Archetypes and player comparisons connect current production to historical player shape, career paths, and roster roles—not just a row of recent box scores.</p></article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head"><p class="eyebrow">The model stack</p><h2>Several layers, one coherent output.</h2></div>
+        <div class="split">
+          <article class="card prose">
+            <h3>1. Structural baseline</h3>
+            <p>Weighted multi-season performance, cohort shrinkage for sparse samples, recent-season variance, age profiles, usage sanity checks, and durability expectations establish the player’s underlying projection.</p>
+            <h3>2. Responsive adjustment</h3>
+            <p>Explicit horizon modes allow the structural view to be compared with recent-window views and game-day context. The response preserves both the structural projection and the adjusted projection.</p>
+            <h3>3. Risk and confidence</h3>
+            <p>Uncertainty is part of the product. DelQuant exposes range, volatility, availability, and confidence so downstream users can distinguish a strong forecast from a fragile one.</p>
+          </article>
+          <article class="card prose">
+            <h3>4. Player shape</h3>
+            <p>Archetypes, competitive traits, historical comparisons, and capability flags describe how the player produces and what kinds of roster or workflow questions the output can answer.</p>
+            <h3>5. Decision translation</h3>
+            <p>The same intelligence can feed player cards, historical research, lineup tools, roster construction, market analysis, reports, and customer-facing applications.</p>
+            <h3>6. Delivery</h3>
+            <p>Outputs are available through API, JSON, batch, and report-ready surfaces. The integration can begin with one endpoint and expand only when the use case proves it deserves more.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head"><p class="eyebrow">Projection horizons</p><h2>One season view is not enough for every decision.</h2><p class="lede">A roster decision, a current-form question, and a game-day workflow should not be forced through the same weighting scheme.</p></div>
+        <div class="grid three">
+          <article class="card"><span class="card-label">Structural</span><h3>Season baseline</h3><p>Use the multi-season baseline for stable valuation, long-run player evaluation, and rest-of-season planning.</p></article>
+          <article class="card"><span class="card-label">Responsive</span><h3>Recent windows</h3><p>Use 10-game, 5-game, or 1-game recency views when current role, usage, or form should have more influence.</p></article>
+          <article class="card"><span class="card-label">Situational</span><h3>Game day</h3><p>Apply schedule, rest, location, matchup, and slate context when the question is about today rather than the season.</p></article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head"><p class="eyebrow">Historical intelligence</p><h2>The differentiator is the explanation layer.</h2></div>
+        <div class="grid three">
+          <article class="card"><h3>Comparable players</h3><p>Find historical player-seasons with similar production and role shape. Use the comparison to create context, not to pretend that two careers are identical.</p></article>
+          <article class="card"><h3>Archetypes</h3><p>Map player production into repeatable offensive, defensive, and roster-construction patterns that can be used across players and eras.</p></article>
+          <article class="card"><h3>Traits and fit</h3><p>Use Motor, Decision, and Pressure signals with player profiles to frame questions about role, fit, and team-building—not just box-score output.</p></article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head"><p class="eyebrow">Validation</p><h2>Test the model before you build around it.</h2><p class="lede">DelQuant supports dated historical replay with no-lookahead behavior. Freeze the player pool, date range, and scoring rules, then compare DelQuant with the current provider or a simple baseline.</p></div>
+        <div class="split">
+          <article class="card prose"><h3>What gets measured</h3><ul><li>Forecast accuracy by horizon and category</li><li>Calibration of confidence and uncertainty</li><li>Stability when the recent window changes</li><li>Incremental value over the current source</li><li>Integration effort and response reliability</li></ul></article>
+          <article class="card prose"><h3>What the evaluation is for</h3><p>The goal is not to win a slide deck. The goal is to find out whether DelQuant improves the forecast, the explanation, or the product experience enough to earn a production role.</p><p>That makes the model easier to buy: start with a bounded test, keep what works, and do not pay for breadth you do not need.</p></article>
+        </div>
+      </section>
+
+      <section class="section callout">
+        <p class="eyebrow">The DelQuant position</p>
+        <h2>Broad feeds give you coverage. DelQuant gives you a basketball intelligence layer worth building on.</h2>
+        <p class="lede">If you already have data, odds, injury, or lineup coverage, keep it. Add DelQuant where you need an independent NBA forecast, historical context, explainability, and outputs your customers can actually use.</p>
+        <div class="cta-row"><a class="button button-primary" href="../developers/">See the API and samples</a><a class="button button-secondary" href="../contact/">Request an evaluation</a></div>
+      </section>
+    </main>
   </body>
 </html>
