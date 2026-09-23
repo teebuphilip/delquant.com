@@ -1,6 +1,6 @@
 {
-  "input_path": "/Users/teebuphilip/Documents/work/dbb2-engine/reports/basketball_ops/context_neutral/context_neutral_player_feed.csv",
-  "output_dir": "/Users/teebuphilip/Documents/work/dbb2-engine/reports/basketball_ops/fmv",
+  "input_path": "/Users/teebuphilip/Documents/work/delquant-engine/reports/basketball_ops/context_neutral/context_neutral_player_feed.csv",
+  "output_dir": "/Users/teebuphilip/Documents/work/delquant-engine/reports/basketball_ops/fmv",
   "simulations": 500,
   "seed": 42,
   "salary_cap": 154647000,

@@ -1,5 +1,5 @@
 {
-  "input_path": "./data/dbb2_flat_file.csv",
+  "input_path": "./data/delquant_flat_file.csv",
   "output_dir": "./reports/basketball_ops/context_neutral",
   "player_rows": 505,
   "teams": 30,

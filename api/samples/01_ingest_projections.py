@@ -1,7 +1,7 @@
 """
-SportsStack sample: ingest DBB2 daily projections and map to universal player IDs.
+SportsStack sample: ingest DELQUANT daily projections and map to universal player IDs.
 
-Use case: SportsStack pulls DBB2's projection feed each morning, maps DBB2 player_id
+Use case: SportsStack pulls DELQUANT's projection feed each morning, maps DELQUANT player_id
 to SportsStack's universal ID, and stores the enriched records for downstream consumers.
 """
 
@@ -9,8 +9,8 @@ import os
 import requests
 from typing import Optional
 
-BASE_URL = os.environ["DBB2_BASE_URL"]
-API_KEY = os.environ["DBB2_API_KEY"]
+BASE_URL = os.environ["DELQUANT_BASE_URL"]
+API_KEY = os.environ["DELQUANT_API_KEY"]
 
 SPORTSSTACK_ID_MAP = {
     "203999": "ss_player_00001",
@@ -38,14 +38,14 @@ def fetch_today_projections() -> list[dict]:
 
 
 def enrich_with_universal_id(player: dict) -> dict:
-    dbb2_id = player["player_id"]
-    universal_id = SPORTSSTACK_ID_MAP.get(dbb2_id, f"unmapped_{dbb2_id}")
+    delquant_id = player["player_id"]
+    universal_id = SPORTSSTACK_ID_MAP.get(delquant_id, f"unmapped_{delquant_id}")
     return {**player, "ss_universal_id": universal_id}
 
 
 def main():
     players = fetch_today_projections()
-    print(f"Fetched {len(players)} players from DBB2")
+    print(f"Fetched {len(players)} players from DELQUANT")
 
     enriched = [enrich_with_universal_id(p) for p in players]
 
@@ -60,7 +60,7 @@ def main():
 
     for p in mapped[:3]:
         print(
-            f"  {p['name']:25s}  dbb2={p['player_id']}  ss={p['ss_universal_id']}"
+            f"  {p['name']:25s}  delquant={p['player_id']}  ss={p['ss_universal_id']}"
             f"  pts={p['pts']:.1f} ({p['pts_conf']:.0%} conf)"
             f"  min={p.get('projected_minutes', 'n/a')}"
         )

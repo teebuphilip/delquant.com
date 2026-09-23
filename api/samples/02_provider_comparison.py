@@ -1,15 +1,15 @@
 """
-SportsStack sample: compare DBB2 projections against provider consensus lines.
+SportsStack sample: compare DELQUANT projections against provider consensus lines.
 
 Use case: SportsStack aggregates projections from multiple providers. This script
-identifies players where DBB2 disagrees materially with consensus and surfaces those
+identifies players where DELQUANT disagrees materially with consensus and surfaces those
 as divergence signals for downstream consumers.
 """
 
 import os
 import requests
 
-BASE_URL = os.environ["DBB2_BASE_URL"]
+BASE_URL = os.environ["DELQUANT_BASE_URL"]
 
 CONSENSUS_PROJECTIONS = {
     "203999": {"pts": 23.1, "reb": 11.2, "ast": 8.5},
@@ -27,30 +27,30 @@ def fetch_today_projections() -> dict[str, dict]:
     return {p["player_id"]: p for p in players}
 
 
-def compute_divergence(dbb2_val: float, consensus_val: float) -> float:
+def compute_divergence(delquant_val: float, consensus_val: float) -> float:
     if consensus_val == 0:
         return 0.0
-    return (dbb2_val - consensus_val) / consensus_val
+    return (delquant_val - consensus_val) / consensus_val
 
 
-def find_divergences(dbb2: dict[str, dict]) -> list[dict]:
+def find_divergences(delquant: dict[str, dict]) -> list[dict]:
     divergences = []
     for player_id, consensus in CONSENSUS_PROJECTIONS.items():
-        if player_id not in dbb2:
+        if player_id not in delquant:
             continue
-        player = dbb2[player_id]
+        player = delquant[player_id]
         for stat, consensus_val in consensus.items():
-            dbb2_val = player.get(stat)
-            if dbb2_val is None:
+            delquant_val = player.get(stat)
+            if delquant_val is None:
                 continue
-            delta = compute_divergence(dbb2_val, consensus_val)
+            delta = compute_divergence(delquant_val, consensus_val)
             if abs(delta) >= DIVERGENCE_THRESHOLD:
                 divergences.append({
                     "player_id": player_id,
                     "name": player["name"],
                     "team": player["team"],
                     "stat": stat,
-                    "dbb2": dbb2_val,
+                    "delquant": delquant_val,
                     "consensus": consensus_val,
                     "delta_pct": delta,
                     "direction": "HIGHER" if delta > 0 else "LOWER",
@@ -60,16 +60,16 @@ def find_divergences(dbb2: dict[str, dict]) -> list[dict]:
 
 
 def main():
-    dbb2 = fetch_today_projections()
-    print(f"Loaded {len(dbb2)} DBB2 projections")
+    delquant = fetch_today_projections()
+    print(f"Loaded {len(delquant)} DELQUANT projections")
 
-    divergences = find_divergences(dbb2)
+    divergences = find_divergences(delquant)
     print(f"\nFound {len(divergences)} divergences >= {DIVERGENCE_THRESHOLD:.0%}\n")
 
     for d in divergences:
         print(
             f"  {d['name']:25s}  {d['stat']:3s}  "
-            f"DBB2={d['dbb2']:.1f}  consensus={d['consensus']:.1f}  "
+            f"DELQUANT={d['delquant']:.1f}  consensus={d['consensus']:.1f}  "
             f"delta={d['delta_pct']:+.1%}  [{d['direction']}]"
         )
 

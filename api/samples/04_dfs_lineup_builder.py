@@ -2,14 +2,14 @@
 SportsStack sample: build an optimized DFS lineup from a candidate pool.
 
 Use case: SportsStack DFS consumer provides a pool of player IDs (from today's slate).
-This script resolves DBB2 IDs, calls the lineup optimizer, and renders the result.
+This script resolves DELQUANT IDs, calls the lineup optimizer, and renders the result.
 """
 
 import os
 import requests
 from typing import Optional
 
-BASE_URL = os.environ["DBB2_BASE_URL"]
+BASE_URL = os.environ["DELQUANT_BASE_URL"]
 
 CANDIDATE_PLAYER_NAMES = [
     "203999",  # Nikola Jokić; ID lookup avoids accent-sensitive name matching.

@@ -1,7 +1,7 @@
 {
   "title": "FMVW projection bundle (26-27)",
-  "source_projection_file": "/Users/teebuphilip/Documents/work/dbb2-engine/output/projections.json",
-  "source_pool_file": "/Users/teebuphilip/Documents/work/dbb2-fmvw/data/fmvw_top360_2627.csv",
+  "source_projection_file": "/Users/teebuphilip/Documents/work/delquant-engine/output/projections.json",
+  "source_pool_file": "/Users/teebuphilip/Documents/work/delquant-fmvw/data/fmvw_top360_2627.csv",
   "player_count": 200,
   "rows": [
     {

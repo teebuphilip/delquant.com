@@ -10,7 +10,7 @@ import os
 import sys
 import requests
 
-BASE_URL = os.environ["DBB2_BASE_URL"]
+BASE_URL = os.environ["DELQUANT_BASE_URL"]
 
 
 def fetch_player_card(player_name: str, comp_count: int = 3) -> dict:

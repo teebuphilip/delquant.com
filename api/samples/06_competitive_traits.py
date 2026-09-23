@@ -11,7 +11,7 @@ import os
 import requests
 
 
-BASE_URL = os.environ["DBB2_BASE_URL"].rstrip("/")
+BASE_URL = os.environ["DELQUANT_BASE_URL"].rstrip("/")
 
 
 def get_json(path: str, **params) -> dict:
@@ -21,7 +21,7 @@ def get_json(path: str, **params) -> dict:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Query DBB2 competitive traits")
+    parser = argparse.ArgumentParser(description="Query DELQUANT competitive traits")
     parser.add_argument("--team", default="DEN", help="NBA team abbreviation")
     parser.add_argument("--position", default="C", help="Position code")
     parser.add_argument("--limit", type=int, default=5)

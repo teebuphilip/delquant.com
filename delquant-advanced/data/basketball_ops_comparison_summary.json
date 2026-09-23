@@ -23,9 +23,9 @@
       "2024-25": 8.402253,
       "2025-26": 8.997
     },
-    "output_dir": "/Users/teebuphilip/Documents/work/dbb2-engine/reports/basketball_ops/fmvw_backtest",
-    "team_csv": "/Users/teebuphilip/Documents/work/dbb2-engine/reports/basketball_ops/fmvw_backtest/fmvw_backtest_team_values.csv",
-    "player_csv": "/Users/teebuphilip/Documents/work/dbb2-engine/reports/basketball_ops/fmvw_backtest/fmvw_backtest_player_values.csv"
+    "output_dir": "/Users/teebuphilip/Documents/work/delquant-engine/reports/basketball_ops/fmvw_backtest",
+    "team_csv": "/Users/teebuphilip/Documents/work/delquant-engine/reports/basketball_ops/fmvw_backtest/fmvw_backtest_team_values.csv",
+    "player_csv": "/Users/teebuphilip/Documents/work/delquant-engine/reports/basketball_ops/fmvw_backtest/fmvw_backtest_player_values.csv"
   },
   "team_ops_backtest": {
     "curve": {

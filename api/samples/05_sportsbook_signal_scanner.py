@@ -2,14 +2,14 @@
 SportsStack sample: scan for sportsbook prop opportunities.
 
 Use case: SportsStack sportsbook consumer provides today's market lines. This script
-compares DBB2 category projections against those lines, flags significant divergences,
+compares DELQUANT category projections against those lines, flags significant divergences,
 and ranks them by edge magnitude.
 """
 
 import os
 import requests
 
-BASE_URL = os.environ["DBB2_BASE_URL"]
+BASE_URL = os.environ["DELQUANT_BASE_URL"]
 
 MARKET_LINES = {
     "203999": {"pts": 24.5, "reb": 11.5, "ast": 8.5},
@@ -27,17 +27,17 @@ def fetch_today_projections() -> dict[str, dict]:
 
 
 
-def scan_signals(dbb2: dict[str, dict]) -> list[dict]:
+def scan_signals(delquant: dict[str, dict]) -> list[dict]:
     signals = []
     for player_id, lines in MARKET_LINES.items():
-        if player_id not in dbb2:
+        if player_id not in delquant:
             continue
-        player = dbb2[player_id]
+        player = delquant[player_id]
         for stat, line in lines.items():
-            dbb2_val = player.get(stat)
-            if dbb2_val is None:
+            delquant_val = player.get(stat)
+            if delquant_val is None:
                 continue
-            edge = dbb2_val - line
+            edge = delquant_val - line
             if abs(edge) < MIN_EDGE:
                 continue
             signals.append({
@@ -45,7 +45,7 @@ def scan_signals(dbb2: dict[str, dict]) -> list[dict]:
                 "name": player["name"],
                 "team": player["team"],
                 "stat": stat,
-                "projection": dbb2_val,
+                "projection": delquant_val,
                 "line": line,
                 "edge": edge,
                 "side": "OVER" if edge > 0 else "UNDER",
@@ -56,12 +56,12 @@ def scan_signals(dbb2: dict[str, dict]) -> list[dict]:
 
 
 def main():
-    dbb2 = fetch_today_projections()
-    print(f"Loaded {len(dbb2)} DBB2 projections")
+    delquant = fetch_today_projections()
+    print(f"Loaded {len(delquant)} DELQUANT projections")
     print(f"Scanning against {len(MARKET_LINES)} player market lines")
     print(f"Filter: edge >= {MIN_EDGE}\n")
 
-    signals = scan_signals(dbb2)
+    signals = scan_signals(delquant)
 
     if not signals:
         print("No signals meeting threshold today.")

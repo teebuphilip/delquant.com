@@ -1,4 +1,4 @@
-# DBB2 / SportsStack Integration Samples
+# DELQUANT / SportsStack Integration Samples
 
 Six working Python samples covering the primary SportsStack integration use cases.
 
@@ -6,8 +6,8 @@ Six working Python samples covering the primary SportsStack integration use case
 
 ```bash
 pip install requests
-export DBB2_BASE_URL=<preview URL supplied with trial key>
-export DBB2_API_KEY=<trial key>
+export DELQUANT_BASE_URL=<preview URL supplied with trial key>
+export DELQUANT_API_KEY=<trial key>
 ```
 
 ## Samples
@@ -16,7 +16,7 @@ export DBB2_API_KEY=<trial key>
 ```bash
 python 01_ingest_projections.py
 ```
-Fetches today's DBB2 projection feed and maps DBB2 player IDs to SportsStack
+Fetches today's DELQUANT projection feed and maps DELQUANT player IDs to SportsStack
 universal IDs. This is the first step in any integration — run it once per day
 after the nightly refresh.
 
@@ -24,7 +24,7 @@ after the nightly refresh.
 ```bash
 python 02_provider_comparison.py
 ```
-Compares DBB2 projections against a provider consensus and surfaces divergences
+Compares DELQUANT projections against a provider consensus and surfaces divergences
 above a configurable threshold. Produces a ranked list of disagreements by stat
 and direction (HIGHER / LOWER).
 
@@ -39,15 +39,15 @@ comps — and renders a structured card. Accepts player name as an argument.
 ```bash
 python 04_dfs_lineup_builder.py
 ```
-Resolves a candidate pool of player names to DBB2 IDs, calls the lineup
+Resolves a candidate pool of player names to DELQUANT IDs, calls the lineup
 optimizer, and renders the optimal lineup with projected fantasy points.
 
 ### 05 — Sportsbook Signal Scanner
 ```bash
 python 05_sportsbook_signal_scanner.py
 ```
-Compares DBB2 category projections against today's market lines. Flags
-props where DBB2 shows a material edge above a minimum threshold and
+Compares DELQUANT category projections against today's market lines. Flags
+props where DELQUANT shows a material edge above a minimum threshold and
 ranks them by edge magnitude.
 
 ### 06 — Competitive Traits
@@ -59,7 +59,7 @@ team report endpoints and renders the available trait context.
 
 ## Notes
 
-- All samples use `DBB2_BASE_URL` and `DBB2_API_KEY` from environment.
+- All samples use `DELQUANT_BASE_URL` and `DELQUANT_API_KEY` from environment.
 - Player IDs and market lines in samples 02, 04, and 05 are placeholders.
   Replace with real IDs from the `/players/lookup` endpoint.
 - Samples are intentionally simple — no retry logic, no persistence layer.

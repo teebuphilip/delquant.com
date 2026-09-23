@@ -135,8 +135,8 @@
     }
   ],
   "paths": {
-    "player_scores": "/Users/teebuphilip/Documents/work/dbb2-engine/reports/roster_construction/strict_wins_bridge/strict_wins_player_scores.csv",
-    "summary": "/Users/teebuphilip/Documents/work/dbb2-engine/reports/roster_construction/strict_wins_bridge/strict_wins_summary.json",
-    "markdown": "/Users/teebuphilip/Documents/work/dbb2-engine/reports/roster_construction/strict_wins_bridge/strict_wins_summary.md"
+    "player_scores": "/Users/teebuphilip/Documents/work/delquant-engine/reports/roster_construction/strict_wins_bridge/strict_wins_player_scores.csv",
+    "summary": "/Users/teebuphilip/Documents/work/delquant-engine/reports/roster_construction/strict_wins_bridge/strict_wins_summary.json",
+    "markdown": "/Users/teebuphilip/Documents/work/delquant-engine/reports/roster_construction/strict_wins_bridge/strict_wins_summary.md"
   }
 }

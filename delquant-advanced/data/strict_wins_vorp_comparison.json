@@ -259,10 +259,10 @@
     }
   ],
   "paths": {
-    "csv": "/Users/teebuphilip/Documents/work/dbb2-engine/reports/roster_construction/vorp_comparison/strict_wins_vorp_comparison.csv",
-    "json": "/Users/teebuphilip/Documents/work/dbb2-engine/reports/roster_construction/vorp_comparison/strict_wins_vorp_comparison.json",
-    "markdown": "/Users/teebuphilip/Documents/work/dbb2-engine/reports/roster_construction/vorp_comparison/strict_wins_vorp_comparison.md",
-    "strict_wins": "/Users/teebuphilip/Documents/work/dbb2-engine/reports/roster_construction/strict_wins_bridge/strict_wins_player_scores.csv",
-    "vorp": "/Users/teebuphilip/Documents/work/dbb2-engine/data/benchmarks/vorp_player_seasons.csv"
+    "csv": "/Users/teebuphilip/Documents/work/delquant-engine/reports/roster_construction/vorp_comparison/strict_wins_vorp_comparison.csv",
+    "json": "/Users/teebuphilip/Documents/work/delquant-engine/reports/roster_construction/vorp_comparison/strict_wins_vorp_comparison.json",
+    "markdown": "/Users/teebuphilip/Documents/work/delquant-engine/reports/roster_construction/vorp_comparison/strict_wins_vorp_comparison.md",
+    "strict_wins": "/Users/teebuphilip/Documents/work/delquant-engine/reports/roster_construction/strict_wins_bridge/strict_wins_player_scores.csv",
+    "vorp": "/Users/teebuphilip/Documents/work/delquant-engine/data/benchmarks/vorp_player_seasons.csv"
   }
 }
