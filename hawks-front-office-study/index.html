@@ -217,7 +217,7 @@
         <div class="site-topline"><a class="brand" href="/">DelQuant</a><nav class="site-nav" aria-label="Primary"><a href="../b2b/">B2B</a><a href="../why-delquant/">Why DelQuant</a><a href="../competitors/">Compare</a><a href="../delquant-advanced/">Basketball Ops</a><a href="../developers/">Developers</a><a href="../methodology/">Methodology</a><a href="../contact/">Contact</a></nav></div>
         <div class="eyebrow">DelQuant Private Demo Output</div>
         <h1>Atlanta Hawks Roster Construction Study</h1>
-        <p>An RFP-style roster construction study using 54 archetypes, Championship DNA outputs, and the Motor / Decision / Pressure competitive trait layer.</p>
+        <p>An RFP-style roster construction study using 54 offensive and 31 defensive archetypes, Championship DNA outputs, and the Motor / Decision / Pressure competitive trait layer.</p>
       </div>
     </header>
 
@@ -235,7 +235,8 @@
         <div class="grid">
           <div class="card span-3"><div class="metric"><span>Seasons</span><strong id="season-count">--</strong></div></div>
           <div class="card span-3"><div class="metric"><span>Profiles</span><strong id="profile-count">--</strong></div></div>
-          <div class="card span-3"><div class="metric"><span>Archetypes</span><strong>54</strong></div></div>
+          <div class="card span-3"><div class="metric"><span>Offensive archetypes</span><strong>54</strong></div></div>
+          <div class="card span-3"><div class="metric"><span>Defensive archetypes</span><strong>31</strong></div></div>
           <div class="card span-3"><div class="metric"><span>Study Window</span><strong>31y</strong></div></div>
 
           <div class="card span-4">
@@ -484,7 +485,7 @@
         document.getElementById("method-note").innerHTML = `<p>${payload.meta.method_note}</p>`;
         const f = payload.framework;
         document.getElementById("framework").innerHTML = `
-          <h3>54 Archetypes</h3><p>${f.archetypes}</p>
+          <h3>54 Offensive / 31 Defensive Archetypes</h3><p>${f.archetypes}</p>
           <h3 style="margin-top:18px;">Championship DNA</h3><p>${f.championship_dna}</p>
           <h3 style="margin-top:18px;">Competitive Traits</h3>
           <p>${tag("Motor")} ${f.competitive_traits.motor}</p>

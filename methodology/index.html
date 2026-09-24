@@ -23,7 +23,7 @@
           </section>
           <aside class="hero-panel page-panel">
             <div class="stat"><span class="stat-label">Historical window</span><strong>31 NBA seasons</strong></div>
-            <div class="stat"><span class="stat-label">Player-shape layer</span><strong>54 archetype families</strong></div>
+            <div class="stat"><span class="stat-label">Player-shape layer</span><strong>54 offensive · 31 defensive families</strong></div>
             <div class="stat"><span class="stat-label">Core rule</span><strong>Show the receipt, then the model</strong></div>
           </aside>
         </div>
@@ -101,7 +101,8 @@
       <section class="section">
         <div class="section-head"><p class="eyebrow">Player-shape statistics</p><h2>From box-score shape to basketball role.</h2></div>
         <div class="grid three">
-          <article class="card prose"><h3>54 archetype families</h3><p>Players are mapped into position-specific clusters using scaled distance across points, rebounds, assists, steals, blocks, and made threes. The output includes the assigned family, distance from its centroid, and cluster confidence.</p></article>
+          <article class="card prose"><h3>54 offensive families</h3><p>Offensive player shapes are mapped into position-specific clusters using scaled distance across points, rebounds, assists, steals, blocks, and made threes. The output includes the assigned family, distance from its centroid, and cluster confidence.</p></article>
+          <article class="card prose"><h3>31 defensive families</h3><p>The defensive taxonomy adds a separate role layer for rim protection, pressure, possession control, matchup responsibility, and defensive impact. Offense and defense remain distinct signals until the decision requires them to be combined.</p></article>
           <article class="card prose"><h3>Archetype-prior variance</h3><p>A player’s observed variance can be blended toward the variance of the historical archetype. The current prior strength is 20 games, giving thin player samples a relevant role-based comparison.</p><div class="code">shrunk variance =
   (n × player variance + 20 × archetype variance)
   / (n + 20)</div></article>

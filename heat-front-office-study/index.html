@@ -209,7 +209,7 @@
       <div class="wrap">
         <div class="eyebrow">DelQuant Private Demo Output</div>
         <h1>How Miami Keeps Creating Value</h1>
-        <p>A roster construction study using 54 archetypes, Championship DNA outputs, and the Motor / Decision / Pressure competitive trait layer.</p>
+        <p>A roster construction study using 54 offensive and 31 defensive archetypes, Championship DNA outputs, and the Motor / Decision / Pressure competitive trait layer.</p>
       </div>
     </header>
 
@@ -227,7 +227,8 @@
         <div class="grid">
           <div class="card span-3"><div class="metric"><span>Seasons</span><strong id="season-count">--</strong></div></div>
           <div class="card span-3"><div class="metric"><span>Profiles</span><strong id="profile-count">--</strong></div></div>
-          <div class="card span-3"><div class="metric"><span>Archetypes</span><strong>54</strong></div></div>
+          <div class="card span-3"><div class="metric"><span>Offensive archetypes</span><strong>54</strong></div></div>
+          <div class="card span-3"><div class="metric"><span>Defensive archetypes</span><strong>31</strong></div></div>
           <div class="card span-3"><div class="metric"><span>Study Window</span><strong>31y</strong></div></div>
 
           <div class="card span-4">
@@ -468,7 +469,7 @@
         document.getElementById("method-note").innerHTML = `<p>${payload.meta.method_note}</p>`;
         const f = payload.framework;
         document.getElementById("framework").innerHTML = `
-          <h3>54 Archetypes</h3><p>${f.archetypes}</p>
+          <h3>54 Offensive / 31 Defensive Archetypes</h3><p>${f.archetypes}</p>
           <h3 style="margin-top:18px;">Championship DNA</h3><p>${f.championship_dna}</p>
           <h3 style="margin-top:18px;">Competitive Traits</h3>
           <p>${tag("Motor")} ${f.competitive_traits.motor}</p>

@@ -314,7 +314,7 @@
       <section id="method" class="tab-panel hidden">
         <div class="grid">
           <div class="card span-4">
-            <h2>54 Archetypes</h2>
+            <h2>54 Offensive / 31 Defensive Archetypes</h2>
             <p id="method-archetypes"></p>
           </div>
           <div class="card span-4">
@@ -416,7 +416,7 @@
             <div>
               <h3>${player.player_name}</h3>
               <span class="tag blue">${player.position || "--"}</span>
-              <span class="tag">${archetype.id || "archetype pending"} / 54</span>
+              <span class="tag">${archetype.id || "archetype pending"} / 54 offensive · 31 defensive</span>
               <span class="tag ${player.confidence_bucket === "strong" ? "good" : "warn"}">${player.confidence_bucket || "thin"} sample</span>
               <span class="tag">${minutesContext.label || "minutes pending"}</span>
               <p class="insight">${player.insight_read || player.coaching_note}</p>
