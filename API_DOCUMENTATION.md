@@ -73,14 +73,14 @@ Consumers should retain both their own universal player ID and DelQuant’s `pla
 - `GET /api/local/historical-projections` — retrieve no-lookahead projections for a past decision date.
 - `GET /api/team/player-profile` — retrieve projection, player context, archetype, risk, and historical comparison fields where available.
 
-## Short-horizon service profiles
+## Daily service profiles
 
 DelQuant separates the source projection layer from downstream decision products. The core feed remains the structural projection; short-horizon profiles add recency or slate context for the decision being made.
 
-- **WinstAPlayer** — market-focused player workflow using responsive projections for individual-market research and comparison. It consumes the structural feed plus the appropriate recency or game-day context; market filters, edge thresholds, and staking remain downstream application logic.
-- **DFSRase** — DFS-focused slate workflow using dated game-day projections and lineup tools. Salary, ownership, contest, exposure, and lineup rules remain in the DFS application layer.
+- **Daily projections** — responsive player projections for individual-market research and comparison. Market filters, edge thresholds, and staking remain downstream application logic.
+- **Daily slate** — dated game-day projections and lineup inputs for fantasy workflows. Salary, ownership, contest, exposure, and lineup rules remain in the downstream application layer.
 
-The primary integration surfaces are `GET /projections/today`, `GET /api/game-day/projections`, `POST /tools/lineup/optimize`, and `GET /tools/streaming-candidates`. Request the required horizon/profile contract during onboarding; do not treat either downstream service as a replacement for the structural projection.
+The dedicated service surfaces are `GET /api/services/daily/projections` and `GET /api/services/daily/slate`. They require the partner `X-API-Key` and a dated request. The underlying integration surfaces are `GET /projections/today`, `GET /api/game-day/projections`, `POST /tools/lineup/optimize`, and `GET /tools/streaming-candidates`. Do not treat either daily feed as a replacement for the structural projection.
 
 ## Authentication and errors
 
