@@ -8,9 +8,93 @@
   <style>
     .docs-hero h1{max-width:15ch}.docs-layout{display:grid;grid-template-columns:220px minmax(0,1fr);gap:24px}.docs-nav{position:sticky;top:20px;align-self:start}.docs-nav a{display:block;padding:8px 0;color:var(--muted)}.docs-nav a:hover{color:var(--accent)}.docs-section{scroll-margin-top:24px}.endpoint{margin:14px 0;padding:22px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.025)}.method{display:inline-block;margin-right:8px;color:var(--accent-3);font:700 12px ui-monospace,SFMono-Regular,Menlo,monospace}.path{color:var(--accent);font:700 15px ui-monospace,SFMono-Regular,Menlo,monospace}.code{margin-top:14px;padding:16px;border-radius:12px;background:rgba(0,0,0,.3);overflow:auto;color:var(--accent);font:13px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace;white-space:pre}.card{padding:24px}.card-label{display:block;margin-bottom:9px;color:var(--accent);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}.fine-print{color:var(--muted);font-size:13px}@media(max-width:800px){.docs-layout{grid-template-columns:1fr}.docs-nav{position:static}}
   </style>
+  <style>
+    .docs-page {
+      --docs-bg: #0b131b;
+      --docs-panel: #141e27;
+      --docs-line: #2d3a44;
+      --docs-text: #f5f3ed;
+      --docs-muted: #b9c4ca;
+      --docs-accent: #eafb68;
+      background: var(--docs-bg);
+      color: var(--docs-text);
+      font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    }
+
+    .docs-page .noise { opacity: .035; }
+    .docs-page .hero { padding: 0; background: #0a131c; border-bottom: 1px solid var(--docs-line); }
+    .docs-page .shell { width: 100%; max-width: none; }
+    .docs-page .topline { height: 82px; margin: 0; padding: 0 clamp(24px, 4vw, 72px); gap: 34px; }
+    .docs-page .brand { color: var(--docs-text); font: 800 20px/1 Georgia, "Times New Roman", serif; letter-spacing: .16em; }
+    .docs-page .brand span { color: var(--docs-accent); }
+    .docs-page .site-nav { display: flex; align-items: center; gap: clamp(16px, 2.1vw, 36px); margin: auto; color: #cbd1d5; font-size: 13px; }
+    .docs-page .site-nav a { transition: color .25s; }
+    .docs-page .site-nav a:hover { color: var(--docs-accent); text-decoration: none; }
+    .docs-page .header-cta { border-radius: 99px; padding: 13px 20px; background: var(--docs-accent); color: #0b131b; font-size: 12px; font-weight: 700; white-space: nowrap; }
+    .docs-page .hero-grid { grid-template-columns: minmax(0, 1.3fr) minmax(300px, .7fr); gap: clamp(40px, 7vw, 110px); align-items: center; padding: 90px clamp(24px, 8vw, 140px) 100px; }
+    .docs-page .hero-copy, .docs-page .hero-panel, .docs-page .card { border-radius: 0; box-shadow: none; }
+    .docs-page .hero-copy { max-width: 760px; padding: 0; background: transparent; border: 0; }
+    .docs-page .eyebrow { color: var(--docs-accent); font-size: 11px; letter-spacing: .22em; }
+    .docs-page h1, .docs-page h2, .docs-page h3 { font-family: Georgia, "Times New Roman", serif; }
+    .docs-page h1 { max-width: 11ch; color: var(--docs-text); font-size: clamp(58px, 7vw, 104px); letter-spacing: -.07em; line-height: .96; }
+    .docs-page .lede { max-width: 650px; color: #d0d9dd; font-size: 16px; line-height: 1.7; }
+    .docs-page .cta-row { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 32px; }
+    .docs-page .button { display: inline-flex; align-items: center; justify-content: center; min-height: 50px; border-radius: 99px; padding: 0 23px; font-size: 13px; font-weight: 700; transition: transform .25s, background .25s, border-color .25s; }
+    .docs-page .button:hover { transform: translateY(-3px); text-decoration: none; }
+    .docs-page .button-primary { border: 1px solid var(--docs-accent); background: var(--docs-accent); color: #0b131b; }
+    .docs-page .button-secondary { border: 1px solid #9ea7aa; background: transparent; color: var(--docs-text); }
+    .docs-page .button-secondary:hover { border-color: var(--docs-accent); }
+    .docs-page .hero-panel { display: grid; gap: 0; padding: 0; background: rgba(20, 30, 39, .8); border: 1px solid #394752; }
+    .docs-page .hero-panel .stat { padding: 25px 28px; border-bottom: 1px solid var(--docs-line); }
+    .docs-page .hero-panel .stat:last-child { border-bottom: 0; }
+    .docs-page .stat-label { display: block; margin-bottom: 8px; color: #a7b3b9; font-size: 10px; letter-spacing: .16em; text-transform: uppercase; }
+    .docs-page .stat strong { color: var(--docs-text); font: 700 clamp(22px, 2.4vw, 32px)/1.1 Georgia, "Times New Roman", serif; }
+    .docs-page main.shell { padding: 0 clamp(24px, 8vw, 140px); }
+    .docs-page .docs-layout { grid-template-columns: 220px minmax(0, 1fr); gap: clamp(35px, 6vw, 90px); }
+    .docs-page article { min-width: 0; }
+    .docs-page .docs-nav { top: 24px; padding-top: 90px; }
+    .docs-page .docs-nav a { padding: 8px 0; color: #aab7bd; font-size: 12px; transition: color .2s; }
+    .docs-page .docs-nav a:hover { color: var(--docs-accent); text-decoration: none; }
+    .docs-page .section { padding: 92px 0 100px; border-bottom: 1px solid var(--docs-line); }
+    .docs-page .section-head { margin-bottom: 34px; }
+    .docs-page h2 { max-width: 15ch; color: var(--docs-text); font-size: clamp(38px, 4.5vw, 68px); letter-spacing: -.06em; line-height: .98; }
+    .docs-page .section-head .lede { max-width: 580px; margin-top: 18px; }
+    .docs-page .card, .docs-page .endpoint { margin: 14px 0; padding: 25px; background: var(--docs-panel); border: 1px solid #394752; color: var(--docs-text); }
+    .docs-page .card p, .docs-page .endpoint p, .docs-page .section-list { color: var(--docs-muted); line-height: 1.7; }
+    .docs-page .endpoint { border-radius: 12px; }
+    .docs-page .method, .docs-page .path, .docs-page .code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .docs-page .method { color: #b6ef69; }
+    .docs-page .path { color: var(--docs-accent); }
+    .docs-page .code { padding: 17px; background: #0d171f; border: 1px solid #263640; color: #d9e6d2; line-height: 1.65; }
+    .docs-page code, .docs-page .tag { color: var(--docs-accent); }
+    .docs-page .tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+    .docs-page .tag { padding: 7px 10px; border: 1px solid #5b6c50; border-radius: 99px; font: 11px ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .docs-page .fine-print { color: #95a4ab; }
+    .docs-page .section-list { padding-left: 20px; }
+    .docs-page .section-list li + li { margin-top: 8px; }
+    @media (max-width: 800px) {
+      .docs-page .topline { height: auto; min-height: 72px; padding-top: 18px; padding-bottom: 18px; }
+      .docs-page .site-nav { gap: 16px; margin: 0; flex-wrap: wrap; }
+      .docs-page .header-cta { display: none; }
+      .docs-page .hero-grid { grid-template-columns: 1fr; padding-top: 65px; padding-bottom: 75px; }
+      .docs-page .docs-layout { grid-template-columns: 1fr; }
+      .docs-page .docs-nav { position: static; padding-top: 30px; display: flex; flex-wrap: wrap; gap: 5px 18px; border-bottom: 1px solid var(--docs-line); padding-bottom: 24px; }
+      .docs-page .docs-nav .eyebrow { width: 100%; }
+    }
+    @media (max-width: 560px) {
+      .docs-page .site-nav { display: none; }
+      .docs-page .hero-grid { padding-right: 24px; padding-left: 24px; }
+      .docs-page h1 { font-size: clamp(50px, 14vw, 76px); }
+      .docs-page .cta-row { align-items: stretch; flex-direction: column; }
+      .docs-page .button { width: 100%; }
+      .docs-page main.shell { padding: 0 24px; }
+      .docs-page .section { padding: 70px 0 75px; }
+      .docs-page .card, .docs-page .endpoint { padding: 18px; }
+    }
+  </style>
 </head>
-<body><div class="noise" aria-hidden="true"></div>
-<header class="hero docs-hero"><div class="shell"><div class="topline page-topline"><a class="brand" href="/">DelQuant</a><nav class="site-nav" aria-label="Primary"><a href="../b2b/">B2B</a><a href="../why-delquant/">Why DelQuant</a><a href="../competitors/">Compare</a><a href="../delquant-advanced/">Basketball Ops</a><a href="../developers/">Developers</a><a href="../methodology/">Methodology</a><a href="../contact/">Contact</a></nav></div><div class="hero-grid"><section class="hero-copy"><p class="eyebrow">Public developer documentation</p><h1>Build on DelQuant NBA intelligence.</h1><p class="lede">Use the API to ingest projections, player context, historical replay, archetypes, and decision tools into your own product. Use DelQuant as your provider—or add it alongside your current source.</p><div class="cta-row"><a class="button button-primary" href="../api/delquant-api-samples.zip" download>Download sample kit</a><a class="button button-secondary" href="mailto:teebu@delquant.com?subject=DelQuant%20API%20access">Request API access</a></div></section><aside class="hero-panel"><div class="stat"><span class="stat-label">API version</span><strong>1.2.0</strong></div><div class="stat"><span class="stat-label">Delivery</span><strong>JSON · API · batch</strong></div><div class="stat"><span class="stat-label">Refresh</span><strong>Nightly and pre-game</strong></div></aside></div></div></header>
+<body class="docs-page"><div class="noise" aria-hidden="true"></div>
+<header class="hero docs-hero"><div class="shell"><div class="topline page-topline"><a class="brand" href="../">DELQUANT<span>.</span></a><nav class="site-nav" aria-label="Primary"><a href="../#intelligence">The platform</a><a href="../#solutions">Solutions</a><a href="../methodology/">Methodology</a><a href="../developers/">Developers</a><a href="../contact/">Contact</a></nav><a class="header-cta" href="mailto:teebu@delquant.com?subject=DelQuant%20demo%20request">Request a demo <span aria-hidden="true">→</span></a></div><div class="hero-grid"><section class="hero-copy"><p class="eyebrow">Public developer documentation</p><h1>Build on DelQuant NBA intelligence.</h1><p class="lede">Use the API to ingest projections, player context, historical replay, archetypes, and decision tools into your own product. Use DelQuant as your provider—or add it alongside your current source.</p><div class="cta-row"><a class="button button-primary" href="../api/delquant-api-samples.zip" download>Download sample kit <span aria-hidden="true">→</span></a><a class="button button-secondary" href="mailto:teebu@delquant.com?subject=DelQuant%20API%20access">Request API access <span aria-hidden="true">→</span></a></div></section><aside class="hero-panel"><div class="stat"><span class="stat-label">API version</span><strong>1.2.0</strong></div><div class="stat"><span class="stat-label">Delivery</span><strong>JSON · API · batch</strong></div><div class="stat"><span class="stat-label">Refresh</span><strong>Nightly and pre-game</strong></div></aside></div></div></header>
 <main class="shell"><div class="docs-layout"><aside class="docs-nav"><p class="eyebrow">On this page</p><a href="#quickstart">Quickstart</a><a href="#service">Service</a><a href="#auth">Authentication</a><a href="#projections">Live projections</a><a href="#horizons">Projection horizons</a><a href="#replay">Historical replay</a><a href="#intelligence">Player intelligence</a><a href="#archetypes">Archetypes and traits</a><a href="#tools">Decision tools</a><a href="#internal">Protected feeds</a><a href="#samples">Sample outputs</a></aside><article>
 <section class="section docs-section" id="quickstart"><div class="section-head"><p class="eyebrow">01 · Quickstart</p><h2>Make your first request.</h2><p class="lede">Resolve a canonical player, pull a projection, then add the context your product needs.</p></div><div class="card"><div class="code">export DELQUANT_BASE_URL="https://backend-production-644d7.up.railway.app"
 export DELQUANT_API_KEY="YOUR_API_KEY"
