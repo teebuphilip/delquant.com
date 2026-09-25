@@ -68,7 +68,7 @@ export function App() {
 
   return <div className="site-shell">
     <header className="site-header" id="top">
-      <a className="brand" href="#top" aria-label="DelQuant home">DELQUANT<span>.</span></a>
+      <a className="brand" href="#top" aria-label="DelQuant home">DELQUANT</a>
       <nav className={menuOpen ? 'nav open' : 'nav'} aria-label="Main navigation">
         <a href="#intelligence" onClick={() => setMenuOpen(false)}>The platform</a><a href="#solutions" onClick={() => setMenuOpen(false)}>Solutions</a><a href="#method" onClick={() => setMenuOpen(false)}>Methodology</a><a href="https://delquant.com/developers/" onClick={() => setMenuOpen(false)}>Developers</a><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
       </nav>
@@ -88,6 +88,6 @@ export function App() {
       <section className="proof section-pad" id="work" aria-labelledby="proof-title"><div className="proof-heading reveal"><div><div className="eyebrow">PUBLIC WORK / REAL USE CASES</div><h2 id="proof-title">SEE THE THINKING<br/>BEHIND THE NUMBERS<span className="period">.</span></h2></div><p>Explore how player intelligence becomes valuation, team analysis, and decisions.</p></div><div className="proof-list reveal"><a href="https://delquant.com/delquant-advanced/"><span>01 / BASKETBALL OPS</span><strong>From player value to team decisions</strong><Arrow/></a><a href="https://delquant.com/hawks-front-office-study/"><span>02 / TEAM STUDY</span><strong>A front-office view of player context</strong><Arrow/></a><a href="https://delquant.com/heat-front-office-study/"><span>03 / ROSTER STUDY</span><strong>Building a long-run roster identity</strong><Arrow/></a></div></section>
       <section className="contact section-pad" id="contact"><div className="reveal"><div className="eyebrow">LET'S BUILD A SMARTER BASKETBALL FUTURE</div><h2>Turn player intelligence<br/>into your advantage.</h2></div><div className="contact-actions reveal"><a className="button primary" href="mailto:teebu@delquant.com?subject=DelQuant%20pilot%20inquiry">Request a pilot <Arrow/></a><a className="button outline" href="mailto:teebu@delquant.com?subject=Talk%20to%20DelQuant">Talk to our team <Arrow/></a></div><div className="contact-tag">SAME GAME.<br/>DEEPER INSIGHT.</div></section>
     </main>
-    <footer><a className="brand" href="#top">DELQUANT<span>.</span></a><nav aria-label="Footer navigation"><a href="#intelligence">Platform</a><a href="#solutions">Solutions</a><a href="https://delquant.com/methodology/">Methodology</a><a href="https://delquant.com/developers/">Developers</a><a href="#contact">Contact</a></nav><span>NBA INTELLIGENCE FOR A BRIGHTER EDGE.</span></footer>
+    <footer><a className="brand" href="#top">DELQUANT</a><nav aria-label="Footer navigation"><a href="#intelligence">Platform</a><a href="#solutions">Solutions</a><a href="https://delquant.com/methodology/">Methodology</a><a href="https://delquant.com/developers/">Developers</a><a href="#contact">Contact</a></nav><span>NBA INTELLIGENCE FOR A BRIGHTER EDGE.</span></footer>
   </div>;
 }
