@@ -80,7 +80,7 @@ DelQuant separates the source projection layer from downstream decision products
 - **Daily projections** — responsive player projections for individual-market research and comparison. Market filters, edge thresholds, and staking remain downstream application logic.
 - **Daily slate** — dated game-day projections and lineup inputs for fantasy workflows. Salary, ownership, contest, exposure, and lineup rules remain in the downstream application layer.
 
-The dedicated service surfaces are `GET /api/services/daily/projections` and `GET /api/services/daily/slate`. They require the partner `X-API-Key` and a dated request. The underlying integration surfaces are `GET /projections/today`, `GET /api/game-day/projections`, `POST /tools/lineup/optimize`, and `GET /tools/streaming-candidates`. Do not treat either daily feed as a replacement for the structural projection.
+The dedicated service surfaces are `GET /api/services/daily/projections` and `GET /api/services/daily/slate`. They require the partner `X-API-Key` and a dated request. Historical responses include `as_of_timestamp`, `model_version`, `no_lookahead`, and `game_id_source`; the current timestamp is a deterministic date-level cutoff, not tipoff-aligned. The underlying integration surfaces are `GET /projections/today`, `GET /api/game-day/projections`, `POST /tools/lineup/optimize`, and `GET /tools/streaming-candidates`. Do not treat either daily feed as a replacement for the structural projection.
 
 ## Authentication and errors
 
