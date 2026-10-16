@@ -1,0 +1,691 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="DelQuant Game Brief — Philadelphia 76ers at New York Knicks, October 20 2026. NBA intelligence for media analysts." />
+    <title>DelQuant | Game Brief Sample — PHI @ NYK Oct 20 2026</title>
+    <link rel="stylesheet" href="../site.css" />
+    <style>
+      .brief-hero {
+        padding: 60px 0 48px;
+        border-bottom: 1px solid var(--line);
+      }
+      .brief-matchup {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 8px;
+      }
+      .brief-matchup .team-a { color: var(--accent); font-weight: 700; font-size: 1.5rem; }
+      .brief-matchup .at { color: var(--muted); font-size: 1.1rem; }
+      .brief-matchup .team-b { color: var(--text); font-weight: 700; font-size: 1.5rem; }
+      .brief-meta {
+        color: var(--muted);
+        font-size: 13px;
+        margin-top: 6px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+      .brief-meta span::before { content: "·"; margin-right: 8px; color: var(--line); }
+      .brief-meta span:first-child::before { content: ""; margin: 0; }
+      .packet-type {
+        display: inline-block;
+        background: rgba(234, 251, 104, 0.1);
+        border: 1px solid rgba(234, 251, 104, 0.25);
+        color: var(--accent);
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 3px 10px;
+        border-radius: 3px;
+        margin-bottom: 20px;
+      }
+
+      .brief-body {
+        padding: 60px 0 80px;
+      }
+
+      .brief-grid {
+        display: grid;
+        grid-template-columns: 1fr 340px;
+        gap: 48px;
+        align-items: start;
+      }
+
+      @media (max-width: 780px) {
+        .brief-grid { grid-template-columns: 1fr; }
+      }
+
+      .brief-section {
+        margin-bottom: 52px;
+      }
+      .brief-section:last-child { margin-bottom: 0; }
+
+      .section-label {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 16px;
+      }
+
+      .morning-read {
+        background: var(--panel-2);
+        border-left: 3px solid var(--accent);
+        border-radius: 0 6px 6px 0;
+        padding: 24px 28px;
+        margin-bottom: 32px;
+      }
+      .morning-read p { margin: 0 0 12px; color: var(--text); font-size: 15px; line-height: 1.65; }
+      .morning-read p:last-child { margin-bottom: 0; }
+
+      .broadcast-setup {
+        font-size: 16px;
+        font-style: italic;
+        color: var(--muted);
+        border-top: 1px solid var(--line);
+        padding-top: 16px;
+        margin-top: 16px;
+        line-height: 1.6;
+      }
+
+      .storyline {
+        background: var(--panel-2);
+        border-radius: 8px;
+        padding: 24px 28px;
+        margin-bottom: 16px;
+        border: 1px solid var(--line);
+      }
+      .storyline-num {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--accent-2);
+        margin-bottom: 8px;
+      }
+      .storyline h3 {
+        margin: 0 0 12px;
+        font-size: 15px;
+        font-weight: 700;
+        color: var(--text);
+        line-height: 1.4;
+      }
+      .storyline p {
+        margin: 0 0 12px;
+        font-size: 14px;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+      .storyline p:last-child { margin-bottom: 0; }
+      .storyline-meta {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        margin-top: 14px;
+        padding-top: 14px;
+        border-top: 1px solid var(--line);
+      }
+      .storyline-meta-item { font-size: 12px; }
+      .storyline-meta-label { color: var(--muted); font-weight: 600; margin-bottom: 2px; }
+      .storyline-meta-val { color: var(--text); font-size: 12px; line-height: 1.4; }
+      .risk-badge {
+        display: inline-block;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        padding: 2px 7px;
+        border-radius: 3px;
+      }
+      .risk-low { background: rgba(182, 239, 105, 0.15); color: var(--accent-3); border: 1px solid rgba(182, 239, 105, 0.3); }
+      .risk-med { background: rgba(210, 160, 105, 0.15); color: var(--accent-2); border: 1px solid rgba(210, 160, 105, 0.3); }
+      .risk-high { background: rgba(255, 120, 80, 0.12); color: #ff9060; border: 1px solid rgba(255, 120, 80, 0.25); }
+
+      .player-card {
+        background: var(--panel-2);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 20px 24px;
+        margin-bottom: 12px;
+      }
+      .player-card:last-child { margin-bottom: 0; }
+      .player-header {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        margin-bottom: 6px;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+      .player-name {
+        font-size: 15px;
+        font-weight: 700;
+        color: var(--text);
+      }
+      .player-team {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-left: 6px;
+      }
+      .player-role {
+        font-size: 12px;
+        color: var(--muted);
+        margin-bottom: 10px;
+        font-style: italic;
+      }
+      .player-stats {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+      }
+      .stat-item { text-align: center; }
+      .stat-val { font-size: 18px; font-weight: 700; color: var(--accent); line-height: 1.1; }
+      .stat-lbl { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+      .player-comp {
+        font-size: 12px;
+        color: var(--muted);
+        margin-top: 8px;
+        padding-top: 8px;
+        border-top: 1px solid var(--line);
+        line-height: 1.5;
+      }
+      .player-comp strong { color: var(--text); }
+
+      .proj-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 13px;
+      }
+      .proj-table th {
+        text-align: left;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--muted);
+        padding: 8px 10px;
+        border-bottom: 1px solid var(--line);
+        white-space: nowrap;
+      }
+      .proj-table th:not(:first-child) { text-align: right; }
+      .proj-table td {
+        padding: 10px 10px;
+        border-bottom: 1px solid rgba(190, 211, 220, 0.07);
+        color: var(--text);
+      }
+      .proj-table td:not(:first-child) { text-align: right; color: var(--muted); }
+      .proj-table td:nth-child(3),
+      .proj-table td:nth-child(4),
+      .proj-table td:nth-child(5) { font-variant-numeric: tabular-nums; font-weight: 600; color: var(--text); }
+      .proj-table .team-phi { color: var(--accent); font-size: 10px; font-weight: 700; letter-spacing: 0.06em; }
+      .proj-table .team-nyk { color: var(--accent-2); font-size: 10px; font-weight: 700; letter-spacing: 0.06em; }
+      .proj-table tr:last-child td { border-bottom: none; }
+
+      .sidebar-panel {
+        background: var(--panel-2);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 24px;
+        margin-bottom: 20px;
+      }
+      .sidebar-panel:last-child { margin-bottom: 0; }
+      .sidebar-label {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 16px;
+      }
+      .sidebar-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 8px 0;
+        border-bottom: 1px solid rgba(190, 211, 220, 0.07);
+        font-size: 13px;
+      }
+      .sidebar-row:last-child { border-bottom: none; }
+      .sidebar-key { color: var(--muted); flex: 1; }
+      .sidebar-val { color: var(--text); text-align: right; font-weight: 600; }
+
+      .comp-row {
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(190, 211, 220, 0.07);
+        font-size: 13px;
+      }
+      .comp-row:last-child { border-bottom: none; }
+      .comp-current { color: var(--text); font-weight: 600; margin-bottom: 2px; }
+      .comp-hist { color: var(--muted); font-size: 12px; }
+      .comp-hist strong { color: var(--accent-2); }
+
+      .guardrail-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .guardrail-list li {
+        font-size: 13px;
+        color: var(--muted);
+        padding: 5px 0;
+        border-bottom: 1px solid rgba(190, 211, 220, 0.06);
+        padding-left: 16px;
+        position: relative;
+        line-height: 1.4;
+      }
+      .guardrail-list li:last-child { border-bottom: none; }
+      .guardrail-list li::before {
+        content: "→";
+        position: absolute;
+        left: 0;
+        color: var(--accent);
+        font-size: 11px;
+      }
+
+      .provenance-note {
+        font-size: 12px;
+        color: var(--muted);
+        padding: 12px 16px;
+        background: rgba(255,255,255,0.03);
+        border-radius: 4px;
+        border: 1px solid var(--line);
+        line-height: 1.5;
+        margin-top: 12px;
+      }
+      .provenance-note strong { color: var(--text); }
+
+      .talking-points {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .talking-points li {
+        font-size: 14px;
+        color: var(--muted);
+        padding: 7px 0 7px 18px;
+        position: relative;
+        border-bottom: 1px solid rgba(190, 211, 220, 0.06);
+        line-height: 1.5;
+      }
+      .talking-points li:last-child { border-bottom: none; }
+      .talking-points li::before {
+        content: "–";
+        position: absolute;
+        left: 0;
+        color: var(--accent-2);
+      }
+      .talking-phase {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin: 16px 0 6px;
+      }
+      .talking-phase:first-child { margin-top: 0; }
+
+      .cta-strip {
+        background: var(--panel-2);
+        border: 1px solid var(--line);
+        border-top: 2px solid var(--accent);
+        border-radius: 8px;
+        padding: 28px 32px;
+        margin-top: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        flex-wrap: wrap;
+      }
+      .cta-copy h3 { margin: 0 0 6px; font-size: 16px; color: var(--text); }
+      .cta-copy p { margin: 0; font-size: 14px; color: var(--muted); }
+      .cta-btn {
+        display: inline-block;
+        background: var(--accent);
+        color: #0b131b;
+        font-weight: 700;
+        font-size: 13px;
+        letter-spacing: 0.04em;
+        padding: 11px 24px;
+        border-radius: 4px;
+        white-space: nowrap;
+        text-decoration: none;
+        transition: opacity 0.2s;
+      }
+      .cta-btn:hover { opacity: 0.85; text-decoration: none; }
+    </style>
+  </head>
+  <body>
+    <div class="noise"></div>
+
+    <header>
+      <div class="shell">
+        <div class="topline page-topline">
+          <a class="brand" href="/">DelQuant</a>
+          <nav class="site-nav" aria-label="Primary">
+            <a href="../sports-media/">Sports Media</a>
+            <a href="../b2b/">B2B</a>
+            <a href="../methodology/">Methodology</a>
+            <a href="../contact/">Contact</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <div class="brief-hero">
+      <div class="shell">
+        <div class="packet-type">Featured Game Brief · Public Sample</div>
+        <div class="brief-matchup">
+          <span class="team-a">Philadelphia 76ers</span>
+          <span class="at">at</span>
+          <span class="team-b">New York Knicks</span>
+        </div>
+        <div class="brief-meta">
+          <span>Tuesday, October 20, 2026</span>
+          <span>7:00 p.m. ET</span>
+          <span>Madison Square Garden</span>
+          <span>NBA Opening Night</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="brief-body">
+      <div class="shell">
+        <div class="brief-grid">
+
+          <main>
+
+            <div class="brief-section">
+              <div class="section-label">The morning read</div>
+              <div class="morning-read">
+                <p>This is the opening-night game with the strongest built-in media frame: New York raises its championship banner at home while Philadelphia introduces a new version of its core on a national stage.</p>
+                <p>The useful analytical question is not simply whether the game features famous players. It is how the two teams distribute creation around their primary stars: New York has a Brunson-led half-court engine with Karl-Anthony Towns as a scoring and rebounding frontcourt partner; Philadelphia has to make the Embiid–Maxey–LeBron combination fit immediately, with V.J. Edgecombe adding a new perimeter role to the mix.</p>
+                <div class="broadcast-setup">"Ring night gives New York the emotional headline, but the basketball story is whether Philadelphia can turn three different creation profiles — Embiid's interior gravity, Maxey's speed, and LeBron's passing — into one coherent opening-night offense."</div>
+              </div>
+            </div>
+
+            <div class="brief-section">
+              <div class="section-label">What matters tonight</div>
+
+              <div class="storyline">
+                <div class="storyline-num">Story candidate 1</div>
+                <h3>Can Philadelphia make the new hierarchy visible immediately?</h3>
+                <p>Philadelphia's preseason-context projection has Embiid at 27.0 points, Maxey at 23.9, and LeBron at 21.2 with 7.8 assists. That is three different ways to create an advantage. The opening-night story is how often the Sixers connect those advantages without letting the offense become a sequence of isolated star possessions.</p>
+                <p><strong style="color:var(--text)">Analyst prompt:</strong> Who is initiating the possession, who is bending the defense, and who is finishing the advantage?</p>
+                <div class="storyline-meta">
+                  <div class="storyline-meta-item">
+                    <div class="storyline-meta-label">Evidence</div>
+                    <div class="storyline-meta-val">Refreshed preseason-context projections; MIN: Embiid 31.7, Maxey 35.8, LeBron 33.8</div>
+                  </div>
+                  <div class="storyline-meta-item">
+                    <div class="storyline-meta-label">Uncertainty</div>
+                    <div class="storyline-meta-val"><span class="risk-badge risk-high">High</span> — confirm starting lineup and rotation before air</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="storyline">
+                <div class="storyline-num">Story candidate 2</div>
+                <h3>Banner night is also a spacing and rebounding test for New York</h3>
+                <p>Brunson is projected for 24.3 points and 7.5 assists. Towns for 19.9 points and 11.2 rebounds. The question for the broadcast is whether Philadelphia's interior attention pulls Towns away from the glass or opens enough space for him to punish the matchup elsewhere.</p>
+                <p><strong style="color:var(--text)">Analyst prompt:</strong> If Philadelphia loads toward Brunson, does Towns become the release valve, the second scorer, or the possession finisher?</p>
+                <div class="storyline-meta">
+                  <div class="storyline-meta-item">
+                    <div class="storyline-meta-label">Evidence</div>
+                    <div class="storyline-meta-val">Refreshed preseason-context projections; Towns 11.2 REB, Brunson 7.5 AST</div>
+                  </div>
+                  <div class="storyline-meta-item">
+                    <div class="storyline-meta-label">Uncertainty</div>
+                    <div class="storyline-meta-val"><span class="risk-badge risk-med">Medium</span> — structural season projection, not game-specific</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="storyline">
+                <div class="storyline-num">Story candidate 3</div>
+                <h3>The perimeter matchup may decide how much freedom the stars get</h3>
+                <p>OG Anunoby is projected for 16.0 points, 5.3 rebounds, and 1.4 steals. V.J. Edgecombe — projected for 15.9 points and 5.0 assists — is the new Philadelphia variable. His opening-night role is not yet a settled fact. Philadelphia's new perimeter shape has to survive New York's length long enough for the frontcourt stars to matter.</p>
+                <p><strong style="color:var(--text)">Analyst prompt:</strong> Is Edgecombe being asked to create, space, defend, or simply connect the three established stars?</p>
+                <div class="storyline-meta">
+                  <div class="storyline-meta-item">
+                    <div class="storyline-meta-label">Evidence</div>
+                    <div class="storyline-meta-val">Refreshed preseason-context projections and role/minutes fields</div>
+                  </div>
+                  <div class="storyline-meta-item">
+                    <div class="storyline-meta-label">Uncertainty</div>
+                    <div class="storyline-meta-val"><span class="risk-badge risk-high">High</span> — young-player role especially sensitive to final lineup</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="brief-section">
+              <div class="section-label">Player cards</div>
+
+              <div class="player-card">
+                <div class="player-header">
+                  <div><span class="player-name">Joel Embiid</span><span class="player-team">PHI</span></div>
+                  <span class="risk-badge risk-med">Medium risk</span>
+                </div>
+                <div class="player-role">Primary interior scorer and offensive hub</div>
+                <div class="player-stats">
+                  <div class="stat-item"><div class="stat-val">27.0</div><div class="stat-lbl">PTS</div></div>
+                  <div class="stat-item"><div class="stat-val">8.8</div><div class="stat-lbl">REB</div></div>
+                  <div class="stat-item"><div class="stat-val">4.1</div><div class="stat-lbl">AST</div></div>
+                  <div class="stat-item"><div class="stat-val">31.7</div><div class="stat-lbl">MIN</div></div>
+                </div>
+                <div class="player-comp">
+                  <strong>Historical shape:</strong> Closest working archive comparison — Karl-Anthony Towns, 2021-22. Scoring big with rebounding and passing load. Descriptive shape match, not a forecast.
+                </div>
+              </div>
+
+              <div class="player-card">
+                <div class="player-header">
+                  <div><span class="player-name">Tyrese Maxey</span><span class="player-team">PHI</span></div>
+                  <span class="risk-badge risk-low">Low risk</span>
+                </div>
+                <div class="player-role">Lead perimeter creator and pace pressure</div>
+                <div class="player-stats">
+                  <div class="stat-item"><div class="stat-val">23.9</div><div class="stat-lbl">PTS</div></div>
+                  <div class="stat-item"><div class="stat-val">4.0</div><div class="stat-lbl">REB</div></div>
+                  <div class="stat-item"><div class="stat-val">5.7</div><div class="stat-lbl">AST</div></div>
+                  <div class="stat-item"><div class="stat-val">35.8</div><div class="stat-lbl">MIN</div></div>
+                </div>
+                <div class="player-comp">
+                  <strong>Historical shape:</strong> Closest working archive comparison — Jamal Murray, 2024-25. High-minute scoring guard with meaningful assist creation.
+                </div>
+              </div>
+
+              <div class="player-card">
+                <div class="player-header">
+                  <div><span class="player-name">LeBron James</span><span class="player-team">PHI</span></div>
+                  <span class="risk-badge risk-low">Low risk</span>
+                </div>
+                <div class="player-role">Secondary creator, connective passer, and matchup amplifier</div>
+                <div class="player-stats">
+                  <div class="stat-item"><div class="stat-val">21.2</div><div class="stat-lbl">PTS</div></div>
+                  <div class="stat-item"><div class="stat-val">6.8</div><div class="stat-lbl">REB</div></div>
+                  <div class="stat-item"><div class="stat-val">7.8</div><div class="stat-lbl">AST</div></div>
+                  <div class="stat-item"><div class="stat-val">33.8</div><div class="stat-lbl">MIN</div></div>
+                </div>
+              </div>
+
+              <div class="player-card">
+                <div class="player-header">
+                  <div><span class="player-name">Jalen Brunson</span><span class="player-team">NYK</span></div>
+                  <span class="risk-badge risk-low">Low risk</span>
+                </div>
+                <div class="player-role">Primary half-court creator and late-clock decision maker</div>
+                <div class="player-stats">
+                  <div class="stat-item"><div class="stat-val">24.3</div><div class="stat-lbl">PTS</div></div>
+                  <div class="stat-item"><div class="stat-val">2.9</div><div class="stat-lbl">REB</div></div>
+                  <div class="stat-item"><div class="stat-val">7.5</div><div class="stat-lbl">AST</div></div>
+                  <div class="stat-item"><div class="stat-val">34.4</div><div class="stat-lbl">MIN</div></div>
+                </div>
+                <div class="player-comp">
+                  <strong>Historical shape:</strong> Closest working archive comparison — Mike James, 2005-06. Lead guard scoring and half-court creation profile.
+                </div>
+              </div>
+
+              <div class="player-card">
+                <div class="player-header">
+                  <div><span class="player-name">Karl-Anthony Towns</span><span class="player-team">NYK</span></div>
+                  <span class="risk-badge risk-low">Low risk</span>
+                </div>
+                <div class="player-role">Scoring big, rebounder, and frontcourt release valve</div>
+                <div class="player-stats">
+                  <div class="stat-item"><div class="stat-val">19.9</div><div class="stat-lbl">PTS</div></div>
+                  <div class="stat-item"><div class="stat-val">11.2</div><div class="stat-lbl">REB</div></div>
+                  <div class="stat-item"><div class="stat-val">3.6</div><div class="stat-lbl">AST</div></div>
+                  <div class="stat-item"><div class="stat-val">32.3</div><div class="stat-lbl">MIN</div></div>
+                </div>
+                <div class="player-comp">
+                  <strong>Historical shape:</strong> Closest working archive comparison — David Lee, 2012-13. Productive rebounder with frontcourt passing value.
+                </div>
+              </div>
+
+            </div>
+
+            <div class="brief-section">
+              <div class="section-label">Projection board</div>
+              <table class="proj-table">
+                <thead>
+                  <tr>
+                    <th>Player</th>
+                    <th>Team</th>
+                    <th>MIN</th>
+                    <th>PTS</th>
+                    <th>REB</th>
+                    <th>AST</th>
+                    <th>Risk</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>Joel Embiid</td><td><span class="team-phi">PHI</span></td><td>31.7</td><td>27.0</td><td>8.8</td><td>4.1</td><td><span class="risk-badge risk-med">Med</span></td></tr>
+                  <tr><td>Tyrese Maxey</td><td><span class="team-phi">PHI</span></td><td>35.8</td><td>23.9</td><td>4.0</td><td>5.7</td><td><span class="risk-badge risk-low">Low</span></td></tr>
+                  <tr><td>LeBron James</td><td><span class="team-phi">PHI</span></td><td>33.8</td><td>21.2</td><td>6.8</td><td>7.8</td><td><span class="risk-badge risk-low">Low</span></td></tr>
+                  <tr><td>V.J. Edgecombe</td><td><span class="team-phi">PHI</span></td><td>33.4</td><td>15.9</td><td>5.9</td><td>5.0</td><td><span class="risk-badge risk-low">Low</span></td></tr>
+                  <tr><td>Jalen Brunson</td><td><span class="team-nyk">NYK</span></td><td>34.4</td><td>24.3</td><td>2.9</td><td>7.5</td><td><span class="risk-badge risk-low">Low</span></td></tr>
+                  <tr><td>Karl-Anthony Towns</td><td><span class="team-nyk">NYK</span></td><td>32.3</td><td>19.9</td><td>11.2</td><td>3.6</td><td><span class="risk-badge risk-low">Low</span></td></tr>
+                  <tr><td>OG Anunoby</td><td><span class="team-nyk">NYK</span></td><td>34.0</td><td>16.0</td><td>5.3</td><td>2.3</td><td><span class="risk-badge risk-low">Low</span></td></tr>
+                  <tr><td>Mikal Bridges</td><td><span class="team-nyk">NYK</span></td><td>34.2</td><td>13.7</td><td>2.7</td><td>3.3</td><td><span class="risk-badge risk-low">Low</span></td></tr>
+                </tbody>
+              </table>
+              <div class="provenance-note">Season-level structural projections from the refreshed preseason context. Not betting lines, probabilities, or final game-day projections. Verify official lineups and availability before publication.</div>
+            </div>
+
+            <div class="brief-section">
+              <div class="section-label">Analyst talking points</div>
+              <div class="talking-phase">Opening</div>
+              <ul class="talking-points">
+                <li>"The Knicks' banner night is also a test of whether last season's structure still travels against a completely reworked Philadelphia group."</li>
+                <li>"The Sixers do not just add another scorer; they add a different organizer in LeBron, and the first question is how the roles divide around Maxey and Embiid."</li>
+              </ul>
+              <div class="talking-phase">During the game</div>
+              <ul class="talking-points">
+                <li>Is Maxey initiating the first action, or is LeBron organizing the possession?</li>
+                <li>Does Towns pull Embiid away from the paint or attack the glass against him?</li>
+                <li>Is Edgecombe making decisions quickly enough to keep the Sixers' spacing alive?</li>
+                <li>When Brunson draws help, is the Knicks' next pass creating a real advantage?</li>
+              </ul>
+              <div class="talking-phase">At halftime</div>
+              <ul class="talking-points">
+                <li>Which team's secondary players are benefiting from the attention paid to the stars?</li>
+                <li>Is Philadelphia's three-star structure producing shared advantages or separate possessions?</li>
+                <li>Are the Knicks winning the possession battle through offensive rebounding and turnover pressure?</li>
+              </ul>
+            </div>
+
+            <div class="cta-strip">
+              <div class="cta-copy">
+                <h3>This is one featured game.</h3>
+                <p>Subscribers receive the full slate, expanded player coverage, downloadable packets, and delivery formats built for their media workflow.</p>
+              </div>
+              <a href="../contact/" class="cta-btn">Request access</a>
+            </div>
+
+          </main>
+
+          <aside>
+
+            <div class="sidebar-panel">
+              <div class="sidebar-label">Historical comparisons</div>
+              <div class="comp-row">
+                <div class="comp-current">Joel Embiid</div>
+                <div class="comp-hist">→ <strong>KAT, 2021-22</strong><br>Scoring big with rebounding and passing load</div>
+              </div>
+              <div class="comp-row">
+                <div class="comp-current">Tyrese Maxey</div>
+                <div class="comp-hist">→ <strong>Jamal Murray, 2024-25</strong><br>High-minute scoring guard, meaningful assist creation</div>
+              </div>
+              <div class="comp-row">
+                <div class="comp-current">Jalen Brunson</div>
+                <div class="comp-hist">→ <strong>Mike James, 2005-06</strong><br>Lead guard scoring and half-court creation</div>
+              </div>
+              <div class="comp-row">
+                <div class="comp-current">Karl-Anthony Towns</div>
+                <div class="comp-hist">→ <strong>David Lee, 2012-13</strong><br>Productive rebounder with frontcourt passing value</div>
+              </div>
+              <div class="provenance-note" style="margin-top:14px">Shape comparisons from the DBB2 historical archive. Descriptive only — not player equivalence claims.</div>
+            </div>
+
+            <div class="sidebar-panel">
+              <div class="sidebar-label">Uncertainty — verify before air</div>
+              <ul class="guardrail-list">
+                <li>Official active/inactive designations</li>
+                <li>Starting lineups</li>
+                <li>Expected minute restrictions</li>
+                <li>Philadelphia's final role assignments</li>
+                <li>New York's final rotation</li>
+                <li>Final broadcast details</li>
+                <li>Late transaction or availability news</li>
+              </ul>
+              <div class="provenance-note" style="margin-top:14px">Risk values are model signals, not calibrated probabilities. Do not replace official team or league information.</div>
+            </div>
+
+            <div class="sidebar-panel">
+              <div class="sidebar-label">Source ledger</div>
+              <div class="sidebar-row">
+                <div class="sidebar-key">Schedule</div>
+                <div class="sidebar-val">NBA.com Game 0022600002</div>
+              </div>
+              <div class="sidebar-row">
+                <div class="sidebar-key">Projections</div>
+                <div class="sidebar-val">auction_2026_27_context_rookies/output/</div>
+              </div>
+              <div class="sidebar-row">
+                <div class="sidebar-key">Historical comps</div>
+                <div class="sidebar-val">data/comps/dbb2_historical.csv</div>
+              </div>
+              <div class="sidebar-row">
+                <div class="sidebar-key">Roster identity</div>
+                <div class="sidebar-val">preseason_roster_2026_27_resolved.csv</div>
+              </div>
+              <div class="sidebar-row">
+                <div class="sidebar-key">Data boundary</div>
+                <div class="sidebar-val">Oct 3, 2026 snapshot</div>
+              </div>
+              <div class="sidebar-row">
+                <div class="sidebar-key">Method</div>
+                <div class="sidebar-val">No-lookahead replay · dated provenance</div>
+              </div>
+            </div>
+
+          </aside>
+
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
