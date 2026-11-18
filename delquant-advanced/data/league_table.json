@@ -23,10 +23,7 @@
       "2023-24": 8.604995,
       "2024-25": 8.402253,
       "2025-26": 8.997
-    },
-    "output_dir": "/Users/teebuphilip/Documents/work/delquant-engine/reports/basketball_ops/fmvw_backtest",
-    "team_csv": "/Users/teebuphilip/Documents/work/delquant-engine/reports/basketball_ops/fmvw_backtest/fmvw_backtest_team_values.csv",
-    "player_csv": "/Users/teebuphilip/Documents/work/delquant-engine/reports/basketball_ops/fmvw_backtest/fmvw_backtest_player_values.csv"
+    }
   },
   "rows": [
     {
@@ -5099,8 +5096,5 @@
       "missing_players": [],
       "actual_rank": 30
     }
-  ],
-  "markdown_path": "/Users/teebuphilip/Documents/work/delquant-engine/reports/basketball_ops/league_table/league_table.md",
-  "csv_path": "/Users/teebuphilip/Documents/work/delquant-engine/reports/basketball_ops/league_table/league_table.csv",
-  "json_path": "/Users/teebuphilip/Documents/work/delquant-engine/reports/basketball_ops/league_table/league_table.json"
+  ]
 }
