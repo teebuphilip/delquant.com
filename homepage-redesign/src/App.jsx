@@ -72,13 +72,13 @@ export function App() {
       <nav className={menuOpen ? 'nav open' : 'nav'} aria-label="Main navigation">
         <a href="#intelligence" onClick={() => setMenuOpen(false)}>The platform</a><a href="#solutions" onClick={() => setMenuOpen(false)}>Solutions</a><a href="#method" onClick={() => setMenuOpen(false)}>Methodology</a><a href="https://delquant.com/developers/" onClick={() => setMenuOpen(false)}>Developers</a><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
       </nav>
-      <a className="header-cta" href="mailto:teebu@delquant.com?subject=DelQuant%20demo%20request">Request a demo <Arrow/></a>
+      <a className="header-cta" href="mailto:teebu@randbalgolabs.com?subject=DelQuant%20demo%20request">Request a demo <Arrow/></a>
       <button className={menuOpen ? 'menu open' : 'menu'} aria-label={menuOpen ? 'Close menu' : 'Open menu'} aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}><span/><span/></button>
     </header>
     <main>
       <section className="hero" aria-labelledby="hero-title">
         <div className="hero-art" aria-hidden="true"><img src={asset('hero-intelligence.png')} alt=""/></div>
-        <div className="hero-copy reveal"><div className="eyebrow">NBA INTELLIGENCE FOR OPERATORS</div><h1 id="hero-title">THE GAME<br/>IS MORE THAN<br/><em>A NUMBER.</em></h1><p>DelQuant turns player data into projections, risk, archetypes, and historical comps—so teams, sportsbooks, fantasy platforms, and basketball media can make smarter decisions, faster.</p><div className="hero-actions"><a className="button primary" href="mailto:teebu@delquant.com?subject=DelQuant%20demo%20request">Request a demo <Arrow/></a><a className="button outline" href="#intelligence">See player intelligence <Arrow/></a></div><div className="audiences"><span>TEAMS<br/><b>EVALUATION</b></span><span>SPORTSBOOKS<br/><b>RISK</b></span><span>FANTASY PLATFORMS<br/><b>EXPERIENCE</b></span><span>MEDIA<br/><b>RESEARCH</b></span></div></div>
+        <div className="hero-copy reveal"><div className="eyebrow">NBA INTELLIGENCE FOR OPERATORS</div><h1 id="hero-title">THE GAME<br/>IS MORE THAN<br/><em>A NUMBER.</em></h1><p>DelQuant turns player data into projections, risk, archetypes, and historical comps—so teams, sportsbooks, fantasy platforms, and basketball media can make smarter decisions, faster.</p><div className="hero-actions"><a className="button primary" href="mailto:teebu@randbalgolabs.com?subject=DelQuant%20demo%20request">Request a demo <Arrow/></a><a className="button outline" href="#intelligence">See player intelligence <Arrow/></a></div><div className="audiences"><span>TEAMS<br/><b>EVALUATION</b></span><span>SPORTSBOOKS<br/><b>RISK</b></span><span>FANTASY PLATFORMS<br/><b>EXPERIENCE</b></span><span>MEDIA<br/><b>RESEARCH</b></span></div></div>
         <div className="hero-note" aria-hidden="true">PLAYERS<br/>DATA<br/>DECISIONS<br/><span>A HIGHER EDGE</span></div><div className="hero-metric" aria-hidden="true"><span>SAMPLE PROJECTION</span><strong>26.8</strong><small>▲ +2.4</small></div>
       </section>
       <section className="signals" aria-label="Illustrative basketball signals"><div className="signal-label"><i/> SAMPLE<br/>SIGNALS</div><div className="signal-list">{signals.map(([name,value,context,trend])=><div className="signal" key={name}><strong>{name}</strong><b className={trend}>{value}</b><span>{context} ↗</span></div>)}</div><div className="signal-mobile"><strong>{signals[signalIndex][0]}</strong><b className={signals[signalIndex][3]}>{signals[signalIndex][1]}</b><span>{signals[signalIndex][2]} ↗</span></div><a className="signal-link" href="https://delquant.com/player-intelligence/">View sample <Arrow/></a></section>
@@ -86,8 +86,46 @@ export function App() {
       <section className="solutions section-pad" id="solutions" aria-labelledby="solutions-title"><div className="section-heading reveal"><div><div className="eyebrow">ONE ENGINE. MANY DECISIONS.</div><h2 id="solutions-title">BUILT FOR<br/>DECISION MAKERS<span className="period">.</span></h2></div><p>Different goals. A common advantage. DelQuant delivers the player intelligence infrastructure powering better decisions across the basketball ecosystem.</p></div><div className="outcome-grid">{outcomes.map(item=><article className="outcome reveal" key={item.title}><div className={`outcome-visual ${item.visual}`}>{item.visual==='team' && <img loading="lazy" src={asset('team-room.png')} alt="Basketball strategy room with an illuminated tactics board"/>}{item.visual==='market' && <div className="market-visual"><span>SAMPLE / MARKET SIGNALS</span><div><b>A</b><b>+4.5</b><b>225.5</b><b>−210</b></div><div><b>B</b><b>−4.5</b><b>220.5</b><b>+175</b></div><div className="market-bars">{[17,25,31,22,39,43,35,49,57,54,68,62,76,72,83].map((height,i)=><i key={i} style={{height: `${height}%`}}/>)}</div></div>}{item.visual==='hoop' && <img loading="lazy" src={asset('hoop-editorial.png')} alt="Amber lit hoop in an empty basketball arena"/>}</div><div className="eyebrow">{item.category}</div><h3>{item.title}</h3><p>{item.copy}</p><a href={item.href}>Explore solution <Arrow/></a></article>)}</div></section>
       <section className="method section-pad" id="method" aria-labelledby="method-title"><div className="method-intro reveal"><div className="eyebrow">OUR METHODOLOGY</div><h2 id="method-title">A DEEPER<br/>LAYER OF<br/>ANALYSIS<span className="period">.</span></h2><p>Advanced statistical models, contextual intelligence, and historical research come together to create independent, transparent player intelligence.</p><a href="https://delquant.com/methodology/">Explore our methodology <Arrow/></a></div><div className="method-steps reveal">{steps.map(([number,title,copy])=><div className="method-step" key={number}><span>{number}</span><div className="step-icon" aria-hidden="true">{title==='DATA'?'◈':title==='MODELS'?'◎':title==='CONTEXT'?'⊕':'↗'}</div><h3>{title}</h3><p>{copy}</p></div>)}</div></section>
       <section className="proof section-pad" id="work" aria-labelledby="proof-title"><div className="proof-heading reveal"><div><div className="eyebrow">PUBLIC WORK / REAL USE CASES</div><h2 id="proof-title">SEE THE THINKING<br/>BEHIND THE NUMBERS<span className="period">.</span></h2></div><p>Explore how player intelligence becomes valuation, team analysis, and decisions.</p></div><div className="proof-list reveal"><a href="https://delquant.com/delquant-advanced/"><span>01 / BASKETBALL OPS</span><strong>From player value to team decisions</strong><Arrow/></a><a href="https://delquant.com/hawks-front-office-study/"><span>02 / TEAM STUDY</span><strong>A front-office view of player context</strong><Arrow/></a><a href="https://delquant.com/heat-front-office-study/"><span>03 / ROSTER STUDY</span><strong>Building a long-run roster identity</strong><Arrow/></a></div></section>
-      <section className="contact section-pad" id="contact"><div className="reveal"><div className="eyebrow">LET'S BUILD A SMARTER BASKETBALL FUTURE</div><h2>Turn player intelligence<br/>into your advantage.</h2></div><div className="contact-actions reveal"><a className="button primary" href="mailto:teebu@delquant.com?subject=DelQuant%20pilot%20inquiry">Request a pilot <Arrow/></a><a className="button outline" href="mailto:teebu@delquant.com?subject=Talk%20to%20DelQuant">Talk to our team <Arrow/></a></div><div className="contact-tag">SAME GAME.<br/>DEEPER INSIGHT.</div></section>
+      <section className="contact section-pad" id="contact"><div className="reveal"><div className="eyebrow">LET'S BUILD A SMARTER BASKETBALL FUTURE</div><h2>Turn player intelligence<br/>into your advantage.</h2></div><div className="contact-actions reveal"><a className="button primary" href="mailto:teebu@randbalgolabs.com?subject=DelQuant%20pilot%20inquiry">Request a pilot <Arrow/></a><a className="button outline" href="mailto:teebu@randbalgolabs.com?subject=Talk%20to%20DelQuant">Talk to our team <Arrow/></a></div><div className="contact-tag">SAME GAME.<br/>DEEPER INSIGHT.</div></section>
     </main>
+    <section className="newsletter section-pad" style={{textAlign:'center', padding:'60px 24px', background:'#0b131b'}}>
+      <div dangerouslySetInnerHTML={{__html: `
+        <div class="sib-form" style="text-align:center; background-color:#EFF2F7;">
+          <div id="sib-form-container" class="sib-form-container">
+            <div id="sib-container" class="sib-container--large sib-container--vertical" style="max-width:540px; margin:0 auto; text-align:center; background-color:rgba(255,255,255,1); border-width:1px; border-style:solid; border-color:#C0CCD9; border-radius:3px;">
+              <form id="sib-form" method="POST" action="https://2ba94ab1.sibforms.com/serve/MUIFALKCIESyt9zmGmd4iCXU-HK5K67wX6wFc5mRqThEtdMMsDJyXTG0JA5ZAWGKuVdoSQsyoJX7GgBYem3VY3zreBeMJYsfE4UnkBgtSELreLzebI7IM48fYxe2gUG3RSkz7oPejYuFF52_vengqAIq8VG6YLS8Tu2yDHEhmkTpfe3tDs9QNqhfsXFV7iBuy1zk7xgkEFOaDAulOA==">
+                <div style="padding:8px 0;">
+                  <div class="sib-form-block" style="font-family:Helvetica,sans-serif; font-size:20px; font-weight:700; text-align:center; color:#3C4858;"><p>Stay Updated</p></div>
+                </div>
+                <div style="padding:8px 0;">
+                  <div class="sib-form-block" style="font-family:Helvetica,sans-serif; font-size:14px; text-align:center; color:#3C4858;"><p>NBA intelligence, product updates, and research from DelQuant.</p></div>
+                </div>
+                <div style="padding:8px 0;">
+                  <div class="sib-input sib-form-block">
+                    <div class="form__entry entry_block">
+                      <div class="form__label-row">
+                        <div class="entry__field">
+                          <input class="input" type="text" id="EMAIL" name="EMAIL" autocomplete="off" value="" placeholder="Enter your email" data-required="true" required style="color:#333333;" />
+                        </div>
+                      </div>
+                      <label class="entry__error entry__error--primary" style="font-family:Helvetica,sans-serif; font-size:14px; color:#661d1d; background-color:#ffeded; border-color:#ff4949; border-radius:3px;"></label>
+                    </div>
+                  </div>
+                </div>
+                <div style="padding:8px 0;">
+                  <div class="sib-form-block" style="text-align:center">
+                    <button class="sib-form-block__button" style="font-family:Helvetica,sans-serif; font-size:16px; font-weight:700; color:#FFFFFF; background-color:#3E4857; border-width:0px; border-radius:3px; padding:12px 24px; cursor:pointer;" form="sib-form" type="submit">SUBSCRIBE</button>
+                  </div>
+                </div>
+                <input type="text" name="email_address_check" value="" class="input--hidden">
+                <input type="hidden" name="locale" value="en">
+                <input type="hidden" name="html_type" value="simple">
+              </form>
+            </div>
+          </div>
+        </div>
+      `}} />
+    </section>
     <footer><a className="brand" href="#top">DELQUANT</a><nav aria-label="Footer navigation"><a href="#intelligence">Platform</a><a href="#solutions">Solutions</a><a href="https://delquant.com/methodology/">Methodology</a><a href="https://delquant.com/developers/">Developers</a><a href="#contact">Contact</a></nav><span>NBA INTELLIGENCE FOR A BRIGHTER EDGE.</span></footer>
   </div>;
 }
